@@ -1,0 +1,13 @@
+# Compile of upCounter.v was successful.
+vsim -gui work.upCounter
+# vsim -gui work.upCounter 
+# Start time: 15:10:22 on Apr 11,2024
+# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
+# Loading work.upCounter(fast)
+add wave -position insertpoint  \
+sim:/upCounter/Enable \
+sim:/upCounter/Clock \
+sim:/upCounter/Q
+do counter.do
+# End time: 15:46:54 on Apr 11,2024, Elapsed time: 0:36:32
+# Errors: 0, Warnings: 2
