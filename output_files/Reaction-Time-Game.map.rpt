@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Reaction-Time-Game
-Fri Apr 12 12:40:57 2024
+Fri Apr 12 18:07:13 2024
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Standard Edition
 
 
@@ -37,7 +37,7 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                            ;
 +------------------------------------+----------------------------------------------------+
-; Analysis & Synthesis Status        ; Failed - Fri Apr 12 12:40:57 2024                  ;
+; Analysis & Synthesis Status        ; Failed - Fri Apr 12 18:07:13 2024                  ;
 ; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Standard Edition ;
 ; Revision Name                      ; Reaction-Time-Game                                 ;
 ; Top-level Entity Name              ; divideByFiftyThousandCounter                       ;
@@ -162,7 +162,7 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Standard Edition
-    Info: Processing started: Fri Apr 12 12:40:53 2024
+    Info: Processing started: Fri Apr 12 18:07:08 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Reaction-Time-Game -c Reaction-Time-Game
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -180,12 +180,17 @@ Info (12021): Found 1 design units, including 1 entities, in source file divideb
 Info (12021): Found 1 design units, including 1 entities, in source file equals16bit.bdf
     Info (12023): Found entity 1: equals16bit
 Info (12127): Elaborating entity "divideByFiftyThousandCounter" for the top level hierarchy
-Error (275033): Can't find name for bus
-Error (12153): Can't elaborate top-level user hierarchy
-Error: Quartus Prime Analysis & Synthesis was unsuccessful. 2 errors, 2 warnings
+Warning (275008): Primitive "GND" of instance "inst17" not used
+Warning (275008): Primitive "VCC" of instance "inst28" not used
+Error (12049): Can't compile duplicate declarations of entity "equals16bit" into library "work" File: U:/CPRE281/FinalProject/Reaction-Time-Game/Equals16bit.v Line: 1
+    Error (12180): Instance could be entity "equals16bit" in file equals16bit.bdf compiled in library work
+    Error (12180): Instance could be entity "Equals16bit" in file Equals16bit.v compiled in library work File: U:/CPRE281/FinalProject/Reaction-Time-Game/Equals16bit.v Line: 1
+Warning (12125): Using design file equals50k.v, which is not specified as a design file for the current project, but contains definitions for 2 design units and 2 entities in project
+    Info (12023): Found entity 1: equals50k File: U:/CPRE281/FinalProject/Reaction-Time-Game/equals50k.v Line: 3
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 5 warnings
     Error: Peak virtual memory: 4728 megabytes
-    Error: Processing ended: Fri Apr 12 12:40:58 2024
-    Error: Elapsed time: 00:00:05
-    Error: Total CPU time (on all processors): 00:00:03
+    Error: Processing ended: Fri Apr 12 18:07:19 2024
+    Error: Elapsed time: 00:00:11
+    Error: Total CPU time (on all processors): 00:00:02
 
 
