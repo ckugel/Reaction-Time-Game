@@ -1,12 +1,12 @@
-Fitter Status : Successful - Thu Apr 18 13:23:54 2024
+Fitter Status : Successful - Thu Apr 18 14:58:28 2024
 Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Standard Edition
 Revision Name : Reaction-Time-Game
 Top-level Entity Name : 3-8Decoder
 Family : Cyclone IV E
 Device : EP4CE115F29C7
 Timing Models : Final
-Total logic elements : 0 / 114,480 ( 0 % )
-    Total combinational functions : 0 / 114,480 ( 0 % )
+Total logic elements : 8 / 114,480 ( < 1 % )
+    Total combinational functions : 8 / 114,480 ( < 1 % )
     Dedicated logic registers : 0 / 114,480 ( 0 % )
 Total registers : 0
 Total pins : 11 / 529 ( 2 % )
