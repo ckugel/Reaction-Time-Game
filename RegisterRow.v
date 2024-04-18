@@ -22,5 +22,5 @@ module RegisterRow(In, Load, Clock, CLRN, Q);
   Register register13 (In[12], Load, Clock, CLRN, Q[12], _ignore);
 
 
-  endmodule;
+  endmodule
 
