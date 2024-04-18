@@ -2,7 +2,7 @@
 
 module RegisterRow(In, Load, Clock, CLRN, Q);
   input [12:0] In;
-  input load;
+  input Load;
   input Clock;
   input CLRN;
   output [12:0] Q;
