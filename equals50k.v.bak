@@ -1,14 +1,14 @@
-`include "Equals16bit.v"
+`include "Equals15bit.v"
 
-module(X, R);
+module equals50k(X, R);
   input [15:0] X;
   output R;
 
   Equals16bit equator (
     X,
-    `1100001101010000,
+    50000,
     out_e
-  )
+  );
 
   assign R = out_e;
 

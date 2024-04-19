@@ -1,12 +1,18 @@
-`include "Equals16bit.v"
+`include "Equals15bit.v"
 
 module equals50k(X, R);
   input [15:0] X;
   output R;
+  reg [15:0] comp;
+  
 
-  Equals16bit equator (
+  initial begin
+  comp = 16'b01100111010110100;
+  end
+  
+  Equals15bit equator (
     X,
-    50000,
+    comp, //50000
     out_e
   );
 

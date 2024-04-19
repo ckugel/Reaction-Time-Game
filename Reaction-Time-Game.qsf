@@ -19,7 +19,7 @@
 #
 # Quartus Prime
 # Version 22.1std.1 Build 917 02/14/2023 SC Standard Edition
-# Date created = 15:11:06  April 10, 2024
+# Date created = 15:17:44  April 18, 2024
 #
 # -------------------------------------------------------------------------- #
 #
@@ -37,22 +37,23 @@
 # -------------------------------------------------------------------------- #
 
 
-set_global_assignment -name FAMILY "Cyclone IV E"
-set_global_assignment -name DEVICE EP4CE115F29C7
-set_global_assignment -name TOP_LEVEL_ENTITY RegisterRow
+
+# Project-Wide Assignments
+# ========================
 set_global_assignment -name ORIGINAL_QUARTUS_VERSION 22.1STD.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:11:06  APRIL 10, 2024"
 set_global_assignment -name LAST_QUARTUS_VERSION "22.1std.1 Standard Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
-set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
-set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
-set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
-set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
 set_global_assignment -name BDF_FILE Register.bdf
 set_global_assignment -name BDF_FILE "Register-component.bdf"
 set_global_assignment -name BDF_FILE "up-counter.bdf"
 set_global_assignment -name BDF_FILE upCounter.bdf
-set_location_assignment PIN_M23 -to Clock
+set_global_assignment -name BDF_FILE divideByTenCounter.bdf
+set_global_assignment -name BDF_FILE divideByFiftyThousandCounter.bdf
+
+# Pin & Location Assignments
+# ==========================
+set_location_assignment PIN_Y2 -to Clock
 set_location_assignment PIN_AB28 -to Enable
 set_location_assignment PIN_M24 -to A
 set_location_assignment PIN_Y22 -to B
@@ -61,12 +62,40 @@ set_location_assignment PIN_W22 -to D
 set_location_assignment PIN_W25 -to E
 set_location_assignment PIN_U23 -to F
 set_location_assignment PIN_U24 -to G
-set_global_assignment -name BDF_FILE divideByTenCounter.bdf
-set_global_assignment -name BDF_FILE divideByFiftyThousandCounter.bdf
-set_global_assignment -name BDF_FILE equals16bit.bdf
-set_global_assignment -name BDF_FILE RegisterRow.bdf
+
+# Classic Timing Assignments
+# ==========================
+set_global_assignment -name MIN_CORE_JUNCTION_TEMP 0
+set_global_assignment -name MAX_CORE_JUNCTION_TEMP 85
+set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
+
+# Analysis & Synthesis Assignments
+# ================================
+set_global_assignment -name FAMILY "Cyclone IV E"
+set_global_assignment -name TOP_LEVEL_ENTITY ClockTest
+
+# Fitter Assignments
+# ==================
+set_global_assignment -name DEVICE EP4CE115F29C7
+set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
+
+# ------------------------------------------
+# start ENTITY(divideByFiftyThousandCounter)
+
+	# start DESIGN_PARTITION(Top)
+	# ---------------------------
+
+		# Incremental Compilation Assignments
+		# ===================================
+
+	# end DESIGN_PARTITION(Top)
+	# -------------------------
+
+# end ENTITY(divideByFiftyThousandCounter)
+# ----------------------------------------
+set_global_assignment -name BDF_FILE ClockTest.bdf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_AH25 -to Output
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
-set_global_assignment -name BDF_FILE RegisterFile.bdf
