@@ -72,7 +72,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect 368 -8 384 160)
 	(text "INPUT" (rect 6 125 16 153)(font "Arial" (font_size 6))(vertical))
-	(text "In[12..0]" (rect 6 5 18 47)(font "Arial" )(vertical))
+	(text "In[12..0]" (rect 6 5 18 46)(font "Arial" )(vertical))
 	(pt 8 168)
 	(drawing
 		(line (pt 4 84)(pt 4 109))
@@ -300,3 +300,103 @@ https://fpgasoftware.intel.com/eula.
 		(rectangle (rect 16 16 144 96))
 	)
 )
+(symbol
+	(rect -8 840 120 936)
+	(text "3-8Decoder" (rect 5 0 75 19)(font "Intel Clear" (font_size 8)))
+	(text "inst" (rect 8 75 24 92)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "X" (rect 0 0 8 19)(font "Intel Clear" (font_size 8)))
+		(text "X" (rect 21 27 29 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "Y" (rect 0 0 8 19)(font "Intel Clear" (font_size 8)))
+		(text "Y" (rect 21 43 29 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "Z" (rect 0 0 8 19)(font "Intel Clear" (font_size 8)))
+		(text "Z" (rect 21 59 29 78)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 128 32)
+		(output)
+		(text "output[0..7]" (rect 0 0 69 19)(font "Intel Clear" (font_size 8)))
+		(text "output[0..7]" (rect 38 27 107 46)(font "Intel Clear" (font_size 8)))
+		(line (pt 128 32)(pt 112 32)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 112 80))
+	)
+)
+(connector
+	(pt 120 872)
+	(pt 344 872)
+	(bus)
+)
+(connector
+	(pt 344 384)
+	(pt 504 384)
+)
+(connector
+	(pt 504 384)
+	(pt 512 384)
+)
+(connector
+	(pt 344 552)
+	(pt 344 384)
+	(bus)
+)
+(connector
+	(pt 504 552)
+	(pt 496 552)
+)
+(connector
+	(pt 496 552)
+	(pt 344 552)
+)
+(connector
+	(pt 344 696)
+	(pt 344 552)
+	(bus)
+)
+(connector
+	(pt 496 696)
+	(pt 488 696)
+)
+(connector
+	(pt 488 696)
+	(pt 344 696)
+)
+(connector
+	(pt 344 872)
+	(pt 344 832)
+	(bus)
+)
+(connector
+	(pt 344 832)
+	(pt 344 696)
+	(bus)
+)
+(connector
+	(pt 496 832)
+	(pt 488 832)
+)
+(connector
+	(pt 488 832)
+	(pt 344 832)
+)
+(junction (pt 504 384))
+(junction (pt 344 552))
+(junction (pt 496 552))
+(junction (pt 344 696))
+(junction (pt 488 696))
+(junction (pt 344 832))
+(junction (pt 488 832))

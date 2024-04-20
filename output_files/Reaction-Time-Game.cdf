@@ -4,7 +4,7 @@ JedecChain;
 	DefaultMfr(6E);
 
 	P ActionCode(Cfg)
-		Device PartName(EP4CE115F29) Path("U:/CPRE281/FinalProject/Reaction-Time-Game/output_files/") File("Reaction-Time-Game.sof") MfrSpec(OpMask(1));
+		Device PartName(EP4CE115F29) Path("U:/CPRE281/Final/Reaction-Time-Game/output_files/") File("Reaction-Time-Game.sof") MfrSpec(OpMask(1));
 
 ChainEnd;
 

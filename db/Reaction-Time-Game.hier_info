@@ -1,155 +1,26 @@
-|RegisterRow
-output[3] <= Register:inst.Q
-output[2] <= Register:inst21.Q
-output[1] <= Register:inst22.Q
-output[0] <= Register:inst23.Q
-In[0] => Register:inst23.In
-In[1] => Register:inst22.In
-In[2] => Register:inst21.In
-In[3] => Register:inst.In
-pin_name1 => Register:inst22.Load
-pin_name1 => Register:inst23.Load
-pin_name1 => Register:inst21.Load
-pin_name1 => Register:inst.Load
-CLK => Register:inst22.CLK
-CLK => Register:inst23.CLK
-CLK => Register:inst21.CLK
-CLK => Register:inst.CLK
-
-
-|RegisterRow|Register:inst22
-Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-CLRN => inst.ACLR
-CLK => inst.CLK
-Load => BUSMUX:inst1.sel
-In => BUSMUX:inst1.datab[0]
-Qnot <= inst3.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|RegisterRow|Register:inst22|BUSMUX:inst1
-dataa[0] => lpm_mux:$00000.data[0][0]
-datab[0] => lpm_mux:$00000.data[1][0]
-sel => lpm_mux:$00000.sel[0]
-result[0] <= lpm_mux:$00000.result[0]
-
-
-|RegisterRow|Register:inst22|BUSMUX:inst1|lpm_mux:$00000
-data[0][0] => mux_7rc:auto_generated.data[0]
-data[1][0] => mux_7rc:auto_generated.data[1]
-sel[0] => mux_7rc:auto_generated.sel[0]
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-result[0] <= mux_7rc:auto_generated.result[0]
-
-
-|RegisterRow|Register:inst22|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
-data[0] => result_node[0].IN1
-data[1] => result_node[0].IN1
-result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
-sel[0] => result_node[0].IN0
-sel[0] => _.IN0
-
-
-|RegisterRow|Register:inst23
-Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-CLRN => inst.ACLR
-CLK => inst.CLK
-Load => BUSMUX:inst1.sel
-In => BUSMUX:inst1.datab[0]
-Qnot <= inst3.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|RegisterRow|Register:inst23|BUSMUX:inst1
-dataa[0] => lpm_mux:$00000.data[0][0]
-datab[0] => lpm_mux:$00000.data[1][0]
-sel => lpm_mux:$00000.sel[0]
-result[0] <= lpm_mux:$00000.result[0]
-
-
-|RegisterRow|Register:inst23|BUSMUX:inst1|lpm_mux:$00000
-data[0][0] => mux_7rc:auto_generated.data[0]
-data[1][0] => mux_7rc:auto_generated.data[1]
-sel[0] => mux_7rc:auto_generated.sel[0]
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-result[0] <= mux_7rc:auto_generated.result[0]
-
-
-|RegisterRow|Register:inst23|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
-data[0] => result_node[0].IN1
-data[1] => result_node[0].IN1
-result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
-sel[0] => result_node[0].IN0
-sel[0] => _.IN0
-
-
-|RegisterRow|Register:inst21
-Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-CLRN => inst.ACLR
-CLK => inst.CLK
-Load => BUSMUX:inst1.sel
-In => BUSMUX:inst1.datab[0]
-Qnot <= inst3.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|RegisterRow|Register:inst21|BUSMUX:inst1
-dataa[0] => lpm_mux:$00000.data[0][0]
-datab[0] => lpm_mux:$00000.data[1][0]
-sel => lpm_mux:$00000.sel[0]
-result[0] <= lpm_mux:$00000.result[0]
-
-
-|RegisterRow|Register:inst21|BUSMUX:inst1|lpm_mux:$00000
-data[0][0] => mux_7rc:auto_generated.data[0]
-data[1][0] => mux_7rc:auto_generated.data[1]
-sel[0] => mux_7rc:auto_generated.sel[0]
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-result[0] <= mux_7rc:auto_generated.result[0]
-
-
-|RegisterRow|Register:inst21|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
-data[0] => result_node[0].IN1
-data[1] => result_node[0].IN1
-result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
-sel[0] => result_node[0].IN0
-sel[0] => _.IN0
-
-
-|RegisterRow|Register:inst
-Q <= inst.DB_MAX_OUTPUT_PORT_TYPE
-CLRN => inst.ACLR
-CLK => inst.CLK
-Load => BUSMUX:inst1.sel
-In => BUSMUX:inst1.datab[0]
-Qnot <= inst3.DB_MAX_OUTPUT_PORT_TYPE
-
-
-|RegisterRow|Register:inst|BUSMUX:inst1
-dataa[0] => lpm_mux:$00000.data[0][0]
-datab[0] => lpm_mux:$00000.data[1][0]
-sel => lpm_mux:$00000.sel[0]
-result[0] <= lpm_mux:$00000.result[0]
-
-
-|RegisterRow|Register:inst|BUSMUX:inst1|lpm_mux:$00000
-data[0][0] => mux_7rc:auto_generated.data[0]
-data[1][0] => mux_7rc:auto_generated.data[1]
-sel[0] => mux_7rc:auto_generated.sel[0]
-clock => ~NO_FANOUT~
-aclr => ~NO_FANOUT~
-clken => ~NO_FANOUT~
-result[0] <= mux_7rc:auto_generated.result[0]
-
-
-|RegisterRow|Register:inst|BUSMUX:inst1|lpm_mux:$00000|mux_7rc:auto_generated
-data[0] => result_node[0].IN1
-data[1] => result_node[0].IN1
-result[0] <= result_node[0].DB_MAX_OUTPUT_PORT_TYPE
-sel[0] => result_node[0].IN0
-sel[0] => _.IN0
+|3-8Decoder
+output[7] <= inst12.DB_MAX_OUTPUT_PORT_TYPE
+output[6] <= inst11.DB_MAX_OUTPUT_PORT_TYPE
+output[5] <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+output[4] <= inst9.DB_MAX_OUTPUT_PORT_TYPE
+output[3] <= inst7.DB_MAX_OUTPUT_PORT_TYPE
+output[2] <= inst6.DB_MAX_OUTPUT_PORT_TYPE
+output[1] <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+output[0] <= inst4.DB_MAX_OUTPUT_PORT_TYPE
+X => inst2.IN0
+X => inst9.IN0
+X => inst10.IN0
+X => inst11.IN0
+X => inst12.IN0
+Y => inst1.IN0
+Y => inst6.IN1
+Y => inst7.IN1
+Y => inst11.IN1
+Y => inst12.IN1
+Z => inst.IN0
+Z => inst5.IN2
+Z => inst7.IN2
+Z => inst10.IN2
+Z => inst12.IN2
 
 

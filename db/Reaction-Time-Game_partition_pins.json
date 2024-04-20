@@ -20,27 +20,31 @@
 					"strict" : false
 				},
 				{
-					"name" : "In[0]",
+					"name" : "output[4]",
 					"strict" : false
 				},
 				{
-					"name" : "CLK",
+					"name" : "output[5]",
 					"strict" : false
 				},
 				{
-					"name" : "pin_name1",
+					"name" : "output[6]",
 					"strict" : false
 				},
 				{
-					"name" : "In[1]",
+					"name" : "output[7]",
 					"strict" : false
 				},
 				{
-					"name" : "In[2]",
+					"name" : "Z",
 					"strict" : false
 				},
 				{
-					"name" : "In[3]",
+					"name" : "X",
+					"strict" : false
+				},
+				{
+					"name" : "Y",
 					"strict" : false
 				}
 			]
