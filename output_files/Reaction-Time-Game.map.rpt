@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Reaction-Time-Game
-Sun Apr 21 21:33:17 2024
+Sun Apr 21 21:48:00 2024
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Standard Edition
 
 
@@ -10,13 +10,7 @@ Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Standard Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -43,20 +37,20 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                            ;
 +------------------------------------+----------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Apr 21 21:33:17 2024              ;
+; Analysis & Synthesis Status        ; Failed - Sun Apr 21 21:48:00 2024                  ;
 ; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Standard Edition ;
 ; Revision Name                      ; Reaction-Time-Game                                 ;
-; Top-level Entity Name              ; 15Adder                                            ;
+; Top-level Entity Name              ; 13Adder                                            ;
 ; Family                             ; Cyclone IV E                                       ;
-; Total logic elements               ; 13                                                 ;
-;     Total combinational functions  ; 13                                                 ;
-;     Dedicated logic registers      ; 0                                                  ;
-; Total registers                    ; 0                                                  ;
-; Total pins                         ; 41                                                 ;
-; Total virtual pins                 ; 0                                                  ;
-; Total memory bits                  ; 0                                                  ;
-; Embedded Multiplier 9-bit elements ; 0                                                  ;
-; Total PLLs                         ; 0                                                  ;
+; Total logic elements               ; N/A until Partition Merge                          ;
+;     Total combinational functions  ; N/A until Partition Merge                          ;
+;     Dedicated logic registers      ; N/A until Partition Merge                          ;
+; Total registers                    ; N/A until Partition Merge                          ;
+; Total pins                         ; N/A until Partition Merge                          ;
+; Total virtual pins                 ; N/A until Partition Merge                          ;
+; Total memory bits                  ; N/A until Partition Merge                          ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                          ;
+; Total PLLs                         ; N/A until Partition Merge                          ;
 +------------------------------------+----------------------------------------------------+
 
 
@@ -66,7 +60,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                            ; 15Adder            ; Reaction-Time-Game ;
+; Top-level entity name                                            ; 13Adder            ; Reaction-Time-Game ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -162,111 +156,13 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                              ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                          ; File Name with Absolute Path                    ; Library ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------+---------+
-; 15Adder.bdf                      ; yes             ; User Block Diagram/Schematic File  ; U:/CPRE281/Final/Reaction-Time-Game/15Adder.bdf ;         ;
-; fa.v                             ; yes             ; Auto-Found Verilog HDL File        ; U:/CPRE281/Final/Reaction-Time-Game/fa.v        ;         ;
-+----------------------------------+-----------------+------------------------------------+-------------------------------------------------+---------+
-
-
-+---------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                   ;
-+---------------------------------------------+-----------------+
-; Resource                                    ; Usage           ;
-+---------------------------------------------+-----------------+
-; Estimated Total logic elements              ; 13              ;
-;                                             ;                 ;
-; Total combinational functions               ; 13              ;
-; Logic element usage by number of LUT inputs ;                 ;
-;     -- 4 input functions                    ; 0               ;
-;     -- 3 input functions                    ; 13              ;
-;     -- <=2 input functions                  ; 0               ;
-;                                             ;                 ;
-; Logic elements by mode                      ;                 ;
-;     -- normal mode                          ; 13              ;
-;     -- arithmetic mode                      ; 0               ;
-;                                             ;                 ;
-; Total registers                             ; 0               ;
-;     -- Dedicated logic registers            ; 0               ;
-;     -- I/O registers                        ; 0               ;
-;                                             ;                 ;
-; I/O pins                                    ; 41              ;
-;                                             ;                 ;
-; Embedded Multiplier 9-bit elements          ; 0               ;
-;                                             ;                 ;
-; Maximum fan-out node                        ; FA:inst3|Cout~0 ;
-; Maximum fan-out                             ; 1               ;
-; Total fan-out                               ; 81              ;
-; Average fan-out                             ; 0.85            ;
-+---------------------------------------------+-----------------+
-
-
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                      ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-; |15Adder                   ; 13 (1)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 41   ; 0            ; |15Adder            ; 15Adder     ; work         ;
-;    |FA:inst10|             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |15Adder|FA:inst10  ; FA          ; work         ;
-;    |FA:inst12|             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |15Adder|FA:inst12  ; FA          ; work         ;
-;    |FA:inst14|             ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |15Adder|FA:inst14  ; FA          ; work         ;
-;    |FA:inst3|              ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |15Adder|FA:inst3   ; FA          ; work         ;
-;    |FA:inst5|              ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |15Adder|FA:inst5   ; FA          ; work         ;
-;    |FA:inst8|              ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |15Adder|FA:inst8   ; FA          ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+-------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; boundary_port         ; 41                          ;
-; cycloneiii_lcell_comb ; 14                          ;
-;     normal            ; 14                          ;
-;         0 data inputs ; 1                           ;
-;         3 data inputs ; 13                          ;
-;                       ;                             ;
-; Max LUT depth         ; 13.00                       ;
-; Average LUT depth     ; 8.88                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Standard Edition
-    Info: Processing started: Sun Apr 21 21:33:10 2024
+    Info: Processing started: Sun Apr 21 21:47:55 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Reaction-Time-Game -c Reaction-Time-Game
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
@@ -284,37 +180,19 @@ Info (12021): Found 1 design units, including 1 entities, in source file divideb
 Warning (12019): Can't analyze file -- file ClockTest.bdf is missing
 Info (12021): Found 1 design units, including 1 entities, in source file 15adder.bdf
     Info (12023): Found entity 1: 15Adder
-Info (12127): Elaborating entity "15Adder" for the top level hierarchy
-Warning (275002): No superset bus at connection
-Warning (275043): Pin "output[0..12]" is missing source
-Warning (12125): Using design file fa.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: FA File: U:/CPRE281/Final/Reaction-Time-Game/fa.v Line: 1
-Info (12128): Elaborating entity "FA" for hierarchy "FA:inst15"
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "output[0]" is stuck at GND
-    Warning (13410): Pin "output[1]" is stuck at GND
-    Warning (13410): Pin "output[2]" is stuck at GND
-    Warning (13410): Pin "output[3]" is stuck at GND
-    Warning (13410): Pin "output[4]" is stuck at GND
-    Warning (13410): Pin "output[5]" is stuck at GND
-    Warning (13410): Pin "output[6]" is stuck at GND
-    Warning (13410): Pin "output[7]" is stuck at GND
-    Warning (13410): Pin "output[8]" is stuck at GND
-    Warning (13410): Pin "output[9]" is stuck at GND
-    Warning (13410): Pin "output[10]" is stuck at GND
-    Warning (13410): Pin "output[11]" is stuck at GND
-    Warning (13410): Pin "output[12]" is stuck at GND
-Info (286030): Timing-Driven Synthesis is running
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 54 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 27 input pins
-    Info (21059): Implemented 14 output pins
-    Info (21061): Implemented 13 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 20 warnings
-    Info: Peak virtual memory: 4800 megabytes
-    Info: Processing ended: Sun Apr 21 21:33:17 2024
-    Info: Elapsed time: 00:00:07
-    Info: Total CPU time (on all processors): 00:00:04
+Info (12021): Found 1 design units, including 1 entities, in source file shiftdevideby10.bdf
+    Info (12023): Found entity 1: Shiftdevideby10
+Info (12021): Found 2 design units, including 2 entities, in source file full_add_subtract13bit.v
+    Info (12023): Found entity 1: 13Adder File: U:/CPRE281/Final/Reaction-Time-Game/13Adder.v Line: 20
+    Info (12023): Found entity 2: full_add_subtract13bit File: U:/CPRE281/Final/Reaction-Time-Game/full_add_subtract13bit.v Line: 2
+Error (12049): Can't compile duplicate declarations of entity "13Adder" into library "work"
+    Error (12180): Instance could be entity "13Adder" in file 13Adder.v compiled in library work File: U:/CPRE281/Final/Reaction-Time-Game/13Adder.v Line: 20
+    Error (12180): Instance could be entity "13Adder" in file 13Adder.bdf compiled in library work
+Info (12021): Found 1 design units, including 1 entities, in source file 13adder.bdf
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 3 errors, 3 warnings
+    Error: Peak virtual memory: 4728 megabytes
+    Error: Processing ended: Sun Apr 21 21:48:00 2024
+    Error: Elapsed time: 00:00:05
+    Error: Total CPU time (on all processors): 00:00:04
 
 

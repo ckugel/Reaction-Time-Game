@@ -15,9 +15,9 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 22.1std.1 Build 917 02/14/2023 SC Standard Edition"
-// CREATED		"Sun Apr 21 21:38:41 2024"
+// CREATED		"Sun Apr 21 21:46:03 2024"
 
-module \15Adder (
+module \13Adder (
 	Cin,
 	X,
 	Y,
