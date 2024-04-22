@@ -4,47 +4,115 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "output[0]",
+					"name" : "Overflow",
 					"strict" : false
 				},
 				{
-					"name" : "output[1]",
+					"name" : "X[0]",
 					"strict" : false
 				},
 				{
-					"name" : "output[2]",
+					"name" : "Y[0]",
 					"strict" : false
 				},
 				{
-					"name" : "output[3]",
+					"name" : "X[1]",
 					"strict" : false
 				},
 				{
-					"name" : "output[4]",
+					"name" : "Y[1]",
 					"strict" : false
 				},
 				{
-					"name" : "output[5]",
+					"name" : "X[2]",
 					"strict" : false
 				},
 				{
-					"name" : "output[6]",
+					"name" : "X[3]",
 					"strict" : false
 				},
 				{
-					"name" : "output[7]",
+					"name" : "Y[3]",
 					"strict" : false
 				},
 				{
-					"name" : "Z",
+					"name" : "X[4]",
 					"strict" : false
 				},
 				{
-					"name" : "X",
+					"name" : "X[5]",
 					"strict" : false
 				},
 				{
-					"name" : "Y",
+					"name" : "Y[5]",
+					"strict" : false
+				},
+				{
+					"name" : "X[6]",
+					"strict" : false
+				},
+				{
+					"name" : "X[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Y[7]",
+					"strict" : false
+				},
+				{
+					"name" : "X[8]",
+					"strict" : false
+				},
+				{
+					"name" : "X[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Y[9]",
+					"strict" : false
+				},
+				{
+					"name" : "X[10]",
+					"strict" : false
+				},
+				{
+					"name" : "X[11]",
+					"strict" : false
+				},
+				{
+					"name" : "Y[11]",
+					"strict" : false
+				},
+				{
+					"name" : "Cin",
+					"strict" : false
+				},
+				{
+					"name" : "X[12]",
+					"strict" : false
+				},
+				{
+					"name" : "Y[12]",
+					"strict" : false
+				},
+				{
+					"name" : "Y[10]",
+					"strict" : false
+				},
+				{
+					"name" : "Y[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Y[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Y[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Y[2]",
 					"strict" : false
 				}
 			]

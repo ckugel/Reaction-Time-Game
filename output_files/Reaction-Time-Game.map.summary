@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Thu Apr 18 14:58:20 2024
+Analysis & Synthesis Status : Successful - Sun Apr 21 21:33:17 2024
 Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Standard Edition
 Revision Name : Reaction-Time-Game
-Top-level Entity Name : 3-8Decoder
+Top-level Entity Name : 15Adder
 Family : Cyclone IV E
-Total logic elements : 8
-    Total combinational functions : 8
+Total logic elements : 13
+    Total combinational functions : 13
     Dedicated logic registers : 0
 Total registers : 0
-Total pins : 11
+Total pins : 41
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

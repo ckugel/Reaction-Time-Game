@@ -88,9 +88,9 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(output)
-	(rect 3888 520 4064 536)
+	(rect 3896 520 4072 536)
 	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
-	(text "Output[0..12]" (rect 90 0 154 12)(font "Arial" ))
+	(text "S[0..12]" (rect 90 0 128 12)(font "Arial" ))
 	(pt 0 8)
 	(drawing
 		(line (pt 0 8)(pt 52 8))
@@ -101,6 +101,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 4072 536 4144 560))
 )
 (symbol
 	(rect 688 304 824 416)
@@ -836,12 +837,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 896 336)
 )
 (connector
-	(text "X[15..0]" (rect 130 56 166 73)(font "Intel Clear" ))
-	(pt 3944 72)
-	(pt 3464 72)
-	(bus)
-)
-(connector
 	(pt 3488 368)
 	(pt 3464 368)
 )
@@ -1184,12 +1179,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 3152 152)
 )
 (connector
-	(text "Y[15..0]" (rect 130 136 166 153)(font "Intel Clear" ))
-	(pt 3952 152)
-	(pt 3400 152)
-	(bus)
-)
-(connector
 	(pt 3400 152)
 	(pt 3152 152)
 	(bus)
@@ -1367,16 +1356,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 3376 528)
 )
 (connector
-	(pt 3376 528)
-	(pt 3648 528)
-	(bus)
-)
-(connector
-	(pt 3648 528)
-	(pt 3888 528)
-	(bus)
-)
-(connector
 	(pt 3624 352)
 	(pt 3648 352)
 )
@@ -1434,6 +1413,27 @@ https://fpgasoftware.intel.com/eula.
 (connector
 	(pt 688 336)
 	(pt 584 336)
+)
+(connector
+	(pt 3944 72)
+	(pt 3464 72)
+	(bus)
+)
+(connector
+	(text "<<__$DEF_ALIAS166>>" (rect 130 136 242 153)(font "Intel Clear" )(invisible))
+	(pt 3952 152)
+	(pt 3400 152)
+	(bus)
+)
+(connector
+	(pt 3376 528)
+	(pt 3648 528)
+	(bus)
+)
+(connector
+	(pt 3648 528)
+	(pt 3896 528)
+	(bus)
 )
 (junction (pt 3464 72))
 (junction (pt 3192 72))
