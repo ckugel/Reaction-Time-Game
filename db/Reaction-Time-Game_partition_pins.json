@@ -4,87 +4,59 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "Overflow",
+					"name" : "Output[12]",
 					"strict" : false
 				},
 				{
-					"name" : "X[0]",
+					"name" : "Output[11]",
 					"strict" : false
 				},
 				{
-					"name" : "Y[0]",
+					"name" : "Output[10]",
 					"strict" : false
 				},
 				{
-					"name" : "X[1]",
+					"name" : "Output[9]",
 					"strict" : false
 				},
 				{
-					"name" : "Y[1]",
+					"name" : "Output[8]",
 					"strict" : false
 				},
 				{
-					"name" : "X[2]",
+					"name" : "Output[7]",
 					"strict" : false
 				},
 				{
-					"name" : "X[3]",
+					"name" : "Output[6]",
 					"strict" : false
 				},
 				{
-					"name" : "Y[3]",
+					"name" : "Output[5]",
 					"strict" : false
 				},
 				{
-					"name" : "X[4]",
+					"name" : "Output[4]",
 					"strict" : false
 				},
 				{
-					"name" : "X[5]",
+					"name" : "Output[3]",
 					"strict" : false
 				},
 				{
-					"name" : "Y[5]",
+					"name" : "Output[2]",
 					"strict" : false
 				},
 				{
-					"name" : "X[6]",
+					"name" : "Output[1]",
 					"strict" : false
 				},
 				{
-					"name" : "X[7]",
+					"name" : "Output[0]",
 					"strict" : false
 				},
 				{
-					"name" : "Y[7]",
-					"strict" : false
-				},
-				{
-					"name" : "X[8]",
-					"strict" : false
-				},
-				{
-					"name" : "X[9]",
-					"strict" : false
-				},
-				{
-					"name" : "Y[9]",
-					"strict" : false
-				},
-				{
-					"name" : "X[10]",
-					"strict" : false
-				},
-				{
-					"name" : "X[11]",
-					"strict" : false
-				},
-				{
-					"name" : "Y[11]",
-					"strict" : false
-				},
-				{
-					"name" : "Cin",
+					"name" : "Z[12]",
 					"strict" : false
 				},
 				{
@@ -96,7 +68,43 @@
 					"strict" : false
 				},
 				{
+					"name" : "Add/sub",
+					"strict" : false
+				},
+				{
+					"name" : "X[11]",
+					"strict" : false
+				},
+				{
+					"name" : "Y[11]",
+					"strict" : false
+				},
+				{
+					"name" : "Z[11]",
+					"strict" : false
+				},
+				{
 					"name" : "Y[10]",
+					"strict" : false
+				},
+				{
+					"name" : "X[10]",
+					"strict" : false
+				},
+				{
+					"name" : "Z[10]",
+					"strict" : false
+				},
+				{
+					"name" : "Y[9]",
+					"strict" : false
+				},
+				{
+					"name" : "X[9]",
+					"strict" : false
+				},
+				{
+					"name" : "Z[9]",
 					"strict" : false
 				},
 				{
@@ -104,7 +112,47 @@
 					"strict" : false
 				},
 				{
+					"name" : "X[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Z[8]",
+					"strict" : false
+				},
+				{
+					"name" : "Y[7]",
+					"strict" : false
+				},
+				{
+					"name" : "X[7]",
+					"strict" : false
+				},
+				{
+					"name" : "Z[7]",
+					"strict" : false
+				},
+				{
 					"name" : "Y[6]",
+					"strict" : false
+				},
+				{
+					"name" : "X[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Z[6]",
+					"strict" : false
+				},
+				{
+					"name" : "Y[5]",
+					"strict" : false
+				},
+				{
+					"name" : "X[5]",
+					"strict" : false
+				},
+				{
+					"name" : "Z[5]",
 					"strict" : false
 				},
 				{
@@ -112,7 +160,59 @@
 					"strict" : false
 				},
 				{
+					"name" : "X[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Z[4]",
+					"strict" : false
+				},
+				{
+					"name" : "Y[3]",
+					"strict" : false
+				},
+				{
+					"name" : "X[3]",
+					"strict" : false
+				},
+				{
+					"name" : "Z[3]",
+					"strict" : false
+				},
+				{
 					"name" : "Y[2]",
+					"strict" : false
+				},
+				{
+					"name" : "X[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Z[2]",
+					"strict" : false
+				},
+				{
+					"name" : "Y[1]",
+					"strict" : false
+				},
+				{
+					"name" : "X[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Z[1]",
+					"strict" : false
+				},
+				{
+					"name" : "Y[0]",
+					"strict" : false
+				},
+				{
+					"name" : "X[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Z[0]",
 					"strict" : false
 				}
 			]

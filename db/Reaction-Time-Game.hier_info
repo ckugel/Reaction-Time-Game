@@ -1,48 +1,148 @@
-|15Adder
-Overflow <= inst6.DB_MAX_OUTPUT_PORT_TYPE
-Cin => FA:inst2.Cin
-X[0] => FA:inst15.X
-X[1] => FA:inst14.X
-X[2] => FA:inst13.X
-X[3] => FA:inst12.X
-X[4] => FA:inst11.X
-X[5] => FA:inst10.X
-X[6] => FA:inst9.X
-X[7] => FA:inst8.X
-X[8] => FA:inst7.X
-X[9] => FA:inst5.X
-X[10] => FA:inst4.X
-X[11] => FA:inst3.X
-X[12] => FA:inst2.X
-Y[0] => FA:inst15.Y
-Y[1] => FA:inst14.Y
-Y[2] => FA:inst13.Y
-Y[3] => FA:inst12.Y
-Y[4] => FA:inst11.Y
-Y[5] => FA:inst10.Y
-Y[6] => FA:inst9.Y
-Y[7] => FA:inst8.Y
-Y[8] => FA:inst7.Y
-Y[9] => FA:inst5.Y
-Y[10] => FA:inst4.Y
-Y[11] => FA:inst3.Y
-Y[12] => FA:inst2.Y
-output[12] <= <GND>
-output[11] <= <GND>
-output[10] <= <GND>
-output[9] <= <GND>
-output[8] <= <GND>
-output[7] <= <GND>
-output[6] <= <GND>
-output[5] <= <GND>
-output[4] <= <GND>
-output[3] <= <GND>
-output[2] <= <GND>
-output[1] <= <GND>
-output[0] <= <GND>
+|Shiftdevideby10
+Output[0] <= full_add_subtract13bit:inst50.S[0]
+Output[1] <= full_add_subtract13bit:inst50.S[1]
+Output[2] <= full_add_subtract13bit:inst50.S[2]
+Output[3] <= full_add_subtract13bit:inst50.S[3]
+Output[4] <= full_add_subtract13bit:inst50.S[4]
+Output[5] <= full_add_subtract13bit:inst50.S[5]
+Output[6] <= full_add_subtract13bit:inst50.S[6]
+Output[7] <= full_add_subtract13bit:inst50.S[7]
+Output[8] <= full_add_subtract13bit:inst50.S[8]
+Output[9] <= full_add_subtract13bit:inst50.S[9]
+Output[10] <= full_add_subtract13bit:inst50.S[10]
+Output[11] <= full_add_subtract13bit:inst50.S[11]
+Output[12] <= full_add_subtract13bit:inst50.S[12]
+Add/sub => full_add_subtract13bit:inst.AddSub
+X[0] => full_add_subtract13bit:inst.X[0]
+X[1] => full_add_subtract13bit:inst.X[1]
+X[2] => full_add_subtract13bit:inst.X[2]
+X[3] => full_add_subtract13bit:inst.X[3]
+X[4] => full_add_subtract13bit:inst.X[4]
+X[5] => full_add_subtract13bit:inst.X[5]
+X[6] => full_add_subtract13bit:inst.X[6]
+X[7] => full_add_subtract13bit:inst.X[7]
+X[8] => full_add_subtract13bit:inst.X[8]
+X[9] => full_add_subtract13bit:inst.X[9]
+X[10] => full_add_subtract13bit:inst.X[10]
+X[11] => full_add_subtract13bit:inst.X[11]
+X[12] => full_add_subtract13bit:inst.X[12]
+Y[0] => full_add_subtract13bit:inst.Y[0]
+Y[1] => full_add_subtract13bit:inst.Y[1]
+Y[2] => full_add_subtract13bit:inst.Y[2]
+Y[3] => full_add_subtract13bit:inst.Y[3]
+Y[4] => full_add_subtract13bit:inst.Y[4]
+Y[5] => full_add_subtract13bit:inst.Y[5]
+Y[6] => full_add_subtract13bit:inst.Y[6]
+Y[7] => full_add_subtract13bit:inst.Y[7]
+Y[8] => full_add_subtract13bit:inst.Y[8]
+Y[9] => full_add_subtract13bit:inst.Y[9]
+Y[10] => full_add_subtract13bit:inst.Y[10]
+Y[11] => full_add_subtract13bit:inst.Y[11]
+Y[12] => full_add_subtract13bit:inst.Y[12]
+Z[0] => full_add_subtract13bit:inst50.Y[0]
+Z[1] => full_add_subtract13bit:inst50.Y[1]
+Z[2] => full_add_subtract13bit:inst50.Y[2]
+Z[3] => full_add_subtract13bit:inst50.Y[3]
+Z[4] => full_add_subtract13bit:inst50.Y[4]
+Z[5] => full_add_subtract13bit:inst50.Y[5]
+Z[6] => full_add_subtract13bit:inst50.Y[6]
+Z[7] => full_add_subtract13bit:inst50.Y[7]
+Z[8] => full_add_subtract13bit:inst50.Y[8]
+Z[9] => full_add_subtract13bit:inst50.Y[9]
+Z[10] => full_add_subtract13bit:inst50.Y[10]
+Z[11] => full_add_subtract13bit:inst50.Y[11]
+Z[12] => full_add_subtract13bit:inst50.Y[12]
 
 
-|15Adder|FA:inst15
+|Shiftdevideby10|full_add_subtract13bit:inst50
+X[0] => X[0].IN1
+X[1] => X[1].IN1
+X[2] => X[2].IN1
+X[3] => X[3].IN1
+X[4] => X[4].IN1
+X[5] => X[5].IN1
+X[6] => X[6].IN1
+X[7] => X[7].IN1
+X[8] => X[8].IN1
+X[9] => X[9].IN1
+X[10] => X[10].IN1
+X[11] => X[11].IN1
+X[12] => X[12].IN1
+Y[0] => In.IN0
+Y[1] => In.IN0
+Y[2] => In.IN0
+Y[3] => In.IN0
+Y[4] => In.IN0
+Y[5] => In.IN0
+Y[6] => In.IN0
+Y[7] => In.IN0
+Y[8] => In.IN0
+Y[9] => In.IN0
+Y[10] => In.IN0
+Y[11] => In.IN0
+Y[12] => In.IN0
+AddSub => AddSub.IN1
+Overflow <= Adder13:FA.port3
+S[0] <= Adder13:FA.port4
+S[1] <= Adder13:FA.port4
+S[2] <= Adder13:FA.port4
+S[3] <= Adder13:FA.port4
+S[4] <= Adder13:FA.port4
+S[5] <= Adder13:FA.port4
+S[6] <= Adder13:FA.port4
+S[7] <= Adder13:FA.port4
+S[8] <= Adder13:FA.port4
+S[9] <= Adder13:FA.port4
+S[10] <= Adder13:FA.port4
+S[11] <= Adder13:FA.port4
+S[12] <= Adder13:FA.port4
+
+
+|Shiftdevideby10|full_add_subtract13bit:inst50|Adder13:FA
+Cin => Cin.IN1
+X[0] => X[0].IN1
+X[1] => X[1].IN1
+X[2] => X[2].IN1
+X[3] => X[3].IN1
+X[4] => X[4].IN1
+X[5] => X[5].IN1
+X[6] => X[6].IN1
+X[7] => X[7].IN1
+X[8] => X[8].IN1
+X[9] => X[9].IN1
+X[10] => X[10].IN1
+X[11] => X[11].IN1
+X[12] => X[12].IN1
+Y[0] => Y[0].IN1
+Y[1] => Y[1].IN1
+Y[2] => Y[2].IN1
+Y[3] => Y[3].IN1
+Y[4] => Y[4].IN1
+Y[5] => Y[5].IN1
+Y[6] => Y[6].IN1
+Y[7] => Y[7].IN1
+Y[8] => Y[8].IN1
+Y[9] => Y[9].IN1
+Y[10] => Y[10].IN1
+Y[11] => Y[11].IN1
+Y[12] => Y[12].IN1
+Overflow <= Overflow.DB_MAX_OUTPUT_PORT_TYPE
+S[0] <= FA:b2v_inst15.S
+S[1] <= FA:b2v_inst14.S
+S[2] <= FA:b2v_inst13.S
+S[3] <= FA:b2v_inst12.S
+S[4] <= FA:b2v_inst11.S
+S[5] <= FA:b2v_inst10.S
+S[6] <= FA:b2v_inst9.S
+S[7] <= FA:b2v_inst8.S
+S[8] <= FA:b2v_inst7.S
+S[9] <= FA:b2v_inst5.S
+S[10] <= FA:b2v_inst4.S
+S[11] <= FA:b2v_inst3.S
+S[12] <= FA:b2v_inst2.S
+
+
+|Shiftdevideby10|full_add_subtract13bit:inst50|Adder13:FA|FA:b2v_inst10
 Cin => S.IN1
 Cin => S.IN1
 Cin => Cout.IN0
@@ -63,7 +163,7 @@ S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|15Adder|FA:inst14
+|Shiftdevideby10|full_add_subtract13bit:inst50|Adder13:FA|FA:b2v_inst11
 Cin => S.IN1
 Cin => S.IN1
 Cin => Cout.IN0
@@ -84,7 +184,7 @@ S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|15Adder|FA:inst13
+|Shiftdevideby10|full_add_subtract13bit:inst50|Adder13:FA|FA:b2v_inst12
 Cin => S.IN1
 Cin => S.IN1
 Cin => Cout.IN0
@@ -105,7 +205,7 @@ S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|15Adder|FA:inst12
+|Shiftdevideby10|full_add_subtract13bit:inst50|Adder13:FA|FA:b2v_inst13
 Cin => S.IN1
 Cin => S.IN1
 Cin => Cout.IN0
@@ -126,7 +226,7 @@ S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|15Adder|FA:inst11
+|Shiftdevideby10|full_add_subtract13bit:inst50|Adder13:FA|FA:b2v_inst14
 Cin => S.IN1
 Cin => S.IN1
 Cin => Cout.IN0
@@ -147,7 +247,7 @@ S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|15Adder|FA:inst10
+|Shiftdevideby10|full_add_subtract13bit:inst50|Adder13:FA|FA:b2v_inst15
 Cin => S.IN1
 Cin => S.IN1
 Cin => Cout.IN0
@@ -168,7 +268,7 @@ S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|15Adder|FA:inst9
+|Shiftdevideby10|full_add_subtract13bit:inst50|Adder13:FA|FA:b2v_inst2
 Cin => S.IN1
 Cin => S.IN1
 Cin => Cout.IN0
@@ -189,7 +289,7 @@ S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|15Adder|FA:inst8
+|Shiftdevideby10|full_add_subtract13bit:inst50|Adder13:FA|FA:b2v_inst3
 Cin => S.IN1
 Cin => S.IN1
 Cin => Cout.IN0
@@ -210,7 +310,7 @@ S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|15Adder|FA:inst7
+|Shiftdevideby10|full_add_subtract13bit:inst50|Adder13:FA|FA:b2v_inst4
 Cin => S.IN1
 Cin => S.IN1
 Cin => Cout.IN0
@@ -231,7 +331,7 @@ S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|15Adder|FA:inst5
+|Shiftdevideby10|full_add_subtract13bit:inst50|Adder13:FA|FA:b2v_inst5
 Cin => S.IN1
 Cin => S.IN1
 Cin => Cout.IN0
@@ -252,7 +352,7 @@ S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|15Adder|FA:inst4
+|Shiftdevideby10|full_add_subtract13bit:inst50|Adder13:FA|FA:b2v_inst7
 Cin => S.IN1
 Cin => S.IN1
 Cin => Cout.IN0
@@ -273,7 +373,7 @@ S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|15Adder|FA:inst3
+|Shiftdevideby10|full_add_subtract13bit:inst50|Adder13:FA|FA:b2v_inst8
 Cin => S.IN1
 Cin => S.IN1
 Cin => Cout.IN0
@@ -294,7 +394,368 @@ S <= S.DB_MAX_OUTPUT_PORT_TYPE
 Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|15Adder|FA:inst2
+|Shiftdevideby10|full_add_subtract13bit:inst50|Adder13:FA|FA:b2v_inst9
+Cin => S.IN1
+Cin => S.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+Cin => S.IN1
+Cin => S.IN1
+X => S.IN0
+X => S.IN0
+X => Cout.IN1
+X => S.IN0
+X => S.IN0
+Y => S.IN1
+Y => S.IN1
+Y => Cout.IN1
+Y => S.IN1
+Y => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Shiftdevideby10|full_add_subtract13bit:inst
+X[0] => X[0].IN1
+X[1] => X[1].IN1
+X[2] => X[2].IN1
+X[3] => X[3].IN1
+X[4] => X[4].IN1
+X[5] => X[5].IN1
+X[6] => X[6].IN1
+X[7] => X[7].IN1
+X[8] => X[8].IN1
+X[9] => X[9].IN1
+X[10] => X[10].IN1
+X[11] => X[11].IN1
+X[12] => X[12].IN1
+Y[0] => In.IN0
+Y[1] => In.IN0
+Y[2] => In.IN0
+Y[3] => In.IN0
+Y[4] => In.IN0
+Y[5] => In.IN0
+Y[6] => In.IN0
+Y[7] => In.IN0
+Y[8] => In.IN0
+Y[9] => In.IN0
+Y[10] => In.IN0
+Y[11] => In.IN0
+Y[12] => In.IN0
+AddSub => AddSub.IN1
+Overflow <= Adder13:FA.port3
+S[0] <= Adder13:FA.port4
+S[1] <= Adder13:FA.port4
+S[2] <= Adder13:FA.port4
+S[3] <= Adder13:FA.port4
+S[4] <= Adder13:FA.port4
+S[5] <= Adder13:FA.port4
+S[6] <= Adder13:FA.port4
+S[7] <= Adder13:FA.port4
+S[8] <= Adder13:FA.port4
+S[9] <= Adder13:FA.port4
+S[10] <= Adder13:FA.port4
+S[11] <= Adder13:FA.port4
+S[12] <= Adder13:FA.port4
+
+
+|Shiftdevideby10|full_add_subtract13bit:inst|Adder13:FA
+Cin => Cin.IN1
+X[0] => X[0].IN1
+X[1] => X[1].IN1
+X[2] => X[2].IN1
+X[3] => X[3].IN1
+X[4] => X[4].IN1
+X[5] => X[5].IN1
+X[6] => X[6].IN1
+X[7] => X[7].IN1
+X[8] => X[8].IN1
+X[9] => X[9].IN1
+X[10] => X[10].IN1
+X[11] => X[11].IN1
+X[12] => X[12].IN1
+Y[0] => Y[0].IN1
+Y[1] => Y[1].IN1
+Y[2] => Y[2].IN1
+Y[3] => Y[3].IN1
+Y[4] => Y[4].IN1
+Y[5] => Y[5].IN1
+Y[6] => Y[6].IN1
+Y[7] => Y[7].IN1
+Y[8] => Y[8].IN1
+Y[9] => Y[9].IN1
+Y[10] => Y[10].IN1
+Y[11] => Y[11].IN1
+Y[12] => Y[12].IN1
+Overflow <= Overflow.DB_MAX_OUTPUT_PORT_TYPE
+S[0] <= FA:b2v_inst15.S
+S[1] <= FA:b2v_inst14.S
+S[2] <= FA:b2v_inst13.S
+S[3] <= FA:b2v_inst12.S
+S[4] <= FA:b2v_inst11.S
+S[5] <= FA:b2v_inst10.S
+S[6] <= FA:b2v_inst9.S
+S[7] <= FA:b2v_inst8.S
+S[8] <= FA:b2v_inst7.S
+S[9] <= FA:b2v_inst5.S
+S[10] <= FA:b2v_inst4.S
+S[11] <= FA:b2v_inst3.S
+S[12] <= FA:b2v_inst2.S
+
+
+|Shiftdevideby10|full_add_subtract13bit:inst|Adder13:FA|FA:b2v_inst10
+Cin => S.IN1
+Cin => S.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+Cin => S.IN1
+Cin => S.IN1
+X => S.IN0
+X => S.IN0
+X => Cout.IN1
+X => S.IN0
+X => S.IN0
+Y => S.IN1
+Y => S.IN1
+Y => Cout.IN1
+Y => S.IN1
+Y => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Shiftdevideby10|full_add_subtract13bit:inst|Adder13:FA|FA:b2v_inst11
+Cin => S.IN1
+Cin => S.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+Cin => S.IN1
+Cin => S.IN1
+X => S.IN0
+X => S.IN0
+X => Cout.IN1
+X => S.IN0
+X => S.IN0
+Y => S.IN1
+Y => S.IN1
+Y => Cout.IN1
+Y => S.IN1
+Y => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Shiftdevideby10|full_add_subtract13bit:inst|Adder13:FA|FA:b2v_inst12
+Cin => S.IN1
+Cin => S.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+Cin => S.IN1
+Cin => S.IN1
+X => S.IN0
+X => S.IN0
+X => Cout.IN1
+X => S.IN0
+X => S.IN0
+Y => S.IN1
+Y => S.IN1
+Y => Cout.IN1
+Y => S.IN1
+Y => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Shiftdevideby10|full_add_subtract13bit:inst|Adder13:FA|FA:b2v_inst13
+Cin => S.IN1
+Cin => S.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+Cin => S.IN1
+Cin => S.IN1
+X => S.IN0
+X => S.IN0
+X => Cout.IN1
+X => S.IN0
+X => S.IN0
+Y => S.IN1
+Y => S.IN1
+Y => Cout.IN1
+Y => S.IN1
+Y => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Shiftdevideby10|full_add_subtract13bit:inst|Adder13:FA|FA:b2v_inst14
+Cin => S.IN1
+Cin => S.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+Cin => S.IN1
+Cin => S.IN1
+X => S.IN0
+X => S.IN0
+X => Cout.IN1
+X => S.IN0
+X => S.IN0
+Y => S.IN1
+Y => S.IN1
+Y => Cout.IN1
+Y => S.IN1
+Y => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Shiftdevideby10|full_add_subtract13bit:inst|Adder13:FA|FA:b2v_inst15
+Cin => S.IN1
+Cin => S.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+Cin => S.IN1
+Cin => S.IN1
+X => S.IN0
+X => S.IN0
+X => Cout.IN1
+X => S.IN0
+X => S.IN0
+Y => S.IN1
+Y => S.IN1
+Y => Cout.IN1
+Y => S.IN1
+Y => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Shiftdevideby10|full_add_subtract13bit:inst|Adder13:FA|FA:b2v_inst2
+Cin => S.IN1
+Cin => S.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+Cin => S.IN1
+Cin => S.IN1
+X => S.IN0
+X => S.IN0
+X => Cout.IN1
+X => S.IN0
+X => S.IN0
+Y => S.IN1
+Y => S.IN1
+Y => Cout.IN1
+Y => S.IN1
+Y => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Shiftdevideby10|full_add_subtract13bit:inst|Adder13:FA|FA:b2v_inst3
+Cin => S.IN1
+Cin => S.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+Cin => S.IN1
+Cin => S.IN1
+X => S.IN0
+X => S.IN0
+X => Cout.IN1
+X => S.IN0
+X => S.IN0
+Y => S.IN1
+Y => S.IN1
+Y => Cout.IN1
+Y => S.IN1
+Y => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Shiftdevideby10|full_add_subtract13bit:inst|Adder13:FA|FA:b2v_inst4
+Cin => S.IN1
+Cin => S.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+Cin => S.IN1
+Cin => S.IN1
+X => S.IN0
+X => S.IN0
+X => Cout.IN1
+X => S.IN0
+X => S.IN0
+Y => S.IN1
+Y => S.IN1
+Y => Cout.IN1
+Y => S.IN1
+Y => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Shiftdevideby10|full_add_subtract13bit:inst|Adder13:FA|FA:b2v_inst5
+Cin => S.IN1
+Cin => S.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+Cin => S.IN1
+Cin => S.IN1
+X => S.IN0
+X => S.IN0
+X => Cout.IN1
+X => S.IN0
+X => S.IN0
+Y => S.IN1
+Y => S.IN1
+Y => Cout.IN1
+Y => S.IN1
+Y => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Shiftdevideby10|full_add_subtract13bit:inst|Adder13:FA|FA:b2v_inst7
+Cin => S.IN1
+Cin => S.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+Cin => S.IN1
+Cin => S.IN1
+X => S.IN0
+X => S.IN0
+X => Cout.IN1
+X => S.IN0
+X => S.IN0
+Y => S.IN1
+Y => S.IN1
+Y => Cout.IN1
+Y => S.IN1
+Y => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Shiftdevideby10|full_add_subtract13bit:inst|Adder13:FA|FA:b2v_inst8
+Cin => S.IN1
+Cin => S.IN1
+Cin => Cout.IN0
+Cin => Cout.IN0
+Cin => S.IN1
+Cin => S.IN1
+X => S.IN0
+X => S.IN0
+X => Cout.IN1
+X => S.IN0
+X => S.IN0
+Y => S.IN1
+Y => S.IN1
+Y => Cout.IN1
+Y => S.IN1
+Y => S.IN1
+S <= S.DB_MAX_OUTPUT_PORT_TYPE
+Cout <= Cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|Shiftdevideby10|full_add_subtract13bit:inst|Adder13:FA|FA:b2v_inst9
 Cin => S.IN1
 Cin => S.IN1
 Cin => Cout.IN0
