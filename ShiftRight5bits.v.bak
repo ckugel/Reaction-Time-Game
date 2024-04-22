@@ -1,4 +1,4 @@
-module ShiftRight5bits(X, S);
+module (X, S);
   input [12:0] X;
   output [12:0] S;
 
