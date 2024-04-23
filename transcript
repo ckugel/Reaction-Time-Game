@@ -1,13 +1,47 @@
-# Compile of upCounter.v was successful.
-vsim -gui work.upCounter
-# vsim -gui work.upCounter 
-# Start time: 15:10:22 on Apr 11,2024
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading work.upCounter(fast)
+vsim -gui work.Shiftdevideby10
+# vsim -gui work.Shiftdevideby10 
+# Start time: 15:20:41 on Apr 23,2024
+# ** Note: (vsim-8009) Loading existing optimized design _opt2
+# Loading work.Shiftdevideby10(fast)
 add wave -position insertpoint  \
-sim:/upCounter/Enable \
-sim:/upCounter/Clock \
-sim:/upCounter/Q
-do counter.do
-# End time: 15:46:54 on Apr 11,2024, Elapsed time: 0:36:32
-# Errors: 0, Warnings: 2
+sim:/Shiftdevideby10/X \
+sim:/Shiftdevideby10/Out
+do devide10-1.do
+# ** Error: invalid command name "//"
+# Error in macro ./devide10-1.do line 1
+# invalid command name "//"
+#     while executing
+# "// Initial reset of X to ensure a clean start"
+do devide10-1.do
+# ** Error: unknown or ambiguous subcommand "clear": must be activecursor, addcursor, clipboard, collapse, configcursor, create, cursor, cursorconfig, cursortime, deletecursor, edit, editwrite, expand, export, exportvcd, group, guiObjGetUPFInfo, guiObjHasUPFInfo, import, interrupt, map, modify, overlay, pah, positioncursor, refresh, seecursor, seetime, sort, ungroup, write, zoom, zoomcursor, zoomfull, zoomin, zoomlast, zoomout, or zoomrange
+# Error in macro ./devide10-1.do line 2
+# unknown or ambiguous subcommand "clear": must be activecursor, addcursor, clipboard, collapse, configcursor, create, cursor, cursorconfig, cursortime, deletecursor, edit, editwrite, expand, export, exportvcd, group, guiObjGetUPFInfo, guiObjHasUPFInfo, import, interrupt, map, modify, overlay, pah, positioncursor, refresh, seecursor, seetime, sort, ungroup, write, zoom, zoomcursor, zoomfull, zoomin, zoomlast, zoomout, or zoomrange
+#     while executing
+# "wave clear"
+do devide10-1.do
+# ** Error: unknown or ambiguous subcommand "clear": must be activecursor, addcursor, clipboard, collapse, configcursor, create, cursor, cursorconfig, cursortime, deletecursor, edit, editwrite, expand, export, exportvcd, group, guiObjGetUPFInfo, guiObjHasUPFInfo, import, interrupt, map, modify, overlay, pah, positioncursor, refresh, seecursor, seetime, sort, ungroup, write, zoom, zoomcursor, zoomfull, zoomin, zoomlast, zoomout, or zoomrange
+# Error in macro ./devide10-1.do line 2
+# unknown or ambiguous subcommand "clear": must be activecursor, addcursor, clipboard, collapse, configcursor, create, cursor, cursorconfig, cursortime, deletecursor, edit, editwrite, expand, export, exportvcd, group, guiObjGetUPFInfo, guiObjHasUPFInfo, import, interrupt, map, modify, overlay, pah, positioncursor, refresh, seecursor, seetime, sort, ungroup, write, zoom, zoomcursor, zoomfull, zoomin, zoomlast, zoomout, or zoomrange
+#     while executing
+# "wave clear"
+do devide10-1.do
+# ** Error: invalid command name "clear"
+# Error in macro ./devide10-1.do line 2
+# invalid command name "clear"
+#     while executing
+# "clear wave"
+do devide10-1.do
+# ** UI-Msg (Warning): (vish-4014) No objects found matching '/full_add_subtract13bit/X'.
+# Error in macro ./devide10-1.do line 4
+# ** UI-Msg (Warning): (vish-4014) No objects found matching '/full_add_subtract13bit/X'.
+#     while executing
+# "add wave -position end /full_add_subtract13bit/X"
+do devide10-1.do
+# ** Error: invalid command name "//"
+# Error in macro ./devide10-1.do line 1
+# invalid command name "//"
+#     while executing
+# "// Initial reset of X to ensure a clean start"
+do devide10-1.do
+# End time: 15:25:38 on Apr 23,2024, Elapsed time: 0:04:57
+# Errors: 5, Warnings: 1

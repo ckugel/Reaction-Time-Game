@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Tue Apr 23 02:05:19 2024
+Analysis & Synthesis Status : Successful - Tue Apr 23 13:49:54 2024
 Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Standard Edition
 Revision Name : Reaction-Time-Game
-Top-level Entity Name : delayCounter
+Top-level Entity Name : Shiftdevideby10
 Family : Cyclone IV E
-Total logic elements : 54
-    Total combinational functions : 54
-    Dedicated logic registers : 24
-Total registers : 24
-Total pins : 24
+Total logic elements : 25
+    Total combinational functions : 25
+    Dedicated logic registers : 0
+Total registers : 0
+Total pins : 26
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

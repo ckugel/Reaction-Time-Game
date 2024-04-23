@@ -1,0 +1,49 @@
+force X[12] 0 0
+force X[11] 0 0
+force X[10] 0 0
+force X[9] 0 0
+force X[8] 0 0
+force X[7] 0 0
+force X[6] 0 0
+force X[5] 1 0
+force X[4] 0 0
+force X[3] 1 0
+force X[2] 0 0
+force X[1] 0 0
+force X[0] 0 0
+
+run 100
+
+force X[12] 0 100
+force X[11] 0 100
+force X[10] 0 100
+force X[9] 0 100
+force X[8] 0 100
+force X[7] 0 100
+force X[6] 1 100
+force X[5] 0 100
+force X[4] 1 100
+force X[3] 0 100
+force X[2] 0 100
+force X[1] 0 100
+force X[0] 0 100
+
+run 200
+
+force X[12] 0 200
+force X[11] 1 200
+force X[10] 0 200
+force X[9] 0 200
+force X[8] 1 200
+force X[7] 0 200
+force X[6] 0 200
+force X[5] 0 200
+force X[4] 0 200
+force X[3] 1 200
+force X[2] 0 200
+force X[1] 1 200
+force X[0] 1 200
+
+run 400
+
+
