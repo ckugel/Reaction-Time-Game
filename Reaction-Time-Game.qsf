@@ -53,15 +53,7 @@ set_global_assignment -name BDF_FILE divideByFiftyThousandCounter.bdf
 
 # Pin & Location Assignments
 # ==========================
-set_location_assignment PIN_Y2 -to Clock
 set_location_assignment PIN_AB28 -to Enable
-set_location_assignment PIN_M24 -to A
-set_location_assignment PIN_Y22 -to B
-set_location_assignment PIN_W21 -to C
-set_location_assignment PIN_W22 -to D
-set_location_assignment PIN_W25 -to E
-set_location_assignment PIN_U23 -to F
-set_location_assignment PIN_U24 -to G
 
 # Classic Timing Assignments
 # ==========================
@@ -72,7 +64,7 @@ set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
 # Analysis & Synthesis Assignments
 # ================================
 set_global_assignment -name FAMILY "Cyclone IV E"
-set_global_assignment -name TOP_LEVEL_ENTITY Shiftdevideby10
+set_global_assignment -name TOP_LEVEL_ENTITY delayCounter
 
 # Fitter Assignments
 # ==================
@@ -94,6 +86,30 @@ set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 # end ENTITY(divideByFiftyThousandCounter)
 # ----------------------------------------
 set_global_assignment -name BDF_FILE Shiftdevideby10.bdf
+set_global_assignment -name BDF_FILE delayCounter.bdf
+set_location_assignment PIN_V21 -to O0
+set_location_assignment PIN_U24 -to O36
+set_location_assignment PIN_U23 -to O35
+set_location_assignment PIN_W25 -to O34
+set_location_assignment PIN_W22 -to O33
+set_location_assignment PIN_W21 -to O32
+set_location_assignment PIN_Y22 -to O31
+set_location_assignment PIN_M24 -to O30
+set_location_assignment PIN_W28 -to O26
+set_location_assignment PIN_W27 -to O25
+set_location_assignment PIN_Y26 -to O24
+set_location_assignment PIN_W26 -to O23
+set_location_assignment PIN_Y25 -to O22
+set_location_assignment PIN_AA26 -to O21
+set_location_assignment PIN_AA25 -to O20
+set_location_assignment PIN_Y19 -to O6
+set_location_assignment PIN_AF23 -to O5
+set_location_assignment PIN_AD24 -to O4
+set_location_assignment PIN_AB20 -to O2
+set_location_assignment PIN_AA21 -to O3
+set_location_assignment PIN_U21 -to O1
+set_location_assignment PIN_Y2 -to Clock3
+set_location_assignment PIN_M21 -to CLRN
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top

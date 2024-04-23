@@ -45,6 +45,13 @@ https://fpgasoftware.intel.com/eula.
 		(text "ClockOut" (rect 70 27 123 46)(font "Intel Clear" (font_size 8)))
 		(line (pt 144 32)(pt 128 32))
 	)
+	(port
+		(pt 144 48)
+		(output)
+		(text "X[15..0]" (rect 0 0 47 19)(font "Intel Clear" (font_size 8)))
+		(text "X[15..0]" (rect 76 43 123 62)(font "Intel Clear" (font_size 8)))
+		(line (pt 144 48)(pt 128 48)(line_width 3))
+	)
 	(drawing
 		(rectangle (rect 16 16 128 80))
 	)
