@@ -1,5 +1,5 @@
 Flow report for Reaction-Time-Game
-Tue Apr 23 13:52:18 2024
+Wed Apr 24 01:27:50 2024
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Standard Edition
 
 
@@ -41,18 +41,18 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------+
 ; Flow Summary                                                                            ;
 +------------------------------------+----------------------------------------------------+
-; Flow Status                        ; Successful - Tue Apr 23 13:50:32 2024              ;
+; Flow Status                        ; Successful - Wed Apr 24 01:27:44 2024              ;
 ; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Standard Edition ;
 ; Revision Name                      ; Reaction-Time-Game                                 ;
-; Top-level Entity Name              ; Shiftdevideby10                                    ;
+; Top-level Entity Name              ; counter4                                           ;
 ; Family                             ; Cyclone IV E                                       ;
 ; Device                             ; EP4CE115F29C7                                      ;
 ; Timing Models                      ; Final                                              ;
-; Total logic elements               ; 25 / 114,480 ( < 1 % )                             ;
-;     Total combinational functions  ; 25 / 114,480 ( < 1 % )                             ;
-;     Dedicated logic registers      ; 0 / 114,480 ( 0 % )                                ;
-; Total registers                    ; 0                                                  ;
-; Total pins                         ; 26 / 529 ( 5 % )                                   ;
+; Total logic elements               ; 41 / 114,480 ( < 1 % )                             ;
+;     Total combinational functions  ; 38 / 114,480 ( < 1 % )                             ;
+;     Dedicated logic registers      ; 27 / 114,480 ( < 1 % )                             ;
+; Total registers                    ; 27                                                 ;
+; Total pins                         ; 10 / 529 ( 2 % )                                   ;
 ; Total virtual pins                 ; 0                                                  ;
 ; Total memory bits                  ; 0 / 3,981,312 ( 0 % )                              ;
 ; Embedded Multiplier 9-bit elements ; 0 / 532 ( 0 % )                                    ;
@@ -65,27 +65,27 @@ https://fpgasoftware.intel.com/eula.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 04/23/2024 13:49:45 ;
+; Start date & time ; 04/24/2024 01:27:20 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Reaction-Time-Game  ;
 +-------------------+---------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------+
-; Flow Non-Default Global Settings                                                                                                 ;
-+-------------------------------------+----------------------------------------+--------------------+-----------------+------------+
-; Assignment Name                     ; Value                                  ; Default Value      ; Entity Name     ; Section Id ;
-+-------------------------------------+----------------------------------------+--------------------+-----------------+------------+
-; COMPILER_SIGNATURE_ID               ; 194042950815797.171389818415212        ; --                 ; --              ; --         ;
-; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --                 ; --              ; --         ;
-; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --                 ; --              ; --         ;
-; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --                 ; --              ; --         ;
-; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --                 ; Shiftdevideby10 ; Top        ;
-; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --                 ; Shiftdevideby10 ; Top        ;
-; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --                 ; Shiftdevideby10 ; Top        ;
-; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --                 ; --              ; --         ;
-; TOP_LEVEL_ENTITY                    ; Shiftdevideby10                        ; Reaction-Time-Game ; --              ; --         ;
-+-------------------------------------+----------------------------------------+--------------------+-----------------+------------+
++------------------------------------------------------------------------------------------------------------------------------+
+; Flow Non-Default Global Settings                                                                                             ;
++-------------------------------------+----------------------------------------+--------------------+-------------+------------+
+; Assignment Name                     ; Value                                  ; Default Value      ; Entity Name ; Section Id ;
++-------------------------------------+----------------------------------------+--------------------+-------------+------------+
+; COMPILER_SIGNATURE_ID               ; 128122668753302.171394004017192        ; --                 ; --          ; --         ;
+; MAX_CORE_JUNCTION_TEMP              ; 85                                     ; --                 ; --          ; --         ;
+; MIN_CORE_JUNCTION_TEMP              ; 0                                      ; --                 ; --          ; --         ;
+; NOMINAL_CORE_SUPPLY_VOLTAGE         ; 1.2V                                   ; --                 ; --          ; --         ;
+; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --                 ; counter4    ; Top        ;
+; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --                 ; counter4    ; Top        ;
+; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --                 ; counter4    ; Top        ;
+; PROJECT_OUTPUT_DIRECTORY            ; output_files                           ; --                 ; --          ; --         ;
+; TOP_LEVEL_ENTITY                    ; counter4                               ; Reaction-Time-Game ; --          ; --         ;
++-------------------------------------+----------------------------------------+--------------------+-------------+------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -93,11 +93,11 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:09     ; 1.0                     ; 4795 MB             ; 00:00:07                           ;
-; Fitter               ; 00:00:24     ; 1.0                     ; 6072 MB             ; 00:00:07                           ;
-; Assembler            ; 00:00:02     ; 1.0                     ; 4730 MB             ; 00:00:02                           ;
-; Timing Analyzer      ; 00:01:45     ; 1.0                     ; 4897 MB             ; 00:00:01                           ;
-; Total                ; 00:02:20     ; --                      ; --                  ; 00:00:17                           ;
+; Analysis & Synthesis ; 00:00:08     ; 1.0                     ; 4840 MB             ; 00:00:04                           ;
+; Fitter               ; 00:00:10     ; 1.0                     ; 6362 MB             ; 00:00:04                           ;
+; Assembler            ; 00:00:02     ; 1.0                     ; 4728 MB             ; 00:00:01                           ;
+; Timing Analyzer      ; 00:00:03     ; 1.0                     ; 4929 MB             ; 00:00:01                           ;
+; Total                ; 00:00:23     ; --                      ; --                  ; 00:00:10                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -106,10 +106,10 @@ https://fpgasoftware.intel.com/eula.
 +----------------------+------------------+------------+------------+----------------+
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
-; Analysis & Synthesis ; CO2042-08        ; Windows 10 ; 10.0       ; x86_64         ;
-; Fitter               ; CO2042-08        ; Windows 10 ; 10.0       ; x86_64         ;
-; Assembler            ; CO2042-08        ; Windows 10 ; 10.0       ; x86_64         ;
-; Timing Analyzer      ; CO2042-08        ; Windows 10 ; 10.0       ; x86_64         ;
+; Analysis & Synthesis ; CO1313-31        ; Windows 10 ; 10.0       ; x86_64         ;
+; Fitter               ; CO1313-31        ; Windows 10 ; 10.0       ; x86_64         ;
+; Assembler            ; CO1313-31        ; Windows 10 ; 10.0       ; x86_64         ;
+; Timing Analyzer      ; CO1313-31        ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 

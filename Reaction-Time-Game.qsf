@@ -64,7 +64,7 @@ set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
 # Analysis & Synthesis Assignments
 # ================================
 set_global_assignment -name FAMILY "Cyclone IV E"
-set_global_assignment -name TOP_LEVEL_ENTITY Shiftdevideby10
+set_global_assignment -name TOP_LEVEL_ENTITY counter4
 
 # Fitter Assignments
 # ==================
@@ -108,14 +108,10 @@ set_location_assignment PIN_AD24 -to O4
 set_location_assignment PIN_AB20 -to O2
 set_location_assignment PIN_AA21 -to O3
 set_location_assignment PIN_U21 -to O1
-set_location_assignment PIN_Y2 -to Clock3
 set_location_assignment PIN_M21 -to CLRN
 set_global_assignment -name VERILOG_FILE Rightshift3.v
 set_global_assignment -name VERILOG_FILE Rightshift4.v
 set_global_assignment -name VERILOG_FILE Rightshift5.v
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_location_assignment PIN_AB23 -to X[0]
 set_location_assignment PIN_AB24 -to X[1]
 set_location_assignment PIN_AC24 -to X[2]
@@ -142,4 +138,19 @@ set_location_assignment PIN_F21 -to Output[9]
 set_location_assignment PIN_E19 -to Output[10]
 set_location_assignment PIN_F19 -to Output[11]
 set_location_assignment PIN_G19 -to Output[12]
+set_global_assignment -name BDF_FILE counter4.bdf
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_location_assignment PIN_Y2 -to Clock
+set_location_assignment PIN_Y23 -to W
+set_location_assignment PIN_AA22 -to PRN
+set_location_assignment PIN_H22 -to Out[6]
+set_location_assignment PIN_J22 -to Out[5]
+set_location_assignment PIN_L25 -to Out[4]
+set_location_assignment PIN_L26 -to Out[3]
+set_location_assignment PIN_E17 -to Out[2]
+set_location_assignment PIN_F22 -to Out[1]
+set_location_assignment PIN_G18 -to Out[0]
+set_location_assignment PIN_Y24 -to Clear
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

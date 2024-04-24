@@ -1,15 +1,15 @@
-Fitter Status : Successful - Tue Apr 23 13:50:19 2024
+Fitter Status : Successful - Wed Apr 24 01:27:39 2024
 Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Standard Edition
 Revision Name : Reaction-Time-Game
-Top-level Entity Name : Shiftdevideby10
+Top-level Entity Name : counter4
 Family : Cyclone IV E
 Device : EP4CE115F29C7
 Timing Models : Final
-Total logic elements : 25 / 114,480 ( < 1 % )
-    Total combinational functions : 25 / 114,480 ( < 1 % )
-    Dedicated logic registers : 0 / 114,480 ( 0 % )
-Total registers : 0
-Total pins : 26 / 529 ( 5 % )
+Total logic elements : 41 / 114,480 ( < 1 % )
+    Total combinational functions : 38 / 114,480 ( < 1 % )
+    Dedicated logic registers : 27 / 114,480 ( < 1 % )
+Total registers : 27
+Total pins : 10 / 529 ( 2 % )
 Total virtual pins : 0
 Total memory bits : 0 / 3,981,312 ( 0 % )
 Embedded Multiplier 9-bit elements : 0 / 532 ( 0 % )
