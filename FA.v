@@ -1,7 +1,7 @@
 module FA(Cin,X,Y,S, Cout);
 input Cin,X,Y;
 output Cout,S;
-assign S = ((~X & ~Y & Cin) | (~X & Y & ~Cin) | (X & ~Y & ~Cin) | (X & Y & Cin));
+assign S = Cin ^ X ^ Y;
 assign Cout = (X & Y) | (Cin & Y ) | (Cin & X);
 
 endmodule
