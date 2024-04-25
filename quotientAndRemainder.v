@@ -8,9 +8,10 @@ module quotientAndRemainder(Input, Quotient, Remainder);
   output [3:0] Remainder;
 
   wire [12:0] inbetween;
+  wire [12:0] Quotient;
 
   divideByTen db10 (.Input(Input), .Quotient(Quotient));
   multiplyByTen mb10 (.X(Quotient), .Product(inbetween));
-  full_add_subtract13bit FA13 (.X(inbetween), .Y(13`b0000000000001), .AddSub(1'b1), .S(Remainder));
+  full_add_subtract13bit FA13 (.X(inbetween), .Y(13'b0000000000001), .AddSub(1'b1), .S(Remainder));
 
 endmodule

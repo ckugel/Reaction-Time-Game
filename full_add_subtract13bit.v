@@ -1,3 +1,6 @@
+`ifndef full_add_subtract13bit
+  `define full_add_subtract13bit
+
 `include "Adder13.v"
 module full_add_subtract13bit(X, Y, AddSub, Overflow, S);
   input [12:0] X;
@@ -25,3 +28,5 @@ module full_add_subtract13bit(X, Y, AddSub, Overflow, S);
   Adder13 FA (AddSub, X, In, Overflow, S);
 
 endmodule
+
+`endif
