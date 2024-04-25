@@ -22,6 +22,8 @@ module displayScore(X, Screen1, Screen2, Screen3, Screen4);
   quotientAndRemainder db10_4 (.Input(Inbetween3_4), .Quotient(Screen4Pre), .Remainder(_ignore));
 
   //TODO: connect to Register rows
+  
   //TODO: connect output of register rows to seven-seg displays
+  
 
 endmodule
