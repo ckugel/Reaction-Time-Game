@@ -64,7 +64,7 @@ set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
 # Analysis & Synthesis Assignments
 # ================================
 set_global_assignment -name FAMILY "Cyclone IV E"
-set_global_assignment -name TOP_LEVEL_ENTITY Shiftdevideby10
+set_global_assignment -name TOP_LEVEL_ENTITY displayScore
 
 # Fitter Assignments
 # ==================
@@ -87,59 +87,57 @@ set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 # ----------------------------------------
 set_global_assignment -name BDF_FILE Shiftdevideby10.bdf
 set_global_assignment -name BDF_FILE delayCounter.bdf
-set_location_assignment PIN_V21 -to O0
-set_location_assignment PIN_U24 -to O36
-set_location_assignment PIN_U23 -to O35
-set_location_assignment PIN_W25 -to O34
-set_location_assignment PIN_W22 -to O33
-set_location_assignment PIN_W21 -to O32
-set_location_assignment PIN_Y22 -to O31
-set_location_assignment PIN_M24 -to O30
-set_location_assignment PIN_W28 -to O26
-set_location_assignment PIN_W27 -to O25
-set_location_assignment PIN_Y26 -to O24
-set_location_assignment PIN_W26 -to O23
-set_location_assignment PIN_Y25 -to O22
-set_location_assignment PIN_AA26 -to O21
-set_location_assignment PIN_AA25 -to O20
-set_location_assignment PIN_Y19 -to O6
-set_location_assignment PIN_AF23 -to O5
-set_location_assignment PIN_AD24 -to O4
-set_location_assignment PIN_AB20 -to O2
-set_location_assignment PIN_AA21 -to O3
-set_location_assignment PIN_U21 -to O1
-set_location_assignment PIN_Y2 -to Clock3
-set_location_assignment PIN_M21 -to CLRN
+
 set_global_assignment -name VERILOG_FILE Rightshift3.v
 set_global_assignment -name VERILOG_FILE Rightshift4.v
 set_global_assignment -name VERILOG_FILE Rightshift5.v
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
-set_location_assignment PIN_AB23 -to X[0]
-set_location_assignment PIN_AB24 -to X[1]
-set_location_assignment PIN_AC24 -to X[2]
-set_location_assignment PIN_AB25 -to X[3]
-set_location_assignment PIN_AC25 -to X[4]
-set_location_assignment PIN_AB26 -to X[5]
-set_location_assignment PIN_AD26 -to X[6]
-set_location_assignment PIN_AC26 -to X[7]
-set_location_assignment PIN_AB27 -to X[8]
-set_location_assignment PIN_AD27 -to X[9]
-set_location_assignment PIN_AC27 -to X[10]
-set_location_assignment PIN_AC28 -to X[11]
-set_location_assignment PIN_AB28 -to X[12]
-set_location_assignment PIN_J16 -to Output[0]
-set_location_assignment PIN_H16 -to Output[1]
-set_location_assignment PIN_J15 -to Output[2]
-set_location_assignment PIN_G17 -to Output[3]
-set_location_assignment PIN_J17 -to Output[4]
-set_location_assignment PIN_H19 -to Output[5]
-set_location_assignment PIN_J19 -to Output[6]
-set_location_assignment PIN_E18 -to Output[7]
-set_location_assignment PIN_F18 -to Output[8]
-set_location_assignment PIN_F21 -to Output[9]
-set_location_assignment PIN_E19 -to Output[10]
-set_location_assignment PIN_F19 -to Output[11]
-set_location_assignment PIN_G19 -to Output[12]
+set_global_assignment -name VERILOG_FILE displayScore.v
+set_location_assignment PIN_AB28 -to CLRN
+set_location_assignment PIN_AD27 -to X[0]
+set_location_assignment PIN_AA22 -to X[10]
+set_location_assignment PIN_Y24 -to X[11]
+set_location_assignment PIN_Y23 -to X[12]
+set_location_assignment PIN_AB27 -to X[1]
+set_location_assignment PIN_AC26 -to X[2]
+set_location_assignment PIN_AD26 -to X[3]
+set_location_assignment PIN_AB26 -to X[4]
+set_location_assignment PIN_AC25 -to X[5]
+set_location_assignment PIN_AC24 -to X[6]
+set_location_assignment PIN_AB24 -to X[7]
+set_location_assignment PIN_AA24 -to X[8]
+set_location_assignment PIN_AA23 -to X[9]
+set_location_assignment PIN_Y2 -to Clock
+set_location_assignment PIN_AC28 -to Display
+set_location_assignment PIN_AC27 -to Load
+set_location_assignment PIN_G18 -to Screen4[0]
+set_location_assignment PIN_H22 -to Screen4[6]
+set_location_assignment PIN_J22 -to Screen4[5]
+set_location_assignment PIN_L25 -to Screen4[4]
+set_location_assignment PIN_L26 -to Screen4[3]
+set_location_assignment PIN_E17 -to Screen4[2]
+set_location_assignment PIN_F22 -to Screen4[1]
+set_location_assignment PIN_Y19 -to Screen1[6]
+set_location_assignment PIN_AF23 -to Screen1[5]
+set_location_assignment PIN_AD24 -to Screen1[4]
+set_location_assignment PIN_AA21 -to Screen1[3]
+set_location_assignment PIN_AB20 -to Screen1[2]
+set_location_assignment PIN_U21 -to Screen1[1]
+set_location_assignment PIN_V21 -to Screen1[0]
+set_location_assignment PIN_W28 -to Screen2[6]
+set_location_assignment PIN_W27 -to Screen2[5]
+set_location_assignment PIN_Y26 -to Screen2[4]
+set_location_assignment PIN_W26 -to Screen2[3]
+set_location_assignment PIN_Y25 -to Screen2[2]
+set_location_assignment PIN_AA26 -to Screen2[1]
+set_location_assignment PIN_AA25 -to Screen2[0]
+set_location_assignment PIN_U24 -to Screen3[6]
+set_location_assignment PIN_U23 -to Screen3[5]
+set_location_assignment PIN_W25 -to Screen3[4]
+set_location_assignment PIN_W22 -to Screen3[3]
+set_location_assignment PIN_W21 -to Screen3[2]
+set_location_assignment PIN_Y22 -to Screen3[1]
+set_location_assignment PIN_M24 -to Screen3[0]
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

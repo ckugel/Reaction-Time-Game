@@ -23,14 +23,14 @@ module displayScore(X, Screen1, Screen2, Screen3, Screen4, Load, Clock, CLRN, Di
   wire [12:0] Inbetween3_4; // Inbetween2_3 / 10
 
   quotientAndRemainder db10_1 (.Input(X), .Quotient(Inbetween1_2), .Remainder(Screen1Pre));
-  quotientAndRemainder db10_2 (.Input(Inbetween1_2), .Quotient(Inbetween1_2), .Remainder(Screen2Pre));
-  quotientAndRemainder db10_3 (.Input(Inbetween2_3), .Quotient(Inbetween2_3), .Remainder(Screen3Pre));
-  quotientAndRemainder db10_4 (.Input(Inbetween3_4), .Quotient(Screen4Pre), .Remainder(_ignore));
+  quotientAndRemainder db10_2 (.Input(Inbetween1_2), .Quotient(Inbetween2_3), .Remainder(Screen2Pre));
+  quotientAndRemainder db10_3 (.Input(Inbetween2_3), .Quotient(Inbetween2_4), .Remainder(Screen3Pre));
+  quotientAndRemainder db10_4 (.Input(Inbetween3_4), .Quotient(_ignore), .Remainder(Screen4Pre));
 
-  wire [12:0] display1;
-  wire [12:0] display2;
-  wire [12:0] display3;
-  wire [12:0] display4;
+  wire [6:0] display1;
+  wire [6:0] display2;
+  wire [6:0] display3;
+  wire [6:0] display4;
   
   // connect to registers to keep the screens values
   RegisterRow rw1 (.In(Screen1Pre), .Load(Load), .Clock(Clock), .CLRN(CLRN), .Q(display1));
@@ -39,9 +39,9 @@ module displayScore(X, Screen1, Screen2, Screen3, Screen4, Load, Clock, CLRN, Di
   RegisterRow rw4 (.In(Screen4Pre), .Load(Load), .Clock(Clock), .CLRN(CLRN), .Q(display4)); 
   
   // The seven segment decoders outputs
-  seven_seg_decoder_bus s1 = (.X(display1), .Result(Screen1), .En(Display));
-  seven_seg_decoder_bus s2 = (.X(display2), .Result(Screen2), .En(Display)); 
-  seven_seg_decoder_bus s3 = (.X(display3), .Result(Screen3), .En(Display)); 
-  seven_seg_decoder_bus s4 = (.X(display4), .Result(Screen4), .En(Display)); 
+  seven_seg_decoder_bus s1 (.X(display1), .Result(Screen1), .En(Display));
+  seven_seg_decoder_bus s2 (.X(display2), .Result(Screen2), .En(Display)); 
+  seven_seg_decoder_bus s3 (.X(display3), .Result(Screen3), .En(Display)); 
+  seven_seg_decoder_bus s4 (.X(display4), .Result(Screen4), .En(Display)); 
 
 endmodule
