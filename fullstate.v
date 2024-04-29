@@ -1,11 +1,13 @@
 `include "RegisterFile/dffCustom.v"
 `include "full_add_subtract13bit.v"
+`include "mux3_8.v"
+`include "equals13bit.v"
 
 module fullstate(
     input buttonStart,
     input buttonHit,
     input buttonReset,
-    input twobitCounterin,
+    input delayConterDone,
     input [12:0] registerDataP,
     input [12:0] registerDataQ,
     input Clock,
@@ -15,7 +17,6 @@ module fullstate(
     output [1:0] runcounter,
     output scoreCounterEnable, //done
     output ledGreen, //done
-    output registerClear,//done
     output twoBitCounterClear, //done
     output [1:0] DisplayScoreControl,
     output RedLed, //done
@@ -29,6 +30,18 @@ module fullstate(
       wire N2;
       wire N1;
       wire N0;
+
+      wire same;
+
+      equals13bit counterIsSame (.X(registerDataP), .Y(13'b000000000011), .S(same));
+      
+      mux3_8 ma2 (.S2(S2), .S1(S1), .S0(S0), .X7(1'b0), .X6(1'b0), .X5(1'b1), .X4(1'b1), .X3(1'b1), .X2(1'b0), .X1(1'b0), .X0(1'b0), .Y(N2Pre));
+      mux3_8 ma1 (.S2(S2), .S1(S1), .S0(S0), .X7(1'b0), .X6(1'b0), .X5(1'b0), .X4(1'b0), .X3(1'b0), .X2(1'b1), .X1(delayConterDone), .X0(1'b0), .Y(N1Pre));
+      mux3_8 ma0 (.S2(S2), .S1(S1), .S0(S0), .X7(1'b0), .X6(1'b0), .X5(1'b1), .X4(same), .X3(1'b0), .X2(buttonHit), .X1(~delayConterDone), .X0(buttonStart), .Y(N0Pre));
+
+      assign N2 = ~buttonReset & N2Pre;
+      assign N1 = ~buttonReset & N1Pre; 
+      assign N0 = ~buttonReset & N0Pre;
 
       // Next state and go to's here
   
@@ -49,7 +62,7 @@ module fullstate(
       assign scoreCounterClear = (~s1 & ~s0) | (s1 & s0) | s2;
       assign registerLoad = (s2 & ~s1 & s0 & buttonHit) | (~s2 & s1 & ~s0 & buttonStart); // TODO: fix, not correct
       assign delayCounterEnable = ~s2 & ~s1 & s0;
-      assign registerClear = 1;
+      assign registerClear = 1; // TODO: Remove
       assign scoreCounterEnable = ~s2&s1&~s0;
       assign twoBitCounterClear = s2 & ~s1 & s0;
 
