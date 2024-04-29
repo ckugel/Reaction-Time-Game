@@ -116,9 +116,31 @@ https://fpgasoftware.intel.com/eula.
 	)
 )
 (symbol
-	(rect 328 272 472 368)
+	(rect 424 664 576 728)
+	(text "clock_generator" (rect 5 0 98 19)(font "Intel Clear" (font_size 8)))
+	(text "inst5" (rect 8 40 30 57)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "CLK_IN" (rect 0 0 43 19)(font "Intel Clear" (font_size 8)))
+		(text "CLK_IN" (rect 24 16 67 35)(font "Intel Clear" (font_size 8)))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 152 32)
+		(output)
+		(text "CLK_OUT" (rect 0 0 57 19)(font "Intel Clear" (font_size 8)))
+		(text "CLK_OUT" (rect 72 16 129 35)(font "Intel Clear" (font_size 8)))
+		(line (pt 152 32)(pt 136 32))
+	)
+	(drawing
+		(rectangle (rect 16 16 136 40))
+	)
+)
+(symbol
+	(rect 344 208 488 304)
 	(text "divideByFiftyThousandCounter" (rect 5 0 189 19)(font "Intel Clear" (font_size 8)))
-	(text "inst50" (rect 8 75 36 92)(font "Intel Clear" ))
+	(text "inst4" (rect 8 75 30 92)(font "Intel Clear" ))
 	(port
 		(pt 0 32)
 		(input)
@@ -170,18 +192,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 592 328)
 )
 (connector
-	(pt 72 176)
-	(pt 8 176)
-)
-(connector
-	(pt -8 328)
-	(pt -8 336)
-)
-(connector
-	(pt -104 328)
-	(pt -8 328)
-)
-(connector
 	(pt 592 312)
 	(pt 584 312)
 )
@@ -190,34 +200,34 @@ https://fpgasoftware.intel.com/eula.
 	(pt 584 304)
 )
 (connector
-	(pt 472 304)
+	(pt 504 304)
 	(pt 584 304)
 )
 (connector
-	(pt 328 320)
-	(pt 312 320)
+	(pt 504 304)
+	(pt 504 240)
 )
 (connector
-	(pt 312 320)
-	(pt 312 336)
+	(pt 504 240)
+	(pt 488 240)
 )
 (connector
-	(pt 72 176)
-	(pt 72 304)
-)
-(connector
-	(pt 72 304)
-	(pt 328 304)
-)
-(connector
-	(pt 8 176)
-	(pt 8 168)
-)
-(connector
-	(pt 8 168)
 	(pt 24 168)
+	(pt 24 240)
 )
 (connector
-	(pt -8 336)
-	(pt 312 336)
+	(pt 24 240)
+	(pt 344 240)
+)
+(connector
+	(pt 312 256)
+	(pt 344 256)
+)
+(connector
+	(pt 312 328)
+	(pt 312 256)
+)
+(connector
+	(pt -104 328)
+	(pt 312 328)
 )

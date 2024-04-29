@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Reaction-Time-Game
-Sun Apr 28 23:01:04 2024
+Mon Apr 29 15:14:02 2024
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Standard Edition
 
 
@@ -43,15 +43,15 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                            ;
 +------------------------------------+----------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sun Apr 28 23:01:04 2024              ;
+; Analysis & Synthesis Status        ; Successful - Mon Apr 29 15:14:02 2024              ;
 ; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Standard Edition ;
 ; Revision Name                      ; Reaction-Time-Game                                 ;
 ; Top-level Entity Name              ; bitCounter13test                                   ;
 ; Family                             ; Cyclone IV E                                       ;
-; Total logic elements               ; 44                                                 ;
-;     Total combinational functions  ; 44                                                 ;
-;     Dedicated logic registers      ; 36                                                 ;
-; Total registers                    ; 36                                                 ;
+; Total logic elements               ; 36                                                 ;
+;     Total combinational functions  ; 36                                                 ;
+;     Dedicated logic registers      ; 29                                                 ;
+; Total registers                    ; 29                                                 ;
 ; Total pins                         ; 15                                                 ;
 ; Total virtual pins                 ; 0                                                  ;
 ; Total memory bits                  ; 0                                                  ;
@@ -171,52 +171,52 @@ https://fpgasoftware.intel.com/eula.
 ; divideByFiftyThousandCounter.bdf ; yes             ; User Block Diagram/Schematic File        ; U:/CPRE281/Final/Reaction-Time-Game/divideByFiftyThousandCounter.bdf ;         ;
 ; bitCounter13.v                   ; yes             ; User Verilog HDL File                    ; U:/CPRE281/Final/Reaction-Time-Game/bitCounter13.v                   ;         ;
 ; bitCounter13test.bdf             ; yes             ; User Block Diagram/Schematic File        ; U:/CPRE281/Final/Reaction-Time-Game/bitCounter13test.bdf             ;         ;
+; clock_generator.bdf              ; yes             ; Auto-Found Block Diagram/Schematic File  ; U:/CPRE281/Final/Reaction-Time-Game/clock_generator.bdf              ;         ;
 ; clock_divider_1024.bdf           ; yes             ; Auto-Found Block Diagram/Schematic File  ; U:/CPRE281/Final/Reaction-Time-Game/clock_divider_1024.bdf           ;         ;
 +----------------------------------+-----------------+------------------------------------------+----------------------------------------------------------------------+---------+
 
 
-+------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                              ;
-+---------------------------------------------+--------------------------------------------+
-; Resource                                    ; Usage                                      ;
-+---------------------------------------------+--------------------------------------------+
-; Estimated Total logic elements              ; 44                                         ;
-;                                             ;                                            ;
-; Total combinational functions               ; 44                                         ;
-; Logic element usage by number of LUT inputs ;                                            ;
-;     -- 4 input functions                    ; 14                                         ;
-;     -- 3 input functions                    ; 9                                          ;
-;     -- <=2 input functions                  ; 21                                         ;
-;                                             ;                                            ;
-; Logic elements by mode                      ;                                            ;
-;     -- normal mode                          ; 33                                         ;
-;     -- arithmetic mode                      ; 11                                         ;
-;                                             ;                                            ;
-; Total registers                             ; 36                                         ;
-;     -- Dedicated logic registers            ; 36                                         ;
-;     -- I/O registers                        ; 0                                          ;
-;                                             ;                                            ;
-; I/O pins                                    ; 15                                         ;
-;                                             ;                                            ;
-; Embedded Multiplier 9-bit elements          ; 0                                          ;
-;                                             ;                                            ;
-; Maximum fan-out node                        ; divideByFiftyThousandCounter:inst50|inst28 ;
-; Maximum fan-out                             ; 14                                         ;
-; Total fan-out                               ; 246                                        ;
-; Average fan-out                             ; 2.24                                       ;
-+---------------------------------------------+--------------------------------------------+
++-----------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                             ;
++---------------------------------------------+-------------------------------------------+
+; Resource                                    ; Usage                                     ;
++---------------------------------------------+-------------------------------------------+
+; Estimated Total logic elements              ; 36                                        ;
+;                                             ;                                           ;
+; Total combinational functions               ; 36                                        ;
+; Logic element usage by number of LUT inputs ;                                           ;
+;     -- 4 input functions                    ; 11                                        ;
+;     -- 3 input functions                    ; 7                                         ;
+;     -- <=2 input functions                  ; 18                                        ;
+;                                             ;                                           ;
+; Logic elements by mode                      ;                                           ;
+;     -- normal mode                          ; 25                                        ;
+;     -- arithmetic mode                      ; 11                                        ;
+;                                             ;                                           ;
+; Total registers                             ; 29                                        ;
+;     -- Dedicated logic registers            ; 29                                        ;
+;     -- I/O registers                        ; 0                                         ;
+;                                             ;                                           ;
+; I/O pins                                    ; 15                                        ;
+;                                             ;                                           ;
+; Embedded Multiplier 9-bit elements          ; 0                                         ;
+;                                             ;                                           ;
+; Maximum fan-out node                        ; divideByFiftyThousandCounter:inst4|inst17 ;
+; Maximum fan-out                             ; 16                                        ;
+; Total fan-out                               ; 213                                       ;
+; Average fan-out                             ; 2.24                                      ;
++---------------------------------------------+-------------------------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                       ;
-+------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+------------------------------+--------------+
-; Compilation Hierarchy Node               ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                   ; Entity Name                  ; Library Name ;
-+------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+------------------------------+--------------+
-; |bitCounter13test                        ; 44 (0)              ; 36 (0)                    ; 0           ; 0            ; 0       ; 0         ; 15   ; 0            ; |bitCounter13test                                     ; bitCounter13test             ; work         ;
-;    |bitCounter13:inst|                   ; 13 (13)             ; 13 (13)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bitCounter13test|bitCounter13:inst                   ; bitCounter13                 ; work         ;
-;    |clock_divider_1024:inst14|           ; 12 (12)             ; 10 (10)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bitCounter13test|clock_divider_1024:inst14           ; clock_divider_1024           ; work         ;
-;    |divideByFiftyThousandCounter:inst50| ; 19 (19)             ; 13 (13)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bitCounter13test|divideByFiftyThousandCounter:inst50 ; divideByFiftyThousandCounter ; work         ;
-+------------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-------------------------------------------------------+------------------------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                     ;
++-----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------+------------------------------+--------------+
+; Compilation Hierarchy Node              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                  ; Entity Name                  ; Library Name ;
++-----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------+------------------------------+--------------+
+; |bitCounter13test                       ; 36 (0)              ; 29 (0)                    ; 0           ; 0            ; 0       ; 0         ; 15   ; 0            ; |bitCounter13test                                    ; bitCounter13test             ; work         ;
+;    |bitCounter13:inst|                  ; 13 (13)             ; 13 (13)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bitCounter13test|bitCounter13:inst                  ; bitCounter13                 ; work         ;
+;    |divideByFiftyThousandCounter:inst4| ; 23 (23)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bitCounter13test|divideByFiftyThousandCounter:inst4 ; divideByFiftyThousandCounter ; work         ;
++-----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------+------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -225,10 +225,10 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 36    ;
+; Total registers                              ; 29    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 25    ;
+; Number of registers using Asynchronous Clear ; 29    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
@@ -241,21 +241,20 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 15                          ;
-; cycloneiii_ff         ; 36                          ;
-;     CLR               ; 25                          ;
-;     plain             ; 11                          ;
-; cycloneiii_lcell_comb ; 44                          ;
+; cycloneiii_ff         ; 29                          ;
+;     CLR               ; 29                          ;
+; cycloneiii_lcell_comb ; 36                          ;
 ;     arith             ; 11                          ;
 ;         2 data inputs ; 10                          ;
 ;         3 data inputs ; 1                           ;
-;     normal            ; 33                          ;
-;         1 data inputs ; 4                           ;
-;         2 data inputs ; 7                           ;
-;         3 data inputs ; 8                           ;
-;         4 data inputs ; 14                          ;
+;     normal            ; 25                          ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 5                           ;
+;         3 data inputs ; 6                           ;
+;         4 data inputs ; 11                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 3.00                        ;
-; Average LUT depth     ; 1.97                        ;
+; Max LUT depth         ; 4.00                        ;
+; Average LUT depth     ; 2.24                        ;
 +-----------------------+-----------------------------+
 
 
@@ -274,7 +273,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Standard Edition
-    Info: Processing started: Sun Apr 28 23:00:54 2024
+    Info: Processing started: Mon Apr 29 15:13:51 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Reaction-Time-Game -c Reaction-Time-Game
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -301,31 +300,41 @@ Info (12021): Found 1 design units, including 1 entities, in source file rightsh
     Info (12023): Found entity 1: Rightshift5 File: U:/CPRE281/Final/Reaction-Time-Game/Rightshift5.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file counter4.bdf
     Info (12023): Found entity 1: counter4
-Info (12021): Found 1 design units, including 1 entities, in source file fullstate.v
-    Info (12023): Found entity 1: fullstate File: U:/CPRE281/Final/Reaction-Time-Game/fullstate.v Line: 1
+Info (12021): Found 4 design units, including 4 entities, in source file fullstate.v
+    Info (12023): Found entity 1: dffCustom File: U:/CPRE281/Final/Reaction-Time-Game/RegisterFile/dffCustom.v Line: 20
+    Info (12023): Found entity 2: Adder13 File: U:/CPRE281/Final/Reaction-Time-Game/Adder13.v Line: 20
+    Info (12023): Found entity 3: full_add_subtract13bit File: U:/CPRE281/Final/Reaction-Time-Game/full_add_subtract13bit.v Line: 5
+    Info (12023): Found entity 4: fullstate File: U:/CPRE281/Final/Reaction-Time-Game/fullstate.v Line: 4
 Warning (12019): Can't analyze file -- file 13bitCounter.v is missing
 Info (12021): Found 1 design units, including 1 entities, in source file bitcounter13.v
     Info (12023): Found entity 1: bitCounter13 File: U:/CPRE281/Final/Reaction-Time-Game/bitCounter13.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file bitcounter13test.bdf
     Info (12023): Found entity 1: bitCounter13test
-Warning (10236): Verilog HDL Implicit Net warning at fullstate.v(33): created implicit net for "delayCounterEnable" File: U:/CPRE281/Final/Reaction-Time-Game/fullstate.v Line: 33
+Warning (10236): Verilog HDL Implicit Net warning at fullstate.v(39): created implicit net for "_ignore0" File: U:/CPRE281/Final/Reaction-Time-Game/fullstate.v Line: 39
+Warning (10236): Verilog HDL Implicit Net warning at fullstate.v(40): created implicit net for "_ignore1" File: U:/CPRE281/Final/Reaction-Time-Game/fullstate.v Line: 40
+Warning (10236): Verilog HDL Implicit Net warning at fullstate.v(41): created implicit net for "_ignore2" File: U:/CPRE281/Final/Reaction-Time-Game/fullstate.v Line: 41
+Warning (10236): Verilog HDL Implicit Net warning at fullstate.v(45): created implicit net for "_ignore" File: U:/CPRE281/Final/Reaction-Time-Game/fullstate.v Line: 45
+Warning (10236): Verilog HDL Implicit Net warning at fullstate.v(51): created implicit net for "delayCounterEnable" File: U:/CPRE281/Final/Reaction-Time-Game/fullstate.v Line: 51
 Info (12127): Elaborating entity "bitCounter13test" for the top level hierarchy
 Info (12128): Elaborating entity "bitCounter13" for hierarchy "bitCounter13:inst"
-Info (12128): Elaborating entity "divideByFiftyThousandCounter" for hierarchy "divideByFiftyThousandCounter:inst50"
+Info (12128): Elaborating entity "divideByFiftyThousandCounter" for hierarchy "divideByFiftyThousandCounter:inst4"
+Warning (12125): Using design file clock_generator.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: clock_generator
+Info (12128): Elaborating entity "clock_generator" for hierarchy "clock_generator:inst5"
 Warning (12125): Using design file clock_divider_1024.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
     Info (12023): Found entity 1: clock_divider_1024
-Info (12128): Elaborating entity "clock_divider_1024" for hierarchy "clock_divider_1024:inst14"
+Info (12128): Elaborating entity "clock_divider_1024" for hierarchy "clock_generator:inst5|clock_divider_1024:inst8"
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 59 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 51 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 2 input pins
     Info (21059): Implemented 13 output pins
-    Info (21061): Implemented 44 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 5 warnings
+    Info (21061): Implemented 36 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
     Info: Peak virtual memory: 4823 megabytes
-    Info: Processing ended: Sun Apr 28 23:01:04 2024
-    Info: Elapsed time: 00:00:10
+    Info: Processing ended: Mon Apr 29 15:14:02 2024
+    Info: Elapsed time: 00:00:11
     Info: Total CPU time (on all processors): 00:00:07
 
 

@@ -12,7 +12,7 @@ counterout[9] <= out[9].DB_MAX_OUTPUT_PORT_TYPE
 counterout[10] <= out[10].DB_MAX_OUTPUT_PORT_TYPE
 counterout[11] <= out[11].DB_MAX_OUTPUT_PORT_TYPE
 counterout[12] <= out[12].DB_MAX_OUTPUT_PORT_TYPE
-CLK => clock_divider_1024:inst14.CLK_IN
+CLK => divideByFiftyThousandCounter:inst4.Clock
 Reset => bitCounter13:inst.reset
 
 
@@ -58,8 +58,8 @@ out[11] <= out~0.DB_MAX_OUTPUT_PORT_TYPE
 out[12] <= out~12.DB_MAX_OUTPUT_PORT_TYPE
 
 
-|bitCounter13test|divideByFiftyThousandCounter:inst50
-ClockOut <= inst28.DB_MAX_OUTPUT_PORT_TYPE
+|bitCounter13test|divideByFiftyThousandCounter:inst4
+ClockOut <= inst25.DB_MAX_OUTPUT_PORT_TYPE
 X[0] <= inst11111.DB_MAX_OUTPUT_PORT_TYPE
 X[1] <= inst1.DB_MAX_OUTPUT_PORT_TYPE
 X[2] <= inst2.DB_MAX_OUTPUT_PORT_TYPE
@@ -76,15 +76,12 @@ X[12] <= inst19.DB_MAX_OUTPUT_PORT_TYPE
 X[13] <= inst20.DB_MAX_OUTPUT_PORT_TYPE
 X[14] <= inst24.DB_MAX_OUTPUT_PORT_TYPE
 X[15] <= inst25.DB_MAX_OUTPUT_PORT_TYPE
-Enable => inst5.IN0
-Enable => inst11111.IN0
 Clock => inst1.CLK
 Clock => inst2.CLK
 Clock => inst3.CLK
 Clock => inst4.CLK
 Clock => inst6.CLK
 Clock => inst16.CLK
-Clock => inst60.CLK
 Clock => inst80.CLK
 Clock => inst19.CLK
 Clock => inst20.CLK
@@ -94,10 +91,30 @@ Clock => inst70.CLK
 Clock => inst18.CLK
 Clock => inst11111.CLK
 Clock => inst24.CLK
-Clock => inst28.CLK
+Clock => inst60.CLK
+Enable => inst11111.IN0
 
 
-|bitCounter13test|clock_divider_1024:inst14
+|bitCounter13test|clock_generator:inst5
+CLK_OUT <= inst5.DB_MAX_OUTPUT_PORT_TYPE
+CLK_IN => clock_divider_1024:inst.CLK_IN
+
+
+|bitCounter13test|clock_generator:inst5|clock_divider_1024:inst8
+CLK_OUT <= inst10.DB_MAX_OUTPUT_PORT_TYPE
+CLK_IN => inst1.CLK
+CLK_IN => inst2.CLK
+CLK_IN => inst3.CLK
+CLK_IN => inst4.CLK
+CLK_IN => inst5.CLK
+CLK_IN => inst6.CLK
+CLK_IN => inst7.CLK
+CLK_IN => inst8.CLK
+CLK_IN => inst9.CLK
+CLK_IN => inst10.CLK
+
+
+|bitCounter13test|clock_generator:inst5|clock_divider_1024:inst
 CLK_OUT <= inst10.DB_MAX_OUTPUT_PORT_TYPE
 CLK_IN => inst1.CLK
 CLK_IN => inst2.CLK
