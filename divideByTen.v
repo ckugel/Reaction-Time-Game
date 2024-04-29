@@ -1,3 +1,6 @@
+`ifndef divideByTen
+	`define divideByTen
+
 `include "full_add_subtract13bit.v"
 
 module divideByTen(dividend, quotient);
@@ -12,3 +15,4 @@ module divideByTen(dividend, quotient);
 
   endmodule
 
+`endif

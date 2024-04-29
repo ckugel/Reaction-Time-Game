@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Tue Apr 23 13:49:54 2024
+Analysis & Synthesis Status : Successful - Sun Apr 28 23:28:11 2024
 Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Standard Edition
 Revision Name : Reaction-Time-Game
-Top-level Entity Name : Shiftdevideby10
+Top-level Entity Name : multiplyByTen
 Family : Cyclone IV E
-Total logic elements : 25
-    Total combinational functions : 25
+Total logic elements : 20
+    Total combinational functions : 20
     Dedicated logic registers : 0
 Total registers : 0
 Total pins : 26
