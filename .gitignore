@@ -1,4 +1,6 @@
 work/
 output/
 db/
-*.out
+.out
+.bak
+incremental_db/
