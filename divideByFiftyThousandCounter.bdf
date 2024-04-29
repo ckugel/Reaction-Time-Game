@@ -86,6 +86,7 @@ https://fpgasoftware.intel.com/eula.
 		(line (pt 82 8)(pt 78 12))
 		(line (pt 78 12)(pt 82 8))
 	)
+	(annotation_block (location)(rect 4072 344 4144 368))
 )
 (symbol
 	(rect 672 72 736 152)
@@ -1518,21 +1519,6 @@ https://fpgasoftware.intel.com/eula.
 		(circle (rect 28 68 36 76))
 	)
 )
-(symbol
-	(rect 3616 240 3648 256)
-	(text "VCC" (rect 7 0 27 10)(font "Arial" (font_size 6)))
-	(text "inst29" (rect 3 5 31 22)(font "Intel Clear" )(invisible))
-	(port
-		(pt 16 16)
-		(output)
-		(text "1" (rect 19 7 24 19)(font "Courier New" (bold))(invisible))
-		(text "1" (rect 19 7 24 19)(font "Courier New" (bold))(invisible))
-		(line (pt 16 16)(pt 16 8))
-	)
-	(drawing
-		(line (pt 8 8)(pt 24 8))
-	)
-)
 (connector
 	(pt 1016 224)
 	(pt 1016 80)
@@ -2058,10 +2044,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 2800 0)
 )
 (connector
-	(pt 2928 64)
-	(pt 2920 64)
-)
-(connector
 	(pt 2920 -24)
 	(pt 2920 -16)
 )
@@ -2426,14 +2408,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 3024 48)
 )
 (connector
-	(pt 2928 272)
-	(pt 2928 64)
-)
-(connector
-	(pt 2752 272)
-	(pt 2928 272)
-)
-(connector
 	(pt 3280 24)
 	(pt 3304 24)
 )
@@ -2488,18 +2462,6 @@ https://fpgasoftware.intel.com/eula.
 (connector
 	(pt 3184 32)
 	(pt 3184 40)
-)
-(connector
-	(text "X[15..0]" (rect 3194 336 3230 353)(font "Intel Clear" ))
-	(pt 3184 352)
-	(pt 3424 352)
-	(bus)
-)
-(connector
-	(text "X[15..0]" (rect 2970 336 3006 353)(font "Intel Clear" ))
-	(pt 2960 352)
-	(pt 3184 352)
-	(bus)
 )
 (connector
 	(text "X[15..0]" (rect 2786 336 2822 353)(font "Intel Clear" ))
@@ -2634,11 +2596,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 2960 352)
 )
 (connector
-	(text "X[14]" (rect 3164 318 3181 343)(font "Intel Clear" )(vertical))
-	(pt 3184 40)
-	(pt 3184 352)
-)
-(connector
 	(text "X[15]" (rect 3396 294 3413 319)(font "Intel Clear" )(vertical))
 	(pt 3424 352)
 	(pt 3424 24)
@@ -2766,18 +2723,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 3632 -208)
 )
 (connector
-	(pt 3344 256)
-	(pt 3632 256)
-)
-(connector
-	(pt 3344 144)
-	(pt 3344 256)
-)
-(connector
-	(pt 3344 256)
-	(pt 3344 272)
-)
-(connector
 	(pt 560 104)
 	(pt 560 -256)
 )
@@ -2800,10 +2745,6 @@ https://fpgasoftware.intel.com/eula.
 (connector
 	(pt 3632 104)
 	(pt 3736 104)
-)
-(connector
-	(pt 3632 -208)
-	(pt 3632 104)
 )
 (connector
 	(pt 3784 104)
@@ -2866,10 +2807,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 3152 272)
 )
 (connector
-	(pt 2928 272)
-	(pt 3152 272)
-)
-(connector
 	(pt 3152 272)
 	(pt 3344 272)
 )
@@ -2893,6 +2830,59 @@ https://fpgasoftware.intel.com/eula.
 (connector
 	(pt 2560 272)
 	(pt 2752 272)
+)
+(connector
+	(pt 3344 144)
+	(pt 3344 256)
+)
+(connector
+	(pt 3344 256)
+	(pt 3344 272)
+)
+(connector
+	(pt 3632 -208)
+	(pt 3632 104)
+)
+(connector
+	(pt 3632 104)
+	(pt 3632 256)
+)
+(connector
+	(pt 3344 256)
+	(pt 3632 256)
+)
+(connector
+	(pt 3184 40)
+	(pt 3192 40)
+)
+(connector
+	(text "X[14]" (rect 3172 318 3189 343)(font "Intel Clear" )(vertical))
+	(pt 3192 40)
+	(pt 3192 352)
+)
+(connector
+	(pt 2920 272)
+	(pt 2920 64)
+)
+(connector
+	(pt 2752 272)
+	(pt 2920 272)
+)
+(connector
+	(pt 2920 272)
+	(pt 3152 272)
+)
+(connector
+	(text "X[15..0]" (rect 3194 336 3230 353)(font "Intel Clear" ))
+	(pt 3192 352)
+	(pt 3424 352)
+	(bus)
+)
+(connector
+	(text "X[15..0]" (rect 2970 336 3006 353)(font "Intel Clear" ))
+	(pt 2960 352)
+	(pt 3192 352)
+	(bus)
 )
 (junction (pt 840 224))
 (junction (pt 656 224))
@@ -2962,7 +2952,6 @@ https://fpgasoftware.intel.com/eula.
 (junction (pt 2920 -24))
 (junction (pt 2960 48))
 (junction (pt 2872 8))
-(junction (pt 2928 272))
 (junction (pt 1624 272))
 (junction (pt 736 352))
 (junction (pt 920 352))
@@ -2977,7 +2966,6 @@ https://fpgasoftware.intel.com/eula.
 (junction (pt 2592 352))
 (junction (pt 2776 352))
 (junction (pt 2960 352))
-(junction (pt 3184 352))
 (junction (pt 3424 352))
 (junction (pt 3344 256))
 (junction (pt 560 104))
@@ -2991,3 +2979,6 @@ https://fpgasoftware.intel.com/eula.
 (junction (pt 3288 120))
 (junction (pt 3152 272))
 (junction (pt 2560 272))
+(junction (pt 3632 104))
+(junction (pt 3192 352))
+(junction (pt 2920 272))

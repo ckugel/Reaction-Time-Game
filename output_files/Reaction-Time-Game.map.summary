@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Wed Apr 24 01:27:28 2024
+Analysis & Synthesis Status : Successful - Sun Apr 28 23:01:04 2024
 Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Standard Edition
 Revision Name : Reaction-Time-Game
-Top-level Entity Name : counter4
+Top-level Entity Name : bitCounter13test
 Family : Cyclone IV E
-Total logic elements : 38
-    Total combinational functions : 38
-    Dedicated logic registers : 27
-Total registers : 27
-Total pins : 10
+Total logic elements : 44
+    Total combinational functions : 44
+    Dedicated logic registers : 36
+Total registers : 36
+Total pins : 15
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0

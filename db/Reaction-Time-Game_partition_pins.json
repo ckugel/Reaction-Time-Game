@@ -4,39 +4,63 @@
 			"name" : "Top",
 			"pins" : [
 				{
-					"name" : "Out[0]",
+					"name" : "counterout[12]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[2]",
+					"name" : "counterout[11]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[3]",
+					"name" : "counterout[10]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[4]",
+					"name" : "counterout[9]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[5]",
+					"name" : "counterout[8]",
 					"strict" : false
 				},
 				{
-					"name" : "Out[6]",
+					"name" : "counterout[7]",
 					"strict" : false
 				},
 				{
-					"name" : "W",
+					"name" : "counterout[6]",
 					"strict" : false
 				},
 				{
-					"name" : "Clear",
+					"name" : "counterout[5]",
 					"strict" : false
 				},
 				{
-					"name" : "Clock",
+					"name" : "counterout[4]",
+					"strict" : false
+				},
+				{
+					"name" : "counterout[3]",
+					"strict" : false
+				},
+				{
+					"name" : "counterout[2]",
+					"strict" : false
+				},
+				{
+					"name" : "counterout[1]",
+					"strict" : false
+				},
+				{
+					"name" : "counterout[0]",
+					"strict" : false
+				},
+				{
+					"name" : "Reset",
+					"strict" : false
+				},
+				{
+					"name" : "CLK",
 					"strict" : false
 				}
 			]
