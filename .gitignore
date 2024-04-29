@@ -1,3 +1,4 @@
-/work
-/output
-/db
+work/
+output/
+db/
+*.out
