@@ -19,6 +19,7 @@ module Reaction_Time_Game(buttonStart, buttonHit, buttonReset, GreenLed, RedLed,
   output [6:0] Screen3; // ...
   output [6:0] Screen4; // Left most screen
   output [6:0] Screen5; // run counter display AKA what is at reg[0]
+  output [2:0] state;
 
   wire [12:0] reg0; // is going to be the data on DATAP which in our case will always be the value stored in register 0
 
@@ -53,7 +54,7 @@ module Reaction_Time_Game(buttonStart, buttonHit, buttonReset, GreenLed, RedLed,
 
   twoBitUpCounterREAL tb2 (.EnableReal(~twobitClRN), .CLK1(buttonHit), .Q0(tbupcntr[0]), .Q1(tbupcntr[1]), .Q3(tbupcntr[2]), .CLRN1(1'b1));
 
-  fullstate fs (.buttonStart(buttonStart), .buttonHit(buttonHit), .buttonReset(buttonReset), .Clock(OnekhzClock), .ReadQ(rq), .registerLoad(registerLoad), .delayCounterDone(delayCounterDone), .delayCounterEnable(delayCounterEnable), .WriteAddress(wa), .ledGreen(GreenLed) , .RedLed(RedLed), .scoreCounterEnable(SCEn), .scoreCounter(scoreFromCounter), .registerDataP(reg0), .registerDataQ(dataQ), .registerLoadData(ld_data), .twoBitCounterClear(twobitClRN));
+  fullstate fs (.buttonStart(buttonStart), .buttonHit(buttonHit), .buttonReset(buttonReset), .Clock(OnekhzClock), .ReadQ(rq), .registerLoad(registerLoad), .delayCounterDone(delayCounterDone), .delayCounterEnable(delayCounterEnable), .WriteAddress(wa), .ledGreen(GreenLed) , .RedLed(RedLed), .scoreCounterEnable(SCEn), .scoreCounter(scoreFromCounter), .registerDataP(reg0), .registerDataQ(dataQ), .registerLoadData(ld_data), .twoBitCounterClear(twobitClRN), .State(state));
   
   wire [12:0] outputDisplay; // TODO: change if base 10 output
   wire [3:0] Screen5Pre; 
