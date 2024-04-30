@@ -1,3 +1,6 @@
+`ifndef equals13bit
+  `define equals13bit
+
 module equals13bit(X, Y, S);
   input [12:0] X;
   input [12:0] Y;
@@ -20,3 +23,5 @@ module equals13bit(X, Y, S);
   assign S = R1 & R2 & R3 & R4 & R5 & R6 & R7 & R8 & R9 & R10 & R11 & R12 & R13;
 
 endmodule
+
+`endif

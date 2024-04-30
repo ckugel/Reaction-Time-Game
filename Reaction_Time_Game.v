@@ -5,7 +5,7 @@
 `include "scoreCounterWithDone.v"
 `include "divideByFiftyThousandCounter.v"
 `include "scoreCounterWithDone.v"
-`include "TwoBitUpCounter.v"
+`include "twoBitUpCounterREAL.v"
 
 module Reaction_Time_Game(buttonStart, buttonHit, buttonReset, GreenLed, RedLed, Screen1, Screen2, Screen3, Screen4, Screen5, Clock);
   input buttonStart;
