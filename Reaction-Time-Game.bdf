@@ -1,0 +1,435 @@
+/*
+WARNING: Do NOT edit the input and output ports in this file in a text
+editor if you plan to continue editing the block that represents it in
+the Block Editor! File corruption is VERY likely to occur.
+*/
+/*
+Copyright (C) 2023  Intel Corporation. All rights reserved.
+Your use of Intel Corporation's design tools, logic functions 
+and other software and tools, and any partner logic 
+functions, and any output files from any of the foregoing 
+(including device programming or simulation files), and any 
+associated documentation or information are expressly subject 
+to the terms and conditions of the Intel Program License 
+Subscription Agreement, the Intel Quartus Prime License Agreement,
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
+*/
+(header "graphic" (version "1.4"))
+(pin
+	(input)
+	(rect 96 312 264 328)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "buttonStart" (rect 5 0 59 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 96 328 264 344)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "ButtonHit" (rect 5 0 51 12)(font "Arial" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect 96 344 264 360)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "buttonReset" (rect 5 0 62 17)(font "Intel Clear" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+)
+(pin
+	(input)
+	(rect -232 400 -64 416)
+	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
+	(text "Clock" (rect 5 0 32 17)(font "Intel Clear" ))
+	(pt 168 8)
+	(drawing
+		(line (pt 84 12)(pt 109 12))
+		(line (pt 84 4)(pt 109 4))
+		(line (pt 113 8)(pt 168 8))
+		(line (pt 84 12)(pt 84 4))
+		(line (pt 109 4)(pt 113 8))
+		(line (pt 109 12)(pt 113 8))
+	)
+	(text "VCC" (rect 128 7 148 17)(font "Arial" (font_size 6)))
+	(annotation_block (location)(rect -288 416 -232 440))
+)
+(pin
+	(output)
+	(rect 1296 352 1472 368)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "GreenLed" (rect 90 0 137 12)(font "Arial" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(pin
+	(output)
+	(rect 1304 416 1480 432)
+	(text "OUTPUT" (rect 1 0 39 10)(font "Arial" (font_size 6)))
+	(text "RedLed" (rect 90 0 126 17)(font "Intel Clear" ))
+	(pt 0 8)
+	(drawing
+		(line (pt 0 8)(pt 52 8))
+		(line (pt 52 4)(pt 78 4))
+		(line (pt 52 12)(pt 78 12))
+		(line (pt 52 12)(pt 52 4))
+		(line (pt 78 4)(pt 82 8))
+		(line (pt 82 8)(pt 78 12))
+		(line (pt 78 12)(pt 82 8))
+	)
+)
+(symbol
+	(rect 80 496 312 672)
+	(text "regfile" (rect 5 0 35 12)(font "Arial" ))
+	(text "inst" (rect 8 160 25 172)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "RP[2..0]" (rect 0 0 41 12)(font "Arial" ))
+		(text "RP[2..0]" (rect 21 27 62 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32)(line_width 3))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "RQ[2..0]" (rect 0 0 42 12)(font "Arial" ))
+		(text "RQ[2..0]" (rect 21 43 63 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48)(line_width 3))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "WA[2..0]" (rect 0 0 43 12)(font "Arial" ))
+		(text "WA[2..0]" (rect 21 59 64 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64)(line_width 3))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "LD_DATA[12..0]" (rect 0 0 80 12)(font "Arial" ))
+		(text "LD_DATA[12..0]" (rect 21 75 101 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80)(line_width 3))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "WR" (rect 0 0 18 12)(font "Arial" ))
+		(text "WR" (rect 21 91 39 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "CLK" (rect 0 0 21 12)(font "Arial" ))
+		(text "CLK" (rect 21 107 42 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "CLRN" (rect 0 0 30 12)(font "Arial" ))
+		(text "CLRN" (rect 21 123 51 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128))
+	)
+	(port
+		(pt 232 32)
+		(output)
+		(text "DATAP[12..0]" (rect 0 0 67 12)(font "Arial" ))
+		(text "DATAP[12..0]" (rect 155 27 222 39)(font "Arial" ))
+		(line (pt 232 32)(pt 216 32)(line_width 3))
+	)
+	(port
+		(pt 232 48)
+		(output)
+		(text "DATAQ[12..0]" (rect 0 0 68 12)(font "Arial" ))
+		(text "DATAQ[12..0]" (rect 154 43 222 55)(font "Arial" ))
+		(line (pt 232 48)(pt 216 48)(line_width 3))
+	)
+	(drawing
+		(rectangle (rect 16 16 216 160))
+	)
+)
+(symbol
+	(rect 536 288 816 528)
+	(text "fullstate" (rect 5 0 45 12)(font "Arial" ))
+	(text "inst" (rect 8 224 25 236)(font "Arial" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "buttonStart" (rect 0 0 54 12)(font "Arial" ))
+		(text "buttonStart" (rect 21 27 75 39)(font "Arial" ))
+		(line (pt 0 32)(pt 16 32))
+	)
+	(port
+		(pt 0 48)
+		(input)
+		(text "buttonHit" (rect 0 0 44 12)(font "Arial" ))
+		(text "buttonHit" (rect 21 43 65 55)(font "Arial" ))
+		(line (pt 0 48)(pt 16 48))
+	)
+	(port
+		(pt 0 64)
+		(input)
+		(text "buttonReset" (rect 0 0 60 12)(font "Arial" ))
+		(text "buttonReset" (rect 21 59 81 71)(font "Arial" ))
+		(line (pt 0 64)(pt 16 64))
+	)
+	(port
+		(pt 0 80)
+		(input)
+		(text "delayConterDone" (rect 0 0 86 12)(font "Arial" ))
+		(text "delayConterDone" (rect 21 75 107 87)(font "Arial" ))
+		(line (pt 0 80)(pt 16 80))
+	)
+	(port
+		(pt 0 96)
+		(input)
+		(text "registerDataP[12..0]" (rect 0 0 99 12)(font "Arial" ))
+		(text "registerDataP[12..0]" (rect 21 91 120 103)(font "Arial" ))
+		(line (pt 0 96)(pt 16 96)(line_width 3))
+	)
+	(port
+		(pt 0 112)
+		(input)
+		(text "registerDataQ[12..0]" (rect 0 0 100 12)(font "Arial" ))
+		(text "registerDataQ[12..0]" (rect 21 107 121 119)(font "Arial" ))
+		(line (pt 0 112)(pt 16 112)(line_width 3))
+	)
+	(port
+		(pt 0 128)
+		(input)
+		(text "Clock" (rect 0 0 28 12)(font "Arial" ))
+		(text "Clock" (rect 21 123 49 135)(font "Arial" ))
+		(line (pt 0 128)(pt 16 128))
+	)
+	(port
+		(pt 280 32)
+		(output)
+		(text "runcounterEnable" (rect 0 0 84 12)(font "Arial" ))
+		(text "runcounterEnable" (rect 188 27 259 39)(font "Arial" ))
+		(line (pt 280 32)(pt 264 32))
+	)
+	(port
+		(pt 280 48)
+		(output)
+		(text "runcounter[1..0]" (rect 0 0 77 12)(font "Arial" ))
+		(text "runcounter[1..0]" (rect 194 43 259 55)(font "Arial" ))
+		(line (pt 280 48)(pt 264 48)(line_width 3))
+	)
+	(port
+		(pt 280 64)
+		(output)
+		(text "scoreCounterEnable" (rect 0 0 99 12)(font "Arial" ))
+		(text "scoreCounterEnable" (rect 176 59 259 71)(font "Arial" ))
+		(line (pt 280 64)(pt 264 64))
+	)
+	(port
+		(pt 280 80)
+		(output)
+		(text "ledGreen" (rect 0 0 43 12)(font "Arial" ))
+		(text "ledGreen" (rect 223 75 259 87)(font "Arial" ))
+		(line (pt 280 80)(pt 264 80))
+	)
+	(port
+		(pt 280 96)
+		(output)
+		(text "twoBitCounterClear" (rect 0 0 94 12)(font "Arial" ))
+		(text "twoBitCounterClear" (rect 180 91 259 103)(font "Arial" ))
+		(line (pt 280 96)(pt 264 96))
+	)
+	(port
+		(pt 280 112)
+		(output)
+		(text "DisplayScoreControl[1..0]" (rect 0 0 127 12)(font "Arial" ))
+		(text "DisplayScoreControl[1..0]" (rect 152 107 259 119)(font "Arial" ))
+		(line (pt 280 112)(pt 264 112)(line_width 3))
+	)
+	(port
+		(pt 280 128)
+		(output)
+		(text "RedLed" (rect 0 0 37 12)(font "Arial" ))
+		(text "RedLed" (rect 228 123 259 135)(font "Arial" ))
+		(line (pt 280 128)(pt 264 128))
+	)
+	(port
+		(pt 280 144)
+		(output)
+		(text "DisplayScore[12..0]" (rect 0 0 97 12)(font "Arial" ))
+		(text "DisplayScore[12..0]" (rect 177 139 259 151)(font "Arial" ))
+		(line (pt 280 144)(pt 264 144)(line_width 3))
+	)
+	(port
+		(pt 280 160)
+		(output)
+		(text "registerLoad" (rect 0 0 60 12)(font "Arial" ))
+		(text "registerLoad" (rect 209 155 259 167)(font "Arial" ))
+		(line (pt 280 160)(pt 264 160))
+	)
+	(port
+		(pt 280 176)
+		(output)
+		(text "registerLoadData[12..0]" (rect 0 0 115 12)(font "Arial" ))
+		(text "registerLoadData[12..0]" (rect 162 171 259 183)(font "Arial" ))
+		(line (pt 280 176)(pt 264 176)(line_width 3))
+	)
+	(port
+		(pt 280 192)
+		(output)
+		(text "scoreCounterClear" (rect 0 0 92 12)(font "Arial" ))
+		(text "scoreCounterClear" (rect 182 187 259 199)(font "Arial" ))
+		(line (pt 280 192)(pt 264 192))
+	)
+	(drawing
+		(rectangle (rect 16 16 264 224))
+	)
+)
+(connector
+	(pt 536 320)
+	(pt 264 320)
+)
+(connector
+	(pt 264 336)
+	(pt 536 336)
+)
+(connector
+	(pt 264 352)
+	(pt 536 352)
+)
+(connector
+	(pt 312 528)
+	(pt 488 528)
+	(bus)
+)
+(connector
+	(pt 488 384)
+	(pt 488 528)
+	(bus)
+)
+(connector
+	(pt 488 384)
+	(pt 536 384)
+	(bus)
+)
+(connector
+	(pt 312 544)
+	(pt 512 544)
+	(bus)
+)
+(connector
+	(pt 512 544)
+	(pt 512 400)
+	(bus)
+)
+(connector
+	(pt 512 400)
+	(pt 536 400)
+	(bus)
+)
+(connector
+	(pt 528 416)
+	(pt 528 408)
+)
+(connector
+	(pt 536 416)
+	(pt 528 416)
+)
+(connector
+	(pt 80 608)
+	(pt -8 608)
+)
+(connector
+	(pt -8 608)
+	(pt -8 408)
+)
+(connector
+	(pt 528 408)
+	(pt -8 408)
+)
+(connector
+	(pt -8 408)
+	(pt -64 408)
+)
+(connector
+	(pt 816 384)
+	(pt 1208 384)
+)
+(connector
+	(pt 1208 736)
+	(pt 1208 384)
+)
+(connector
+	(pt -8 736)
+	(pt 1208 736)
+)
+(connector
+	(pt -8 624)
+	(pt -8 736)
+)
+(connector
+	(pt -8 624)
+	(pt 80 624)
+)
+(connector
+	(pt 1296 424)
+	(pt 1296 416)
+)
+(connector
+	(pt 1304 424)
+	(pt 1296 424)
+)
+(connector
+	(pt 1296 416)
+	(pt 816 416)
+)
+(connector
+	(pt 1288 360)
+	(pt 1288 368)
+)
+(connector
+	(pt 1296 360)
+	(pt 1288 360)
+)
+(connector
+	(pt 816 368)
+	(pt 1288 368)
+)
+(junction (pt -8 408))
