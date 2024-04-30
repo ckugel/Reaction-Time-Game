@@ -32,9 +32,9 @@ module fullstate(
 
       wire same;
 
-      equals13bit counterIsSame (.X(registerDataP), .Y(13'b000000000011), .S(same));
+      equals13bit counterIsSame (.X(registerDataP), .Y(13'b000000000100), .S(same));
       
-      mux3_8 ma2 (.S2(S2), .S1(S1), .S0(S0), .X7(1'b0), .X6(1'b0), .X5(1'b1), .X4(1'b1), .X3(1'b1), .X2(1'b0), .X1(1'b0), .X0(1'b0), .F(N2Pre));
+      mux3_8 ma2 (.S2(S2), .S1(S1), .S0(S0), .X7(1'b0), .X6(1'b0), .X5(1'b1), .X4(same), .X3(1'b1), .X2(1'b0), .X1(1'b0), .X0(1'b0), .F(N2Pre));
       mux3_8 ma1 (.S2(S2), .S1(S1), .S0(S0), .X7(1'b0), .X6(1'b0), .X5(1'b0), .X4(1'b0), .X3(1'b0), .X2(1'b1), .X1(delayConterDone), .X0(1'b0), .F(N1Pre));
       mux3_8 ma0 (.S2(S2), .S1(S1), .S0(S0), .X7(1'b0), .X6(1'b0), .X5(1'b1), .X4(same), .X3(1'b0), .X2(buttonHit), .X1(~delayConterDone), .X0(buttonStart), .F(N0Pre));
 
