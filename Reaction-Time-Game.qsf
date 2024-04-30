@@ -64,7 +64,7 @@ set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
 # Analysis & Synthesis Assignments
 # ================================
 set_global_assignment -name FAMILY "Cyclone IV E"
-set_global_assignment -name TOP_LEVEL_ENTITY delayCounter13bit
+set_global_assignment -name TOP_LEVEL_ENTITY twoBitUpCounterREAL
 
 # Fitter Assignments
 # ==================
