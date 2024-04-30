@@ -1,4 +1,6 @@
-`include "RegisterFile/dffCustom.v"
+`ifndef fullstate
+`define fullstate
+
 `include "full_add_subtract13bit.v"
 `include "mux3_8.v"
 `include "equals13bit.v"
@@ -46,9 +48,9 @@ module fullstate(
       // TODO: Next we need to give s2, s1, and s0 values. They should go through the Flip flops below
       //a,b,c
       wire s2,s1,s0; // represents the current state -> output. aka these are the second half or "right half" of the state machine	
-      dffCustom df0 (.Clk(Clock), .D(N0), .CLRN(1'b1), .Q(s0), .QN(_ignore0));
-      dffCustom df1 (.Clk(Clock), .D(N1), .CLRN(1'b1), .Q(s1), .QN(_ignore1));
-      dffCustom df2 (.Clk(Clock), .D(N2), .CLRN(1'b1), .Q(s2), .QN(_ignore2));
+      dff df0 (.Clk(Clock), .D(N0), .CLRN(1'b1), .Q(s0));
+      dff df1 (.Clk(Clock), .D(N1), .CLRN(1'b1), .Q(s1));
+      dff df2 (.Clk(Clock), .D(N2), .CLRN(1'b1), .Q(s2));
 
       wire [12:0] regPlus; // reg[0] plus one.
 
@@ -69,3 +71,5 @@ module fullstate(
 
 
 endmodule
+
+`endif

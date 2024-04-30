@@ -44,16 +44,9 @@ set_global_assignment -name ORIGINAL_QUARTUS_VERSION 22.1STD.1
 set_global_assignment -name PROJECT_CREATION_TIME_DATE "15:11:06  APRIL 10, 2024"
 set_global_assignment -name LAST_QUARTUS_VERSION "22.1std.1 Standard Edition"
 set_global_assignment -name PROJECT_OUTPUT_DIRECTORY output_files
-set_global_assignment -name BDF_FILE Register.bdf
-set_global_assignment -name BDF_FILE "Register-component.bdf"
-set_global_assignment -name BDF_FILE "up-counter.bdf"
-set_global_assignment -name BDF_FILE upCounter.bdf
-set_global_assignment -name BDF_FILE divideByTenCounter.bdf
-set_global_assignment -name BDF_FILE divideByFiftyThousandCounter.bdf
 
 # Pin & Location Assignments
 # ==========================
-set_location_assignment PIN_AB22 -to Enable
 
 # Classic Timing Assignments
 # ==========================
@@ -64,7 +57,7 @@ set_global_assignment -name NOMINAL_CORE_SUPPLY_VOLTAGE 1.2V
 # Analysis & Synthesis Assignments
 # ================================
 set_global_assignment -name FAMILY "Cyclone IV E"
-set_global_assignment -name TOP_LEVEL_ENTITY twoBitUpCounterREAL
+set_global_assignment -name TOP_LEVEL_ENTITY Reaction_Time_Game
 
 # Fitter Assignments
 # ==================
@@ -85,69 +78,7 @@ set_global_assignment -name ERROR_CHECK_FREQUENCY_DIVISOR 1
 
 # end ENTITY(divideByFiftyThousandCounter)
 # ----------------------------------------
-set_global_assignment -name BDF_FILE Shiftdevideby10.bdf
-set_global_assignment -name BDF_FILE delayCounter.bdf
-set_location_assignment PIN_V21 -to O0
-set_location_assignment PIN_U24 -to O36
-set_location_assignment PIN_U23 -to O35
-set_location_assignment PIN_W25 -to O34
-set_location_assignment PIN_W22 -to O33
-set_location_assignment PIN_W21 -to O32
-set_location_assignment PIN_Y22 -to O31
-set_location_assignment PIN_M24 -to O30
-set_location_assignment PIN_W28 -to O26
-set_location_assignment PIN_W27 -to O25
-set_location_assignment PIN_Y26 -to O24
-set_location_assignment PIN_W26 -to O23
-set_location_assignment PIN_Y25 -to O22
-set_location_assignment PIN_AA26 -to O21
-set_location_assignment PIN_AA25 -to O20
-set_location_assignment PIN_Y19 -to O6
-set_location_assignment PIN_AF23 -to O5
-set_location_assignment PIN_AD24 -to O4
-set_location_assignment PIN_AB20 -to O2
-set_location_assignment PIN_AA21 -to O3
-set_location_assignment PIN_U21 -to O1
-set_global_assignment -name BDF_FILE counter4.bdf
-set_global_assignment -name VERILOG_FILE fullstate.v
-set_global_assignment -name VERILOG_FILE 13bitCounter.v
-set_global_assignment -name VERILOG_FILE bitCounter13.v
-set_global_assignment -name BDF_FILE bitCounter13test.bdf
-set_location_assignment PIN_Y2 -to CLK
-set_location_assignment PIN_G19 -to counterout[0]
-set_location_assignment PIN_F19 -to counterout[1]
-set_location_assignment PIN_E19 -to counterout[2]
-set_location_assignment PIN_F21 -to counterout[3]
-set_location_assignment PIN_F18 -to counterout[4]
-set_location_assignment PIN_E18 -to counterout[5]
-set_location_assignment PIN_J19 -to counterout[6]
-set_location_assignment PIN_H19 -to counterout[7]
-set_location_assignment PIN_J17 -to counterout[8]
-set_location_assignment PIN_G17 -to counterout[9]
-set_location_assignment PIN_J15 -to counterout[10]
-set_location_assignment PIN_H16 -to counterout[11]
-set_location_assignment PIN_J16 -to counterout[12]
-set_location_assignment PIN_AB28 -to Reset
-
-set_global_assignment -name VERILOG_FILE Rightshift3.v
-set_global_assignment -name VERILOG_FILE Rightshift4.v
-set_global_assignment -name VERILOG_FILE Rightshift5.v
-set_global_assignment -name VERILOG_FILE displayScore.v
-set_location_assignment PIN_AB28 -to CLRN
-set_location_assignment PIN_AD27 -to X[0]
-set_location_assignment PIN_AA22 -to X[10]
-set_location_assignment PIN_AB27 -to X[1]
-set_location_assignment PIN_AC26 -to X[2]
-set_location_assignment PIN_AD26 -to X[3]
-set_location_assignment PIN_AB26 -to X[4]
-set_location_assignment PIN_AC25 -to X[5]
-set_location_assignment PIN_AC24 -to X[6]
-set_location_assignment PIN_AB24 -to X[7]
-set_location_assignment PIN_AA24 -to X[8]
-set_location_assignment PIN_AA23 -to X[9]
 set_location_assignment PIN_Y2 -to Clock
-set_location_assignment PIN_AC28 -to Display
-set_location_assignment PIN_AC27 -to Load
 set_location_assignment PIN_G18 -to Screen1[0]
 set_location_assignment PIN_H22 -to Screen1[6]
 set_location_assignment PIN_J22 -to Screen1[5]
@@ -176,59 +107,21 @@ set_location_assignment PIN_W22 -to Screen3[3]
 set_location_assignment PIN_W21 -to Screen3[2]
 set_location_assignment PIN_Y22 -to Screen3[1]
 set_location_assignment PIN_M24 -to Screen3[0]
-set_global_assignment -name VERILOG_FILE quotientAndRemainder.v
-set_location_assignment PIN_AD27 -to Input[0]
-set_location_assignment PIN_AA22 -to Input[10]
-set_location_assignment PIN_AB27 -to Input[1]
-set_location_assignment PIN_AC26 -to Input[2]
-set_location_assignment PIN_AD26 -to Input[3]
-set_location_assignment PIN_AB26 -to Input[4]
-set_location_assignment PIN_AC25 -to Input[5]
-set_location_assignment PIN_AC24 -to Input[6]
-set_location_assignment PIN_AB24 -to Input[7]
-set_location_assignment PIN_AA24 -to Input[8]
-set_location_assignment PIN_AA23 -to Input[9]
-set_location_assignment PIN_J16 -to Quotient[12]
-set_location_assignment PIN_H16 -to Quotient[11]
-set_location_assignment PIN_J15 -to Quotient[10]
-set_location_assignment PIN_G17 -to Quotient[9]
-set_location_assignment PIN_J17 -to Quotient[8]
-set_location_assignment PIN_H19 -to Quotient[7]
-set_location_assignment PIN_J19 -to Quotient[6]
-set_location_assignment PIN_E18 -to Quotient[5]
-set_location_assignment PIN_F18 -to Quotient[4]
-set_location_assignment PIN_F21 -to Quotient[3]
-set_location_assignment PIN_E19 -to Quotient[2]
-set_location_assignment PIN_F19 -to Quotient[1]
-set_location_assignment PIN_G19 -to Quotient[0]
-set_location_assignment PIN_J16 -to Product[12]
-set_location_assignment PIN_H16 -to Product[11]
-set_location_assignment PIN_J15 -to Product[10]
-set_location_assignment PIN_G17 -to Product[9]
-set_location_assignment PIN_J17 -to Product[8]
-set_location_assignment PIN_H19 -to Product[7]
-set_location_assignment PIN_J19 -to Product[6]
-set_location_assignment PIN_E18 -to Product[5]
-set_location_assignment PIN_F18 -to Product[4]
-set_location_assignment PIN_F21 -to Product[3]
-set_location_assignment PIN_E19 -to Product[2]
-set_location_assignment PIN_F19 -to Product[1]
-set_location_assignment PIN_G19 -to Product[0]
-set_location_assignment PIN_E24 -to Remainder[3]
-set_location_assignment PIN_E25 -to Remainder[2]
-set_location_assignment PIN_E22 -to Remainder[1]
-set_location_assignment PIN_E21 -to Remainder[0]
-set_global_assignment -name VERILOG_FILE multiplyByTen.v
-set_global_assignment -name BDF_FILE "Reaction-Time-Game.bdf"
-set_global_assignment -name BDF_FILE 2bitupcounterREAL.bdf
-set_global_assignment -name BDF_FILE twoBitUpCounterREAL.bdf
-set_location_assignment PIN_H15 -to Q0
-set_location_assignment PIN_G16 -to Q1
-set_location_assignment PIN_Y23 -to CLK1
-set_location_assignment PIN_Y24 -to CLRN1
-set_location_assignment PIN_G15 -to Q3
-set_global_assignment -name BDF_FILE delayCounter13bit.bdf
 set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
 set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
 set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VERILOG_FILE Reaction_Time_Game.v
+set_global_assignment -name VERILOG_FILE seven_seg_decoder_enable.v
+set_location_assignment PIN_AF22 -to RedLed
+set_location_assignment PIN_AG25 -to GreenLed
+set_location_assignment PIN_AC17 -to Screen5[6]
+set_location_assignment PIN_AA15 -to Screen5[5]
+set_location_assignment PIN_AB15 -to Screen5[4]
+set_location_assignment PIN_AB17 -to Screen5[3]
+set_location_assignment PIN_AA16 -to Screen5[2]
+set_location_assignment PIN_AB16 -to Screen5[1]
+set_location_assignment PIN_AA17 -to Screen5[0]
+set_location_assignment PIN_M23 -to buttonHit
+set_location_assignment PIN_M21 -to buttonReset
+set_location_assignment PIN_N21 -to buttonStart
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top
