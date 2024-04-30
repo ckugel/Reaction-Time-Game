@@ -2,7 +2,7 @@
 `include "fullstate.v"
 `include "seven_seg_decoder_bus.v"
 `include "elevenBitUpCount.v"
-`include "scoreCounterWithDone.v"
+`include "thirteenBitUpCounter.v"
 `include "divideByFiftyThousandCounter.v"
 `include "twoBitUpCounterREAL.v"
 
@@ -39,16 +39,16 @@ module Reaction_Time_Game(buttonStart, buttonHit, buttonReset, GreenLed, RedLed,
   
   wire OneKhzClock;
 
-  elevenBitUpCount dc (.Enable(delayCounterEnable), .Clock(OneKhzClock), .Reset(1'b0), .Done(delayCounterDone));
+  divideByFiftyThousandCounter dbftc (.Enable(1'b1), .Clock(Clock), .ClockOut(OneKhzClock));
+  
+   elevenBitUpCount dc (.Enable(delayCounterEnable), .Clock(OneKhzClock), .Reset(buttonReset), .Done(delayCounterDone));
  
   wire [12:0] scoreFromCounter;
 
 
-  divideByFiftyThousandCounter dbftc (.Enable(1'b1), .Clock(Clock), .ClockOut(OneKhzClock));
+  thirteenBitUpCounter scd (.Enable(SCEn), .Clock(OneKhzClock), .count(scoreFromCounter), .Reset(~SCEn));
 
-  scoreCounterWithDone scd (.Enable(SCEn), .ClockIn(OneKhzClock), .Y(scoreFromCounter));
-
-  regfile rf (.DATAP(reg0), .DATAQ(dataQ), .RP(rp), .RQ(rq), .WA(wa), .LD_DATA(ld_data), .WR(registerLoad), .CLK(Clock), .CLRN(1'b1));
+  regfile rf (.DATAP(reg0), .DATAQ(dataQ), .RP(rp), .RQ(rq), .WA(wa), .LD_DATA(ld_data), .WR(registerLoad), .CLK(OneKhzClock), .CLRN(1'b1));
 
   wire [2:0] tbupcntr;
   wire twobitClRN;

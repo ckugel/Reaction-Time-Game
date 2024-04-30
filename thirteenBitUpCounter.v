@@ -1,14 +1,12 @@
-`ifndef thirteenBitUpCount
-`define thirteenBitUpCount
+`ifndef thirteenBitUpCounter
+`define thirteenBitUpCounter
 
-module thirteenBitUpCount(Enable, Clock, Reset, Done);
+module thirteenBitUpCounter(Enable, Clock, Reset, count);
     input Enable;
     input Clock;
     input Reset;
 
-    reg [12:0] count;
-
-    output Done;
+    output reg [12:0] count;
 
     always @(posedge Clock) begin
         if (Reset) begin
@@ -20,7 +18,6 @@ module thirteenBitUpCount(Enable, Clock, Reset, Done);
         end
     end
 
-    assign Done = count[0] & count[1] & count[2] & count[3] & count[4] & count[5] & count[6] & count[7] & count[8] & count[9] & count[10] & count[11] & count[12];
 endmodule
 
 `endif

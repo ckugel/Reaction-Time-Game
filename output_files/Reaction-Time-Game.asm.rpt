@@ -1,5 +1,5 @@
 Assembler report for Reaction-Time-Game
-Tue Apr 30 11:17:39 2024
+Tue Apr 30 11:59:51 2024
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Standard Edition
 
 
@@ -38,7 +38,7 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------------------------+
 ; Assembler Summary                                             ;
 +-----------------------+---------------------------------------+
-; Assembler Status      ; Successful - Tue Apr 30 11:17:39 2024 ;
+; Assembler Status      ; Successful - Tue Apr 30 11:59:51 2024 ;
 ; Revision Name         ; Reaction-Time-Game                    ;
 ; Top-level Entity Name ; Reaction_Time_Game                    ;
 ; Family                ; Cyclone IV E                          ;
@@ -67,8 +67,8 @@ https://fpgasoftware.intel.com/eula.
 +----------------+-----------------------------------------------------------------------------------------+
 ; Option         ; Setting                                                                                 ;
 +----------------+-----------------------------------------------------------------------------------------+
-; JTAG usercode  ; 0x0057A634                                                                              ;
-; Checksum       ; 0x0057A634                                                                              ;
+; JTAG usercode  ; 0x0057619C                                                                              ;
+; Checksum       ; 0x0057619C                                                                              ;
 +----------------+-----------------------------------------------------------------------------------------+
 
 
@@ -78,15 +78,15 @@ https://fpgasoftware.intel.com/eula.
 Info: *******************************************************************
 Info: Running Quartus Prime Assembler
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Standard Edition
-    Info: Processing started: Tue Apr 30 11:17:35 2024
+    Info: Processing started: Tue Apr 30 11:59:47 2024
 Info: Command: quartus_asm --read_settings_files=off --write_settings_files=off Reaction-Time-Game -c Reaction-Time-Game
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (115031): Writing out detailed assembly data for power analysis
 Info (115030): Assembler is generating device programming files
 Info: Quartus Prime Assembler was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 4744 megabytes
-    Info: Processing ended: Tue Apr 30 11:17:39 2024
+    Info: Peak virtual memory: 4735 megabytes
+    Info: Processing ended: Tue Apr 30 11:59:51 2024
     Info: Elapsed time: 00:00:04
-    Info: Total CPU time (on all processors): 00:00:01
+    Info: Total CPU time (on all processors): 00:00:00
 
 

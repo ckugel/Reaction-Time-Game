@@ -1,12 +1,12 @@
-Analysis & Synthesis Status : Successful - Tue Apr 30 11:17:15 2024
+Analysis & Synthesis Status : Successful - Tue Apr 30 11:59:25 2024
 Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Standard Edition
 Revision Name : Reaction-Time-Game
 Top-level Entity Name : Reaction_Time_Game
 Family : Cyclone IV E
-Total logic elements : 122
-    Total combinational functions : 122
-    Dedicated logic registers : 45
-Total registers : 45
+Total logic elements : 113
+    Total combinational functions : 113
+    Dedicated logic registers : 58
+Total registers : 58
 Total pins : 45
 Total virtual pins : 0
 Total memory bits : 0
