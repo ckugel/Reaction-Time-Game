@@ -1,4 +1,4 @@
-`include "seven_seg_decoder-enable.v"
+`include "seven_seg_decoder.v"
 
 module seven_seg_decoder_bus(X, Result, En);
   input [3:0] X;
