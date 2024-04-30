@@ -4,7 +4,7 @@
 `include "delayCounterWithDone.v"
 `include "scoreCounterWithDone.v"
 `include "divideByFiftyThousandCounter.v"
-`include "scoreCounter.v"
+`include "scoreCounterWithDone.v"
 `include "TwoBitUpCounter.v"
 
 module Reaction_Time_Game(buttonStart, buttonHit, buttonReset, GreenLed, RedLed, Screen1, Screen2, Screen3, Screen4, Screen5, Clock);

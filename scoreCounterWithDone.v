@@ -1,7 +1,7 @@
 `ifndef scoreCounterWithDone
   `define scoreCounterWithDone
 
-`include "scoreCounter.v"
+`include "counter/ThirteenBitUpCounter.v"
 module scoreCounterWithDone(Enable, ClockIn, Y);
   input Enable;
   input ClockIn;

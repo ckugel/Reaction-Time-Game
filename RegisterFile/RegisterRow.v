@@ -1,4 +1,7 @@
-`include "Register.v"
+`ifndef RegisterRow
+  `define RegisterRow
+
+`include "RegisterFile/Register.v"
 
 module RegisterRow(In, Load, Clock, CLRN, Q);
   input [12:0] In;
@@ -23,4 +26,4 @@ module RegisterRow(In, Load, Clock, CLRN, Q);
 
 
   endmodule
-
+`endif

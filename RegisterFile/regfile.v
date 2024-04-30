@@ -1,6 +1,6 @@
-`include "RegisterRow.v"
-`include "Mux8.v"
-`include "Decoder3to8.v"
+`include "RegisterFile/RegisterRow.v"
+`include "RegisterFile/Mux8.v"
+`include "RegisterFile/Decoder3to8.v"
 
 module regfile(DATAP, DATAQ, RP, RQ, WA, LD_DATA, WR, CLK, CLRN);
 	output [12:0] DATAP;
