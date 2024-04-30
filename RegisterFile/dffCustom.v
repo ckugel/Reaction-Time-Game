@@ -17,6 +17,9 @@
 // VERSION		"Version 22.1std.1 Build 917 02/14/2023 SC Standard Edition"
 // CREATED		"Tue Apr 23 01:56:42 2024"
 
+`ifndef dffCustom
+	`define dffCustom
+
 module dffCustom(
 	Clk,
 	D,
@@ -58,3 +61,5 @@ assign	SYNTHESIZED_WIRE_12 = ~(SYNTHESIZED_WIRE_10 & Clk & SYNTHESIZED_WIRE_11);
 
 
 endmodule
+
+`endif
