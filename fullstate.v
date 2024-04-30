@@ -23,7 +23,8 @@ module fullstate(
     output scoreCounterEnable, //done
     output delayCounterEnable,
     output [2:0] ReadQ,
-    output [2:0] WriteAddress
+    output [2:0] WriteAddress,
+    output [2:0] State
 	 
 );
       wire N2Pre;
@@ -41,6 +42,8 @@ module fullstate(
       assign N2 = ~buttonReset & N2Pre;
       assign N1 = ~buttonReset & N1Pre; 
       assign N0 = ~buttonReset & N0Pre;
+
+      assign State = {N2, N1, N0};
 
       // Next state and go to's here
   
