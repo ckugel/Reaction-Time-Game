@@ -17,6 +17,9 @@
 // VERSION		"Version 22.1std.1 Build 917 02/14/2023 SC Standard Edition"
 // CREATED		"Sat Apr 20 01:52:04 2024"
 
+`ifndef TFlipFlop
+  `define TFlipFlop
+
 module TFlipFlop(
 	Clock,
 	T,
@@ -54,3 +57,5 @@ assign	SYNTHESIZED_WIRE_7 = ~(PresetN & SYNTHESIZED_WIRE_4 & SYNTHESIZED_WIRE_6)
 
 
 endmodule
+
+`endif

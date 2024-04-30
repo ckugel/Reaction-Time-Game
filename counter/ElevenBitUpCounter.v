@@ -1,10 +1,10 @@
 `include "TFlipFlop.v"
-module EightBitUpCounter(Enable, .Clock(Clock), S, Reset);
+module ElevenBitUpCounter(Enable, .Clock(Clock), S, Reset);
   input Enable;
   input Clock;
   input Reset;
 
-  output [8:0] S;
+  output [10:0] S;
 
   
   TFlipFlop TA1 (.T(Enable), .Clock(Clock), .ClearN(~Reset), .PresetN(1'b1), .Q(QA1), .Qn(_ignore));
@@ -22,6 +22,12 @@ module EightBitUpCounter(Enable, .Clock(Clock), S, Reset);
   TFlipFlop TA7 (.T(cond6), .Clock(Clock), .ClearN(~Reset), .PresetN(1'b1), .Q(QA7), .Qn(_ignore));
   assign cond7 = cond6 & QA7;
   TFlipFlop TA8 (.T(cond7), .Clock(Clock), .ClearN(~Reset), .PresetN(1'b1), .Q(QA8), .Qn(_ignore));
+  assign cond8 = cond7 & QA8;
+  TFlipFlop TA9 (.T(cond8), .Clock(Clock), .ClearN(~Reset), .PresetN(1'b1), .Q(QA9), .Qn(_ignore));
+  assign cond9 = cond8 & QA9;
+  TFlipFlop TA10 (.T(cond9), .Clock(Clock), .ClearN(~Reset), .PresetN(1'b1), .Q(QA10), .Qn(_ignore));
+  assign cond10 = cond9 & QA10;
+  TFlipFlop TA11 (.T(cond10), .Clock(Clock), .ClearN(~Reset), .PresetN(1'b1), .Q(QA11), .Qn(_ignore)); 
 
 
   assign S[0] = QA1;
@@ -32,6 +38,9 @@ module EightBitUpCounter(Enable, .Clock(Clock), S, Reset);
   assign S[5] = QA6;
   assign S[6] = QA7;
   assign S[7] = QA8;
+  assign S[8] = QA9;
+  assign S[9] = QA10;
+  assign S[10] = QA11;
 
 
 endmodule
