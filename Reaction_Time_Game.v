@@ -11,6 +11,7 @@ module Reaction_Time_Game(buttonStart, buttonHit, buttonReset, GreenLed, RedLed,
   input buttonStart;
   input buttonHit;
   input buttonReset;
+  input Clock;
   output GreenLed;
   output RedLed;
   output [6:0] Screen1; // Right most screen
@@ -36,15 +37,23 @@ module Reaction_Time_Game(buttonStart, buttonHit, buttonReset, GreenLed, RedLed,
   wire delayCounterEnable;
 
   delayCounterWithDone dc (.Enable(delayCounterEnable), .ClockIn(Clock), .Done(delayCounterDone));
+ 
+  wire [12:0] scoreFromCounter;
 
-  wire scoreCounterEnable;
-  wire scoreFromCounter;
+  wire OneKhzClock;
 
-  scoreCounterWithDone scd (.Enable(scoreCounterEnable), .ClockIn(Clock), .Y(scoreFromCounter));
+  divideByFiftyThousandCounter dbftc (.Enable(), .Clock(Clock), .ClockOut(OneKhzClock));
+
+  scoreCounterWithDone scd (.Enable(SCEn), .ClockIn(OneKhzClock), .Y(scoreFromCounter));
 
   regfile rf (.DATAP(reg0), .DATAQ(dataQ), .RP(rp), .RQ(rq), .WA(wa), .LD_DATA(ld_data), .WR(registerLoad), .CLK(CLock), .CLRN(1'b1));
 
-  fullstate fs (.buttonStart(buttonStart), .buttonHit(buttonHit), .buttonReset(buttonReset), .Clock(Clock) .ReadQ(rq), .registerLoad(registerLoad), .delayCounterDone(delayCounterDone), .delayCounterEnable(delayCounterEnable), .WriteAddress(wa), .ledGreen(GreenLed), .RedLed(RedLed), .scoreCounterEnable(SCEn), .scoreCounterEnable(scoreCounterEnable), .scoreCounter(scoreFromCounter), .registerDataP(reg0), .registerDataQ(dataQ), .Clock(Clock), .registerLoadData(ld_data), .twoBitCounterClear(_ignoreAnother));
+  wire [2:0] tbupcntr;
+  wire twobitClRN;
+
+  twoBitUpCounterREAL tb2 (.EnableReal(~twobitClRN), .CLK1(buttonHit), .Q0(tbupcntr[0]), .Q1(tbupcntr[1]), .Q3(tbupcntr[2]), .CLRN1(1'b1));
+
+  fullstate fs (.buttonStart(buttonStart), .buttonHit(buttonHit), .buttonReset(buttonReset), .Clock(Clock), .ReadQ(rq), .registerLoad(registerLoad), .delayCounterDone(delayCounterDone), .delayCounterEnable(delayCounterEnable), .WriteAddress(wa), .ledGreen(GreenLed) , .RedLed(RedLed), .scoreCounterEnable(SCEn), .scoreCounter(scoreFromCounter), .registerDataP(reg0), .registerDataQ(dataQ), .registerLoadData(ld_data), .twoBitCounterClear(twobitClRN));
   
   wire [12:0] outputDisplay; // TODO: change if base 10 output
   wire [3:0] Screen5Pre; 

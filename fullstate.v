@@ -7,7 +7,7 @@ module fullstate(
     input buttonStart,
     input buttonHit,
     input buttonReset,
-    input delayConterDone,
+    input delayCounterDone,
     input [12:0] scoreCounter,
     input [12:0] registerDataP,
     input [12:0] registerDataQ,
