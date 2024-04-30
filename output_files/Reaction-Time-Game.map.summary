@@ -1,13 +1,13 @@
-Analysis & Synthesis Status : Successful - Tue Apr 30 00:31:57 2024
+Analysis & Synthesis Status : Successful - Tue Apr 30 02:05:34 2024
 Quartus Prime Version : 22.1std.1 Build 917 02/14/2023 SC Standard Edition
 Revision Name : Reaction-Time-Game
-Top-level Entity Name : twoBitUpCounterREAL
+Top-level Entity Name : delayCounter13bit
 Family : Cyclone IV E
-Total logic elements : 3
-    Total combinational functions : 3
-    Dedicated logic registers : 2
-Total registers : 2
-Total pins : 5
+Total logic elements : 41
+    Total combinational functions : 41
+    Dedicated logic registers : 29
+Total registers : 29
+Total pins : 16
 Total virtual pins : 0
 Total memory bits : 0
 Embedded Multiplier 9-bit elements : 0
