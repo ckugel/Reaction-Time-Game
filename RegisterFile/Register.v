@@ -1,6 +1,7 @@
 `ifndef Register
 	`define Register
-`include "RegisterFile/dffCustom.v"
+	
+	// `include "dffCustom.v"
 module Register(In, Load, Clock, CLRN, Q);
   input In;
   input Load;
@@ -10,7 +11,7 @@ module Register(In, Load, Clock, CLRN, Q);
   
   
   assign D = Load ? In : Q;
-  dffCustom regDFF (.D(D), .Clk(Clock), .CLRN(CLRN), .Q(Q));
+  dff regDFF (.D(D), .Clk(Clock), .CLRN(CLRN), .Q(Q)/*, .QN(_ignore23)*/);
   
 endmodule
 

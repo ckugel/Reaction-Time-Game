@@ -8,7 +8,7 @@ module scoreCounterWithDone(Enable, ClockIn, Y);
 
   output [12:0] Y;
 
-  ThirteenBitUpCounter upper (.Enable(Enable), .Clock(ClockIn), .S(Y), .Reset(Enable));
+  ThirteenBitUpCounter upper (.Enable(Enable), .Clock(ClockIn), .S(Y), .Reset(~Enable));
 endmodule
 
 `endif

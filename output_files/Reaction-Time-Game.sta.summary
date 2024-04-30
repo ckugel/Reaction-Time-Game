@@ -2,4 +2,196 @@
 Timing Analyzer Summary
 ------------------------------------------------------------
 
+Type  : Slow 1200mV 85C Model Setup 'Clock'
+Slack : -9.181
+TNS   : -101.400
+
+Type  : Slow 1200mV 85C Model Setup 'divideByFiftyThousandCounter:dbftc|TFF_inst25'
+Slack : -3.735
+TNS   : -37.688
+
+Type  : Slow 1200mV 85C Model Setup 'fullstate:fs|df0'
+Slack : -3.131
+TNS   : -5.791
+
+Type  : Slow 1200mV 85C Model Setup 'buttonHit'
+Slack : 0.149
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'fullstate:fs|df0'
+Slack : 0.157
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'Clock'
+Slack : 0.402
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'divideByFiftyThousandCounter:dbftc|TFF_inst25'
+Slack : 0.404
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Hold 'buttonHit'
+Slack : 0.440
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Recovery 'Clock'
+Slack : -2.864
+TNS   : -45.620
+
+Type  : Slow 1200mV 85C Model Recovery 'buttonHit'
+Slack : -0.931
+TNS   : -1.862
+
+Type  : Slow 1200mV 85C Model Removal 'buttonHit'
+Slack : 0.563
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Removal 'Clock'
+Slack : 1.381
+TNS   : 0.000
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'Clock'
+Slack : -3.000
+TNS   : -40.265
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'buttonHit'
+Slack : -3.000
+TNS   : -5.570
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'divideByFiftyThousandCounter:dbftc|TFF_inst25'
+Slack : -1.285
+TNS   : -17.990
+
+Type  : Slow 1200mV 85C Model Minimum Pulse Width 'fullstate:fs|df0'
+Slack : 0.378
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Setup 'Clock'
+Slack : -8.322
+TNS   : -89.484
+
+Type  : Slow 1200mV 0C Model Setup 'divideByFiftyThousandCounter:dbftc|TFF_inst25'
+Slack : -3.342
+TNS   : -33.372
+
+Type  : Slow 1200mV 0C Model Setup 'fullstate:fs|df0'
+Slack : -2.825
+TNS   : -5.182
+
+Type  : Slow 1200mV 0C Model Setup 'buttonHit'
+Slack : 0.232
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'fullstate:fs|df0'
+Slack : 0.139
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'Clock'
+Slack : 0.353
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'divideByFiftyThousandCounter:dbftc|TFF_inst25'
+Slack : 0.354
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Hold 'buttonHit'
+Slack : 0.387
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Recovery 'Clock'
+Slack : -2.491
+TNS   : -39.736
+
+Type  : Slow 1200mV 0C Model Recovery 'buttonHit'
+Slack : -0.685
+TNS   : -1.370
+
+Type  : Slow 1200mV 0C Model Removal 'buttonHit'
+Slack : 0.440
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Removal 'Clock'
+Slack : 1.333
+TNS   : 0.000
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'Clock'
+Slack : -3.000
+TNS   : -40.265
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'buttonHit'
+Slack : -3.000
+TNS   : -5.570
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'divideByFiftyThousandCounter:dbftc|TFF_inst25'
+Slack : -1.285
+TNS   : -17.990
+
+Type  : Slow 1200mV 0C Model Minimum Pulse Width 'fullstate:fs|df0'
+Slack : 0.363
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Setup 'Clock'
+Slack : -4.121
+TNS   : -39.002
+
+Type  : Fast 1200mV 0C Model Setup 'fullstate:fs|df0'
+Slack : -1.544
+TNS   : -2.847
+
+Type  : Fast 1200mV 0C Model Setup 'divideByFiftyThousandCounter:dbftc|TFF_inst25'
+Slack : -1.384
+TNS   : -11.310
+
+Type  : Fast 1200mV 0C Model Setup 'buttonHit'
+Slack : 0.598
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'fullstate:fs|df0'
+Slack : 0.063
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'divideByFiftyThousandCounter:dbftc|TFF_inst25'
+Slack : 0.082
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'Clock'
+Slack : 0.181
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Hold 'buttonHit'
+Slack : 0.201
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Recovery 'Clock'
+Slack : -0.958
+TNS   : -15.220
+
+Type  : Fast 1200mV 0C Model Recovery 'buttonHit'
+Slack : -0.137
+TNS   : -0.274
+
+Type  : Fast 1200mV 0C Model Removal 'buttonHit'
+Slack : 0.295
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Removal 'Clock'
+Slack : 0.414
+TNS   : 0.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'Clock'
+Slack : -3.000
+TNS   : -33.866
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'buttonHit'
+Slack : -3.000
+TNS   : -5.220
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'divideByFiftyThousandCounter:dbftc|TFF_inst25'
+Slack : -1.000
+TNS   : -14.000
+
+Type  : Fast 1200mV 0C Model Minimum Pulse Width 'fullstate:fs|df0'
+Slack : 0.420
+TNS   : 0.000
+
 ------------------------------------------------------------

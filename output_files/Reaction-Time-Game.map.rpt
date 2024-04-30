@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Reaction-Time-Game
-Tue Apr 30 05:21:02 2024
+Tue Apr 30 11:17:15 2024
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Standard Edition
 
 
@@ -13,54 +13,43 @@ Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Standard Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. Removed Registers Triggering Further Register Optimizations
- 10. General Register Statistics
- 11. Port Connectivity Checks: "seven_seg_decoder_bus:ssd5"
- 12. Port Connectivity Checks: "seven_seg_decoder_bus:ssd4"
- 13. Port Connectivity Checks: "seven_seg_decoder_bus:ssd1"
- 14. Port Connectivity Checks: "fullstate:fs|full_add_subtract13bit:FA1|full_adder_13bit:FA"
- 15. Port Connectivity Checks: "fullstate:fs|full_add_subtract13bit:FA1"
- 16. Port Connectivity Checks: "fullstate:fs|mux3_8:ma0"
- 17. Port Connectivity Checks: "fullstate:fs|mux3_8:ma1"
- 18. Port Connectivity Checks: "fullstate:fs|mux3_8:ma2"
- 19. Port Connectivity Checks: "fullstate:fs|equals13bit:counterIsSame"
- 20. Port Connectivity Checks: "twoBitUpCounterREAL:tb2"
- 21. Port Connectivity Checks: "regfile:rf|Mux8:outputMuxQ"
- 22. Port Connectivity Checks: "regfile:rf|Mux8:outputMuxP"
- 23. Port Connectivity Checks: "regfile:rf|Decoder3to8:decoder"
- 24. Port Connectivity Checks: "regfile:rf"
- 25. Port Connectivity Checks: "scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA13"
- 26. Port Connectivity Checks: "scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA12"
- 27. Port Connectivity Checks: "scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA11"
- 28. Port Connectivity Checks: "scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA10"
- 29. Port Connectivity Checks: "scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA9"
- 30. Port Connectivity Checks: "scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA8"
- 31. Port Connectivity Checks: "scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA7"
- 32. Port Connectivity Checks: "scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA6"
- 33. Port Connectivity Checks: "scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA5"
- 34. Port Connectivity Checks: "scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA4"
- 35. Port Connectivity Checks: "scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA3"
- 36. Port Connectivity Checks: "scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA2"
- 37. Port Connectivity Checks: "scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA1"
- 38. Port Connectivity Checks: "scoreCounterWithDone:scd|ThirteenBitUpCounter:upper"
- 39. Port Connectivity Checks: "divideByFiftyThousandCounter:dbftc"
- 40. Port Connectivity Checks: "delayCounterWithDone:dc|equals13bit:eq"
- 41. Port Connectivity Checks: "delayCounterWithDone:dc|ElevenBitUpCounter:upper|TFlipFlop:TA11"
- 42. Port Connectivity Checks: "delayCounterWithDone:dc|ElevenBitUpCounter:upper|TFlipFlop:TA10"
- 43. Port Connectivity Checks: "delayCounterWithDone:dc|ElevenBitUpCounter:upper|TFlipFlop:TA9"
- 44. Port Connectivity Checks: "delayCounterWithDone:dc|ElevenBitUpCounter:upper|TFlipFlop:TA8"
- 45. Port Connectivity Checks: "delayCounterWithDone:dc|ElevenBitUpCounter:upper|TFlipFlop:TA7"
- 46. Port Connectivity Checks: "delayCounterWithDone:dc|ElevenBitUpCounter:upper|TFlipFlop:TA6"
- 47. Port Connectivity Checks: "delayCounterWithDone:dc|ElevenBitUpCounter:upper|TFlipFlop:TA5"
- 48. Port Connectivity Checks: "delayCounterWithDone:dc|ElevenBitUpCounter:upper|TFlipFlop:TA4"
- 49. Port Connectivity Checks: "delayCounterWithDone:dc|ElevenBitUpCounter:upper|TFlipFlop:TA3"
- 50. Port Connectivity Checks: "delayCounterWithDone:dc|ElevenBitUpCounter:upper|TFlipFlop:TA2"
- 51. Port Connectivity Checks: "delayCounterWithDone:dc|ElevenBitUpCounter:upper|TFlipFlop:TA1"
- 52. Port Connectivity Checks: "delayCounterWithDone:dc|ElevenBitUpCounter:upper"
- 53. Post-Synthesis Netlist Statistics for Top Partition
- 54. Elapsed Time Per Partition
- 55. Analysis & Synthesis Messages
+  8. Logic Cells Representing Combinational Loops
+  9. Registers Removed During Synthesis
+ 10. Removed Registers Triggering Further Register Optimizations
+ 11. General Register Statistics
+ 12. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 13. Port Connectivity Checks: "seven_seg_decoder_bus:ssd5"
+ 14. Port Connectivity Checks: "seven_seg_decoder_bus:ssd4"
+ 15. Port Connectivity Checks: "seven_seg_decoder_bus:ssd1"
+ 16. Port Connectivity Checks: "fullstate:fs|full_add_subtract13bit:FA1|full_adder_13bit:FA"
+ 17. Port Connectivity Checks: "fullstate:fs|full_add_subtract13bit:FA1"
+ 18. Port Connectivity Checks: "fullstate:fs|mux3_8:ma0"
+ 19. Port Connectivity Checks: "fullstate:fs|mux3_8:ma1"
+ 20. Port Connectivity Checks: "fullstate:fs|mux3_8:ma2"
+ 21. Port Connectivity Checks: "fullstate:fs|equals13bit:counterIsSame"
+ 22. Port Connectivity Checks: "regfile:rf|Mux8:outputMuxQ"
+ 23. Port Connectivity Checks: "regfile:rf|Mux8:outputMuxP"
+ 24. Port Connectivity Checks: "regfile:rf|Decoder3to8:decoder"
+ 25. Port Connectivity Checks: "regfile:rf"
+ 26. Port Connectivity Checks: "scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA13"
+ 27. Port Connectivity Checks: "scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA12"
+ 28. Port Connectivity Checks: "scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA11"
+ 29. Port Connectivity Checks: "scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA10"
+ 30. Port Connectivity Checks: "scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA9"
+ 31. Port Connectivity Checks: "scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA8"
+ 32. Port Connectivity Checks: "scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA7"
+ 33. Port Connectivity Checks: "scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA6"
+ 34. Port Connectivity Checks: "scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA5"
+ 35. Port Connectivity Checks: "scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA4"
+ 36. Port Connectivity Checks: "scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA3"
+ 37. Port Connectivity Checks: "scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA2"
+ 38. Port Connectivity Checks: "scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA1"
+ 39. Port Connectivity Checks: "scoreCounterWithDone:scd|ThirteenBitUpCounter:upper"
+ 40. Port Connectivity Checks: "divideByFiftyThousandCounter:dbftc"
+ 41. Port Connectivity Checks: "elevenBitUpCount:dc"
+ 42. Post-Synthesis Netlist Statistics for Top Partition
+ 43. Elapsed Time Per Partition
+ 44. Analysis & Synthesis Messages
 
 
 
@@ -87,16 +76,16 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                            ;
 +------------------------------------+----------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Tue Apr 30 05:21:02 2024              ;
+; Analysis & Synthesis Status        ; Successful - Tue Apr 30 11:17:15 2024              ;
 ; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Standard Edition ;
 ; Revision Name                      ; Reaction-Time-Game                                 ;
 ; Top-level Entity Name              ; Reaction_Time_Game                                 ;
 ; Family                             ; Cyclone IV E                                       ;
-; Total logic elements               ; 0                                                  ;
-;     Total combinational functions  ; 0                                                  ;
-;     Dedicated logic registers      ; 0                                                  ;
-; Total registers                    ; 0                                                  ;
-; Total pins                         ; 41                                                 ;
+; Total logic elements               ; 122                                                ;
+;     Total combinational functions  ; 122                                                ;
+;     Dedicated logic registers      ; 45                                                 ;
+; Total registers                    ; 45                                                 ;
+; Total pins                         ; 45                                                 ;
 ; Total virtual pins                 ; 0                                                  ;
 ; Total memory bits                  ; 0                                                  ;
 ; Embedded Multiplier 9-bit elements ; 0                                                  ;
@@ -195,14 +184,15 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 16          ;
-; Maximum allowed            ; 8           ;
+; Number detected on machine ; 20          ;
+; Maximum allowed            ; 12          ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 12          ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-12        ;   0.0%      ;
 +----------------------------+-------------+
 
 
@@ -213,6 +203,7 @@ https://fpgasoftware.intel.com/eula.
 +----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------------+---------+
 ; Reaction_Time_Game.v             ; yes             ; User Verilog HDL File        ; U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v           ;         ;
 ; seven_seg_decoder_enable.v       ; yes             ; User Verilog HDL File        ; U:/CPRE281/FinalProject/Reaction-Time-Game/seven_seg_decoder_enable.v     ;         ;
+; elevenBitUpCount.v               ; yes             ; User Verilog HDL File        ; U:/CPRE281/FinalProject/Reaction-Time-Game/elevenBitUpCount.v             ;         ;
 ; RegisterFile/Register.v          ; yes             ; Auto-Found Verilog HDL File  ; U:/CPRE281/FinalProject/Reaction-Time-Game/RegisterFile/Register.v        ;         ;
 ; RegisterFile/RegisterRow.v       ; yes             ; Auto-Found Verilog HDL File  ; U:/CPRE281/FinalProject/Reaction-Time-Game/RegisterFile/RegisterRow.v     ;         ;
 ; RegisterFile/Mux8.v              ; yes             ; Auto-Found Verilog HDL File  ; U:/CPRE281/FinalProject/Reaction-Time-Game/RegisterFile/Mux8.v            ;         ;
@@ -227,8 +218,6 @@ https://fpgasoftware.intel.com/eula.
 ; fullstate.v                      ; yes             ; Auto-Found Verilog HDL File  ; U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v                    ;         ;
 ; seven_seg_decoder_bus.v          ; yes             ; Auto-Found Verilog HDL File  ; U:/CPRE281/FinalProject/Reaction-Time-Game/seven_seg_decoder_bus.v        ;         ;
 ; TFlipFlop.v                      ; yes             ; Auto-Found Verilog HDL File  ; U:/CPRE281/FinalProject/Reaction-Time-Game/TFlipFlop.v                    ;         ;
-; counter/ElevenBitUpCounter.v     ; yes             ; Auto-Found Verilog HDL File  ; U:/CPRE281/FinalProject/Reaction-Time-Game/counter/ElevenBitUpCounter.v   ;         ;
-; delayCounterWithDone.v           ; yes             ; Auto-Found Verilog HDL File  ; U:/CPRE281/FinalProject/Reaction-Time-Game/delayCounterWithDone.v         ;         ;
 ; counter/ThirteenBitUpCounter.v   ; yes             ; Auto-Found Verilog HDL File  ; U:/CPRE281/FinalProject/Reaction-Time-Game/counter/ThirteenBitUpCounter.v ;         ;
 ; scoreCounterWithDone.v           ; yes             ; Auto-Found Verilog HDL File  ; U:/CPRE281/FinalProject/Reaction-Time-Game/scoreCounterWithDone.v         ;         ;
 ; divideByFiftyThousandCounter.v   ; yes             ; Auto-Found Verilog HDL File  ; U:/CPRE281/FinalProject/Reaction-Time-Game/divideByFiftyThousandCounter.v ;         ;
@@ -241,40 +230,106 @@ https://fpgasoftware.intel.com/eula.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
+; Estimated Total logic elements              ; 122         ;
 ;                                             ;             ;
-; Total combinational functions               ; 0           ;
+; Total combinational functions               ; 122         ;
 ; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 0           ;
-;     -- 3 input functions                    ; 0           ;
-;     -- <=2 input functions                  ; 0           ;
+;     -- 4 input functions                    ; 56          ;
+;     -- 3 input functions                    ; 34          ;
+;     -- <=2 input functions                  ; 32          ;
 ;                                             ;             ;
 ; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 0           ;
-;     -- arithmetic mode                      ; 0           ;
+;     -- normal mode                          ; 113         ;
+;     -- arithmetic mode                      ; 9           ;
 ;                                             ;             ;
-; Total registers                             ; 0           ;
-;     -- Dedicated logic registers            ; 0           ;
+; Total registers                             ; 45          ;
+;     -- Dedicated logic registers            ; 45          ;
 ;     -- I/O registers                        ; 0           ;
 ;                                             ;             ;
-; I/O pins                                    ; 41          ;
+; I/O pins                                    ; 45          ;
 ;                                             ;             ;
 ; Embedded Multiplier 9-bit elements          ; 0           ;
 ;                                             ;             ;
-; Maximum fan-out node                        ; buttonStart ;
-; Maximum fan-out                             ; 1           ;
-; Total fan-out                               ; 41          ;
-; Average fan-out                             ; 0.50        ;
+; Maximum fan-out node                        ; Clock~input ;
+; Maximum fan-out                             ; 29          ;
+; Total fan-out                               ; 594         ;
+; Average fan-out                             ; 2.31        ;
 +---------------------------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                             ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name        ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------------+--------------+
-; |Reaction_Time_Game        ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 41   ; 0            ; |Reaction_Time_Game ; Reaction_Time_Game ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+---------------------+--------------------+--------------+
++-----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                       ;
++-----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------+------------------------------+--------------+
+; Compilation Hierarchy Node              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                    ; Entity Name                  ; Library Name ;
++-----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------+------------------------------+--------------+
+; |Reaction_Time_Game                     ; 122 (0)             ; 45 (0)                    ; 0           ; 0            ; 0       ; 0         ; 45   ; 0            ; |Reaction_Time_Game                                                                    ; Reaction_Time_Game           ; work         ;
+;    |divideByFiftyThousandCounter:dbftc| ; 23 (23)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|divideByFiftyThousandCounter:dbftc                                 ; divideByFiftyThousandCounter ; work         ;
+;    |elevenBitUpCount:dc|                ; 15 (15)             ; 11 (11)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|elevenBitUpCount:dc                                                ; elevenBitUpCount             ; work         ;
+;    |fullstate:fs|                       ; 25 (25)             ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|fullstate:fs                                                       ; fullstate                    ; work         ;
+;    |regfile:rf|                         ; 14 (0)              ; 13 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf                                                         ; regfile                      ; work         ;
+;       |Decoder3to8:decoder|             ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|Decoder3to8:decoder                                     ; Decoder3to8                  ; work         ;
+;       |Mux8:outputMuxQ|                 ; 13 (13)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|Mux8:outputMuxQ                                         ; Mux8                         ; work         ;
+;       |RegisterRow:reg3|                ; 0 (0)               ; 13 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg3                                        ; RegisterRow                  ; work         ;
+;          |Register:register10|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg3|Register:register10                    ; Register                     ; work         ;
+;          |Register:register11|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg3|Register:register11                    ; Register                     ; work         ;
+;          |Register:register12|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg3|Register:register12                    ; Register                     ; work         ;
+;          |Register:register13|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg3|Register:register13                    ; Register                     ; work         ;
+;          |Register:register1|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg3|Register:register1                     ; Register                     ; work         ;
+;          |Register:register2|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg3|Register:register2                     ; Register                     ; work         ;
+;          |Register:register3|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg3|Register:register3                     ; Register                     ; work         ;
+;          |Register:register4|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg3|Register:register4                     ; Register                     ; work         ;
+;          |Register:register5|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg3|Register:register5                     ; Register                     ; work         ;
+;          |Register:register6|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg3|Register:register6                     ; Register                     ; work         ;
+;          |Register:register7|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg3|Register:register7                     ; Register                     ; work         ;
+;          |Register:register8|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg3|Register:register8                     ; Register                     ; work         ;
+;          |Register:register9|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg3|Register:register9                     ; Register                     ; work         ;
+;    |scoreCounterWithDone:scd|           ; 22 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|scoreCounterWithDone:scd                                           ; scoreCounterWithDone         ; work         ;
+;       |ThirteenBitUpCounter:upper|      ; 22 (0)              ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|scoreCounterWithDone:scd|ThirteenBitUpCounter:upper                ; ThirteenBitUpCounter         ; work         ;
+;          |TFlipFlop:TA10|               ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA10 ; TFlipFlop                    ; work         ;
+;          |TFlipFlop:TA11|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA11 ; TFlipFlop                    ; work         ;
+;          |TFlipFlop:TA12|               ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA12 ; TFlipFlop                    ; work         ;
+;          |TFlipFlop:TA13|               ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA13 ; TFlipFlop                    ; work         ;
+;          |TFlipFlop:TA1|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA1  ; TFlipFlop                    ; work         ;
+;          |TFlipFlop:TA2|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA2  ; TFlipFlop                    ; work         ;
+;          |TFlipFlop:TA3|                ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA3  ; TFlipFlop                    ; work         ;
+;          |TFlipFlop:TA4|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA4  ; TFlipFlop                    ; work         ;
+;          |TFlipFlop:TA5|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA5  ; TFlipFlop                    ; work         ;
+;          |TFlipFlop:TA6|                ; 3 (3)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA6  ; TFlipFlop                    ; work         ;
+;          |TFlipFlop:TA7|                ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA7  ; TFlipFlop                    ; work         ;
+;          |TFlipFlop:TA8|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA8  ; TFlipFlop                    ; work         ;
+;          |TFlipFlop:TA9|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA9  ; TFlipFlop                    ; work         ;
+;    |seven_seg_decoder_bus:ssd1|         ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|seven_seg_decoder_bus:ssd1                                         ; seven_seg_decoder_bus        ; work         ;
+;       |seven_seg_decoder_enable:ssd|    ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|seven_seg_decoder_bus:ssd1|seven_seg_decoder_enable:ssd            ; seven_seg_decoder_enable     ; work         ;
+;    |seven_seg_decoder_bus:ssd2|         ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|seven_seg_decoder_bus:ssd2                                         ; seven_seg_decoder_bus        ; work         ;
+;       |seven_seg_decoder_enable:ssd|    ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|seven_seg_decoder_bus:ssd2|seven_seg_decoder_enable:ssd            ; seven_seg_decoder_enable     ; work         ;
+;    |seven_seg_decoder_bus:ssd3|         ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|seven_seg_decoder_bus:ssd3                                         ; seven_seg_decoder_bus        ; work         ;
+;       |seven_seg_decoder_enable:ssd|    ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|seven_seg_decoder_bus:ssd3|seven_seg_decoder_enable:ssd            ; seven_seg_decoder_enable     ; work         ;
+;    |twoBitUpCounterREAL:tb2|            ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|twoBitUpCounterREAL:tb2                                            ; twoBitUpCounterREAL          ; work         ;
++-----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+----------------------------------------------------------------------------------------+------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++-----------------------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops                                ;
++------------------------------------------------------------------------+----+
+; Logic Cell Name                                                        ;    ;
++------------------------------------------------------------------------+----+
+; scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA2|Q~0  ;    ;
+; scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA3|Q~0  ;    ;
+; scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA1|Q~0  ;    ;
+; scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA4|Q~0  ;    ;
+; scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA6|Q~0  ;    ;
+; scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA7|Q~0  ;    ;
+; scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA8|Q~0  ;    ;
+; scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA5|Q~0  ;    ;
+; scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA10|Q~0 ;    ;
+; scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA11|Q~0 ;    ;
+; scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA12|Q~0 ;    ;
+; scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA9|Q~0  ;    ;
+; scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA13|Q~0 ;    ;
+; Number of logic cells representing combinational loops                 ; 13 ;
++------------------------------------------------------------------------+----+
+Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------------------------------------------------------+
@@ -282,9 +337,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------------------------------------------------------+---------------------------------------------+
 ; Register name                                          ; Reason for Removal                          ;
 +--------------------------------------------------------+---------------------------------------------+
-; fullstate:fs|df0                                       ; Stuck at GND due to stuck port clock        ;
-; fullstate:fs|df1                                       ; Stuck at GND due to stuck port clock        ;
-; fullstate:fs|df2                                       ; Stuck at GND due to stuck port clock        ;
 ; regfile:rf|RegisterRow:reg1|Register:register13|regDFF ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:rf|RegisterRow:reg1|Register:register12|regDFF ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:rf|RegisterRow:reg1|Register:register11|regDFF ; Stuck at GND due to stuck port clock_enable ;
@@ -298,157 +350,89 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; regfile:rf|RegisterRow:reg1|Register:register3|regDFF  ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:rf|RegisterRow:reg1|Register:register2|regDFF  ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:rf|RegisterRow:reg1|Register:register1|regDFF  ; Stuck at GND due to stuck port clock_enable ;
-; regfile:rf|RegisterRow:reg4|Register:register13|regDFF ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg4|Register:register12|regDFF ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg4|Register:register11|regDFF ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg4|Register:register10|regDFF ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg4|Register:register9|regDFF  ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg4|Register:register8|regDFF  ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg4|Register:register7|regDFF  ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg4|Register:register6|regDFF  ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg4|Register:register5|regDFF  ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg4|Register:register4|regDFF  ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg4|Register:register3|regDFF  ; Stuck at GND due to stuck port data_in      ;
+; regfile:rf|RegisterRow:reg4|Register:register3|regDFF  ; Stuck at VCC due to stuck port data_in      ;
+; regfile:rf|RegisterRow:reg4|Register:register4|regDFF  ; Stuck at GND due to stuck port clock_enable ;
+; regfile:rf|RegisterRow:reg4|Register:register6|regDFF  ; Stuck at GND due to stuck port clock_enable ;
+; regfile:rf|RegisterRow:reg4|Register:register7|regDFF  ; Stuck at GND due to stuck port clock_enable ;
+; regfile:rf|RegisterRow:reg4|Register:register8|regDFF  ; Stuck at GND due to stuck port clock_enable ;
+; regfile:rf|RegisterRow:reg4|Register:register5|regDFF  ; Stuck at GND due to stuck port clock_enable ;
+; regfile:rf|RegisterRow:reg4|Register:register10|regDFF ; Stuck at GND due to stuck port clock_enable ;
+; regfile:rf|RegisterRow:reg4|Register:register11|regDFF ; Stuck at GND due to stuck port clock_enable ;
+; regfile:rf|RegisterRow:reg4|Register:register12|regDFF ; Stuck at GND due to stuck port clock_enable ;
+; regfile:rf|RegisterRow:reg4|Register:register9|regDFF  ; Stuck at GND due to stuck port clock_enable ;
+; regfile:rf|RegisterRow:reg4|Register:register13|regDFF ; Stuck at GND due to stuck port clock_enable ;
 ; regfile:rf|RegisterRow:reg4|Register:register2|regDFF  ; Stuck at GND due to stuck port data_in      ;
 ; regfile:rf|RegisterRow:reg4|Register:register1|regDFF  ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg3|Register:register13|regDFF ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg3|Register:register12|regDFF ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg3|Register:register11|regDFF ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg3|Register:register10|regDFF ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg3|Register:register9|regDFF  ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg3|Register:register8|regDFF  ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg3|Register:register7|regDFF  ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg3|Register:register6|regDFF  ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg3|Register:register5|regDFF  ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg3|Register:register4|regDFF  ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg3|Register:register3|regDFF  ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg3|Register:register2|regDFF  ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg3|Register:register1|regDFF  ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg2|Register:register13|regDFF ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg2|Register:register12|regDFF ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg2|Register:register11|regDFF ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg2|Register:register10|regDFF ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg2|Register:register9|regDFF  ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg2|Register:register8|regDFF  ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg2|Register:register7|regDFF  ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg2|Register:register6|regDFF  ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg2|Register:register5|regDFF  ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg2|Register:register4|regDFF  ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg2|Register:register3|regDFF  ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg2|Register:register2|regDFF  ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg2|Register:register1|regDFF  ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg0|Register:register13|regDFF ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg0|Register:register12|regDFF ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg0|Register:register11|regDFF ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg0|Register:register10|regDFF ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg0|Register:register9|regDFF  ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg0|Register:register8|regDFF  ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg0|Register:register7|regDFF  ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg0|Register:register6|regDFF  ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg0|Register:register5|regDFF  ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg0|Register:register4|regDFF  ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg0|Register:register3|regDFF  ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg0|Register:register2|regDFF  ; Stuck at GND due to stuck port data_in      ;
-; regfile:rf|RegisterRow:reg0|Register:register1|regDFF  ; Stuck at GND due to stuck port data_in      ;
-; divideByFiftyThousandCounter:dbftc|TFF_inst1           ; Lost fanout                                 ;
-; divideByFiftyThousandCounter:dbftc|SYNTHESIZED_WIRE_61 ; Lost fanout                                 ;
-; divideByFiftyThousandCounter:dbftc|TFF_inst16          ; Lost fanout                                 ;
-; divideByFiftyThousandCounter:dbftc|TFF_inst18          ; Lost fanout                                 ;
-; divideByFiftyThousandCounter:dbftc|TFF_inst19          ; Lost fanout                                 ;
-; divideByFiftyThousandCounter:dbftc|TFF_inst2           ; Lost fanout                                 ;
-; divideByFiftyThousandCounter:dbftc|TFF_inst20          ; Lost fanout                                 ;
-; divideByFiftyThousandCounter:dbftc|SYNTHESIZED_WIRE_71 ; Lost fanout                                 ;
-; divideByFiftyThousandCounter:dbftc|TFF_inst25          ; Lost fanout                                 ;
-; divideByFiftyThousandCounter:dbftc|TFF_inst3           ; Lost fanout                                 ;
-; divideByFiftyThousandCounter:dbftc|SYNTHESIZED_WIRE_70 ; Lost fanout                                 ;
-; divideByFiftyThousandCounter:dbftc|TFF_inst6           ; Lost fanout                                 ;
-; divideByFiftyThousandCounter:dbftc|SYNTHESIZED_WIRE_63 ; Lost fanout                                 ;
-; divideByFiftyThousandCounter:dbftc|TFF_inst80          ; Lost fanout                                 ;
-; divideByFiftyThousandCounter:dbftc|SYNTHESIZED_WIRE_68 ; Lost fanout                                 ;
-; divideByFiftyThousandCounter:dbftc|SYNTHESIZED_WIRE_65 ; Lost fanout                                 ;
-; Total Number of Removed Registers = 84                 ;                                             ;
+; regfile:rf|RegisterRow:reg2|Register:register2|regDFF  ; Stuck at GND due to stuck port clock_enable ;
+; regfile:rf|RegisterRow:reg0|Register:register2|regDFF  ; Stuck at GND due to stuck port clock_enable ;
+; regfile:rf|RegisterRow:reg2|Register:register3|regDFF  ; Stuck at GND due to stuck port clock_enable ;
+; regfile:rf|RegisterRow:reg0|Register:register3|regDFF  ; Stuck at GND due to stuck port clock_enable ;
+; regfile:rf|RegisterRow:reg2|Register:register4|regDFF  ; Stuck at GND due to stuck port clock_enable ;
+; regfile:rf|RegisterRow:reg0|Register:register4|regDFF  ; Stuck at GND due to stuck port clock_enable ;
+; regfile:rf|RegisterRow:reg2|Register:register1|regDFF  ; Stuck at GND due to stuck port clock_enable ;
+; regfile:rf|RegisterRow:reg0|Register:register1|regDFF  ; Stuck at GND due to stuck port clock_enable ;
+; regfile:rf|RegisterRow:reg2|Register:register6|regDFF  ; Stuck at GND due to stuck port clock_enable ;
+; regfile:rf|RegisterRow:reg0|Register:register6|regDFF  ; Stuck at GND due to stuck port clock_enable ;
+; regfile:rf|RegisterRow:reg2|Register:register7|regDFF  ; Stuck at GND due to stuck port clock_enable ;
+; regfile:rf|RegisterRow:reg0|Register:register7|regDFF  ; Stuck at GND due to stuck port clock_enable ;
+; regfile:rf|RegisterRow:reg2|Register:register8|regDFF  ; Stuck at GND due to stuck port clock_enable ;
+; regfile:rf|RegisterRow:reg0|Register:register8|regDFF  ; Stuck at GND due to stuck port clock_enable ;
+; regfile:rf|RegisterRow:reg2|Register:register5|regDFF  ; Stuck at GND due to stuck port clock_enable ;
+; regfile:rf|RegisterRow:reg0|Register:register5|regDFF  ; Stuck at GND due to stuck port clock_enable ;
+; regfile:rf|RegisterRow:reg2|Register:register10|regDFF ; Stuck at GND due to stuck port clock_enable ;
+; regfile:rf|RegisterRow:reg0|Register:register10|regDFF ; Stuck at GND due to stuck port clock_enable ;
+; regfile:rf|RegisterRow:reg2|Register:register11|regDFF ; Stuck at GND due to stuck port clock_enable ;
+; regfile:rf|RegisterRow:reg0|Register:register11|regDFF ; Stuck at GND due to stuck port clock_enable ;
+; regfile:rf|RegisterRow:reg2|Register:register12|regDFF ; Stuck at GND due to stuck port clock_enable ;
+; regfile:rf|RegisterRow:reg0|Register:register12|regDFF ; Stuck at GND due to stuck port clock_enable ;
+; regfile:rf|RegisterRow:reg2|Register:register9|regDFF  ; Stuck at GND due to stuck port clock_enable ;
+; regfile:rf|RegisterRow:reg0|Register:register9|regDFF  ; Stuck at GND due to stuck port clock_enable ;
+; regfile:rf|RegisterRow:reg2|Register:register13|regDFF ; Stuck at GND due to stuck port clock_enable ;
+; regfile:rf|RegisterRow:reg0|Register:register13|regDFF ; Stuck at GND due to stuck port clock_enable ;
+; Total Number of Removed Registers = 52                 ;                                             ;
 +--------------------------------------------------------+---------------------------------------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------+
-; Removed Registers Triggering Further Register Optimizations                                                                       ;
-+-----------------------------------------------+-------------------------+---------------------------------------------------------+
-; Register name                                 ; Reason for Removal      ; Registers Removed due to This Register                  ;
-+-----------------------------------------------+-------------------------+---------------------------------------------------------+
-; fullstate:fs|df0                              ; Stuck at GND            ; regfile:rf|RegisterRow:reg1|Register:register12|regDFF, ;
-;                                               ; due to stuck port clock ; regfile:rf|RegisterRow:reg1|Register:register10|regDFF, ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg1|Register:register9|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg4|Register:register13|regDFF, ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg4|Register:register12|regDFF, ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg4|Register:register11|regDFF, ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg4|Register:register10|regDFF, ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg4|Register:register9|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg4|Register:register8|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg4|Register:register7|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg4|Register:register6|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg4|Register:register5|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg4|Register:register4|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg4|Register:register3|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg4|Register:register2|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg4|Register:register1|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg3|Register:register13|regDFF, ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg3|Register:register12|regDFF, ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg3|Register:register11|regDFF, ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg3|Register:register10|regDFF, ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg3|Register:register9|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg3|Register:register8|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg3|Register:register7|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg3|Register:register6|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg3|Register:register5|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg3|Register:register4|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg3|Register:register3|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg3|Register:register2|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg3|Register:register1|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg2|Register:register13|regDFF, ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg2|Register:register12|regDFF, ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg2|Register:register11|regDFF, ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg2|Register:register10|regDFF, ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg2|Register:register9|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg2|Register:register8|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg2|Register:register7|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg2|Register:register6|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg2|Register:register5|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg2|Register:register4|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg2|Register:register3|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg2|Register:register2|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg2|Register:register1|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg0|Register:register13|regDFF, ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg0|Register:register12|regDFF, ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg0|Register:register11|regDFF, ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg0|Register:register10|regDFF, ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg0|Register:register9|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg0|Register:register8|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg0|Register:register7|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg0|Register:register6|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg0|Register:register5|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg0|Register:register4|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg0|Register:register3|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg0|Register:register2|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg0|Register:register1|regDFF,  ;
-;                                               ;                         ; divideByFiftyThousandCounter:dbftc|TFF_inst25           ;
-; fullstate:fs|df2                              ; Stuck at GND            ; regfile:rf|RegisterRow:reg1|Register:register7|regDFF,  ;
-;                                               ; due to stuck port clock ; regfile:rf|RegisterRow:reg1|Register:register6|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg1|Register:register5|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg1|Register:register4|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg1|Register:register3|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg1|Register:register2|regDFF,  ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg1|Register:register1|regDFF   ;
-; divideByFiftyThousandCounter:dbftc|TFF_inst1  ; Lost Fanouts            ; divideByFiftyThousandCounter:dbftc|SYNTHESIZED_WIRE_61, ;
-;                                               ;                         ; divideByFiftyThousandCounter:dbftc|SYNTHESIZED_WIRE_71, ;
-;                                               ;                         ; divideByFiftyThousandCounter:dbftc|SYNTHESIZED_WIRE_70, ;
-;                                               ;                         ; divideByFiftyThousandCounter:dbftc|SYNTHESIZED_WIRE_63, ;
-;                                               ;                         ; divideByFiftyThousandCounter:dbftc|SYNTHESIZED_WIRE_68, ;
-;                                               ;                         ; divideByFiftyThousandCounter:dbftc|SYNTHESIZED_WIRE_65  ;
-; fullstate:fs|df1                              ; Stuck at GND            ; regfile:rf|RegisterRow:reg1|Register:register13|regDFF, ;
-;                                               ; due to stuck port clock ; regfile:rf|RegisterRow:reg1|Register:register11|regDFF, ;
-;                                               ;                         ; regfile:rf|RegisterRow:reg1|Register:register8|regDFF   ;
-; divideByFiftyThousandCounter:dbftc|TFF_inst18 ; Lost Fanouts            ; divideByFiftyThousandCounter:dbftc|TFF_inst80           ;
-+-----------------------------------------------+-------------------------+---------------------------------------------------------+
++---------------------------------------------------------------------------------------------------------------------------------------------+
+; Removed Registers Triggering Further Register Optimizations                                                                                 ;
++-------------------------------------------------------+---------------------------+---------------------------------------------------------+
+; Register name                                         ; Reason for Removal        ; Registers Removed due to This Register                  ;
++-------------------------------------------------------+---------------------------+---------------------------------------------------------+
+; regfile:rf|RegisterRow:reg4|Register:register3|regDFF ; Stuck at VCC              ; regfile:rf|RegisterRow:reg4|Register:register4|regDFF,  ;
+;                                                       ; due to stuck port data_in ; regfile:rf|RegisterRow:reg4|Register:register6|regDFF,  ;
+;                                                       ;                           ; regfile:rf|RegisterRow:reg4|Register:register7|regDFF,  ;
+;                                                       ;                           ; regfile:rf|RegisterRow:reg4|Register:register8|regDFF,  ;
+;                                                       ;                           ; regfile:rf|RegisterRow:reg4|Register:register5|regDFF,  ;
+;                                                       ;                           ; regfile:rf|RegisterRow:reg4|Register:register10|regDFF, ;
+;                                                       ;                           ; regfile:rf|RegisterRow:reg4|Register:register11|regDFF, ;
+;                                                       ;                           ; regfile:rf|RegisterRow:reg4|Register:register12|regDFF, ;
+;                                                       ;                           ; regfile:rf|RegisterRow:reg4|Register:register9|regDFF,  ;
+;                                                       ;                           ; regfile:rf|RegisterRow:reg4|Register:register13|regDFF, ;
+;                                                       ;                           ; regfile:rf|RegisterRow:reg2|Register:register3|regDFF,  ;
+;                                                       ;                           ; regfile:rf|RegisterRow:reg0|Register:register3|regDFF,  ;
+;                                                       ;                           ; regfile:rf|RegisterRow:reg2|Register:register4|regDFF,  ;
+;                                                       ;                           ; regfile:rf|RegisterRow:reg0|Register:register4|regDFF,  ;
+;                                                       ;                           ; regfile:rf|RegisterRow:reg2|Register:register6|regDFF,  ;
+;                                                       ;                           ; regfile:rf|RegisterRow:reg0|Register:register6|regDFF,  ;
+;                                                       ;                           ; regfile:rf|RegisterRow:reg2|Register:register7|regDFF,  ;
+;                                                       ;                           ; regfile:rf|RegisterRow:reg0|Register:register7|regDFF,  ;
+;                                                       ;                           ; regfile:rf|RegisterRow:reg2|Register:register8|regDFF,  ;
+;                                                       ;                           ; regfile:rf|RegisterRow:reg0|Register:register8|regDFF,  ;
+;                                                       ;                           ; regfile:rf|RegisterRow:reg2|Register:register5|regDFF,  ;
+;                                                       ;                           ; regfile:rf|RegisterRow:reg0|Register:register5|regDFF,  ;
+;                                                       ;                           ; regfile:rf|RegisterRow:reg2|Register:register10|regDFF, ;
+;                                                       ;                           ; regfile:rf|RegisterRow:reg0|Register:register10|regDFF, ;
+;                                                       ;                           ; regfile:rf|RegisterRow:reg2|Register:register11|regDFF, ;
+;                                                       ;                           ; regfile:rf|RegisterRow:reg0|Register:register11|regDFF, ;
+;                                                       ;                           ; regfile:rf|RegisterRow:reg2|Register:register12|regDFF, ;
+;                                                       ;                           ; regfile:rf|RegisterRow:reg0|Register:register12|regDFF, ;
+;                                                       ;                           ; regfile:rf|RegisterRow:reg2|Register:register9|regDFF,  ;
+;                                                       ;                           ; regfile:rf|RegisterRow:reg0|Register:register9|regDFF,  ;
+;                                                       ;                           ; regfile:rf|RegisterRow:reg2|Register:register13|regDFF, ;
+;                                                       ;                           ; regfile:rf|RegisterRow:reg0|Register:register13|regDFF  ;
+; regfile:rf|RegisterRow:reg4|Register:register2|regDFF ; Stuck at GND              ; regfile:rf|RegisterRow:reg2|Register:register2|regDFF,  ;
+;                                                       ; due to stuck port data_in ; regfile:rf|RegisterRow:reg0|Register:register2|regDFF   ;
++-------------------------------------------------------+---------------------------+---------------------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -456,14 +440,23 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 0     ;
+; Total registers                              ; 45    ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
+; Number of registers using Asynchronous Clear ; 18    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
+; Number of registers using Clock Enable       ; 23    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                    ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                          ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
+; 7:1                ; 13 bits   ; 52 LEs        ; 39 LEs               ; 13 LEs                 ; No         ; |Reaction_Time_Game|regfile:rf|Mux8:outputMuxQ|F[2] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+-----------------------------------------------------+
 
 
 +--------------------------------------------------------+
@@ -565,18 +558,6 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Y[1..0]  ; Input ; Info     ; Stuck at VCC                         ;
 ; Y[12..2] ; Input ; Info     ; Stuck at GND                         ;
 +----------+-------+----------+--------------------------------------+
-
-
-+-----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "twoBitUpCounterREAL:tb2"                                                             ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; Port  ; Type   ; Severity ; Details                                                                             ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
-; Q0    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; Q1    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; Q3    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; CLRN1 ; Input  ; Info     ; Stuck at VCC                                                                        ;
-+-------+--------+----------+-------------------------------------------------------------------------------------+
 
 
 +--------------------------------------------------------+
@@ -756,123 +737,13 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +--------+-------+----------+------------------------------------+
 
 
-+--------------------------------------------------------------------+
-; Port Connectivity Checks: "delayCounterWithDone:dc|equals13bit:eq" ;
-+---------+-------+----------+---------------------------------------+
-; Port    ; Type  ; Severity ; Details                               ;
-+---------+-------+----------+---------------------------------------+
-; X       ; Input ; Info     ; Stuck at VCC                          ;
-; Y[1..0] ; Input ; Info     ; Stuck at VCC                          ;
-+---------+-------+----------+---------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "delayCounterWithDone:dc|ElevenBitUpCounter:upper|TFlipFlop:TA11" ;
-+---------+-------+----------+----------------------------------------------------------------+
-; Port    ; Type  ; Severity ; Details                                                        ;
-+---------+-------+----------+----------------------------------------------------------------+
-; PresetN ; Input ; Info     ; Stuck at VCC                                                   ;
-+---------+-------+----------+----------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "delayCounterWithDone:dc|ElevenBitUpCounter:upper|TFlipFlop:TA10" ;
-+---------+-------+----------+----------------------------------------------------------------+
-; Port    ; Type  ; Severity ; Details                                                        ;
-+---------+-------+----------+----------------------------------------------------------------+
-; PresetN ; Input ; Info     ; Stuck at VCC                                                   ;
-+---------+-------+----------+----------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "delayCounterWithDone:dc|ElevenBitUpCounter:upper|TFlipFlop:TA9" ;
-+---------+-------+----------+---------------------------------------------------------------+
-; Port    ; Type  ; Severity ; Details                                                       ;
-+---------+-------+----------+---------------------------------------------------------------+
-; PresetN ; Input ; Info     ; Stuck at VCC                                                  ;
-+---------+-------+----------+---------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "delayCounterWithDone:dc|ElevenBitUpCounter:upper|TFlipFlop:TA8" ;
-+---------+-------+----------+---------------------------------------------------------------+
-; Port    ; Type  ; Severity ; Details                                                       ;
-+---------+-------+----------+---------------------------------------------------------------+
-; PresetN ; Input ; Info     ; Stuck at VCC                                                  ;
-+---------+-------+----------+---------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "delayCounterWithDone:dc|ElevenBitUpCounter:upper|TFlipFlop:TA7" ;
-+---------+-------+----------+---------------------------------------------------------------+
-; Port    ; Type  ; Severity ; Details                                                       ;
-+---------+-------+----------+---------------------------------------------------------------+
-; PresetN ; Input ; Info     ; Stuck at VCC                                                  ;
-+---------+-------+----------+---------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "delayCounterWithDone:dc|ElevenBitUpCounter:upper|TFlipFlop:TA6" ;
-+---------+-------+----------+---------------------------------------------------------------+
-; Port    ; Type  ; Severity ; Details                                                       ;
-+---------+-------+----------+---------------------------------------------------------------+
-; PresetN ; Input ; Info     ; Stuck at VCC                                                  ;
-+---------+-------+----------+---------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "delayCounterWithDone:dc|ElevenBitUpCounter:upper|TFlipFlop:TA5" ;
-+---------+-------+----------+---------------------------------------------------------------+
-; Port    ; Type  ; Severity ; Details                                                       ;
-+---------+-------+----------+---------------------------------------------------------------+
-; PresetN ; Input ; Info     ; Stuck at VCC                                                  ;
-+---------+-------+----------+---------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "delayCounterWithDone:dc|ElevenBitUpCounter:upper|TFlipFlop:TA4" ;
-+---------+-------+----------+---------------------------------------------------------------+
-; Port    ; Type  ; Severity ; Details                                                       ;
-+---------+-------+----------+---------------------------------------------------------------+
-; PresetN ; Input ; Info     ; Stuck at VCC                                                  ;
-+---------+-------+----------+---------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "delayCounterWithDone:dc|ElevenBitUpCounter:upper|TFlipFlop:TA3" ;
-+---------+-------+----------+---------------------------------------------------------------+
-; Port    ; Type  ; Severity ; Details                                                       ;
-+---------+-------+----------+---------------------------------------------------------------+
-; PresetN ; Input ; Info     ; Stuck at VCC                                                  ;
-+---------+-------+----------+---------------------------------------------------------------+
-
-
-+--------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "delayCounterWithDone:dc|ElevenBitUpCounter:upper|TFlipFlop:TA2" ;
-+---------+-------+----------+---------------------------------------------------------------+
-; Port    ; Type  ; Severity ; Details                                                       ;
-+---------+-------+----------+---------------------------------------------------------------+
-; PresetN ; Input ; Info     ; Stuck at VCC                                                  ;
-+---------+-------+----------+---------------------------------------------------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "delayCounterWithDone:dc|ElevenBitUpCounter:upper|TFlipFlop:TA1"                        ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; Port    ; Type   ; Severity ; Details                                                                             ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-; PresetN ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; Qn      ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+---------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+---------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "delayCounterWithDone:dc|ElevenBitUpCounter:upper"                ;
-+-------+---------+------------------+--------------------------------------------------------+
-; Port  ; Type    ; Severity         ; Details                                                ;
-+-------+---------+------------------+--------------------------------------------------------+
-; Clock ; Unknown ; Critical Warning ; Named port was not declared by the instantiated entity ;
-+-------+---------+------------------+--------------------------------------------------------+
++-------------------------------------------------+
+; Port Connectivity Checks: "elevenBitUpCount:dc" ;
++-------+-------+----------+----------------------+
+; Port  ; Type  ; Severity ; Details              ;
++-------+-------+----------+----------------------+
+; Reset ; Input ; Info     ; Stuck at GND         ;
++-------+-------+----------+----------------------+
 
 
 +-----------------------------------------------------+
@@ -880,13 +751,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 41                          ;
-; cycloneiii_lcell_comb ; 2                           ;
-;     normal            ; 2                           ;
+; boundary_port         ; 45                          ;
+; cycloneiii_ff         ; 45                          ;
+;     CLR               ; 18                          ;
+;     ENA               ; 23                          ;
+;     plain             ; 4                           ;
+; cycloneiii_lcell_comb ; 124                         ;
+;     arith             ; 9                           ;
+;         2 data inputs ; 8                           ;
+;         3 data inputs ; 1                           ;
+;     normal            ; 115                         ;
 ;         0 data inputs ; 2                           ;
+;         1 data inputs ; 3                           ;
+;         2 data inputs ; 21                          ;
+;         3 data inputs ; 33                          ;
+;         4 data inputs ; 56                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
+; Max LUT depth         ; 6.00                        ;
+; Average LUT depth     ; 2.95                        ;
 +-----------------------+-----------------------------+
 
 
@@ -905,14 +787,14 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Standard Edition
-    Info: Processing started: Tue Apr 30 05:20:33 2024
+    Info: Processing started: Tue Apr 30 11:16:59 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Reaction-Time-Game -c Reaction-Time-Game
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
-Info (12021): Found 22 design units, including 22 entities, in source file reaction_time_game.v
-    Info (12023): Found entity 1: Register File: U:/CPRE281/FinalProject/Reaction-Time-Game/RegisterFile/Register.v Line: 4
+Info (20030): Parallel compilation is enabled and will use 12 of the 12 processors detected
+Info (12021): Found 21 design units, including 21 entities, in source file reaction_time_game.v
+    Info (12023): Found entity 1: Register File: U:/CPRE281/FinalProject/Reaction-Time-Game/RegisterFile/Register.v Line: 5
     Info (12023): Found entity 2: RegisterRow File: U:/CPRE281/FinalProject/Reaction-Time-Game/RegisterFile/RegisterRow.v Line: 6
-    Info (12023): Found entity 3: Mux8 File: U:/CPRE281/FinalProject/Reaction-Time-Game/RegisterFile/Mux8.v Line: 1
+    Info (12023): Found entity 3: Mux8 File: U:/CPRE281/FinalProject/Reaction-Time-Game/RegisterFile/Mux8.v Line: 4
     Info (12023): Found entity 4: Decoder3to8 File: U:/CPRE281/FinalProject/Reaction-Time-Game/RegisterFile/Decoder3to8.v Line: 20
     Info (12023): Found entity 5: regfile File: U:/CPRE281/FinalProject/Reaction-Time-Game/RegisterFile/regfile.v Line: 5
     Info (12023): Found entity 6: FA File: U:/CPRE281/FinalProject/Reaction-Time-Game/FA.v Line: 1
@@ -921,19 +803,21 @@ Info (12021): Found 22 design units, including 22 entities, in source file react
     Info (12023): Found entity 9: mux4to1 File: U:/CPRE281/FinalProject/Reaction-Time-Game/mux4to1.v Line: 3
     Info (12023): Found entity 10: mux3_8 File: U:/CPRE281/FinalProject/Reaction-Time-Game/mux3_8.v Line: 5
     Info (12023): Found entity 11: equals13bit File: U:/CPRE281/FinalProject/Reaction-Time-Game/equals13bit.v Line: 4
-    Info (12023): Found entity 12: fullstate File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 8
+    Info (12023): Found entity 12: fullstate File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 9
     Info (12023): Found entity 13: seven_seg_decoder_enable File: U:/CPRE281/FinalProject/Reaction-Time-Game/seven_seg_decoder_enable.v Line: 4
     Info (12023): Found entity 14: seven_seg_decoder_bus File: U:/CPRE281/FinalProject/Reaction-Time-Game/seven_seg_decoder_bus.v Line: 3
-    Info (12023): Found entity 15: TFlipFlop File: U:/CPRE281/FinalProject/Reaction-Time-Game/TFlipFlop.v Line: 22
-    Info (12023): Found entity 16: ElevenBitUpCounter File: U:/CPRE281/FinalProject/Reaction-Time-Game/counter/ElevenBitUpCounter.v Line: 2
-    Info (12023): Found entity 17: delayCounterWithDone File: U:/CPRE281/FinalProject/Reaction-Time-Game/delayCounterWithDone.v Line: 6
-    Info (12023): Found entity 18: ThirteenBitUpCounter File: U:/CPRE281/FinalProject/Reaction-Time-Game/counter/ThirteenBitUpCounter.v Line: 2
-    Info (12023): Found entity 19: scoreCounterWithDone File: U:/CPRE281/FinalProject/Reaction-Time-Game/scoreCounterWithDone.v Line: 5
-    Info (12023): Found entity 20: divideByFiftyThousandCounter File: U:/CPRE281/FinalProject/Reaction-Time-Game/divideByFiftyThousandCounter.v Line: 19
-    Info (12023): Found entity 21: twoBitUpCounterREAL File: U:/CPRE281/FinalProject/Reaction-Time-Game/twoBitUpCounterREAL.v Line: 20
-    Info (12023): Found entity 22: Reaction_Time_Game File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 10
+    Info (12023): Found entity 15: elevenBitUpCount File: U:/CPRE281/FinalProject/Reaction-Time-Game/elevenBitUpCount.v Line: 4
+    Info (12023): Found entity 16: TFlipFlop File: U:/CPRE281/FinalProject/Reaction-Time-Game/TFlipFlop.v Line: 22
+    Info (12023): Found entity 17: ThirteenBitUpCounter File: U:/CPRE281/FinalProject/Reaction-Time-Game/counter/ThirteenBitUpCounter.v Line: 2
+    Info (12023): Found entity 18: scoreCounterWithDone File: U:/CPRE281/FinalProject/Reaction-Time-Game/scoreCounterWithDone.v Line: 5
+    Info (12023): Found entity 19: divideByFiftyThousandCounter File: U:/CPRE281/FinalProject/Reaction-Time-Game/divideByFiftyThousandCounter.v Line: 19
+    Info (12023): Found entity 20: twoBitUpCounterREAL File: U:/CPRE281/FinalProject/Reaction-Time-Game/twoBitUpCounterREAL.v Line: 20
+    Info (12023): Found entity 21: Reaction_Time_Game File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 9
 Info (12021): Found 0 design units, including 0 entities, in source file seven_seg_decoder_enable.v
-Warning (10236): Verilog HDL Implicit Net warning at Register.v(12): created implicit net for "D" File: U:/CPRE281/FinalProject/Reaction-Time-Game/RegisterFile/Register.v Line: 12
+Info (12021): Found 0 design units, including 0 entities, in source file elevenbitupcount.v
+Info (12021): Found 1 design units, including 1 entities, in source file thirteenbitupcounter.v
+    Info (12023): Found entity 1: thirteenBitUpCount File: U:/CPRE281/FinalProject/Reaction-Time-Game/thirteenBitUpCounter.v Line: 4
+Warning (10236): Verilog HDL Implicit Net warning at Register.v(13): created implicit net for "D" File: U:/CPRE281/FinalProject/Reaction-Time-Game/RegisterFile/Register.v Line: 13
 Warning (10236): Verilog HDL Implicit Net warning at full_adder_13bit.v(15): created implicit net for "Cnext" File: U:/CPRE281/FinalProject/Reaction-Time-Game/full_adder_13bit.v Line: 15
 Warning (10236): Verilog HDL Implicit Net warning at full_adder_13bit.v(16): created implicit net for "Cnext1" File: U:/CPRE281/FinalProject/Reaction-Time-Game/full_adder_13bit.v Line: 16
 Warning (10236): Verilog HDL Implicit Net warning at full_adder_13bit.v(17): created implicit net for "Cnext2" File: U:/CPRE281/FinalProject/Reaction-Time-Game/full_adder_13bit.v Line: 17
@@ -963,36 +847,7 @@ Warning (10236): Verilog HDL Implicit Net warning at equals13bit.v(18): created 
 Warning (10236): Verilog HDL Implicit Net warning at equals13bit.v(19): created implicit net for "R11" File: U:/CPRE281/FinalProject/Reaction-Time-Game/equals13bit.v Line: 19
 Warning (10236): Verilog HDL Implicit Net warning at equals13bit.v(20): created implicit net for "R12" File: U:/CPRE281/FinalProject/Reaction-Time-Game/equals13bit.v Line: 20
 Warning (10236): Verilog HDL Implicit Net warning at equals13bit.v(21): created implicit net for "R13" File: U:/CPRE281/FinalProject/Reaction-Time-Game/equals13bit.v Line: 21
-Warning (10236): Verilog HDL Implicit Net warning at fullstate.v(37): created implicit net for "S2" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 37
-Warning (10236): Verilog HDL Implicit Net warning at fullstate.v(37): created implicit net for "S1" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 37
-Warning (10236): Verilog HDL Implicit Net warning at fullstate.v(37): created implicit net for "S0" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 37
-Warning (10236): Verilog HDL Implicit Net warning at fullstate.v(38): created implicit net for "delayConterDone" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 38
-Warning (10236): Verilog HDL Implicit Net warning at fullstate.v(41): created implicit net for "N2" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 41
-Warning (10236): Verilog HDL Implicit Net warning at fullstate.v(42): created implicit net for "N1" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 42
-Warning (10236): Verilog HDL Implicit Net warning at fullstate.v(43): created implicit net for "N0" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 43
-Warning (10236): Verilog HDL Implicit Net warning at fullstate.v(57): created implicit net for "_ignore" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 57
-Warning (10236): Verilog HDL Implicit Net warning at ElevenBitUpCounter.v(10): created implicit net for "QA1" File: U:/CPRE281/FinalProject/Reaction-Time-Game/counter/ElevenBitUpCounter.v Line: 10
-Warning (10236): Verilog HDL Implicit Net warning at ElevenBitUpCounter.v(10): created implicit net for "_ignore" File: U:/CPRE281/FinalProject/Reaction-Time-Game/counter/ElevenBitUpCounter.v Line: 10
-Warning (10236): Verilog HDL Implicit Net warning at ElevenBitUpCounter.v(11): created implicit net for "cond1" File: U:/CPRE281/FinalProject/Reaction-Time-Game/counter/ElevenBitUpCounter.v Line: 11
-Warning (10236): Verilog HDL Implicit Net warning at ElevenBitUpCounter.v(12): created implicit net for "QA2" File: U:/CPRE281/FinalProject/Reaction-Time-Game/counter/ElevenBitUpCounter.v Line: 12
-Warning (10236): Verilog HDL Implicit Net warning at ElevenBitUpCounter.v(13): created implicit net for "cond2" File: U:/CPRE281/FinalProject/Reaction-Time-Game/counter/ElevenBitUpCounter.v Line: 13
-Warning (10236): Verilog HDL Implicit Net warning at ElevenBitUpCounter.v(14): created implicit net for "QA3" File: U:/CPRE281/FinalProject/Reaction-Time-Game/counter/ElevenBitUpCounter.v Line: 14
-Warning (10236): Verilog HDL Implicit Net warning at ElevenBitUpCounter.v(15): created implicit net for "cond3" File: U:/CPRE281/FinalProject/Reaction-Time-Game/counter/ElevenBitUpCounter.v Line: 15
-Warning (10236): Verilog HDL Implicit Net warning at ElevenBitUpCounter.v(16): created implicit net for "QA4" File: U:/CPRE281/FinalProject/Reaction-Time-Game/counter/ElevenBitUpCounter.v Line: 16
-Warning (10236): Verilog HDL Implicit Net warning at ElevenBitUpCounter.v(17): created implicit net for "cond4" File: U:/CPRE281/FinalProject/Reaction-Time-Game/counter/ElevenBitUpCounter.v Line: 17
-Warning (10236): Verilog HDL Implicit Net warning at ElevenBitUpCounter.v(18): created implicit net for "QA5" File: U:/CPRE281/FinalProject/Reaction-Time-Game/counter/ElevenBitUpCounter.v Line: 18
-Warning (10236): Verilog HDL Implicit Net warning at ElevenBitUpCounter.v(19): created implicit net for "cond5" File: U:/CPRE281/FinalProject/Reaction-Time-Game/counter/ElevenBitUpCounter.v Line: 19
-Warning (10236): Verilog HDL Implicit Net warning at ElevenBitUpCounter.v(20): created implicit net for "QA6" File: U:/CPRE281/FinalProject/Reaction-Time-Game/counter/ElevenBitUpCounter.v Line: 20
-Warning (10236): Verilog HDL Implicit Net warning at ElevenBitUpCounter.v(21): created implicit net for "cond6" File: U:/CPRE281/FinalProject/Reaction-Time-Game/counter/ElevenBitUpCounter.v Line: 21
-Warning (10236): Verilog HDL Implicit Net warning at ElevenBitUpCounter.v(22): created implicit net for "QA7" File: U:/CPRE281/FinalProject/Reaction-Time-Game/counter/ElevenBitUpCounter.v Line: 22
-Warning (10236): Verilog HDL Implicit Net warning at ElevenBitUpCounter.v(23): created implicit net for "cond7" File: U:/CPRE281/FinalProject/Reaction-Time-Game/counter/ElevenBitUpCounter.v Line: 23
-Warning (10236): Verilog HDL Implicit Net warning at ElevenBitUpCounter.v(24): created implicit net for "QA8" File: U:/CPRE281/FinalProject/Reaction-Time-Game/counter/ElevenBitUpCounter.v Line: 24
-Warning (10236): Verilog HDL Implicit Net warning at ElevenBitUpCounter.v(25): created implicit net for "cond8" File: U:/CPRE281/FinalProject/Reaction-Time-Game/counter/ElevenBitUpCounter.v Line: 25
-Warning (10236): Verilog HDL Implicit Net warning at ElevenBitUpCounter.v(26): created implicit net for "QA9" File: U:/CPRE281/FinalProject/Reaction-Time-Game/counter/ElevenBitUpCounter.v Line: 26
-Warning (10236): Verilog HDL Implicit Net warning at ElevenBitUpCounter.v(27): created implicit net for "cond9" File: U:/CPRE281/FinalProject/Reaction-Time-Game/counter/ElevenBitUpCounter.v Line: 27
-Warning (10236): Verilog HDL Implicit Net warning at ElevenBitUpCounter.v(28): created implicit net for "QA10" File: U:/CPRE281/FinalProject/Reaction-Time-Game/counter/ElevenBitUpCounter.v Line: 28
-Warning (10236): Verilog HDL Implicit Net warning at ElevenBitUpCounter.v(29): created implicit net for "cond10" File: U:/CPRE281/FinalProject/Reaction-Time-Game/counter/ElevenBitUpCounter.v Line: 29
-Warning (10236): Verilog HDL Implicit Net warning at ElevenBitUpCounter.v(30): created implicit net for "QA11" File: U:/CPRE281/FinalProject/Reaction-Time-Game/counter/ElevenBitUpCounter.v Line: 30
+Warning (10236): Verilog HDL Implicit Net warning at fullstate.v(68): created implicit net for "_ignore" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 68
 Warning (10236): Verilog HDL Implicit Net warning at ThirteenBitUpCounter.v(10): created implicit net for "QA1" File: U:/CPRE281/FinalProject/Reaction-Time-Game/counter/ThirteenBitUpCounter.v Line: 10
 Warning (10236): Verilog HDL Implicit Net warning at ThirteenBitUpCounter.v(10): created implicit net for "_ignore" File: U:/CPRE281/FinalProject/Reaction-Time-Game/counter/ThirteenBitUpCounter.v Line: 10
 Warning (10236): Verilog HDL Implicit Net warning at ThirteenBitUpCounter.v(11): created implicit net for "cond1" File: U:/CPRE281/FinalProject/Reaction-Time-Game/counter/ThirteenBitUpCounter.v Line: 11
@@ -1019,88 +874,50 @@ Warning (10236): Verilog HDL Implicit Net warning at ThirteenBitUpCounter.v(31):
 Warning (10236): Verilog HDL Implicit Net warning at ThirteenBitUpCounter.v(32): created implicit net for "QA12" File: U:/CPRE281/FinalProject/Reaction-Time-Game/counter/ThirteenBitUpCounter.v Line: 32
 Warning (10236): Verilog HDL Implicit Net warning at ThirteenBitUpCounter.v(33): created implicit net for "cond12" File: U:/CPRE281/FinalProject/Reaction-Time-Game/counter/ThirteenBitUpCounter.v Line: 33
 Warning (10236): Verilog HDL Implicit Net warning at ThirteenBitUpCounter.v(34): created implicit net for "QA13" File: U:/CPRE281/FinalProject/Reaction-Time-Game/counter/ThirteenBitUpCounter.v Line: 34
-Warning (10236): Verilog HDL Implicit Net warning at Reaction_Time_Game.v(56): created implicit net for "OnekhzClock" File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 56
 Info (12127): Elaborating entity "Reaction_Time_Game" for the top level hierarchy
-Info (12128): Elaborating entity "delayCounterWithDone" for hierarchy "delayCounterWithDone:dc" File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 39
-Info (12128): Elaborating entity "ElevenBitUpCounter" for hierarchy "delayCounterWithDone:dc|ElevenBitUpCounter:upper" File: U:/CPRE281/FinalProject/Reaction-Time-Game/delayCounterWithDone.v Line: 13
-Info (12128): Elaborating entity "TFlipFlop" for hierarchy "delayCounterWithDone:dc|ElevenBitUpCounter:upper|TFlipFlop:TA1" File: U:/CPRE281/FinalProject/Reaction-Time-Game/counter/ElevenBitUpCounter.v Line: 10
-Info (12128): Elaborating entity "equals13bit" for hierarchy "delayCounterWithDone:dc|equals13bit:eq" File: U:/CPRE281/FinalProject/Reaction-Time-Game/delayCounterWithDone.v Line: 15
-Info (12128): Elaborating entity "divideByFiftyThousandCounter" for hierarchy "divideByFiftyThousandCounter:dbftc" File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 45
-Info (12128): Elaborating entity "scoreCounterWithDone" for hierarchy "scoreCounterWithDone:scd" File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 47
+Info (12128): Elaborating entity "elevenBitUpCount" for hierarchy "elevenBitUpCount:dc" File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 42
+Info (12128): Elaborating entity "divideByFiftyThousandCounter" for hierarchy "divideByFiftyThousandCounter:dbftc" File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 47
+Info (12128): Elaborating entity "scoreCounterWithDone" for hierarchy "scoreCounterWithDone:scd" File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 49
 Info (12128): Elaborating entity "ThirteenBitUpCounter" for hierarchy "scoreCounterWithDone:scd|ThirteenBitUpCounter:upper" File: U:/CPRE281/FinalProject/Reaction-Time-Game/scoreCounterWithDone.v Line: 11
-Info (12128): Elaborating entity "regfile" for hierarchy "regfile:rf" File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 49
+Info (12128): Elaborating entity "TFlipFlop" for hierarchy "scoreCounterWithDone:scd|ThirteenBitUpCounter:upper|TFlipFlop:TA1" File: U:/CPRE281/FinalProject/Reaction-Time-Game/counter/ThirteenBitUpCounter.v Line: 10
+Info (12128): Elaborating entity "regfile" for hierarchy "regfile:rf" File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 51
 Info (12128): Elaborating entity "Decoder3to8" for hierarchy "regfile:rf|Decoder3to8:decoder" File: U:/CPRE281/FinalProject/Reaction-Time-Game/RegisterFile/regfile.v Line: 27
 Info (12128): Elaborating entity "RegisterRow" for hierarchy "regfile:rf|RegisterRow:reg0" File: U:/CPRE281/FinalProject/Reaction-Time-Game/RegisterFile/regfile.v Line: 29
 Info (12128): Elaborating entity "Register" for hierarchy "regfile:rf|RegisterRow:reg0|Register:register1" File: U:/CPRE281/FinalProject/Reaction-Time-Game/RegisterFile/RegisterRow.v Line: 13
 Info (12128): Elaborating entity "Mux8" for hierarchy "regfile:rf|Mux8:outputMuxP" File: U:/CPRE281/FinalProject/Reaction-Time-Game/RegisterFile/regfile.v Line: 36
-Info (12128): Elaborating entity "twoBitUpCounterREAL" for hierarchy "twoBitUpCounterREAL:tb2" File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 54
-Info (12128): Elaborating entity "fullstate" for hierarchy "fullstate:fs" File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 56
-Info (12128): Elaborating entity "mux3_8" for hierarchy "fullstate:fs|mux3_8:ma2" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 37
+Info (12128): Elaborating entity "twoBitUpCounterREAL" for hierarchy "twoBitUpCounterREAL:tb2" File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 56
+Info (12128): Elaborating entity "fullstate" for hierarchy "fullstate:fs" File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 58
+Info (12128): Elaborating entity "equals13bit" for hierarchy "fullstate:fs|equals13bit:counterIsSame" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 40
+Info (12128): Elaborating entity "mux3_8" for hierarchy "fullstate:fs|mux3_8:ma2" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 42
 Info (12128): Elaborating entity "mux4to1" for hierarchy "fullstate:fs|mux3_8:ma2|mux4to1:m41SW1" File: U:/CPRE281/FinalProject/Reaction-Time-Game/mux3_8.v Line: 27
-Info (12128): Elaborating entity "full_add_subtract13bit" for hierarchy "fullstate:fs|full_add_subtract13bit:FA1" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 57
+Info (12128): Elaborating entity "full_add_subtract13bit" for hierarchy "fullstate:fs|full_add_subtract13bit:FA1" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 68
 Info (12128): Elaborating entity "full_adder_13bit" for hierarchy "fullstate:fs|full_add_subtract13bit:FA1|full_adder_13bit:FA" File: U:/CPRE281/FinalProject/Reaction-Time-Game/full_add_subtract13bit.v Line: 28
 Info (12128): Elaborating entity "FA" for hierarchy "fullstate:fs|full_add_subtract13bit:FA1|full_adder_13bit:FA|FA:adder1" File: U:/CPRE281/FinalProject/Reaction-Time-Game/full_adder_13bit.v Line: 15
-Info (12128): Elaborating entity "seven_seg_decoder_bus" for hierarchy "seven_seg_decoder_bus:ssd1" File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 67
+Info (12128): Elaborating entity "seven_seg_decoder_bus" for hierarchy "seven_seg_decoder_bus:ssd1" File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 71
 Info (12128): Elaborating entity "seven_seg_decoder_enable" for hierarchy "seven_seg_decoder_bus:ssd1|seven_seg_decoder_enable:ssd" File: U:/CPRE281/FinalProject/Reaction-Time-Game/seven_seg_decoder_bus.v Line: 8
-Warning (12011): Net is missing source, defaulting to GND
-    Warning (12110): Net "fullstate:fs|_" is missing source, defaulting to GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 56
-    Warning (12110): Net "fullstate:fs|S2" is missing source, defaulting to GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 37
-    Warning (12110): Net "fullstate:fs|S1" is missing source, defaulting to GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 37
-    Warning (12110): Net "fullstate:fs|S0" is missing source, defaulting to GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 37
-Warning (12241): 2 hierarchies have connectivity warnings - see the Connectivity Checks report folder
+Warning (12241): 1 hierarchies have connectivity warnings - see the Connectivity Checks report folder
 Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "GreenLed" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 15
-    Warning (13410): Pin "RedLed" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 16
-    Warning (13410): Pin "Screen1[0]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 17
-    Warning (13410): Pin "Screen1[1]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 17
-    Warning (13410): Pin "Screen1[2]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 17
-    Warning (13410): Pin "Screen1[3]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 17
-    Warning (13410): Pin "Screen1[4]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 17
-    Warning (13410): Pin "Screen1[5]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 17
-    Warning (13410): Pin "Screen1[6]" is stuck at VCC File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 17
-    Warning (13410): Pin "Screen2[0]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 18
-    Warning (13410): Pin "Screen2[1]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 18
-    Warning (13410): Pin "Screen2[2]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 18
-    Warning (13410): Pin "Screen2[3]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 18
-    Warning (13410): Pin "Screen2[4]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 18
-    Warning (13410): Pin "Screen2[5]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 18
-    Warning (13410): Pin "Screen2[6]" is stuck at VCC File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 18
-    Warning (13410): Pin "Screen3[0]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 19
-    Warning (13410): Pin "Screen3[1]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 19
-    Warning (13410): Pin "Screen3[2]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 19
-    Warning (13410): Pin "Screen3[3]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 19
-    Warning (13410): Pin "Screen3[4]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 19
-    Warning (13410): Pin "Screen3[5]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 19
-    Warning (13410): Pin "Screen3[6]" is stuck at VCC File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 19
-    Warning (13410): Pin "Screen4[0]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 20
-    Warning (13410): Pin "Screen4[1]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 20
-    Warning (13410): Pin "Screen4[2]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 20
-    Warning (13410): Pin "Screen4[3]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 20
-    Warning (13410): Pin "Screen4[4]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 20
-    Warning (13410): Pin "Screen4[5]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 20
-    Warning (13410): Pin "Screen4[6]" is stuck at VCC File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 20
-    Warning (13410): Pin "Screen5[0]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 21
-    Warning (13410): Pin "Screen5[1]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 21
-    Warning (13410): Pin "Screen5[2]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 21
-    Warning (13410): Pin "Screen5[3]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 21
-    Warning (13410): Pin "Screen5[4]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 21
-    Warning (13410): Pin "Screen5[5]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 21
-    Warning (13410): Pin "Screen5[6]" is stuck at VCC File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 21
-Info (17049): 16 registers lost all their fanouts during netlist optimizations.
+    Warning (13410): Pin "Screen4[1]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 19
+    Warning (13410): Pin "Screen4[2]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 19
+    Warning (13410): Pin "Screen4[6]" is stuck at VCC File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 19
+    Warning (13410): Pin "Screen5[0]" is stuck at VCC File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 20
+    Warning (13410): Pin "Screen5[1]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 20
+    Warning (13410): Pin "Screen5[2]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 20
+    Warning (13410): Pin "Screen5[3]" is stuck at VCC File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 20
+    Warning (13410): Pin "Screen5[4]" is stuck at VCC File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 20
+    Warning (13410): Pin "Screen5[5]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 20
+    Warning (13410): Pin "Screen5[6]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 20
+Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 4 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "buttonStart" File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 11
-    Warning (15610): No output dependent on input pin "buttonHit" File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 12
-    Warning (15610): No output dependent on input pin "buttonReset" File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 13
-    Warning (15610): No output dependent on input pin "Clock" File: U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 14
-Info (21057): Implemented 41 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 167 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 4 input pins
-    Info (21059): Implemented 37 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 137 warnings
-    Info: Peak virtual memory: 4761 megabytes
-    Info: Processing ended: Tue Apr 30 05:21:02 2024
-    Info: Elapsed time: 00:00:29
-    Info: Total CPU time (on all processors): 00:00:08
+    Info (21059): Implemented 41 output pins
+    Info (21061): Implemented 122 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 70 warnings
+    Info: Peak virtual memory: 4844 megabytes
+    Info: Processing ended: Tue Apr 30 11:17:15 2024
+    Info: Elapsed time: 00:00:16
+    Info: Total CPU time (on all processors): 00:00:03
 
 

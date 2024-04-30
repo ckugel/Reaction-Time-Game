@@ -1,6 +1,3 @@
-`ifndef Mux8
-`define Mux8
-
 module Mux8(S2, S1, S0, W7, W6, W5, W4, W3, W2, W1, W0, F);
 	input [12:0] W0;
 	input [12:0] W1;
@@ -36,5 +33,3 @@ module Mux8(S2, S1, S0, W7, W6, W5, W4, W3, W2, W1, W0, F);
 	assign F = S2 ? ST1 : ST2;
 	
 endmodule
-
-`endif

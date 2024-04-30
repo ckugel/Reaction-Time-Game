@@ -107,9 +107,6 @@ set_location_assignment PIN_W22 -to Screen3[3]
 set_location_assignment PIN_W21 -to Screen3[2]
 set_location_assignment PIN_Y22 -to Screen3[1]
 set_location_assignment PIN_M24 -to Screen3[0]
-set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
-set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
-set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
 set_global_assignment -name VERILOG_FILE Reaction_Time_Game.v
 set_global_assignment -name VERILOG_FILE seven_seg_decoder_enable.v
 set_location_assignment PIN_AF22 -to RedLed
@@ -124,4 +121,13 @@ set_location_assignment PIN_AA17 -to Screen5[0]
 set_location_assignment PIN_M23 -to buttonHit
 set_location_assignment PIN_M21 -to buttonReset
 set_location_assignment PIN_N21 -to buttonStart
+set_location_assignment PIN_E19 -to state[2]
+set_location_assignment PIN_F19 -to state[1]
+set_location_assignment PIN_G19 -to state[0]
+set_location_assignment PIN_E21 -to delayCounterDone
+set_global_assignment -name VERILOG_FILE elevenBitUpCount.v
+set_global_assignment -name PARTITION_NETLIST_TYPE SOURCE -section_id Top
+set_global_assignment -name PARTITION_FITTER_PRESERVATION_LEVEL PLACEMENT_AND_ROUTING -section_id Top
+set_global_assignment -name PARTITION_COLOR 16764057 -section_id Top
+set_global_assignment -name VERILOG_FILE thirteenBitUpCounter.v
 set_instance_assignment -name PARTITION_HIERARCHY root_partition -to | -section_id Top

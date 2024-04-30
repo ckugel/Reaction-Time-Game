@@ -1,13 +1,12 @@
 `include "RegisterFile/regfile.v"
 `include "fullstate.v"
 `include "seven_seg_decoder_bus.v"
-`include "delayCounterWithDone.v"
+`include "elevenBitUpCount.v"
 `include "scoreCounterWithDone.v"
 `include "divideByFiftyThousandCounter.v"
-`include "scoreCounterWithDone.v"
 `include "twoBitUpCounterREAL.v"
 
-module Reaction_Time_Game(buttonStart, buttonHit, buttonReset, GreenLed, RedLed, Screen1, Screen2, Screen3, Screen4, Screen5, Clock);
+module Reaction_Time_Game(buttonStart, buttonHit, buttonReset, GreenLed, RedLed, Screen1, Screen2, Screen3, Screen4, Screen5, Clock, state, delayCounterDone);
   input buttonStart;
   input buttonHit;
   input buttonReset;
@@ -20,6 +19,7 @@ module Reaction_Time_Game(buttonStart, buttonHit, buttonReset, GreenLed, RedLed,
   output [6:0] Screen4; // Left most screen
   output [6:0] Screen5; // run counter display AKA what is at reg[0]
   output [2:0] state;
+  output delayCounterDone;
 
   wire [12:0] reg0; // is going to be the data on DATAP which in our case will always be the value stored in register 0
 
@@ -34,14 +34,15 @@ module Reaction_Time_Game(buttonStart, buttonHit, buttonReset, GreenLed, RedLed,
   wire [2:0] wa;
   wire SCEn;
 
-  wire delayCounterDone;
+  // wire delayCounterDone;
   wire delayCounterEnable;
+  
+  wire OneKhzClock;
 
-  delayCounterWithDone dc (.Enable(delayCounterEnable), .ClockIn(Clock), .Done(delayCounterDone));
+  elevenBitUpCount dc (.Enable(delayCounterEnable), .Clock(OneKhzClock), .Reset(1'b0), .Done(delayCounterDone));
  
   wire [12:0] scoreFromCounter;
 
-  wire OneKhzClock;
 
   divideByFiftyThousandCounter dbftc (.Enable(1'b1), .Clock(Clock), .ClockOut(OneKhzClock));
 
@@ -52,12 +53,14 @@ module Reaction_Time_Game(buttonStart, buttonHit, buttonReset, GreenLed, RedLed,
   wire [2:0] tbupcntr;
   wire twobitClRN;
 
-  twoBitUpCounterREAL tb2 (.EnableReal(~twobitClRN), .CLK1(buttonHit), .Q0(tbupcntr[0]), .Q1(tbupcntr[1]), .Q3(tbupcntr[2]), .CLRN1(1'b1));
+  twoBitUpCounterREAL tb2 (.EnableReal(twobitClRN), .CLK1(buttonHit), .Q0(tbupcntr[0]), .Q1(tbupcntr[1]), .Q3(tbupcntr[2]), .CLRN1(twobitClRN));
 
-  fullstate fs (.buttonStart(buttonStart), .buttonHit(buttonHit), .buttonReset(buttonReset), .Clock(OnekhzClock), .ReadQ(rq), .registerLoad(registerLoad), .delayCounterDone(delayCounterDone), .delayCounterEnable(delayCounterEnable), .WriteAddress(wa), .ledGreen(GreenLed) , .RedLed(RedLed), .scoreCounterEnable(SCEn), .scoreCounter(scoreFromCounter), .registerDataP(reg0), .registerDataQ(dataQ), .registerLoadData(ld_data), .twoBitCounterClear(twobitClRN), .State(state));
+  fullstate fs (.buttonStart(buttonStart), .buttonHit(buttonHit), .buttonReset(buttonReset), .Clock(OneKhzClock), .ReadQ(rq), .registerLoad(registerLoad), .delayCounterDone(delayCounterDone), .delayCounterEnable(delayCounterEnable), .WriteAddress(wa), .ledGreen(GreenLed) , .RedLed(RedLed), .scoreCounterEnable(SCEn), .scoreCounter(scoreFromCounter), .registerDataP(reg0), .registerDataQ(dataQ), .registerLoadData(ld_data), .twoBitCounterClear(twobitClRN), .State(state), .twoBitCounterCurrent(tbupcntr));
   
   wire [12:0] outputDisplay; // TODO: change if base 10 output
   wire [3:0] Screen5Pre; 
+  
+  assign Screen5Pre = /*(twobitClRN) ? (tbupcntr) : */ ({reg0[3], reg0[2], reg0[1], reg0[0]});
 
   wire RunScoreDisplay;
   assign RunScoreDisplay = 1'b1;
