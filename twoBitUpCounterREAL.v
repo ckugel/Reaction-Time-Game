@@ -15,11 +15,12 @@
 
 // PROGRAM		"Quartus Prime"
 // VERSION		"Version 22.1std.1 Build 917 02/14/2023 SC Standard Edition"
-// CREATED		"Tue Apr 30 03:19:28 2024"
+// CREATED		"Tue Apr 30 03:58:14 2024"
 
 module twoBitUpCounterREAL(
 	CLRN1,
 	CLK1,
+	EnableReal,
 	Q0,
 	Q1,
 	Q3
@@ -28,6 +29,7 @@ module twoBitUpCounterREAL(
 
 input wire	CLRN1;
 input wire	CLK1;
+input wire	EnableReal;
 output wire	Q0;
 output wire	Q1;
 output wire	Q3;
@@ -45,22 +47,6 @@ always@(posedge CLK1 or negedge CLRN1 or negedge SYNTHESIZED_WIRE_3)
 begin
 if (!CLRN1)
 	begin
-	SYNTHESIZED_WIRE_5 <= 0;
-	end
-else
-if (!SYNTHESIZED_WIRE_3)
-	begin
-	SYNTHESIZED_WIRE_5 <= 1;
-	end
-else
-	SYNTHESIZED_WIRE_5 <= SYNTHESIZED_WIRE_5 ^ SYNTHESIZED_WIRE_4;
-end
-
-
-always@(posedge CLK1 or negedge CLRN1 or negedge SYNTHESIZED_WIRE_3)
-begin
-if (!CLRN1)
-	begin
 	SYNTHESIZED_WIRE_4 <= 0;
 	end
 else
@@ -69,7 +55,29 @@ if (!SYNTHESIZED_WIRE_3)
 	SYNTHESIZED_WIRE_4 <= 1;
 	end
 else
+if (EnableReal)
+	begin
 	SYNTHESIZED_WIRE_4 <= SYNTHESIZED_WIRE_4 ^ SYNTHESIZED_WIRE_3;
+	end
+end
+
+
+always@(posedge CLK1 or negedge CLRN1 or negedge SYNTHESIZED_WIRE_3)
+begin
+if (!CLRN1)
+	begin
+	SYNTHESIZED_WIRE_5 <= 0;
+	end
+else
+if (!SYNTHESIZED_WIRE_3)
+	begin
+	SYNTHESIZED_WIRE_5 <= 1;
+	end
+else
+if (EnableReal)
+	begin
+	SYNTHESIZED_WIRE_5 <= SYNTHESIZED_WIRE_5 ^ SYNTHESIZED_WIRE_4;
+	end
 end
 
 

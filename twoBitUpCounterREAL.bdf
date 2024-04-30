@@ -56,9 +56,9 @@ https://fpgasoftware.intel.com/eula.
 )
 (pin
 	(input)
-	(rect 176 440 344 456)
+	(rect 168 512 336 528)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "EnableReal" (rect 5 0 61 12)(font "Arial" ))
+	(text "EnableReal" (rect 5 0 60 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -518,16 +518,20 @@ https://fpgasoftware.intel.com/eula.
 	(pt 464 360)
 )
 (connector
+	(pt 464 448)
+	(pt 656 448)
+)
+(connector
+	(pt 464 520)
+	(pt 336 520)
+)
+(connector
 	(pt 464 360)
 	(pt 464 448)
 )
 (connector
-	(pt 344 448)
 	(pt 464 448)
-)
-(connector
-	(pt 464 448)
-	(pt 656 448)
+	(pt 464 520)
 )
 (junction (pt 616 272))
 (junction (pt 504 416))
