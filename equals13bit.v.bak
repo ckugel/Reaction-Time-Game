@@ -16,7 +16,10 @@ module equals13bit(X, Y, S);
   assign R11 = ~(X[10] ^ Y[10]);
   assign R12 = ~(X[11] ^ Y[11]);
   assign R13 = ~(X[12] ^ Y[12]);
+  assign R14 = ~(X[13] ^ Y[13]);
+  assign R15 = ~(X[14] ^ Y[14]);
+  assign R16 = ~(X[15] ^ Y[15]);
 
-  assign S = R1 & R2 & R3 & R4 & R5 & R6 & R7 & R8 & R9 & R10 & R11 & R12;
+  assign S = R1 & R2 & R3 & R4 & R5 & R6 & R7 & R8 & R9 & R10 & R11 & R12 & R13 & R14 & R15 & R16;
 
 endmodule

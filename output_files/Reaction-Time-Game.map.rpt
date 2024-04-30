@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Reaction-Time-Game
-Mon Apr 29 15:14:02 2024
+Mon Apr 29 22:42:49 2024
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Standard Edition
 
 
@@ -13,10 +13,19 @@ Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Standard Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Post-Synthesis Netlist Statistics for Top Partition
- 10. Elapsed Time Per Partition
- 11. Analysis & Synthesis Messages
+  8. Logic Cells Representing Combinational Loops
+  9. General Register Statistics
+ 10. Port Connectivity Checks: "full_add_subtract13bit:FA1"
+ 11. Port Connectivity Checks: "dffCustom:df2"
+ 12. Port Connectivity Checks: "dffCustom:df1"
+ 13. Port Connectivity Checks: "dffCustom:df0"
+ 14. Port Connectivity Checks: "mux3_8:ma0"
+ 15. Port Connectivity Checks: "mux3_8:ma1"
+ 16. Port Connectivity Checks: "mux3_8:ma2"
+ 17. Port Connectivity Checks: "equals13bit:counterIsSame"
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
 
 
 
@@ -43,16 +52,16 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                            ;
 +------------------------------------+----------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Mon Apr 29 15:14:02 2024              ;
+; Analysis & Synthesis Status        ; Successful - Mon Apr 29 22:42:49 2024              ;
 ; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Standard Edition ;
 ; Revision Name                      ; Reaction-Time-Game                                 ;
-; Top-level Entity Name              ; bitCounter13test                                   ;
+; Top-level Entity Name              ; fullstate                                          ;
 ; Family                             ; Cyclone IV E                                       ;
-; Total logic elements               ; 36                                                 ;
-;     Total combinational functions  ; 36                                                 ;
-;     Dedicated logic registers      ; 29                                                 ;
-; Total registers                    ; 29                                                 ;
-; Total pins                         ; 15                                                 ;
+; Total logic elements               ; 4                                                  ;
+;     Total combinational functions  ; 4                                                  ;
+;     Dedicated logic registers      ; 0                                                  ;
+; Total registers                    ; 0                                                  ;
+; Total pins                         ; 77                                                 ;
 ; Total virtual pins                 ; 0                                                  ;
 ; Total memory bits                  ; 0                                                  ;
 ; Embedded Multiplier 9-bit elements ; 0                                                  ;
@@ -66,7 +75,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                            ; bitCounter13test   ; Reaction-Time-Game ;
+; Top-level entity name                                            ; fullstate          ; Reaction-Time-Game ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -155,69 +164,83 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 8           ;
+; Maximum used               ; 1           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-8         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                         ;
-+----------------------------------+-----------------+------------------------------------------+----------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                                ; File Name with Absolute Path                                         ; Library ;
-+----------------------------------+-----------------+------------------------------------------+----------------------------------------------------------------------+---------+
-; divideByFiftyThousandCounter.bdf ; yes             ; User Block Diagram/Schematic File        ; U:/CPRE281/Final/Reaction-Time-Game/divideByFiftyThousandCounter.bdf ;         ;
-; bitCounter13.v                   ; yes             ; User Verilog HDL File                    ; U:/CPRE281/Final/Reaction-Time-Game/bitCounter13.v                   ;         ;
-; bitCounter13test.bdf             ; yes             ; User Block Diagram/Schematic File        ; U:/CPRE281/Final/Reaction-Time-Game/bitCounter13test.bdf             ;         ;
-; clock_generator.bdf              ; yes             ; Auto-Found Block Diagram/Schematic File  ; U:/CPRE281/Final/Reaction-Time-Game/clock_generator.bdf              ;         ;
-; clock_divider_1024.bdf           ; yes             ; Auto-Found Block Diagram/Schematic File  ; U:/CPRE281/Final/Reaction-Time-Game/clock_divider_1024.bdf           ;         ;
-+----------------------------------+-----------------+------------------------------------------+----------------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                            ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                        ; Library ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------+---------+
+; fullstate.v                      ; yes             ; User Verilog HDL File        ; U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v              ;         ;
+; RegisterFile/dffCustom.v         ; yes             ; Auto-Found Verilog HDL File  ; U:/CPRE281/FinalProject/Reaction-Time-Game/RegisterFile/dffCustom.v ;         ;
+; Adder13.v                        ; yes             ; Auto-Found Verilog HDL File  ; U:/CPRE281/FinalProject/Reaction-Time-Game/Adder13.v                ;         ;
+; full_add_subtract13bit.v         ; yes             ; Auto-Found Verilog HDL File  ; U:/CPRE281/FinalProject/Reaction-Time-Game/full_add_subtract13bit.v ;         ;
+; mux4to1.v                        ; yes             ; Auto-Found Verilog HDL File  ; U:/CPRE281/FinalProject/Reaction-Time-Game/mux4to1.v                ;         ;
+; mux3_8.v                         ; yes             ; Auto-Found Verilog HDL File  ; U:/CPRE281/FinalProject/Reaction-Time-Game/mux3_8.v                 ;         ;
+; equals13bit.v                    ; yes             ; Auto-Found Verilog HDL File  ; U:/CPRE281/FinalProject/Reaction-Time-Game/equals13bit.v            ;         ;
+; fa.v                             ; yes             ; Auto-Found Verilog HDL File  ; U:/CPRE281/FinalProject/Reaction-Time-Game/fa.v                     ;         ;
++----------------------------------+-----------------+------------------------------+---------------------------------------------------------------------+---------+
 
 
-+-----------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary                                             ;
-+---------------------------------------------+-------------------------------------------+
-; Resource                                    ; Usage                                     ;
-+---------------------------------------------+-------------------------------------------+
-; Estimated Total logic elements              ; 36                                        ;
-;                                             ;                                           ;
-; Total combinational functions               ; 36                                        ;
-; Logic element usage by number of LUT inputs ;                                           ;
-;     -- 4 input functions                    ; 11                                        ;
-;     -- 3 input functions                    ; 7                                         ;
-;     -- <=2 input functions                  ; 18                                        ;
-;                                             ;                                           ;
-; Logic elements by mode                      ;                                           ;
-;     -- normal mode                          ; 25                                        ;
-;     -- arithmetic mode                      ; 11                                        ;
-;                                             ;                                           ;
-; Total registers                             ; 29                                        ;
-;     -- Dedicated logic registers            ; 29                                        ;
-;     -- I/O registers                        ; 0                                         ;
-;                                             ;                                           ;
-; I/O pins                                    ; 15                                        ;
-;                                             ;                                           ;
-; Embedded Multiplier 9-bit elements          ; 0                                         ;
-;                                             ;                                           ;
-; Maximum fan-out node                        ; divideByFiftyThousandCounter:inst4|inst17 ;
-; Maximum fan-out                             ; 16                                        ;
-; Total fan-out                               ; 213                                       ;
-; Average fan-out                             ; 2.24                                      ;
-+---------------------------------------------+-------------------------------------------+
++----------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                      ;
++---------------------------------------------+------------------------------------+
+; Resource                                    ; Usage                              ;
++---------------------------------------------+------------------------------------+
+; Estimated Total logic elements              ; 4                                  ;
+;                                             ;                                    ;
+; Total combinational functions               ; 4                                  ;
+; Logic element usage by number of LUT inputs ;                                    ;
+;     -- 4 input functions                    ; 0                                  ;
+;     -- 3 input functions                    ; 4                                  ;
+;     -- <=2 input functions                  ; 0                                  ;
+;                                             ;                                    ;
+; Logic elements by mode                      ;                                    ;
+;     -- normal mode                          ; 4                                  ;
+;     -- arithmetic mode                      ; 0                                  ;
+;                                             ;                                    ;
+; Total registers                             ; 0                                  ;
+;     -- Dedicated logic registers            ; 0                                  ;
+;     -- I/O registers                        ; 0                                  ;
+;                                             ;                                    ;
+; I/O pins                                    ; 77                                 ;
+;                                             ;                                    ;
+; Embedded Multiplier 9-bit elements          ; 0                                  ;
+;                                             ;                                    ;
+; Maximum fan-out node                        ; dffCustom:df0|SYNTHESIZED_WIRE_4~0 ;
+; Maximum fan-out                             ; 4                                  ;
+; Total fan-out                               ; 105                                ;
+; Average fan-out                             ; 0.66                               ;
++---------------------------------------------+------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                     ;
-+-----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------+------------------------------+--------------+
-; Compilation Hierarchy Node              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                  ; Entity Name                  ; Library Name ;
-+-----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------+------------------------------+--------------+
-; |bitCounter13test                       ; 36 (0)              ; 29 (0)                    ; 0           ; 0            ; 0       ; 0         ; 15   ; 0            ; |bitCounter13test                                    ; bitCounter13test             ; work         ;
-;    |bitCounter13:inst|                  ; 13 (13)             ; 13 (13)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bitCounter13test|bitCounter13:inst                  ; bitCounter13                 ; work         ;
-;    |divideByFiftyThousandCounter:inst4| ; 23 (23)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |bitCounter13test|divideByFiftyThousandCounter:inst4 ; divideByFiftyThousandCounter ; work         ;
-+-----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+------------------------------------------------------+------------------------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                           ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+-------------+--------------+
+; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name      ; Entity Name ; Library Name ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+-------------+--------------+
+; |fullstate                 ; 4 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 77   ; 0            ; |fullstate               ; fullstate   ; work         ;
+;    |dffCustom:df0|         ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |fullstate|dffCustom:df0 ; dffCustom   ; work         ;
++----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------+-------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
+
+
++------------------------------------------------------------+
+; Logic Cells Representing Combinational Loops               ;
++--------------------------------------------------------+---+
+; Logic Cell Name                                        ;   ;
++--------------------------------------------------------+---+
+; dffCustom:df0|Q~0                                      ;   ;
+; dffCustom:df0|SYNTHESIZED_WIRE_2~1                     ;   ;
+; dffCustom:df0|SYNTHESIZED_WIRE_6~1                     ;   ;
+; Number of logic cells representing combinational loops ; 3 ;
++--------------------------------------------------------+---+
+Note: All cells listed above may not be present at the end of synthesis due to various synthesis optimizations.
 
 
 +------------------------------------------------------+
@@ -225,14 +248,109 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 29    ;
+; Total registers                              ; 0     ;
 ; Number of registers using Synchronous Clear  ; 0     ;
 ; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 29    ;
+; Number of registers using Asynchronous Clear ; 0     ;
 ; Number of registers using Asynchronous Load  ; 0     ;
 ; Number of registers using Clock Enable       ; 0     ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "full_add_subtract13bit:FA1"                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Y[12..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; Y[0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; AddSub   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; Overflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "dffCustom:df2"                                                                      ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; CLRN ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; QN   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "dffCustom:df1"                                                                      ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; CLRN ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; QN   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "dffCustom:df0"                                                                      ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; CLRN ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; QN   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++----------------------------------------+
+; Port Connectivity Checks: "mux3_8:ma0" ;
++------+-------+----------+--------------+
+; Port ; Type  ; Severity ; Details      ;
++------+-------+----------+--------------+
+; X7   ; Input ; Info     ; Stuck at GND ;
+; X6   ; Input ; Info     ; Stuck at GND ;
+; X5   ; Input ; Info     ; Stuck at VCC ;
+; X3   ; Input ; Info     ; Stuck at GND ;
++------+-------+----------+--------------+
+
+
++----------------------------------------+
+; Port Connectivity Checks: "mux3_8:ma1" ;
++------+-------+----------+--------------+
+; Port ; Type  ; Severity ; Details      ;
++------+-------+----------+--------------+
+; X7   ; Input ; Info     ; Stuck at GND ;
+; X6   ; Input ; Info     ; Stuck at GND ;
+; X5   ; Input ; Info     ; Stuck at GND ;
+; X4   ; Input ; Info     ; Stuck at GND ;
+; X3   ; Input ; Info     ; Stuck at GND ;
+; X2   ; Input ; Info     ; Stuck at VCC ;
+; X0   ; Input ; Info     ; Stuck at GND ;
++------+-------+----------+--------------+
+
+
++----------------------------------------+
+; Port Connectivity Checks: "mux3_8:ma2" ;
++------+-------+----------+--------------+
+; Port ; Type  ; Severity ; Details      ;
++------+-------+----------+--------------+
+; X7   ; Input ; Info     ; Stuck at GND ;
+; X6   ; Input ; Info     ; Stuck at GND ;
+; X5   ; Input ; Info     ; Stuck at VCC ;
+; X4   ; Input ; Info     ; Stuck at VCC ;
+; X3   ; Input ; Info     ; Stuck at VCC ;
+; X2   ; Input ; Info     ; Stuck at GND ;
+; X1   ; Input ; Info     ; Stuck at GND ;
+; X0   ; Input ; Info     ; Stuck at GND ;
++------+-------+----------+--------------+
+
+
++-------------------------------------------------------+
+; Port Connectivity Checks: "equals13bit:counterIsSame" ;
++----------+-------+----------+-------------------------+
+; Port     ; Type  ; Severity ; Details                 ;
++----------+-------+----------+-------------------------+
+; Y[1..0]  ; Input ; Info     ; Stuck at VCC            ;
+; Y[12..2] ; Input ; Info     ; Stuck at GND            ;
++----------+-------+----------+-------------------------+
 
 
 +-----------------------------------------------------+
@@ -240,21 +358,15 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 15                          ;
-; cycloneiii_ff         ; 29                          ;
-;     CLR               ; 29                          ;
-; cycloneiii_lcell_comb ; 36                          ;
-;     arith             ; 11                          ;
-;         2 data inputs ; 10                          ;
-;         3 data inputs ; 1                           ;
-;     normal            ; 25                          ;
-;         1 data inputs ; 3                           ;
-;         2 data inputs ; 5                           ;
-;         3 data inputs ; 6                           ;
-;         4 data inputs ; 11                          ;
+; boundary_port         ; 77                          ;
+; cycloneiii_lcell_comb ; 6                           ;
+;     normal            ; 6                           ;
+;         0 data inputs ; 1                           ;
+;         1 data inputs ; 1                           ;
+;         3 data inputs ; 4                           ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.24                        ;
+; Max LUT depth         ; 2.00                        ;
+; Average LUT depth     ; 0.68                        ;
 +-----------------------+-----------------------------+
 
 
@@ -273,7 +385,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Standard Edition
-    Info: Processing started: Mon Apr 29 15:13:51 2024
+    Info: Processing started: Mon Apr 29 22:42:37 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Reaction-Time-Game -c Reaction-Time-Game
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -293,48 +405,129 @@ Info (12021): Found 1 design units, including 1 entities, in source file shiftde
 Info (12021): Found 1 design units, including 1 entities, in source file delaycounter.bdf
     Info (12023): Found entity 1: delayCounter
 Info (12021): Found 1 design units, including 1 entities, in source file rightshift3.v
-    Info (12023): Found entity 1: Rightshift3 File: U:/CPRE281/Final/Reaction-Time-Game/Rightshift3.v Line: 1
+    Info (12023): Found entity 1: Rightshift3 File: U:/CPRE281/FinalProject/Reaction-Time-Game/Rightshift3.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file rightshift4.v
-    Info (12023): Found entity 1: Rightshift4 File: U:/CPRE281/Final/Reaction-Time-Game/Rightshift4.v Line: 1
+    Info (12023): Found entity 1: Rightshift4 File: U:/CPRE281/FinalProject/Reaction-Time-Game/Rightshift4.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file rightshift5.v
-    Info (12023): Found entity 1: Rightshift5 File: U:/CPRE281/Final/Reaction-Time-Game/Rightshift5.v Line: 1
+    Info (12023): Found entity 1: Rightshift5 File: U:/CPRE281/FinalProject/Reaction-Time-Game/Rightshift5.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file counter4.bdf
     Info (12023): Found entity 1: counter4
-Info (12021): Found 4 design units, including 4 entities, in source file fullstate.v
-    Info (12023): Found entity 1: dffCustom File: U:/CPRE281/Final/Reaction-Time-Game/RegisterFile/dffCustom.v Line: 20
-    Info (12023): Found entity 2: Adder13 File: U:/CPRE281/Final/Reaction-Time-Game/Adder13.v Line: 20
-    Info (12023): Found entity 3: full_add_subtract13bit File: U:/CPRE281/Final/Reaction-Time-Game/full_add_subtract13bit.v Line: 5
-    Info (12023): Found entity 4: fullstate File: U:/CPRE281/Final/Reaction-Time-Game/fullstate.v Line: 4
+Info (12021): Found 7 design units, including 7 entities, in source file fullstate.v
+    Info (12023): Found entity 1: dffCustom File: U:/CPRE281/FinalProject/Reaction-Time-Game/RegisterFile/dffCustom.v Line: 20
+    Info (12023): Found entity 2: Adder13 File: U:/CPRE281/FinalProject/Reaction-Time-Game/Adder13.v Line: 20
+    Info (12023): Found entity 3: full_add_subtract13bit File: U:/CPRE281/FinalProject/Reaction-Time-Game/full_add_subtract13bit.v Line: 5
+    Info (12023): Found entity 4: mux4to1 File: U:/CPRE281/FinalProject/Reaction-Time-Game/mux4to1.v Line: 3
+    Info (12023): Found entity 5: mux3_8 File: U:/CPRE281/FinalProject/Reaction-Time-Game/mux3_8.v Line: 5
+    Info (12023): Found entity 6: equals13bit File: U:/CPRE281/FinalProject/Reaction-Time-Game/equals13bit.v Line: 1
+    Info (12023): Found entity 7: fullstate File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 6
 Warning (12019): Can't analyze file -- file 13bitCounter.v is missing
 Info (12021): Found 1 design units, including 1 entities, in source file bitcounter13.v
-    Info (12023): Found entity 1: bitCounter13 File: U:/CPRE281/Final/Reaction-Time-Game/bitCounter13.v Line: 1
+    Info (12023): Found entity 1: bitCounter13 File: U:/CPRE281/FinalProject/Reaction-Time-Game/bitCounter13.v Line: 1
 Info (12021): Found 1 design units, including 1 entities, in source file bitcounter13test.bdf
     Info (12023): Found entity 1: bitCounter13test
-Warning (10236): Verilog HDL Implicit Net warning at fullstate.v(39): created implicit net for "_ignore0" File: U:/CPRE281/Final/Reaction-Time-Game/fullstate.v Line: 39
-Warning (10236): Verilog HDL Implicit Net warning at fullstate.v(40): created implicit net for "_ignore1" File: U:/CPRE281/Final/Reaction-Time-Game/fullstate.v Line: 40
-Warning (10236): Verilog HDL Implicit Net warning at fullstate.v(41): created implicit net for "_ignore2" File: U:/CPRE281/Final/Reaction-Time-Game/fullstate.v Line: 41
-Warning (10236): Verilog HDL Implicit Net warning at fullstate.v(45): created implicit net for "_ignore" File: U:/CPRE281/Final/Reaction-Time-Game/fullstate.v Line: 45
-Warning (10236): Verilog HDL Implicit Net warning at fullstate.v(51): created implicit net for "delayCounterEnable" File: U:/CPRE281/Final/Reaction-Time-Game/fullstate.v Line: 51
-Info (12127): Elaborating entity "bitCounter13test" for the top level hierarchy
-Info (12128): Elaborating entity "bitCounter13" for hierarchy "bitCounter13:inst"
-Info (12128): Elaborating entity "divideByFiftyThousandCounter" for hierarchy "divideByFiftyThousandCounter:inst4"
-Warning (12125): Using design file clock_generator.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: clock_generator
-Info (12128): Elaborating entity "clock_generator" for hierarchy "clock_generator:inst5"
-Warning (12125): Using design file clock_divider_1024.bdf, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
-    Info (12023): Found entity 1: clock_divider_1024
-Info (12128): Elaborating entity "clock_divider_1024" for hierarchy "clock_generator:inst5|clock_divider_1024:inst8"
+Warning (10236): Verilog HDL Implicit Net warning at mux4to1.v(8): created implicit net for "SW1" File: U:/CPRE281/FinalProject/Reaction-Time-Game/mux4to1.v Line: 8
+Warning (10236): Verilog HDL Implicit Net warning at mux4to1.v(9): created implicit net for "SW2" File: U:/CPRE281/FinalProject/Reaction-Time-Game/mux4to1.v Line: 9
+Warning (10236): Verilog HDL Implicit Net warning at equals13bit.v(6): created implicit net for "R1" File: U:/CPRE281/FinalProject/Reaction-Time-Game/equals13bit.v Line: 6
+Warning (10236): Verilog HDL Implicit Net warning at equals13bit.v(7): created implicit net for "R2" File: U:/CPRE281/FinalProject/Reaction-Time-Game/equals13bit.v Line: 7
+Warning (10236): Verilog HDL Implicit Net warning at equals13bit.v(8): created implicit net for "R3" File: U:/CPRE281/FinalProject/Reaction-Time-Game/equals13bit.v Line: 8
+Warning (10236): Verilog HDL Implicit Net warning at equals13bit.v(9): created implicit net for "R4" File: U:/CPRE281/FinalProject/Reaction-Time-Game/equals13bit.v Line: 9
+Warning (10236): Verilog HDL Implicit Net warning at equals13bit.v(10): created implicit net for "R5" File: U:/CPRE281/FinalProject/Reaction-Time-Game/equals13bit.v Line: 10
+Warning (10236): Verilog HDL Implicit Net warning at equals13bit.v(11): created implicit net for "R6" File: U:/CPRE281/FinalProject/Reaction-Time-Game/equals13bit.v Line: 11
+Warning (10236): Verilog HDL Implicit Net warning at equals13bit.v(12): created implicit net for "R7" File: U:/CPRE281/FinalProject/Reaction-Time-Game/equals13bit.v Line: 12
+Warning (10236): Verilog HDL Implicit Net warning at equals13bit.v(13): created implicit net for "R8" File: U:/CPRE281/FinalProject/Reaction-Time-Game/equals13bit.v Line: 13
+Warning (10236): Verilog HDL Implicit Net warning at equals13bit.v(14): created implicit net for "R9" File: U:/CPRE281/FinalProject/Reaction-Time-Game/equals13bit.v Line: 14
+Warning (10236): Verilog HDL Implicit Net warning at equals13bit.v(15): created implicit net for "R10" File: U:/CPRE281/FinalProject/Reaction-Time-Game/equals13bit.v Line: 15
+Warning (10236): Verilog HDL Implicit Net warning at equals13bit.v(16): created implicit net for "R11" File: U:/CPRE281/FinalProject/Reaction-Time-Game/equals13bit.v Line: 16
+Warning (10236): Verilog HDL Implicit Net warning at equals13bit.v(17): created implicit net for "R12" File: U:/CPRE281/FinalProject/Reaction-Time-Game/equals13bit.v Line: 17
+Warning (10236): Verilog HDL Implicit Net warning at equals13bit.v(18): created implicit net for "R13" File: U:/CPRE281/FinalProject/Reaction-Time-Game/equals13bit.v Line: 18
+Warning (10236): Verilog HDL Implicit Net warning at fullstate.v(36): created implicit net for "S2" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 36
+Warning (10236): Verilog HDL Implicit Net warning at fullstate.v(36): created implicit net for "S1" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 36
+Warning (10236): Verilog HDL Implicit Net warning at fullstate.v(36): created implicit net for "S0" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 36
+Warning (10236): Verilog HDL Implicit Net warning at fullstate.v(40): created implicit net for "N2" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 40
+Warning (10236): Verilog HDL Implicit Net warning at fullstate.v(41): created implicit net for "N1" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 41
+Warning (10236): Verilog HDL Implicit Net warning at fullstate.v(42): created implicit net for "N0" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 42
+Warning (10236): Verilog HDL Implicit Net warning at fullstate.v(50): created implicit net for "_ignore0" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 50
+Warning (10236): Verilog HDL Implicit Net warning at fullstate.v(51): created implicit net for "_ignore1" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 51
+Warning (10236): Verilog HDL Implicit Net warning at fullstate.v(52): created implicit net for "_ignore2" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 52
+Warning (10236): Verilog HDL Implicit Net warning at fullstate.v(56): created implicit net for "_ignore" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 56
+Info (12127): Elaborating entity "fullstate" for the top level hierarchy
+Warning (10034): Output port "DisplayScore" at fullstate.v(21) has no driver File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 21
+Info (12128): Elaborating entity "equals13bit" for hierarchy "equals13bit:counterIsSame" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 34
+Warning (10036): Verilog HDL or VHDL warning at equals13bit.v(18): object "R13" assigned a value but never read File: U:/CPRE281/FinalProject/Reaction-Time-Game/equals13bit.v Line: 18
+Info (12128): Elaborating entity "mux3_8" for hierarchy "mux3_8:ma2" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 36
+Info (12128): Elaborating entity "mux4to1" for hierarchy "mux3_8:ma2|mux4to1:m41SW1" File: U:/CPRE281/FinalProject/Reaction-Time-Game/mux3_8.v Line: 27
+Info (12128): Elaborating entity "dffCustom" for hierarchy "dffCustom:df0" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 50
+Info (12128): Elaborating entity "full_add_subtract13bit" for hierarchy "full_add_subtract13bit:FA1" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 56
+Info (12128): Elaborating entity "Adder13" for hierarchy "full_add_subtract13bit:FA1|Adder13:FA" File: U:/CPRE281/FinalProject/Reaction-Time-Game/full_add_subtract13bit.v Line: 28
+Warning (12125): Using design file fa.v, which is not specified as a design file for the current project, but contains definitions for 1 design units and 1 entities in project
+    Info (12023): Found entity 1: FA File: U:/CPRE281/FinalProject/Reaction-Time-Game/fa.v Line: 1
+Info (12128): Elaborating entity "FA" for hierarchy "full_add_subtract13bit:FA1|Adder13:FA|FA:b2v_inst10" File: U:/CPRE281/FinalProject/Reaction-Time-Game/Adder13.v Line: 59
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "S2" is missing source, defaulting to GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 36
+    Warning (12110): Net "S1" is missing source, defaulting to GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 36
+    Warning (12110): Net "S0" is missing source, defaulting to GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 36
+Warning (12011): Net is missing source, defaulting to GND
+    Warning (12110): Net "S2" is missing source, defaulting to GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 36
+    Warning (12110): Net "S1" is missing source, defaulting to GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 36
+    Warning (12110): Net "S0" is missing source, defaulting to GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 36
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "scoreCounterEnable" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 17
+    Warning (13410): Pin "ledGreen" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 18
+    Warning (13410): Pin "twoBitCounterClear" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 19
+    Warning (13410): Pin "DisplayScore[0]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 21
+    Warning (13410): Pin "DisplayScore[1]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 21
+    Warning (13410): Pin "DisplayScore[2]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 21
+    Warning (13410): Pin "DisplayScore[3]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 21
+    Warning (13410): Pin "DisplayScore[4]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 21
+    Warning (13410): Pin "DisplayScore[5]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 21
+    Warning (13410): Pin "DisplayScore[6]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 21
+    Warning (13410): Pin "DisplayScore[7]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 21
+    Warning (13410): Pin "DisplayScore[8]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 21
+    Warning (13410): Pin "DisplayScore[9]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 21
+    Warning (13410): Pin "DisplayScore[10]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 21
+    Warning (13410): Pin "DisplayScore[11]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 21
+    Warning (13410): Pin "DisplayScore[12]" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 21
+    Warning (13410): Pin "registerLoad" is stuck at GND File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 22
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 51 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 2 input pins
-    Info (21059): Implemented 13 output pins
-    Info (21061): Implemented 36 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 10 warnings
-    Info: Peak virtual memory: 4823 megabytes
-    Info: Processing ended: Mon Apr 29 15:14:02 2024
-    Info: Elapsed time: 00:00:11
+Warning (21074): Design contains 28 input pin(s) that do not drive logic
+    Warning (15610): No output dependent on input pin "buttonHit" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 8
+    Warning (15610): No output dependent on input pin "delayConterDone" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 10
+    Warning (15610): No output dependent on input pin "registerDataP[0]" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 12
+    Warning (15610): No output dependent on input pin "registerDataP[1]" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 12
+    Warning (15610): No output dependent on input pin "registerDataP[2]" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 12
+    Warning (15610): No output dependent on input pin "registerDataP[3]" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 12
+    Warning (15610): No output dependent on input pin "registerDataP[4]" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 12
+    Warning (15610): No output dependent on input pin "registerDataP[5]" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 12
+    Warning (15610): No output dependent on input pin "registerDataP[6]" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 12
+    Warning (15610): No output dependent on input pin "registerDataP[7]" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 12
+    Warning (15610): No output dependent on input pin "registerDataP[8]" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 12
+    Warning (15610): No output dependent on input pin "registerDataP[9]" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 12
+    Warning (15610): No output dependent on input pin "registerDataP[10]" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 12
+    Warning (15610): No output dependent on input pin "registerDataP[11]" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 12
+    Warning (15610): No output dependent on input pin "registerDataP[12]" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 12
+    Warning (15610): No output dependent on input pin "registerDataQ[0]" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 13
+    Warning (15610): No output dependent on input pin "registerDataQ[1]" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 13
+    Warning (15610): No output dependent on input pin "registerDataQ[2]" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 13
+    Warning (15610): No output dependent on input pin "registerDataQ[3]" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 13
+    Warning (15610): No output dependent on input pin "registerDataQ[4]" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 13
+    Warning (15610): No output dependent on input pin "registerDataQ[5]" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 13
+    Warning (15610): No output dependent on input pin "registerDataQ[6]" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 13
+    Warning (15610): No output dependent on input pin "registerDataQ[7]" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 13
+    Warning (15610): No output dependent on input pin "registerDataQ[8]" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 13
+    Warning (15610): No output dependent on input pin "registerDataQ[9]" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 13
+    Warning (15610): No output dependent on input pin "registerDataQ[10]" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 13
+    Warning (15610): No output dependent on input pin "registerDataQ[11]" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 13
+    Warning (15610): No output dependent on input pin "registerDataQ[12]" File: U:/CPRE281/FinalProject/Reaction-Time-Game/fullstate.v Line: 13
+Info (21057): Implemented 81 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 44 input pins
+    Info (21059): Implemented 33 output pins
+    Info (21061): Implemented 4 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 86 warnings
+    Info: Peak virtual memory: 4799 megabytes
+    Info: Processing ended: Mon Apr 29 22:42:49 2024
+    Info: Elapsed time: 00:00:12
     Info: Total CPU time (on all processors): 00:00:07
 
 
