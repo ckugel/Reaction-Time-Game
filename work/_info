@@ -63,6 +63,7 @@ Z7 o-quiet -auto_acc_if_foreign -work work
 Z8 tCvgOpt 0
 n@_opt
 Z9 OL;O;2023.2;77
+R4
 T_opt1
 !s110 1712858823
 V48m>Jz?z5g:T[2jL1WN?@3
@@ -74,19 +75,6 @@ R6
 o-quiet -auto_acc_if_foreign -work work +acc
 R8
 n@_opt1
-R9
-R4
-T_opt2
-!s110 1714490597
-V_Y<ReX2dZY8GISR^;>`Ma0
-04 16 4 work elevenBitUpCount fast 0
-=1-7486e228a15d-66310ce4-328-2664
-R1
-R5
-R6
-R7
-R8
-n@_opt2
 R9
 R4
 vAdder13
@@ -115,23 +103,23 @@ R8
 n@adder13
 vDecoder3to8
 Z16 2U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v
-Z17 !s110 1714492774
+Z17 !s110 1714618343
 !i10b 1
 !s100 dNA3R;MV=0FZlZWRL1D4G0
 Ia9PQ`FfRZAGE6@zf50hSF3
-Z18 dU:/CPRE281/FinalProject/Reaction-Time-Game
+Z18 dX:/Documents/FinalProject/Reaction-Time-Game
 w1714350402
 8RegisterFile/Decoder3to8.v
 FRegisterFile/Decoder3to8.v
-!i122 60
+!i122 61
 L0 20 48
 R12
 R13
 r1
 !s85 0
 31
-Z19 !s108 1714492772.000000
-Z20 !s107 twoBitUpCounterREAL.v|divideByFiftyThousandCounter.v|TFlipFlop.v|counter/ThirteenBitUpCounter.v|scoreCounterWithDone.v|elevenBitUpCount.v|seven_seg_decoder_enable.v|seven_seg_decoder_bus.v|equals13bit.v|mux4to1.v|mux3_8.v|FA.v|full_adder_13bit.v|full_add_subtract13bit.v|fullstate.v|RegisterFile/Decoder3to8.v|RegisterFile/Mux8.v|RegisterFile/dffCustom.v|RegisterFile/Register.v|RegisterFile/RegisterRow.v|RegisterFile/regfile.v|U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v|
+Z19 !s108 1714618343.000000
+Z20 !s107 twoBitUpCounterREAL.v|divideByFiftyThousandCounter.v|thirteenBitUpCounter.v|elevenBitUpCount.v|seven_seg_decoder_enable.v|seven_seg_decoder_bus.v|TFlipFlop.v|equals13bit.v|mux4to1.v|mux3_8.v|FA.v|full_adder_13bit.v|full_add_subtract13bit.v|fullstate.v|RegisterFile/Decoder3to8.v|RegisterFile/Mux8.v|RegisterFile/Register.v|RegisterFile/RegisterRow.v|RegisterFile/regfile.v|U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v|
 Z21 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v|
 !i113 0
 R15
@@ -143,7 +131,7 @@ Z23 !s110 1714486724
 !i10b 1
 !s100 j_K25odka7m2_J7GhUeLG1
 IfcRL;RY6cdIF0<IZf3`Kf2
-R18
+Z24 dU:/CPRE281/FinalProject/Reaction-Time-Game
 w1714486463
 8U:/CPRE281/FinalProject/Reaction-Time-Game/delayCounterWithDone.v
 FU:/CPRE281/FinalProject/Reaction-Time-Game/delayCounterWithDone.v
@@ -154,21 +142,21 @@ R13
 r1
 !s85 0
 31
-Z24 !s108 1714486724.000000
-Z25 !s107 TFlipFlop.v|counter/elevenBitUpCounter.v|equals13bit.v|U:/CPRE281/FinalProject/Reaction-Time-Game/delayCounterWithDone.v|
-Z26 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|U:/CPRE281/FinalProject/Reaction-Time-Game/delayCounterWithDone.v|
+Z25 !s108 1714486724.000000
+Z26 !s107 TFlipFlop.v|counter/elevenBitUpCounter.v|equals13bit.v|U:/CPRE281/FinalProject/Reaction-Time-Game/delayCounterWithDone.v|
+Z27 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|U:/CPRE281/FinalProject/Reaction-Time-Game/delayCounterWithDone.v|
 !i113 0
 R15
 R8
 ndelay@counter@with@done
 vdffCustom
 R16
-R17
+Z28 !s110 1714492774
 !i10b 1
 !s100 C5BiiX<6f]W1TlJ79nL`o3
 Ic=_l[IKn;N[[J`BU^Q@B33
-R18
-Z27 w1714473904
+R24
+Z29 w1714473904
 8RegisterFile/dffCustom.v
 FRegisterFile/dffCustom.v
 !i122 60
@@ -178,8 +166,8 @@ R13
 r1
 !s85 0
 31
-R19
-R20
+Z30 !s108 1714492772.000000
+Z31 !s107 twoBitUpCounterREAL.v|divideByFiftyThousandCounter.v|TFlipFlop.v|counter/ThirteenBitUpCounter.v|scoreCounterWithDone.v|elevenBitUpCount.v|seven_seg_decoder_enable.v|seven_seg_decoder_bus.v|equals13bit.v|mux4to1.v|mux3_8.v|FA.v|full_adder_13bit.v|full_add_subtract13bit.v|fullstate.v|RegisterFile/Decoder3to8.v|RegisterFile/Mux8.v|RegisterFile/dffCustom.v|RegisterFile/Register.v|RegisterFile/RegisterRow.v|RegisterFile/regfile.v|U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v|
 R21
 !i113 0
 R15
@@ -192,10 +180,10 @@ R17
 !s100 :6KZ1^1n8TNj4k^RVen>03
 I;D<PJXiFV1Y98mN?f@3e:3
 R18
-R27
+R29
 8divideByFiftyThousandCounter.v
 FdivideByFiftyThousandCounter.v
-!i122 60
+!i122 61
 L0 19 338
 R12
 R13
@@ -213,13 +201,13 @@ velevenBitUpCount
 R16
 R17
 !i10b 1
-!s100 b67QZHm7X<n8Rn[9?HVd^3
-IcgDPZMV0h=XOeEFVnoH<U0
+!s100 4zHIQBk_g57Mo;SI4JD651
+I4jE`G:Mj1M1;:G6=aEW3N1
 R18
-w1714491952
+w1714608026
 8elevenBitUpCount.v
 FelevenBitUpCount.v
-!i122 60
+!i122 61
 L0 4 21
 R12
 R13
@@ -239,7 +227,7 @@ R23
 !i10b 1
 !s100 6>A[6fR35@6Q?7Olg4AC@3
 IG:WTI48G`CD?22b:FfVjD3
-R18
+R24
 w1714485906
 8counter/elevenBitUpCounter.v
 Fcounter/elevenBitUpCounter.v
@@ -250,9 +238,9 @@ R13
 r1
 !s85 0
 31
-R24
 R25
 R26
+R27
 !i113 0
 R15
 R8
@@ -264,10 +252,10 @@ R17
 !s100 EWS9SkoAeDCdzgZQZ2ZAm1
 I2JS`MmJS=j:FAcd^DZ[ZB0
 R18
-R27
+R29
 8equals13bit.v
 Fequals13bit.v
-!i122 60
+!i122 61
 L0 4 22
 R12
 R13
@@ -290,7 +278,7 @@ R18
 w1714350674
 8FA.v
 FFA.v
-!i122 60
+!i122 61
 L0 1 7
 R12
 R13
@@ -311,10 +299,10 @@ R17
 !s100 1GiSjG7a`;Mn5_XTZfbP;2
 IMech_?IjWbKnPIcYg_Oo:0
 R18
-Z28 w1714448958
+Z32 w1714601738
 8full_add_subtract13bit.v
 Ffull_add_subtract13bit.v
-!i122 60
+!i122 61
 L0 5 26
 R12
 R13
@@ -334,10 +322,10 @@ R17
 !s100 ZefPV7kOcAiWh5J>hJfCk1
 I[M=h^1@[6nK9ND3Xof4bH3
 R18
-R28
+R32
 8full_adder_13bit.v
 Ffull_adder_13bit.v
-!i122 60
+!i122 61
 L0 6 27
 R12
 R13
@@ -354,14 +342,14 @@ vfullstate
 R16
 R17
 !i10b 1
-!s100 cc4iM4ebl>Hoo<]@SmbZC3
-IDQBBN[c_Fk<RN_mlMXzZA3
+!s100 A><5IXefX0bWUzRe>?DXe0
+IkAC3oW?[ZnZi6Mz?XRL550
 R18
-w1714492765
+w1714618145
 8fullstate.v
 Ffullstate.v
-!i122 60
-L0 9 75
+!i122 61
+L0 11 71
 R12
 R13
 r1
@@ -374,15 +362,15 @@ R21
 R15
 R8
 vjkff2_0
-Z29 2U:/CPRE281/FinalProject/Reaction-Time-Game/upCounter.v
-Z30 !s110 1712857020
+Z33 2U:/CPRE281/FinalProject/Reaction-Time-Game/upCounter.v
+Z34 !s110 1712857020
 !i10b 1
 !s100 QUIUcRde=R3B@hCh_oREi3
 IXPVLPeHB;ZcWcOjjbg`:f2
-R18
-Z31 w1712856756
-Z32 8U:/CPRE281/FinalProject/Reaction-Time-Game/upCounter.v
-Z33 FU:/CPRE281/FinalProject/Reaction-Time-Game/upCounter.v
+R24
+Z35 w1712856756
+Z36 8U:/CPRE281/FinalProject/Reaction-Time-Game/upCounter.v
+Z37 FU:/CPRE281/FinalProject/Reaction-Time-Game/upCounter.v
 !i122 3
 L0 89 12
 R12
@@ -390,22 +378,22 @@ R13
 r1
 !s85 0
 31
-Z34 !s108 1712857018.000000
-Z35 !s107 U:/CPRE281/FinalProject/Reaction-Time-Game/upCounter.v|
-Z36 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|U:/CPRE281/FinalProject/Reaction-Time-Game/upCounter.v|
+Z38 !s108 1712857018.000000
+Z39 !s107 U:/CPRE281/FinalProject/Reaction-Time-Game/upCounter.v|
+Z40 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|U:/CPRE281/FinalProject/Reaction-Time-Game/upCounter.v|
 !i113 0
 R15
 R8
 vjkff2_1
-R29
-R30
+R33
+R34
 !i10b 1
 !s100 36zBVN0QlaWcEC>Y>]ZlA2
 I;49:4o:U[@V`1F__8E?]N3
-R18
-R31
-R32
-R33
+R24
+R35
+R36
+R37
 !i122 3
 L0 102 12
 R12
@@ -413,22 +401,22 @@ R13
 r1
 !s85 0
 31
-R34
-R35
-R36
+R38
+R39
+R40
 !i113 0
 R15
 R8
 vjkff2_2
-R29
-R30
+R33
+R34
 !i10b 1
 !s100 _C<fI80?O1Vl8b9PAV?Q50
 IEK<[^KB6fB6J;j<ihc7ZD0
-R18
-R31
-R32
-R33
+R24
+R35
+R36
+R37
 !i122 3
 L0 115 12
 R12
@@ -436,22 +424,22 @@ R13
 r1
 !s85 0
 31
-R34
-R35
-R36
+R38
+R39
+R40
 !i113 0
 R15
 R8
 vjkff2_3
-R29
-R30
+R33
+R34
 !i10b 1
 !s100 TY;U1eFXWDYIZCYB[A1dV3
 IFbXcmo[;5PbV:Qa]4_PI30
-R18
-R31
-R32
-R33
+R24
+R35
+R36
+R37
 !i122 3
 L0 128 11
 R12
@@ -459,9 +447,9 @@ R13
 r1
 !s85 0
 31
-R34
-R35
-R36
+R38
+R39
+R40
 !i113 0
 R15
 R8
@@ -472,10 +460,10 @@ R17
 !s100 ^<fdjJmKAi<`6R79hg=8]3
 I1WBOcWB62ML`C1<zh:6>L0
 R18
-R27
+w1714495924
 8mux3_8.v
 Fmux3_8.v
-!i122 60
+!i122 61
 L0 5 29
 R12
 R13
@@ -495,10 +483,10 @@ R17
 !s100 k16JL[gaDoAf<Ba:4O5Nb0
 IFQ2[@99?jVJEIUDQ4Xcb21
 R18
-R27
+R29
 8mux4to1.v
 Fmux4to1.v
-!i122 60
+!i122 61
 L0 3 10
 R12
 R13
@@ -521,7 +509,7 @@ R18
 w1714482375
 8RegisterFile/Mux8.v
 FRegisterFile/Mux8.v
-!i122 60
+!i122 61
 L0 4 35
 R12
 R13
@@ -539,14 +527,14 @@ vReaction_Time_Game
 R16
 R17
 !i10b 1
-!s100 9XVllA@^z9KN9jhTjLD8Y0
-I7:>PfW70>igDSjD7?>CW=1
+!s100 <WnYRI;=f;z0W]i]CjOK93
+I;GMJf]EZJP17GQm0EZZNU3
 R18
-w1714492404
+w1714607308
 8U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v
 FU:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v
-!i122 60
-L0 9 70
+!i122 61
+L0 9 69
 R12
 R13
 r1
@@ -566,10 +554,10 @@ R17
 !s100 >z<jWkLXiJf4iMWZCV_NZ1
 I7Y2<Z<dT>=RdXF`T<0b]O0
 R18
-R27
+R29
 8RegisterFile/regfile.v
 FRegisterFile/regfile.v
-!i122 60
+!i122 61
 L0 5 37
 R12
 R13
@@ -586,13 +574,13 @@ vRegister
 R16
 R17
 !i10b 1
-!s100 VgVLkj]EObDcaEFaaEB3E3
-IMdf8O8FPR?VjLdR_86R>P2
+!s100 K9JX=G>@OidCR9=O0Y>zm0
+IU?AoSN4iL8@i=jWO?KI;11
 R18
-w1714492606
+w1714493105
 8RegisterFile/Register.v
 FRegisterFile/Register.v
-!i122 60
+!i122 61
 L0 5 12
 R12
 R13
@@ -613,10 +601,10 @@ R17
 !s100 HoUWD`V1^<K:hTe;bK`Wj0
 I4<63C_nSV:UT?KB7cccck1
 R18
-R27
+R29
 8RegisterFile/RegisterRow.v
 FRegisterFile/RegisterRow.v
-!i122 60
+!i122 61
 L0 6 23
 R12
 R13
@@ -641,13 +629,13 @@ w1713894802
 8U:/CPRE281/Final/Reaction-Time-Game/Rightshift3.v
 FU:/CPRE281/Final/Reaction-Time-Game/Rightshift3.v
 !i122 21
-Z37 L0 1 8
+Z41 L0 1 8
 R12
 R13
 r1
 !s85 0
 31
-Z38 !s108 1713901551.000000
+Z42 !s108 1713901551.000000
 !s107 U:/CPRE281/Final/Reaction-Time-Game/Rightshift3.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|U:/CPRE281/Final/Reaction-Time-Game/Rightshift3.v|
 !i113 0
@@ -665,13 +653,13 @@ w1713894341
 8U:/CPRE281/Final/Reaction-Time-Game/Rightshift4.v
 FU:/CPRE281/Final/Reaction-Time-Game/Rightshift4.v
 !i122 22
-R37
+R41
 R12
 R13
 r1
 !s85 0
 31
-R38
+R42
 !s107 U:/CPRE281/Final/Reaction-Time-Game/Rightshift4.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|U:/CPRE281/Final/Reaction-Time-Game/Rightshift4.v|
 !i113 0
@@ -689,7 +677,7 @@ w1713894863
 8U:/CPRE281/Final/Reaction-Time-Game/Rightshift5.v
 FU:/CPRE281/Final/Reaction-Time-Game/Rightshift5.v
 !i122 23
-R37
+R41
 R12
 R13
 r1
@@ -704,11 +692,11 @@ R8
 n@rightshift5
 vscoreCounterWithDone
 R16
-R17
+R28
 !i10b 1
 !s100 ;Ue0B0B14HdTh4b<AQ=1@0
 I3W2PNA:0bTXeEFPf:M_oh2
-R18
+R24
 w1714482543
 8scoreCounterWithDone.v
 FscoreCounterWithDone.v
@@ -719,8 +707,8 @@ R13
 r1
 !s85 0
 31
-R19
-R20
+R30
+R31
 R21
 !i113 0
 R15
@@ -733,10 +721,10 @@ R17
 !s100 [eQmR71GBIK3AD5Vh`5:h2
 I5=4fKM?aMbL0zao0dkNSb2
 R18
-Z39 w1714473905
+Z43 w1714473905
 8seven_seg_decoder_bus.v
 Fseven_seg_decoder_bus.v
-!i122 60
+!i122 61
 L0 3 8
 R12
 R13
@@ -756,10 +744,10 @@ R17
 !s100 ;CKWj8^ePHKn9zcASL]H52
 I:eMVRI2EGiE<Z<0JTk0k12
 R18
-R39
+R43
 8seven_seg_decoder_enable.v
 Fseven_seg_decoder_enable.v
-!i122 60
+!i122 61
 L0 4 13
 R12
 R13
@@ -803,10 +791,10 @@ R17
 !s100 nJ3DK5EK?9<KgSz`XURha0
 Io5jdmcn644TOf_T:VmL0a0
 R18
-R27
+R29
 8TFlipFlop.v
 FTFlipFlop.v
-!i122 60
+!i122 61
 L0 22 37
 R12
 R13
@@ -822,16 +810,40 @@ R8
 n@t@flip@flop
 vThirteenBitUpCounter
 R16
-R17
+R28
 !i10b 1
 !s100 A`H>`>RF[R6za5OG8G4Qa2
 I1RBDP8?`CmoA8dcXoa94^0
-R18
-R27
+R24
+R29
 8counter/ThirteenBitUpCounter.v
 Fcounter/ThirteenBitUpCounter.v
 !i122 60
 L0 2 50
+R12
+R13
+r1
+!s85 0
+31
+R30
+R31
+R21
+!i113 0
+R15
+R8
+n@thirteen@bit@up@counter
+vthirteenBitUpCounter
+R16
+R17
+!i10b 1
+!s100 `J<Tca@6fQ4z?[gB<Llad3
+IPfX<:Km8_Z5B6mYbIX1TM0
+R18
+w1714494217
+8thirteenBitUpCounter.v
+FthirteenBitUpCounter.v
+!i122 61
+L0 4 18
 R12
 R13
 r1
@@ -843,7 +855,7 @@ R21
 !i113 0
 R15
 R8
-n@thirteen@bit@up@counter
+nthirteen@bit@up@counter
 vtwoBitUpCounterREAL
 R16
 R17
@@ -851,10 +863,10 @@ R17
 !s100 <Hf4CK?UzfU8OBzPNJ_P=3
 I]zVKzV>?GW:OD^CLL:F;Z2
 R18
-R39
+R43
 8twoBitUpCounterREAL.v
 FtwoBitUpCounterREAL.v
-!i122 60
+!i122 61
 L0 20 72
 R12
 R13
@@ -869,15 +881,15 @@ R15
 R8
 ntwo@bit@up@counter@r@e@a@l
 vupCounter
-R29
+R33
 R23
 !i10b 1
 !s100 hXSMPUj]9iCeh9bKb4Xf;0
 I[nTz_[ARC5=QOTaoDWRm`0
-R18
+R24
 w1712858792
-R32
-R33
+R36
+R37
 !i122 44
 L0 20 61
 R12
@@ -886,8 +898,8 @@ r1
 !s85 0
 31
 !s108 1714486722.000000
-R35
-R36
+R39
+R40
 !i113 0
 R15
 R8

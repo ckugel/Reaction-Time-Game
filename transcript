@@ -1,120 +1,18 @@
-# Compile of elevenBitUpCount.v was successful.
-vsim -gui work.elevenBitUpCount
-# vsim -gui work.elevenBitUpCount 
-# Start time: 10:23:16 on Apr 30,2024
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading work.elevenBitUpCount(fast)
-add wave -position insertpoint  \
-sim:/elevenBitUpCount/Enable \
-sim:/elevenBitUpCount/Clock \
-sim:/elevenBitUpCount/Reset \
-sim:/elevenBitUpCount/Done
-force -freeze sim:/elevenBitUpCount/Enable 1'h1 0
-force -freeze sim:/elevenBitUpCount/Clock 1 0, 0 {50 ns} -r 100
-force -freeze sim:/elevenBitUpCount/Reset 1'h1 0
-run 20
-force -freeze sim:/elevenBitUpCount/Reset 1'h0 0
-run 20
-run 20000
-run 2000000
-quit -sim
-# End time: 10:51:10 on Apr 30,2024, Elapsed time: 0:27:54
-# Errors: 0, Warnings: 2
-# Compile of Reaction_Time_Game.v failed with 4 errors.
-# Compile of Reaction_Time_Game.v failed with 1 errors.
 # Compile of Reaction_Time_Game.v was successful.
 vsim -gui work.Reaction_Time_Game
 # vsim -gui work.Reaction_Time_Game 
-# Start time: 10:53:45 on Apr 30,2024
+# Start time: 21:52:41 on May 01,2024
 # ** Note: (vsim-3812) Design is being optimized...
-# ** Error: RegisterFile/Register.v(12): Module 'dff' is not defined.
+# ** Error: RegisterFile/Register.v(14): Module 'dff' is not defined.
 #  For instance 'regDFF' at path 'Reaction_Time_Game.rf.reg0.register1'
-# ** Error: fullstate.v(58): Module 'dff' is not defined.
+# ** Error: fullstate.v(57): Module 'dff' is not defined.
 #  For instance 'df0' at path 'Reaction_Time_Game.fs'
-# ** Error: fullstate.v(59): Module 'dff' is not defined.
+# ** Error: fullstate.v(58): Module 'dff' is not defined.
 #  For instance 'df1' at path 'Reaction_Time_Game.fs'
 # ** Error: fullstate.v(60): Module 'dff' is not defined.
 #  For instance 'df2' at path 'Reaction_Time_Game.fs'
 # Optimization failed
 # ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=4, Warnings=0.
 # Error loading design
-# End time: 10:53:48 on Apr 30,2024, Elapsed time: 0:00:03
-# Errors: 4, Warnings: 5
-# Compile of Reaction_Time_Game.v was successful.
-vsim -gui work.Reaction_Time_Game
-# vsim -gui work.Reaction_Time_Game 
-# Start time: 10:56:29 on Apr 30,2024
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Error: RegisterFile/Register.v(14): Module 'dff' is not defined.
-#  For instance 'regDFF' at path 'Reaction_Time_Game.rf.reg0.register1'
-# Optimization failed
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=1, Warnings=0.
-# Error loading design
-# End time: 10:56:31 on Apr 30,2024, Elapsed time: 0:00:02
-# Errors: 1, Warnings: 2
-# Compile of Reaction_Time_Game.v was successful.
-vsim -gui work.Reaction_Time_Game
-# vsim -gui work.Reaction_Time_Game 
-# Start time: 10:57:11 on Apr 30,2024
-# ** Note: (vsim-3812) Design is being optimized...
-# ** Warning: fullstate.v(43): (vopt-2241) Connection width does not match width of port 'W7'. The port definition is at: RegisterFile/Mux8.v(4).
-# ** Warning: fullstate.v(43): (vopt-2241) Connection width does not match width of port 'W6'. The port definition is at: RegisterFile/Mux8.v(4).
-# ** Warning: fullstate.v(43): (vopt-2241) Connection width does not match width of port 'W5'. The port definition is at: RegisterFile/Mux8.v(4).
-# ** Warning: fullstate.v(43): (vopt-2241) Connection width does not match width of port 'W4'. The port definition is at: RegisterFile/Mux8.v(4).
-# ** Warning: fullstate.v(43): (vopt-2241) Connection width does not match width of port 'W3'. The port definition is at: RegisterFile/Mux8.v(4).
-# ** Warning: fullstate.v(43): (vopt-2241) Connection width does not match width of port 'W2'. The port definition is at: RegisterFile/Mux8.v(4).
-# ** Warning: fullstate.v(43): (vopt-2241) Connection width does not match width of port 'W1'. The port definition is at: RegisterFile/Mux8.v(4).
-# ** Warning: fullstate.v(43): (vopt-2241) Connection width does not match width of port 'W0'. The port definition is at: RegisterFile/Mux8.v(4).
-# ** Warning: fullstate.v(43): (vopt-2241) Connection width does not match width of port 'F'. The port definition is at: RegisterFile/Mux8.v(4).
-# ** Warning: fullstate.v(42): (vopt-2241) Connection width does not match width of port 'W7'. The port definition is at: RegisterFile/Mux8.v(4).
-# ** Warning: fullstate.v(42): (vopt-2241) Connection width does not match width of port 'W6'. The port definition is at: RegisterFile/Mux8.v(4).
-# ** Warning: fullstate.v(42): (vopt-2241) Connection width does not match width of port 'W5'. The port definition is at: RegisterFile/Mux8.v(4).
-# ** Warning: fullstate.v(42): (vopt-2241) Connection width does not match width of port 'W4'. The port definition is at: RegisterFile/Mux8.v(4).
-# ** Warning: fullstate.v(42): (vopt-2241) Connection width does not match width of port 'W3'. The port definition is at: RegisterFile/Mux8.v(4).
-# ** Warning: fullstate.v(42): (vopt-2241) Connection width does not match width of port 'W2'. The port definition is at: RegisterFile/Mux8.v(4).
-# ** Warning: fullstate.v(42): (vopt-2241) Connection width does not match width of port 'W1'. The port definition is at: RegisterFile/Mux8.v(4).
-# ** Warning: fullstate.v(42): (vopt-2241) Connection width does not match width of port 'W0'. The port definition is at: RegisterFile/Mux8.v(4).
-# ** Warning: fullstate.v(42): (vopt-2241) Connection width does not match width of port 'F'. The port definition is at: RegisterFile/Mux8.v(4).
-# ** Warning: fullstate.v(41): (vopt-2241) Connection width does not match width of port 'W7'. The port definition is at: RegisterFile/Mux8.v(4).
-# ** Warning: fullstate.v(41): (vopt-2241) Connection width does not match width of port 'W6'. The port definition is at: RegisterFile/Mux8.v(4).
-# ** Warning: fullstate.v(41): (vopt-2241) Connection width does not match width of port 'W5'. The port definition is at: RegisterFile/Mux8.v(4).
-# ** Warning: fullstate.v(41): (vopt-2241) Connection width does not match width of port 'W4'. The port definition is at: RegisterFile/Mux8.v(4).
-# ** Warning: fullstate.v(41): (vopt-2241) Connection width does not match width of port 'W3'. The port definition is at: RegisterFile/Mux8.v(4).
-# ** Warning: fullstate.v(41): (vopt-2241) Connection width does not match width of port 'W2'. The port definition is at: RegisterFile/Mux8.v(4).
-# ** Warning: fullstate.v(41): (vopt-2241) Connection width does not match width of port 'W1'. The port definition is at: RegisterFile/Mux8.v(4).
-# ** Warning: fullstate.v(41): (vopt-2241) Connection width does not match width of port 'W0'. The port definition is at: RegisterFile/Mux8.v(4).
-# ** Warning: fullstate.v(41): (vopt-2241) Connection width does not match width of port 'F'. The port definition is at: RegisterFile/Mux8.v(4).
-# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=0, Warnings=27.
-# Loading work.Reaction_Time_Game(fast)
-quit -sim
-# End time: 10:58:37 on Apr 30,2024, Elapsed time: 0:01:26
-# Errors: 0, Warnings: 29
-# Compile of Reaction_Time_Game.v was successful.
-# Compile of Reaction_Time_Game.v was successful.
-vsim -gui work.Reaction_Time_Game
-# vsim -gui work.Reaction_Time_Game 
-# Start time: 11:00:16 on Apr 30,2024
-# ** Note: (vsim-3813) Design is being optimized due to module recompilation...
-# Loading work.Reaction_Time_Game(fast)
-add wave -position insertpoint  \
-sim:/Reaction_Time_Game/buttonStart \
-sim:/Reaction_Time_Game/buttonHit \
-sim:/Reaction_Time_Game/buttonReset \
-sim:/Reaction_Time_Game/Clock \
-sim:/Reaction_Time_Game/GreenLed \
-sim:/Reaction_Time_Game/RedLed \
-sim:/Reaction_Time_Game/Screen1 \
-sim:/Reaction_Time_Game/Screen2 \
-sim:/Reaction_Time_Game/Screen3 \
-sim:/Reaction_Time_Game/Screen4 \
-sim:/Reaction_Time_Game/Screen5 \
-sim:/Reaction_Time_Game/state \
-sim:/Reaction_Time_Game/delayCounterDone
-force -freeze sim:/Reaction_Time_Game/buttonStart 1'h0 0
-force -freeze sim:/Reaction_Time_Game/buttonHit 1'h0 0
-force -freeze sim:/Reaction_Time_Game/buttonReset 1'h0 0
-force -freeze sim:/Reaction_Time_Game/Clock 1 0, 0 {50 ns} -r 100
-run 2000
-force -freeze sim:/Reaction_Time_Game/buttonStart 1'h1 0
-run 100
-force -freeze sim:/Reaction_Time_Game/buttonStart 1'h0 0
+# End time: 21:52:42 on May 01,2024, Elapsed time: 0:00:01
+# Errors: 4, Warnings: 2

@@ -1,4 +1,28 @@
-U:/CPRE281/FinalProject/Reaction-Time-Game/seven_seg_decoder.v {1 {vlog -work work -vopt -stats=none U:/CPRE281/FinalProject/Reaction-Time-Game/seven_seg_decoder.v
+U:/CPRE281/FinalProject/Reaction-Time-Game/divideByTen.v {1 {vlog -work work -vopt -stats=none U:/CPRE281/FinalProject/Reaction-Time-Game/divideByTen.v
+QuestaSim-64 vlog 2023.2 Compiler 2023.04 Apr 11 2023
+-- Compiling module FA
+-- Compiling module full_adder_13bit
+-- Compiling module full_add_subtract13bit
+-- Compiling module divideByTen
+
+Top level modules:
+	divideByTen
+
+} {} {}} U:/CPRE281/FinalProject/Reaction-Time-Game/FA.v {1 {vlog -work work -vopt -stats=none U:/CPRE281/FinalProject/Reaction-Time-Game/FA.v
+QuestaSim-64 vlog 2023.2 Compiler 2023.04 Apr 11 2023
+-- Compiling module FA
+
+Top level modules:
+	FA
+
+} {} {}} U:/CPRE281/FinalProject/Reaction-Time-Game/counter/TFlipFlop.v {1 {vlog -work work -vopt -stats=none U:/CPRE281/FinalProject/Reaction-Time-Game/counter/TFlipFlop.v
+QuestaSim-64 vlog 2023.2 Compiler 2023.04 Apr 11 2023
+-- Compiling module TFlipFlop
+
+Top level modules:
+	TFlipFlop
+
+} {} {}} U:/CPRE281/FinalProject/Reaction-Time-Game/seven_seg_decoder-enable.v {1 {vlog -work work -vopt -stats=none U:/CPRE281/FinalProject/Reaction-Time-Game/seven_seg_decoder-enable.v
 QuestaSim-64 vlog 2023.2 Compiler 2023.04 Apr 11 2023
 -- Compiling module seven_seg_decoder
 
@@ -13,19 +37,12 @@ QuestaSim-64 vlog 2023.2 Compiler 2023.04 Apr 11 2023
 Top level modules:
 	full_adder_13bit
 
-} {} {}} U:/CPRE281/FinalProject/Reaction-Time-Game/upCounter.v {1 {vlog -work work -vopt -stats=none U:/CPRE281/FinalProject/Reaction-Time-Game/upCounter.v
+} {} {}} U:/CPRE281/FinalProject/Reaction-Time-Game/seven_seg_decoder.v {1 {vlog -work work -vopt -stats=none U:/CPRE281/FinalProject/Reaction-Time-Game/seven_seg_decoder.v
 QuestaSim-64 vlog 2023.2 Compiler 2023.04 Apr 11 2023
--- Compiling module upCounter
+-- Compiling module seven_seg_decoder
 
 Top level modules:
-	upCounter
-
-} {} {}} U:/CPRE281/FinalProject/Reaction-Time-Game/counter/TFlipFlop.v {1 {vlog -work work -vopt -stats=none U:/CPRE281/FinalProject/Reaction-Time-Game/counter/TFlipFlop.v
-QuestaSim-64 vlog 2023.2 Compiler 2023.04 Apr 11 2023
--- Compiling module TFlipFlop
-
-Top level modules:
-	TFlipFlop
+	seven_seg_decoder
 
 } {} {}} U:/CPRE281/FinalProject/Reaction-Time-Game/full_add_subtract13bit.v {1 {vlog -work work -vopt -stats=none U:/CPRE281/FinalProject/Reaction-Time-Game/full_add_subtract13bit.v
 QuestaSim-64 vlog 2023.2 Compiler 2023.04 Apr 11 2023
@@ -36,47 +53,12 @@ QuestaSim-64 vlog 2023.2 Compiler 2023.04 Apr 11 2023
 Top level modules:
 	full_add_subtract13bit
 
-} {} {}} U:/CPRE281/FinalProject/Reaction-Time-Game/FA.v {1 {vlog -work work -vopt -stats=none U:/CPRE281/FinalProject/Reaction-Time-Game/FA.v
+} {} {}} U:/CPRE281/FinalProject/Reaction-Time-Game/upCounter.v {1 {vlog -work work -vopt -stats=none U:/CPRE281/FinalProject/Reaction-Time-Game/upCounter.v
 QuestaSim-64 vlog 2023.2 Compiler 2023.04 Apr 11 2023
--- Compiling module FA
+-- Compiling module upCounter
 
 Top level modules:
-	FA
-
-} {} {}} U:/CPRE281/FinalProject/Reaction-Time-Game/divideByTen.v {1 {vlog -work work -vopt -stats=none U:/CPRE281/FinalProject/Reaction-Time-Game/divideByTen.v
-QuestaSim-64 vlog 2023.2 Compiler 2023.04 Apr 11 2023
--- Compiling module FA
--- Compiling module full_adder_13bit
--- Compiling module full_add_subtract13bit
--- Compiling module divideByTen
-
-Top level modules:
-	divideByTen
-
-} {} {}} U:/CPRE281/FinalProject/Reaction-Time-Game/seven_seg_decoder-enable.v {1 {vlog -work work -vopt -stats=none U:/CPRE281/FinalProject/Reaction-Time-Game/seven_seg_decoder-enable.v
-QuestaSim-64 vlog 2023.2 Compiler 2023.04 Apr 11 2023
--- Compiling module seven_seg_decoder
-
-Top level modules:
-	seven_seg_decoder
-
-} {} {}} U:/CPRE281/FinalProject/Reaction-Time-Game/counter/ElevenBitUpCounter.v {1 {vlog -work work -vopt -stats=none U:/CPRE281/FinalProject/Reaction-Time-Game/counter/ElevenBitUpCounter.v
-QuestaSim-64 vlog 2023.2 Compiler 2023.04 Apr 11 2023
--- Compiling module TFlipFlop
--- Compiling module ElevenBitUpCounter
-
-Top level modules:
-	ElevenBitUpCounter
-
-} {} {}} U:/CPRE281/FinalProject/Reaction-Time-Game/multiplyByTen.v {1 {vlog -work work -vopt -stats=none U:/CPRE281/FinalProject/Reaction-Time-Game/multiplyByTen.v
-QuestaSim-64 vlog 2023.2 Compiler 2023.04 Apr 11 2023
--- Compiling module FA
--- Compiling module full_adder_13bit
--- Compiling module full_add_subtract13bit
--- Compiling module multiplyByTen
-
-Top level modules:
-	multiplyByTen
+	upCounter
 
 } {} {}} U:/CPRE281/FinalProject/Reaction-Time-Game/displayScore.v {1 {vlog -work work -vopt -stats=none U:/CPRE281/FinalProject/Reaction-Time-Game/displayScore.v
 QuestaSim-64 vlog 2023.2 Compiler 2023.04 Apr 11 2023
@@ -95,5 +77,23 @@ QuestaSim-64 vlog 2023.2 Compiler 2023.04 Apr 11 2023
 
 Top level modules:
 	displayScore
+
+} {} {}} U:/CPRE281/FinalProject/Reaction-Time-Game/multiplyByTen.v {1 {vlog -work work -vopt -stats=none U:/CPRE281/FinalProject/Reaction-Time-Game/multiplyByTen.v
+QuestaSim-64 vlog 2023.2 Compiler 2023.04 Apr 11 2023
+-- Compiling module FA
+-- Compiling module full_adder_13bit
+-- Compiling module full_add_subtract13bit
+-- Compiling module multiplyByTen
+
+Top level modules:
+	multiplyByTen
+
+} {} {}} U:/CPRE281/FinalProject/Reaction-Time-Game/counter/ElevenBitUpCounter.v {1 {vlog -work work -vopt -stats=none U:/CPRE281/FinalProject/Reaction-Time-Game/counter/ElevenBitUpCounter.v
+QuestaSim-64 vlog 2023.2 Compiler 2023.04 Apr 11 2023
+-- Compiling module TFlipFlop
+-- Compiling module ElevenBitUpCounter
+
+Top level modules:
+	ElevenBitUpCounter
 
 } {} {}}

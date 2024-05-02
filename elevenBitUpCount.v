@@ -11,7 +11,7 @@ module elevenBitUpCount(Enable, Clock, Reset, Done);
     output Done;
 
     always @(posedge Clock) begin
-        if (Reset) begin
+        if (~Reset) begin
             count <= 11'h0; // Reset the counter to zero
         end else begin
             if (Enable) begin
