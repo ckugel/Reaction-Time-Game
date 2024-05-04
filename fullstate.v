@@ -38,7 +38,7 @@ module fullstate(
 
       equals13bit counterIsSame (.X(registerDataP), .Y(13'b000000000100), .S(same));
 		
-		wire N2;
+      wire N2;
       wire N1;
       wire N0;
       
@@ -48,7 +48,7 @@ module fullstate(
 
 
       // Next state and go to's here
-		assign State = {s2, s1, s0};
+      assign State = {s2, s1, s0};
   
 
       // TODO: Next we need to give s2, s1, and s0 values. They should go through the Flip flops below
@@ -57,7 +57,7 @@ module fullstate(
       dff/*Custom*/ df0 (.Clk(Clock), .D(N2), .CLRN(buttonReset), .PRN(1'b1), .Q(s2)/*, .QN(ignore)*/);
       dff/*Custom*/ df1 (.Clk(Clock), .D(N1), .CLRN(buttonReset), .Q(s1), .PRN(1'b1)/*, .QN(_ignore1)*/);
       // TFlipFlop tf2 (.Clock(Clock), .T(N0), .ClearN(buttonReset), .PresetN(1'b1), .Q(s0), .Qn(_ignoreTFF1));
-		dff/*Custom*/ df2 (.Clk(Clock), .D(N0), .CLRN(buttonReset), .Q(s0), .PRN(1'b1)/*, .QN(_ignore1)*/);
+      dff/*Custom*/ df2 (.Clk(Clock), .D(N0), .CLRN(buttonReset), .Q(s0), .PRN(1'b1)/*, .QN(_ignore1)*/);
 		
 
       wire [12:0] regPlus; // reg[0] plus one.

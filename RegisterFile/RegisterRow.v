@@ -10,19 +10,19 @@ module RegisterRow(In, Load, Clock, CLRN, Q);
   input CLRN;
   output [12:0] Q;
 
-  Register register1 (In[0], Load, Clock, CLRN, Q[0]);
-  Register register2 (In[1], Load, Clock, CLRN, Q[1]);
-  Register register3 (In[2], Load, Clock, CLRN, Q[2]);
-  Register register4 (In[3], Load, Clock, CLRN, Q[3]);
-  Register register5 (In[4], Load, Clock, CLRN, Q[4]);
-  Register register6 (In[5], Load, Clock, CLRN, Q[5]);
-  Register register7 (In[6], Load, Clock, CLRN, Q[6]);
-  Register register8 (In[7], Load, Clock, CLRN, Q[7]);
-  Register register9 (In[8], Load, Clock, CLRN, Q[8]);
-  Register register10 (In[9], Load, Clock, CLRN, Q[9]);
-  Register register11 (In[10], Load, Clock, CLRN, Q[10]);
-  Register register12 (In[11], Load, Clock, CLRN, Q[11]);
-  Register register13 (In[12], Load, Clock, CLRN, Q[12]);
+  Register register1 (.In(In[0]), .Load(Load), .Clock(Clock), .CLRN(CLRN), .Q(Q[0]));
+  Register register2 (.In(In[1]), .Load(Load), .Clock(Clock), .CLRN(CLRN), .Q(Q[1]));
+  Register register3 (.In(In[2]), .Load(Load), .Clock(Clock), .CLRN(CLRN), .Q(Q[2]));
+  Register register4 (.In(In[3]), .Load(Load), .Clock(Clock), .CLRN(CLRN), .Q(Q[3]));
+  Register register5 (.In(In[4]), .Load(Load), .Clock(Clock), .CLRN(CLRN), .Q(Q[4]));
+  Register register6 (.In(In[5]), .Load(Load), .Clock(Clock), .CLRN(CLRN), .Q(Q[5]));
+  Register register7 (.In(In[6]), .Load(Load), .Clock(Clock), .CLRN(CLRN), .Q(Q[6]));
+  Register register8 (.In(In[7]), .Load(Load), .Clock(Clock), .CLRN(CLRN), .Q(Q[7]));
+  Register register9 (.In(In[8]), .Load(Load), .Clock(Clock), .CLRN(CLRN), .Q(Q[8]));
+  Register register10 (.In(In[9]), .Load(Load), .Clock(Clock), .CLRN(CLRN), .Q(Q[9]));
+  Register register11 (.In(In[10]), .Load(Load), .Clock(Clock), .CLRN(CLRN), .Q(Q[10]));
+  Register register12 (.In(In[11]), .Load(Load), .Clock(Clock), .CLRN(CLRN), .Q(Q[11]));
+  Register register13 (.In(In[12]), .Load(Load), .Clock(Clock), .CLRN(CLRN), .Q(Q[12]));
 
 
   endmodule
