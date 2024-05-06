@@ -28,12 +28,12 @@ module Mux8(S2, S1, S0, W7, W6, W5, W4, W3, W2, W1, W0, F);
 	assign SW1 = S0 ? W1 : W0;
 	assign SW2 = S0 ? W3 : W2;
 	assign SW3 = S0 ? W5 : W4;
-	assign SW4 = S0 ? W7: W6;
+	assign SW4 = S0 ? W7 : W6;
 	
 	assign ST1 = S1 ? SW2 : SW1;
 	assign ST2 = S1 ? SW4 : SW3;
 	
-	assign F = S2 ? ST1 : ST2;
+	assign F = S2 ? ST2 : ST1;
 	
 endmodule
 

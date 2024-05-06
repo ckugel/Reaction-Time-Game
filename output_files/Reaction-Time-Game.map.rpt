@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Reaction-Time-Game
-Sat May  4 15:12:02 2024
+Mon May  6 14:50:28 2024
 Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Standard Edition
 
 
@@ -13,15 +13,19 @@ Quartus Prime Version 22.1std.1 Build 917 02/14/2023 SC Standard Edition
   5. Analysis & Synthesis Source Files Read
   6. Analysis & Synthesis Resource Usage Summary
   7. Analysis & Synthesis Resource Utilization by Entity
-  8. Registers Removed During Synthesis
-  9. General Register Statistics
- 10. Multiplexer Restructuring Statistics (Restructuring Performed)
- 11. Port Connectivity Checks: "Mux8:outputMuxQ"
- 12. Port Connectivity Checks: "Mux8:outputMuxP"
- 13. Port Connectivity Checks: "Decoder3to8:decoder"
- 14. Post-Synthesis Netlist Statistics for Top Partition
- 15. Elapsed Time Per Partition
- 16. Analysis & Synthesis Messages
+  8. General Register Statistics
+  9. Multiplexer Restructuring Statistics (Restructuring Performed)
+ 10. Port Connectivity Checks: "seven_seg_decoder_bus:ssd5"
+ 11. Port Connectivity Checks: "seven_seg_decoder_bus:ssd4"
+ 12. Port Connectivity Checks: "seven_seg_decoder_bus:ssd1"
+ 13. Port Connectivity Checks: "fullstate:fs|full_add_subtract13bit:FA1|full_adder_13bit:FA"
+ 14. Port Connectivity Checks: "fullstate:fs|full_add_subtract13bit:FA1"
+ 15. Port Connectivity Checks: "fullstate:fs|equals13bit:counterIsSame"
+ 16. Port Connectivity Checks: "regfile:rf"
+ 17. Port Connectivity Checks: "divideByFiftyThousandCounter:dbftc"
+ 18. Post-Synthesis Netlist Statistics for Top Partition
+ 19. Elapsed Time Per Partition
+ 20. Analysis & Synthesis Messages
 
 
 
@@ -48,16 +52,16 @@ https://fpgasoftware.intel.com/eula.
 +-----------------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                            ;
 +------------------------------------+----------------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Sat May  4 15:12:02 2024              ;
+; Analysis & Synthesis Status        ; Successful - Mon May  6 14:50:28 2024              ;
 ; Quartus Prime Version              ; 22.1std.1 Build 917 02/14/2023 SC Standard Edition ;
 ; Revision Name                      ; Reaction-Time-Game                                 ;
-; Top-level Entity Name              ; regfile                                            ;
+; Top-level Entity Name              ; Reaction_Time_Game                                 ;
 ; Family                             ; Cyclone IV E                                       ;
-; Total logic elements               ; 182                                                ;
-;     Total combinational functions  ; 117                                                ;
-;     Dedicated logic registers      ; 65                                                 ;
-; Total registers                    ; 65                                                 ;
-; Total pins                         ; 51                                                 ;
+; Total logic elements               ; 292                                                ;
+;     Total combinational functions  ; 204                                                ;
+;     Dedicated logic registers      ; 149                                                ;
+; Total registers                    ; 149                                                ;
+; Total pins                         ; 58                                                 ;
 ; Total virtual pins                 ; 0                                                  ;
 ; Total memory bits                  ; 0                                                  ;
 ; Embedded Multiplier 9-bit elements ; 0                                                  ;
@@ -71,7 +75,7 @@ https://fpgasoftware.intel.com/eula.
 ; Option                                                           ; Setting            ; Default Value      ;
 +------------------------------------------------------------------+--------------------+--------------------+
 ; Device                                                           ; EP4CE115F29C7      ;                    ;
-; Top-level entity name                                            ; regfile            ; Reaction-Time-Game ;
+; Top-level entity name                                            ; Reaction_Time_Game ; Reaction-Time-Game ;
 ; Family name                                                      ; Cyclone IV E       ; Cyclone V          ;
 ; Use smart compilation                                            ; Off                ; Off                ;
 ; Enable parallel Assembler and Timing Analyzer during compilation ; On                 ; On                 ;
@@ -160,161 +164,218 @@ https://fpgasoftware.intel.com/eula.
 ; Maximum allowed            ; 8           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 1           ;
+; Maximum used               ; 8           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
+;     Processors 2-8         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+-----------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                            ; Library ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+---------+
-; RegisterFile/Register.v          ; yes             ; Auto-Found Verilog HDL File  ; X:/Documents/FinalProject/Reaction-Time-Game/RegisterFile/Register.v    ;         ;
-; RegisterFile/RegisterRow.v       ; yes             ; Auto-Found Verilog HDL File  ; X:/Documents/FinalProject/Reaction-Time-Game/RegisterFile/RegisterRow.v ;         ;
-; RegisterFile/Mux8.v              ; yes             ; Auto-Found Verilog HDL File  ; X:/Documents/FinalProject/Reaction-Time-Game/RegisterFile/Mux8.v        ;         ;
-; RegisterFile/Decoder3to8.v       ; yes             ; Auto-Found Verilog HDL File  ; X:/Documents/FinalProject/Reaction-Time-Game/RegisterFile/Decoder3to8.v ;         ;
-; RegisterFile/regfile.v           ; yes             ; Auto-Found Verilog HDL File  ; X:/Documents/FinalProject/Reaction-Time-Game/RegisterFile/regfile.v     ;         ;
-+----------------------------------+-----------------+------------------------------+-------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                    ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                    ; File Name with Absolute Path                                                ; Library ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
+; Reaction_Time_Game.v             ; yes             ; User Verilog HDL File        ; X:/Documents/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v           ;         ;
+; seven_seg_decoder_enable.v       ; yes             ; User Verilog HDL File        ; X:/Documents/FinalProject/Reaction-Time-Game/seven_seg_decoder_enable.v     ;         ;
+; elevenBitUpCount.v               ; yes             ; User Verilog HDL File        ; X:/Documents/FinalProject/Reaction-Time-Game/elevenBitUpCount.v             ;         ;
+; thirteenBitUpCounter.v           ; yes             ; User Verilog HDL File        ; X:/Documents/FinalProject/Reaction-Time-Game/thirteenBitUpCounter.v         ;         ;
+; RegisterFile/Register.v          ; yes             ; Auto-Found Verilog HDL File  ; X:/Documents/FinalProject/Reaction-Time-Game/RegisterFile/Register.v        ;         ;
+; RegisterFile/RegisterRow.v       ; yes             ; Auto-Found Verilog HDL File  ; X:/Documents/FinalProject/Reaction-Time-Game/RegisterFile/RegisterRow.v     ;         ;
+; RegisterFile/Mux8.v              ; yes             ; Auto-Found Verilog HDL File  ; X:/Documents/FinalProject/Reaction-Time-Game/RegisterFile/Mux8.v            ;         ;
+; RegisterFile/Decoder3to8.v       ; yes             ; Auto-Found Verilog HDL File  ; X:/Documents/FinalProject/Reaction-Time-Game/RegisterFile/Decoder3to8.v     ;         ;
+; RegisterFile/regfile.v           ; yes             ; Auto-Found Verilog HDL File  ; X:/Documents/FinalProject/Reaction-Time-Game/RegisterFile/regfile.v         ;         ;
+; FA.v                             ; yes             ; Auto-Found Verilog HDL File  ; X:/Documents/FinalProject/Reaction-Time-Game/FA.v                           ;         ;
+; full_adder_13bit.v               ; yes             ; Auto-Found Verilog HDL File  ; X:/Documents/FinalProject/Reaction-Time-Game/full_adder_13bit.v             ;         ;
+; full_add_subtract13bit.v         ; yes             ; Auto-Found Verilog HDL File  ; X:/Documents/FinalProject/Reaction-Time-Game/full_add_subtract13bit.v       ;         ;
+; mux4to1.v                        ; yes             ; Auto-Found Verilog HDL File  ; X:/Documents/FinalProject/Reaction-Time-Game/mux4to1.v                      ;         ;
+; mux3_8.v                         ; yes             ; Auto-Found Verilog HDL File  ; X:/Documents/FinalProject/Reaction-Time-Game/mux3_8.v                       ;         ;
+; equals13bit.v                    ; yes             ; Auto-Found Verilog HDL File  ; X:/Documents/FinalProject/Reaction-Time-Game/equals13bit.v                  ;         ;
+; TFlipFlop.v                      ; yes             ; Auto-Found Verilog HDL File  ; X:/Documents/FinalProject/Reaction-Time-Game/TFlipFlop.v                    ;         ;
+; fullstate.v                      ; yes             ; Auto-Found Verilog HDL File  ; X:/Documents/FinalProject/Reaction-Time-Game/fullstate.v                    ;         ;
+; seven_seg_decoder_bus.v          ; yes             ; Auto-Found Verilog HDL File  ; X:/Documents/FinalProject/Reaction-Time-Game/seven_seg_decoder_bus.v        ;         ;
+; divideByFiftyThousandCounter.v   ; yes             ; Auto-Found Verilog HDL File  ; X:/Documents/FinalProject/Reaction-Time-Game/divideByFiftyThousandCounter.v ;         ;
+; twoBitUpCounterREAL.v            ; yes             ; Auto-Found Verilog HDL File  ; X:/Documents/FinalProject/Reaction-Time-Game/twoBitUpCounterREAL.v          ;         ;
++----------------------------------+-----------------+------------------------------+-----------------------------------------------------------------------------+---------+
 
 
-+---------------------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary             ;
-+---------------------------------------------+-----------+
-; Resource                                    ; Usage     ;
-+---------------------------------------------+-----------+
-; Estimated Total logic elements              ; 182       ;
-;                                             ;           ;
-; Total combinational functions               ; 117       ;
-; Logic element usage by number of LUT inputs ;           ;
-;     -- 4 input functions                    ; 57        ;
-;     -- 3 input functions                    ; 32        ;
-;     -- <=2 input functions                  ; 28        ;
-;                                             ;           ;
-; Logic elements by mode                      ;           ;
-;     -- normal mode                          ; 117       ;
-;     -- arithmetic mode                      ; 0         ;
-;                                             ;           ;
-; Total registers                             ; 65        ;
-;     -- Dedicated logic registers            ; 65        ;
-;     -- I/O registers                        ; 0         ;
-;                                             ;           ;
-; I/O pins                                    ; 51        ;
-;                                             ;           ;
-; Embedded Multiplier 9-bit elements          ; 0         ;
-;                                             ;           ;
-; Maximum fan-out node                        ; CLK~input ;
-; Maximum fan-out                             ; 65        ;
-; Total fan-out                               ; 717       ;
-; Average fan-out                             ; 2.52      ;
-+---------------------------------------------+-----------+
++---------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Usage Summary                                                 ;
++---------------------------------------------+-----------------------------------------------+
+; Resource                                    ; Usage                                         ;
++---------------------------------------------+-----------------------------------------------+
+; Estimated Total logic elements              ; 292                                           ;
+;                                             ;                                               ;
+; Total combinational functions               ; 204                                           ;
+; Logic element usage by number of LUT inputs ;                                               ;
+;     -- 4 input functions                    ; 132                                           ;
+;     -- 3 input functions                    ; 35                                            ;
+;     -- <=2 input functions                  ; 37                                            ;
+;                                             ;                                               ;
+; Logic elements by mode                      ;                                               ;
+;     -- normal mode                          ; 182                                           ;
+;     -- arithmetic mode                      ; 22                                            ;
+;                                             ;                                               ;
+; Total registers                             ; 149                                           ;
+;     -- Dedicated logic registers            ; 149                                           ;
+;     -- I/O registers                        ; 0                                             ;
+;                                             ;                                               ;
+; I/O pins                                    ; 58                                            ;
+;                                             ;                                               ;
+; Embedded Multiplier 9-bit elements          ; 0                                             ;
+;                                             ;                                               ;
+; Maximum fan-out node                        ; divideByFiftyThousandCounter:dbftc|TFF_inst25 ;
+; Maximum fan-out                             ; 133                                           ;
+; Total fan-out                               ; 1362                                          ;
+; Average fan-out                             ; 2.90                                          ;
++---------------------------------------------+-----------------------------------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                 ;
-+-----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+-------------+--------------+
-; Compilation Hierarchy Node  ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                           ; Entity Name ; Library Name ;
-+-----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+-------------+--------------+
-; |regfile                    ; 117 (0)             ; 65 (0)                    ; 0           ; 0            ; 0       ; 0         ; 51   ; 0            ; |regfile                                      ; regfile     ; work         ;
-;    |Decoder3to8:decoder|    ; 5 (5)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|Decoder3to8:decoder                  ; Decoder3to8 ; work         ;
-;    |Mux8:outputMuxP|        ; 56 (56)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|Mux8:outputMuxP                      ; Mux8        ; work         ;
-;    |Mux8:outputMuxQ|        ; 56 (56)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|Mux8:outputMuxQ                      ; Mux8        ; work         ;
-;    |RegisterRow:reg0|       ; 0 (0)               ; 13 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg0                     ; RegisterRow ; work         ;
-;       |Register:register10| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg0|Register:register10 ; Register    ; work         ;
-;       |Register:register11| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg0|Register:register11 ; Register    ; work         ;
-;       |Register:register12| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg0|Register:register12 ; Register    ; work         ;
-;       |Register:register13| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg0|Register:register13 ; Register    ; work         ;
-;       |Register:register1|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg0|Register:register1  ; Register    ; work         ;
-;       |Register:register2|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg0|Register:register2  ; Register    ; work         ;
-;       |Register:register3|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg0|Register:register3  ; Register    ; work         ;
-;       |Register:register4|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg0|Register:register4  ; Register    ; work         ;
-;       |Register:register5|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg0|Register:register5  ; Register    ; work         ;
-;       |Register:register6|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg0|Register:register6  ; Register    ; work         ;
-;       |Register:register7|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg0|Register:register7  ; Register    ; work         ;
-;       |Register:register8|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg0|Register:register8  ; Register    ; work         ;
-;       |Register:register9|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg0|Register:register9  ; Register    ; work         ;
-;    |RegisterRow:reg2|       ; 0 (0)               ; 13 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg2                     ; RegisterRow ; work         ;
-;       |Register:register10| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg2|Register:register10 ; Register    ; work         ;
-;       |Register:register11| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg2|Register:register11 ; Register    ; work         ;
-;       |Register:register12| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg2|Register:register12 ; Register    ; work         ;
-;       |Register:register13| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg2|Register:register13 ; Register    ; work         ;
-;       |Register:register1|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg2|Register:register1  ; Register    ; work         ;
-;       |Register:register2|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg2|Register:register2  ; Register    ; work         ;
-;       |Register:register3|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg2|Register:register3  ; Register    ; work         ;
-;       |Register:register4|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg2|Register:register4  ; Register    ; work         ;
-;       |Register:register5|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg2|Register:register5  ; Register    ; work         ;
-;       |Register:register6|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg2|Register:register6  ; Register    ; work         ;
-;       |Register:register7|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg2|Register:register7  ; Register    ; work         ;
-;       |Register:register8|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg2|Register:register8  ; Register    ; work         ;
-;       |Register:register9|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg2|Register:register9  ; Register    ; work         ;
-;    |RegisterRow:reg3|       ; 0 (0)               ; 13 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg3                     ; RegisterRow ; work         ;
-;       |Register:register10| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg3|Register:register10 ; Register    ; work         ;
-;       |Register:register11| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg3|Register:register11 ; Register    ; work         ;
-;       |Register:register12| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg3|Register:register12 ; Register    ; work         ;
-;       |Register:register13| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg3|Register:register13 ; Register    ; work         ;
-;       |Register:register1|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg3|Register:register1  ; Register    ; work         ;
-;       |Register:register2|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg3|Register:register2  ; Register    ; work         ;
-;       |Register:register3|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg3|Register:register3  ; Register    ; work         ;
-;       |Register:register4|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg3|Register:register4  ; Register    ; work         ;
-;       |Register:register5|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg3|Register:register5  ; Register    ; work         ;
-;       |Register:register6|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg3|Register:register6  ; Register    ; work         ;
-;       |Register:register7|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg3|Register:register7  ; Register    ; work         ;
-;       |Register:register8|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg3|Register:register8  ; Register    ; work         ;
-;       |Register:register9|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg3|Register:register9  ; Register    ; work         ;
-;    |RegisterRow:reg4|       ; 0 (0)               ; 13 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg4                     ; RegisterRow ; work         ;
-;       |Register:register10| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg4|Register:register10 ; Register    ; work         ;
-;       |Register:register11| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg4|Register:register11 ; Register    ; work         ;
-;       |Register:register12| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg4|Register:register12 ; Register    ; work         ;
-;       |Register:register13| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg4|Register:register13 ; Register    ; work         ;
-;       |Register:register1|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg4|Register:register1  ; Register    ; work         ;
-;       |Register:register2|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg4|Register:register2  ; Register    ; work         ;
-;       |Register:register3|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg4|Register:register3  ; Register    ; work         ;
-;       |Register:register4|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg4|Register:register4  ; Register    ; work         ;
-;       |Register:register5|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg4|Register:register5  ; Register    ; work         ;
-;       |Register:register6|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg4|Register:register6  ; Register    ; work         ;
-;       |Register:register7|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg4|Register:register7  ; Register    ; work         ;
-;       |Register:register8|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg4|Register:register8  ; Register    ; work         ;
-;       |Register:register9|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg4|Register:register9  ; Register    ; work         ;
-;    |RegisterRow:reg5|       ; 0 (0)               ; 13 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg5                     ; RegisterRow ; work         ;
-;       |Register:register10| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg5|Register:register10 ; Register    ; work         ;
-;       |Register:register11| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg5|Register:register11 ; Register    ; work         ;
-;       |Register:register12| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg5|Register:register12 ; Register    ; work         ;
-;       |Register:register13| ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg5|Register:register13 ; Register    ; work         ;
-;       |Register:register1|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg5|Register:register1  ; Register    ; work         ;
-;       |Register:register2|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg5|Register:register2  ; Register    ; work         ;
-;       |Register:register3|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg5|Register:register3  ; Register    ; work         ;
-;       |Register:register4|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg5|Register:register4  ; Register    ; work         ;
-;       |Register:register5|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg5|Register:register5  ; Register    ; work         ;
-;       |Register:register6|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg5|Register:register6  ; Register    ; work         ;
-;       |Register:register7|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg5|Register:register7  ; Register    ; work         ;
-;       |Register:register8|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg5|Register:register8  ; Register    ; work         ;
-;       |Register:register9|  ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |regfile|RegisterRow:reg5|Register:register9  ; Register    ; work         ;
-+-----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+-----------------------------------------------+-------------+--------------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                                           ;
++-----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------+------------------------------+--------------+
+; Compilation Hierarchy Node              ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; Full Hierarchy Name                                                                        ; Entity Name                  ; Library Name ;
++-----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------+------------------------------+--------------+
+; |Reaction_Time_Game                     ; 204 (0)             ; 149 (0)                   ; 0           ; 0            ; 0       ; 0         ; 58   ; 0            ; |Reaction_Time_Game                                                                        ; Reaction_Time_Game           ; work         ;
+;    |divideByFiftyThousandCounter:dbftc| ; 23 (23)             ; 16 (16)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|divideByFiftyThousandCounter:dbftc                                     ; divideByFiftyThousandCounter ; work         ;
+;    |elevenBitUpCount:dc|                ; 15 (15)             ; 11 (11)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|elevenBitUpCount:dc                                                    ; elevenBitUpCount             ; work         ;
+;    |fullstate:fs|                       ; 43 (31)             ; 3 (3)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|fullstate:fs                                                           ; fullstate                    ; work         ;
+;       |equals13bit:counterIsSame|       ; 4 (4)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|fullstate:fs|equals13bit:counterIsSame                                 ; equals13bit                  ; work         ;
+;       |full_add_subtract13bit:FA1|      ; 8 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|fullstate:fs|full_add_subtract13bit:FA1                                ; full_add_subtract13bit       ; work         ;
+;          |full_adder_13bit:FA|          ; 8 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|fullstate:fs|full_add_subtract13bit:FA1|full_adder_13bit:FA            ; full_adder_13bit             ; work         ;
+;             |FA:adder11|                ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|fullstate:fs|full_add_subtract13bit:FA1|full_adder_13bit:FA|FA:adder11 ; FA                           ; work         ;
+;             |FA:adder4|                 ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|fullstate:fs|full_add_subtract13bit:FA1|full_adder_13bit:FA|FA:adder4  ; FA                           ; work         ;
+;             |FA:adder5|                 ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|fullstate:fs|full_add_subtract13bit:FA1|full_adder_13bit:FA|FA:adder5  ; FA                           ; work         ;
+;             |FA:adder7|                 ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|fullstate:fs|full_add_subtract13bit:FA1|full_adder_13bit:FA|FA:adder7  ; FA                           ; work         ;
+;             |FA:adder8|                 ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|fullstate:fs|full_add_subtract13bit:FA1|full_adder_13bit:FA|FA:adder8  ; FA                           ; work         ;
+;    |regfile:rf|                         ; 80 (0)              ; 104 (0)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf                                                             ; regfile                      ; work         ;
+;       |Decoder3to8:decoder|             ; 12 (12)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|Decoder3to8:decoder                                         ; Decoder3to8                  ; work         ;
+;       |Mux8:outputMuxQ|                 ; 65 (65)             ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|Mux8:outputMuxQ                                             ; Mux8                         ; work         ;
+;       |RegisterRow:reg0|                ; 3 (0)               ; 13 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg0                                            ; RegisterRow                  ; work         ;
+;          |Register:register10|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg0|Register:register10                        ; Register                     ; work         ;
+;          |Register:register11|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg0|Register:register11                        ; Register                     ; work         ;
+;          |Register:register12|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg0|Register:register12                        ; Register                     ; work         ;
+;          |Register:register13|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg0|Register:register13                        ; Register                     ; work         ;
+;          |Register:register1|           ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg0|Register:register1                         ; Register                     ; work         ;
+;          |Register:register2|           ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg0|Register:register2                         ; Register                     ; work         ;
+;          |Register:register3|           ; 1 (1)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg0|Register:register3                         ; Register                     ; work         ;
+;          |Register:register4|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg0|Register:register4                         ; Register                     ; work         ;
+;          |Register:register5|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg0|Register:register5                         ; Register                     ; work         ;
+;          |Register:register6|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg0|Register:register6                         ; Register                     ; work         ;
+;          |Register:register7|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg0|Register:register7                         ; Register                     ; work         ;
+;          |Register:register8|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg0|Register:register8                         ; Register                     ; work         ;
+;          |Register:register9|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg0|Register:register9                         ; Register                     ; work         ;
+;       |RegisterRow:reg1|                ; 0 (0)               ; 13 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg1                                            ; RegisterRow                  ; work         ;
+;          |Register:register10|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg1|Register:register10                        ; Register                     ; work         ;
+;          |Register:register11|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg1|Register:register11                        ; Register                     ; work         ;
+;          |Register:register12|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg1|Register:register12                        ; Register                     ; work         ;
+;          |Register:register13|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg1|Register:register13                        ; Register                     ; work         ;
+;          |Register:register1|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg1|Register:register1                         ; Register                     ; work         ;
+;          |Register:register2|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg1|Register:register2                         ; Register                     ; work         ;
+;          |Register:register3|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg1|Register:register3                         ; Register                     ; work         ;
+;          |Register:register4|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg1|Register:register4                         ; Register                     ; work         ;
+;          |Register:register5|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg1|Register:register5                         ; Register                     ; work         ;
+;          |Register:register6|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg1|Register:register6                         ; Register                     ; work         ;
+;          |Register:register7|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg1|Register:register7                         ; Register                     ; work         ;
+;          |Register:register8|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg1|Register:register8                         ; Register                     ; work         ;
+;          |Register:register9|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg1|Register:register9                         ; Register                     ; work         ;
+;       |RegisterRow:reg2|                ; 0 (0)               ; 13 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg2                                            ; RegisterRow                  ; work         ;
+;          |Register:register10|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg2|Register:register10                        ; Register                     ; work         ;
+;          |Register:register11|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg2|Register:register11                        ; Register                     ; work         ;
+;          |Register:register12|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg2|Register:register12                        ; Register                     ; work         ;
+;          |Register:register13|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg2|Register:register13                        ; Register                     ; work         ;
+;          |Register:register1|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg2|Register:register1                         ; Register                     ; work         ;
+;          |Register:register2|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg2|Register:register2                         ; Register                     ; work         ;
+;          |Register:register3|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg2|Register:register3                         ; Register                     ; work         ;
+;          |Register:register4|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg2|Register:register4                         ; Register                     ; work         ;
+;          |Register:register5|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg2|Register:register5                         ; Register                     ; work         ;
+;          |Register:register6|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg2|Register:register6                         ; Register                     ; work         ;
+;          |Register:register7|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg2|Register:register7                         ; Register                     ; work         ;
+;          |Register:register8|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg2|Register:register8                         ; Register                     ; work         ;
+;          |Register:register9|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg2|Register:register9                         ; Register                     ; work         ;
+;       |RegisterRow:reg3|                ; 0 (0)               ; 13 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg3                                            ; RegisterRow                  ; work         ;
+;          |Register:register10|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg3|Register:register10                        ; Register                     ; work         ;
+;          |Register:register11|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg3|Register:register11                        ; Register                     ; work         ;
+;          |Register:register12|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg3|Register:register12                        ; Register                     ; work         ;
+;          |Register:register13|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg3|Register:register13                        ; Register                     ; work         ;
+;          |Register:register1|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg3|Register:register1                         ; Register                     ; work         ;
+;          |Register:register2|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg3|Register:register2                         ; Register                     ; work         ;
+;          |Register:register3|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg3|Register:register3                         ; Register                     ; work         ;
+;          |Register:register4|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg3|Register:register4                         ; Register                     ; work         ;
+;          |Register:register5|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg3|Register:register5                         ; Register                     ; work         ;
+;          |Register:register6|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg3|Register:register6                         ; Register                     ; work         ;
+;          |Register:register7|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg3|Register:register7                         ; Register                     ; work         ;
+;          |Register:register8|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg3|Register:register8                         ; Register                     ; work         ;
+;          |Register:register9|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg3|Register:register9                         ; Register                     ; work         ;
+;       |RegisterRow:reg4|                ; 0 (0)               ; 13 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg4                                            ; RegisterRow                  ; work         ;
+;          |Register:register10|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg4|Register:register10                        ; Register                     ; work         ;
+;          |Register:register11|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg4|Register:register11                        ; Register                     ; work         ;
+;          |Register:register12|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg4|Register:register12                        ; Register                     ; work         ;
+;          |Register:register13|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg4|Register:register13                        ; Register                     ; work         ;
+;          |Register:register1|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg4|Register:register1                         ; Register                     ; work         ;
+;          |Register:register2|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg4|Register:register2                         ; Register                     ; work         ;
+;          |Register:register3|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg4|Register:register3                         ; Register                     ; work         ;
+;          |Register:register4|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg4|Register:register4                         ; Register                     ; work         ;
+;          |Register:register5|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg4|Register:register5                         ; Register                     ; work         ;
+;          |Register:register6|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg4|Register:register6                         ; Register                     ; work         ;
+;          |Register:register7|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg4|Register:register7                         ; Register                     ; work         ;
+;          |Register:register8|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg4|Register:register8                         ; Register                     ; work         ;
+;          |Register:register9|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg4|Register:register9                         ; Register                     ; work         ;
+;       |RegisterRow:reg5|                ; 0 (0)               ; 13 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg5                                            ; RegisterRow                  ; work         ;
+;          |Register:register10|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg5|Register:register10                        ; Register                     ; work         ;
+;          |Register:register11|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg5|Register:register11                        ; Register                     ; work         ;
+;          |Register:register12|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg5|Register:register12                        ; Register                     ; work         ;
+;          |Register:register13|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg5|Register:register13                        ; Register                     ; work         ;
+;          |Register:register1|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg5|Register:register1                         ; Register                     ; work         ;
+;          |Register:register2|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg5|Register:register2                         ; Register                     ; work         ;
+;          |Register:register3|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg5|Register:register3                         ; Register                     ; work         ;
+;          |Register:register4|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg5|Register:register4                         ; Register                     ; work         ;
+;          |Register:register5|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg5|Register:register5                         ; Register                     ; work         ;
+;          |Register:register6|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg5|Register:register6                         ; Register                     ; work         ;
+;          |Register:register7|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg5|Register:register7                         ; Register                     ; work         ;
+;          |Register:register8|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg5|Register:register8                         ; Register                     ; work         ;
+;          |Register:register9|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg5|Register:register9                         ; Register                     ; work         ;
+;       |RegisterRow:reg6|                ; 0 (0)               ; 13 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg6                                            ; RegisterRow                  ; work         ;
+;          |Register:register10|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg6|Register:register10                        ; Register                     ; work         ;
+;          |Register:register11|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg6|Register:register11                        ; Register                     ; work         ;
+;          |Register:register12|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg6|Register:register12                        ; Register                     ; work         ;
+;          |Register:register13|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg6|Register:register13                        ; Register                     ; work         ;
+;          |Register:register1|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg6|Register:register1                         ; Register                     ; work         ;
+;          |Register:register2|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg6|Register:register2                         ; Register                     ; work         ;
+;          |Register:register3|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg6|Register:register3                         ; Register                     ; work         ;
+;          |Register:register4|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg6|Register:register4                         ; Register                     ; work         ;
+;          |Register:register5|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg6|Register:register5                         ; Register                     ; work         ;
+;          |Register:register6|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg6|Register:register6                         ; Register                     ; work         ;
+;          |Register:register7|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg6|Register:register7                         ; Register                     ; work         ;
+;          |Register:register8|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg6|Register:register8                         ; Register                     ; work         ;
+;          |Register:register9|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg6|Register:register9                         ; Register                     ; work         ;
+;       |RegisterRow:reg7|                ; 0 (0)               ; 13 (0)                    ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg7                                            ; RegisterRow                  ; work         ;
+;          |Register:register10|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg7|Register:register10                        ; Register                     ; work         ;
+;          |Register:register11|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg7|Register:register11                        ; Register                     ; work         ;
+;          |Register:register12|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg7|Register:register12                        ; Register                     ; work         ;
+;          |Register:register13|          ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg7|Register:register13                        ; Register                     ; work         ;
+;          |Register:register1|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg7|Register:register1                         ; Register                     ; work         ;
+;          |Register:register2|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg7|Register:register2                         ; Register                     ; work         ;
+;          |Register:register3|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg7|Register:register3                         ; Register                     ; work         ;
+;          |Register:register4|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg7|Register:register4                         ; Register                     ; work         ;
+;          |Register:register5|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg7|Register:register5                         ; Register                     ; work         ;
+;          |Register:register6|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg7|Register:register6                         ; Register                     ; work         ;
+;          |Register:register7|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg7|Register:register7                         ; Register                     ; work         ;
+;          |Register:register8|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg7|Register:register8                         ; Register                     ; work         ;
+;          |Register:register9|           ; 0 (0)               ; 1 (1)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|regfile:rf|RegisterRow:reg7|Register:register9                         ; Register                     ; work         ;
+;    |seven_seg_decoder_bus:ssd1|         ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|seven_seg_decoder_bus:ssd1                                             ; seven_seg_decoder_bus        ; work         ;
+;       |seven_seg_decoder_enable:ssd|    ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|seven_seg_decoder_bus:ssd1|seven_seg_decoder_enable:ssd                ; seven_seg_decoder_enable     ; work         ;
+;    |seven_seg_decoder_bus:ssd2|         ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|seven_seg_decoder_bus:ssd2                                             ; seven_seg_decoder_bus        ; work         ;
+;       |seven_seg_decoder_enable:ssd|    ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|seven_seg_decoder_bus:ssd2|seven_seg_decoder_enable:ssd                ; seven_seg_decoder_enable     ; work         ;
+;    |seven_seg_decoder_bus:ssd3|         ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|seven_seg_decoder_bus:ssd3                                             ; seven_seg_decoder_bus        ; work         ;
+;       |seven_seg_decoder_enable:ssd|    ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|seven_seg_decoder_bus:ssd3|seven_seg_decoder_enable:ssd                ; seven_seg_decoder_enable     ; work         ;
+;    |seven_seg_decoder_bus:ssd5|         ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|seven_seg_decoder_bus:ssd5                                             ; seven_seg_decoder_bus        ; work         ;
+;       |seven_seg_decoder_enable:ssd|    ; 7 (7)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|seven_seg_decoder_bus:ssd5|seven_seg_decoder_enable:ssd                ; seven_seg_decoder_enable     ; work         ;
+;    |thirteenBitUpCounter:scd|           ; 13 (13)             ; 13 (13)                   ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|thirteenBitUpCounter:scd                                               ; thirteenBitUpCounter         ; work         ;
+;    |twoBitUpCounterREAL:tb2|            ; 2 (2)               ; 2 (2)                     ; 0           ; 0            ; 0       ; 0         ; 0    ; 0            ; |Reaction_Time_Game|twoBitUpCounterREAL:tb2                                                ; twoBitUpCounterREAL          ; work         ;
++-----------------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+------+--------------+--------------------------------------------------------------------------------------------+------------------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+-------------------------------------------------------------------------------------------+
-; Registers Removed During Synthesis                                                        ;
-+---------------------------------------------+---------------------------------------------+
-; Register name                               ; Reason for Removal                          ;
-+---------------------------------------------+---------------------------------------------+
-; RegisterRow:reg1|Register:register13|regDFF ; Stuck at GND due to stuck port clock_enable ;
-; RegisterRow:reg1|Register:register12|regDFF ; Stuck at GND due to stuck port clock_enable ;
-; RegisterRow:reg1|Register:register11|regDFF ; Stuck at GND due to stuck port clock_enable ;
-; RegisterRow:reg1|Register:register10|regDFF ; Stuck at GND due to stuck port clock_enable ;
-; RegisterRow:reg1|Register:register9|regDFF  ; Stuck at GND due to stuck port clock_enable ;
-; RegisterRow:reg1|Register:register8|regDFF  ; Stuck at GND due to stuck port clock_enable ;
-; RegisterRow:reg1|Register:register7|regDFF  ; Stuck at GND due to stuck port clock_enable ;
-; RegisterRow:reg1|Register:register6|regDFF  ; Stuck at GND due to stuck port clock_enable ;
-; RegisterRow:reg1|Register:register5|regDFF  ; Stuck at GND due to stuck port clock_enable ;
-; RegisterRow:reg1|Register:register4|regDFF  ; Stuck at GND due to stuck port clock_enable ;
-; RegisterRow:reg1|Register:register3|regDFF  ; Stuck at GND due to stuck port clock_enable ;
-; RegisterRow:reg1|Register:register2|regDFF  ; Stuck at GND due to stuck port clock_enable ;
-; RegisterRow:reg1|Register:register1|regDFF  ; Stuck at GND due to stuck port clock_enable ;
-; Total Number of Removed Registers = 13      ;                                             ;
-+---------------------------------------------+---------------------------------------------+
 
 
 +------------------------------------------------------+
@@ -322,53 +383,100 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +----------------------------------------------+-------+
 ; Statistic                                    ; Value ;
 +----------------------------------------------+-------+
-; Total registers                              ; 65    ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 65    ;
+; Total registers                              ; 149   ;
+; Number of registers using Synchronous Clear  ; 24    ;
+; Number of registers using Synchronous Load   ; 1     ;
+; Number of registers using Asynchronous Clear ; 125   ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 65    ;
+; Number of registers using Clock Enable       ; 101   ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
-+---------------------------------------------------------------------------------------------------------------------------------------------+
-; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                              ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
-; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output    ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
-; 7:1                ; 13 bits   ; 52 LEs        ; 52 LEs               ; 0 LEs                  ; No         ; |regfile|Mux8:outputMuxP|F[0] ;
-; 7:1                ; 13 bits   ; 52 LEs        ; 52 LEs               ; 0 LEs                  ; No         ; |regfile|Mux8:outputMuxQ|F[0] ;
-+--------------------+-----------+---------------+----------------------+------------------------+------------+-------------------------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Multiplexer Restructuring Statistics (Restructuring Performed)                                                                                                     ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+; Multiplexer Inputs ; Bus Width ; Baseline Area ; Area if Restructured ; Saving if Restructured ; Registered ; Example Multiplexer Output                           ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
+; 8:1                ; 13 bits   ; 65 LEs        ; 65 LEs               ; 0 LEs                  ; No         ; |Reaction_Time_Game|regfile:rf|Mux8:outputMuxQ|F[11] ;
++--------------------+-----------+---------------+----------------------+------------------------+------------+------------------------------------------------------+
 
 
-+---------------------------------------------+
-; Port Connectivity Checks: "Mux8:outputMuxQ" ;
-+------+-------+----------+-------------------+
-; Port ; Type  ; Severity ; Details           ;
-+------+-------+----------+-------------------+
-; W7   ; Input ; Info     ; Stuck at GND      ;
-; W6   ; Input ; Info     ; Stuck at GND      ;
-+------+-------+----------+-------------------+
++--------------------------------------------------------+
+; Port Connectivity Checks: "seven_seg_decoder_bus:ssd5" ;
++------+-------+----------+------------------------------+
+; Port ; Type  ; Severity ; Details                      ;
++------+-------+----------+------------------------------+
+; En   ; Input ; Info     ; Stuck at VCC                 ;
++------+-------+----------+------------------------------+
 
 
-+---------------------------------------------+
-; Port Connectivity Checks: "Mux8:outputMuxP" ;
-+------+-------+----------+-------------------+
-; Port ; Type  ; Severity ; Details           ;
-+------+-------+----------+-------------------+
-; W7   ; Input ; Info     ; Stuck at GND      ;
-; W6   ; Input ; Info     ; Stuck at GND      ;
-+------+-------+----------+-------------------+
++--------------------------------------------------------+
+; Port Connectivity Checks: "seven_seg_decoder_bus:ssd4" ;
++---------+-------+----------+---------------------------+
+; Port    ; Type  ; Severity ; Details                   ;
++---------+-------+----------+---------------------------+
+; X[3..1] ; Input ; Info     ; Stuck at GND              ;
++---------+-------+----------+---------------------------+
 
 
-+---------------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "Decoder3to8:decoder"                                                                     ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; Port      ; Type   ; Severity ; Details                                                                             ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
-; OUT[0..1] ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+-----------+--------+----------+-------------------------------------------------------------------------------------+
++--------------------------------------------------------+
+; Port Connectivity Checks: "seven_seg_decoder_bus:ssd1" ;
++------+-------+----------+------------------------------+
+; Port ; Type  ; Severity ; Details                      ;
++------+-------+----------+------------------------------+
+; En   ; Input ; Info     ; Stuck at VCC                 ;
++------+-------+----------+------------------------------+
+
+
++----------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fullstate:fs|full_add_subtract13bit:FA1|full_adder_13bit:FA"                        ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Port ; Type   ; Severity ; Details                                                                             ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+; Cout ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------------------------------------------------------+
+; Port Connectivity Checks: "fullstate:fs|full_add_subtract13bit:FA1"                                                ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Port     ; Type   ; Severity ; Details                                                                             ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+; Y[12..1] ; Input  ; Info     ; Stuck at GND                                                                        ;
+; Y[0]     ; Input  ; Info     ; Stuck at VCC                                                                        ;
+; AddSub   ; Input  ; Info     ; Stuck at GND                                                                        ;
+; Overflow ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
++----------+--------+----------+-------------------------------------------------------------------------------------+
+
+
++--------------------------------------------------------------------+
+; Port Connectivity Checks: "fullstate:fs|equals13bit:counterIsSame" ;
++----------+-------+----------+--------------------------------------+
+; Port     ; Type  ; Severity ; Details                              ;
++----------+-------+----------+--------------------------------------+
+; Y[12..3] ; Input ; Info     ; Stuck at GND                         ;
+; Y[1..0]  ; Input ; Info     ; Stuck at GND                         ;
+; Y[2]     ; Input ; Info     ; Stuck at VCC                         ;
++----------+-------+----------+--------------------------------------+
+
+
++----------------------------------------+
+; Port Connectivity Checks: "regfile:rf" ;
++------+-------+----------+--------------+
+; Port ; Type  ; Severity ; Details      ;
++------+-------+----------+--------------+
+; RP   ; Input ; Info     ; Stuck at GND ;
++------+-------+----------+--------------+
+
+
++----------------------------------------------------------------+
+; Port Connectivity Checks: "divideByFiftyThousandCounter:dbftc" ;
++--------+-------+----------+------------------------------------+
+; Port   ; Type  ; Severity ; Details                            ;
++--------+-------+----------+------------------------------------+
+; Enable ; Input ; Info     ; Stuck at VCC                       ;
++--------+-------+----------+------------------------------------+
 
 
 +-----------------------------------------------------+
@@ -376,17 +484,24 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 51                          ;
-; cycloneiii_ff         ; 65                          ;
-;     ENA CLR           ; 65                          ;
-; cycloneiii_lcell_comb ; 117                         ;
-;     normal            ; 117                         ;
-;         2 data inputs ; 28                          ;
-;         3 data inputs ; 32                          ;
-;         4 data inputs ; 57                          ;
+; boundary_port         ; 58                          ;
+; cycloneiii_ff         ; 149                         ;
+;     CLR               ; 23                          ;
+;     CLR SLD           ; 1                           ;
+;     ENA CLR           ; 101                         ;
+;     SCLR              ; 24                          ;
+; cycloneiii_lcell_comb ; 206                         ;
+;     arith             ; 22                          ;
+;         2 data inputs ; 22                          ;
+;     normal            ; 184                         ;
+;         0 data inputs ; 2                           ;
+;         1 data inputs ; 4                           ;
+;         2 data inputs ; 11                          ;
+;         3 data inputs ; 35                          ;
+;         4 data inputs ; 132                         ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 3.05                        ;
+; Max LUT depth         ; 6.00                        ;
+; Average LUT depth     ; 3.63                        ;
 +-----------------------+-----------------------------+
 
 
@@ -405,7 +520,7 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 22.1std.1 Build 917 02/14/2023 SC Standard Edition
-    Info: Processing started: Sat May  4 15:11:52 2024
+    Info: Processing started: Mon May  6 14:50:17 2024
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Reaction-Time-Game -c Reaction-Time-Game
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 8 of the 8 processors detected
@@ -413,7 +528,7 @@ Info (12021): Found 20 design units, including 20 entities, in source file react
     Info (12023): Found entity 1: Register File: X:/Documents/FinalProject/Reaction-Time-Game/RegisterFile/Register.v Line: 5
     Info (12023): Found entity 2: RegisterRow File: X:/Documents/FinalProject/Reaction-Time-Game/RegisterFile/RegisterRow.v Line: 6
     Info (12023): Found entity 3: Mux8 File: X:/Documents/FinalProject/Reaction-Time-Game/RegisterFile/Mux8.v Line: 4
-    Info (12023): Found entity 4: Decoder3to8 File: X:/Documents/FinalProject/Reaction-Time-Game/RegisterFile/Decoder3to8.v Line: 20
+    Info (12023): Found entity 4: Decoder3to8 File: X:/Documents/FinalProject/Reaction-Time-Game/RegisterFile/Decoder3to8.v Line: 4
     Info (12023): Found entity 5: regfile File: X:/Documents/FinalProject/Reaction-Time-Game/RegisterFile/regfile.v Line: 5
     Info (12023): Found entity 6: FA File: X:/Documents/FinalProject/Reaction-Time-Game/FA.v Line: 1
     Info (12023): Found entity 7: full_adder_13bit File: X:/Documents/FinalProject/Reaction-Time-Game/full_adder_13bit.v Line: 6
@@ -467,22 +582,39 @@ Warning (10236): Verilog HDL Implicit Net warning at fullstate.v(65): created im
 Warning (10236): Verilog HDL Implicit Net warning at Reaction_Time_Game.v(38): created implicit net for "buttonStartReal" File: X:/Documents/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 38
 Warning (10236): Verilog HDL Implicit Net warning at Reaction_Time_Game.v(39): created implicit net for "buttonHitReal" File: X:/Documents/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 39
 Warning (10236): Verilog HDL Implicit Net warning at Reaction_Time_Game.v(40): created implicit net for "buttonResetReal" File: X:/Documents/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 40
-Info (12127): Elaborating entity "regfile" for the top level hierarchy
-Info (12128): Elaborating entity "Decoder3to8" for hierarchy "Decoder3to8:decoder" File: X:/Documents/FinalProject/Reaction-Time-Game/RegisterFile/regfile.v Line: 28
-Info (12128): Elaborating entity "RegisterRow" for hierarchy "RegisterRow:reg0" File: X:/Documents/FinalProject/Reaction-Time-Game/RegisterFile/regfile.v Line: 30
-Info (12128): Elaborating entity "Register" for hierarchy "RegisterRow:reg0|Register:register1" File: X:/Documents/FinalProject/Reaction-Time-Game/RegisterFile/RegisterRow.v Line: 13
-Info (12128): Elaborating entity "Mux8" for hierarchy "Mux8:outputMuxP" File: X:/Documents/FinalProject/Reaction-Time-Game/RegisterFile/regfile.v Line: 38
+Info (12127): Elaborating entity "Reaction_Time_Game" for the top level hierarchy
+Warning (10036): Verilog HDL or VHDL warning at Reaction_Time_Game.v(40): object "buttonResetReal" assigned a value but never read File: X:/Documents/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 40
+Info (12128): Elaborating entity "divideByFiftyThousandCounter" for hierarchy "divideByFiftyThousandCounter:dbftc" File: X:/Documents/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 47
+Info (12128): Elaborating entity "elevenBitUpCount" for hierarchy "elevenBitUpCount:dc" File: X:/Documents/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 49
+Info (12128): Elaborating entity "thirteenBitUpCounter" for hierarchy "thirteenBitUpCounter:scd" File: X:/Documents/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 54
+Info (12128): Elaborating entity "regfile" for hierarchy "regfile:rf" File: X:/Documents/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 56
+Info (12128): Elaborating entity "Decoder3to8" for hierarchy "regfile:rf|Decoder3to8:decoder" File: X:/Documents/FinalProject/Reaction-Time-Game/RegisterFile/regfile.v Line: 30
+Info (12128): Elaborating entity "RegisterRow" for hierarchy "regfile:rf|RegisterRow:reg0" File: X:/Documents/FinalProject/Reaction-Time-Game/RegisterFile/regfile.v Line: 32
+Info (12128): Elaborating entity "Register" for hierarchy "regfile:rf|RegisterRow:reg0|Register:register1" File: X:/Documents/FinalProject/Reaction-Time-Game/RegisterFile/RegisterRow.v Line: 13
+Info (12128): Elaborating entity "Mux8" for hierarchy "regfile:rf|Mux8:outputMuxP" File: X:/Documents/FinalProject/Reaction-Time-Game/RegisterFile/regfile.v Line: 42
+Info (12128): Elaborating entity "twoBitUpCounterREAL" for hierarchy "twoBitUpCounterREAL:tb2" File: X:/Documents/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 62
+Info (12128): Elaborating entity "fullstate" for hierarchy "fullstate:fs" File: X:/Documents/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 64
+Info (12128): Elaborating entity "equals13bit" for hierarchy "fullstate:fs|equals13bit:counterIsSame" File: X:/Documents/FinalProject/Reaction-Time-Game/fullstate.v Line: 39
+Info (12128): Elaborating entity "full_add_subtract13bit" for hierarchy "fullstate:fs|full_add_subtract13bit:FA1" File: X:/Documents/FinalProject/Reaction-Time-Game/fullstate.v Line: 65
+Info (12128): Elaborating entity "full_adder_13bit" for hierarchy "fullstate:fs|full_add_subtract13bit:FA1|full_adder_13bit:FA" File: X:/Documents/FinalProject/Reaction-Time-Game/full_add_subtract13bit.v Line: 28
+Info (12128): Elaborating entity "FA" for hierarchy "fullstate:fs|full_add_subtract13bit:FA1|full_adder_13bit:FA|FA:adder1" File: X:/Documents/FinalProject/Reaction-Time-Game/full_adder_13bit.v Line: 15
+Info (12128): Elaborating entity "seven_seg_decoder_bus" for hierarchy "seven_seg_decoder_bus:ssd1" File: X:/Documents/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 77
+Info (12128): Elaborating entity "seven_seg_decoder_enable" for hierarchy "seven_seg_decoder_bus:ssd1|seven_seg_decoder_enable:ssd" File: X:/Documents/FinalProject/Reaction-Time-Game/seven_seg_decoder_bus.v Line: 8
+Warning (13024): Output pins are stuck at VCC or GND
+    Warning (13410): Pin "Screen4[1]" is stuck at GND File: X:/Documents/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 20
+    Warning (13410): Pin "Screen4[2]" is stuck at GND File: X:/Documents/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 20
+    Warning (13410): Pin "Screen4[6]" is stuck at VCC File: X:/Documents/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v Line: 20
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 233 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 25 input pins
-    Info (21059): Implemented 26 output pins
-    Info (21061): Implemented 182 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 35 warnings
-    Info: Peak virtual memory: 4798 megabytes
-    Info: Processing ended: Sat May  4 15:12:02 2024
-    Info: Elapsed time: 00:00:10
-    Info: Total CPU time (on all processors): 00:00:08
+Info (21057): Implemented 363 device resources after synthesis - the final resource count might be different
+    Info (21058): Implemented 4 input pins
+    Info (21059): Implemented 54 output pins
+    Info (21061): Implemented 305 logic cells
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 40 warnings
+    Info: Peak virtual memory: 4827 megabytes
+    Info: Processing ended: Mon May  6 14:50:28 2024
+    Info: Elapsed time: 00:00:11
+    Info: Total CPU time (on all processors): 00:00:07
 
 

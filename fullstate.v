@@ -42,8 +42,8 @@ module fullstate(
       wire N1;
       wire N0;
       
-      assign N2 = (s2 & ~s1 & ~s0 & ~same) | (s2 & s0) | (s1 & s0);
-      assign N1 = (~s2 & ~s1 & s0 & delayCounterDone) | (~s2 & s1);
+      assign N2 = (s2 & ~s1 & ~s0 & same) | (s2 & s0) | (s1 & s0);
+      assign N1 = (~s2 & ~s1 & s0 & delayCounterDone) | (~s2 & s1 & ~s0);
       assign N0 = ((~s0 & ((buttonStart & ~s2 & ~s1) | (buttonHit & ~s2 & s1) | (same & ~s2 & ~s1))) | (s0 & ~((~s2 & s1) | (delayCounterDone & ~s2 & ~s1))));
 
 
