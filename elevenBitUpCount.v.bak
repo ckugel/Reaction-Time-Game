@@ -1,0 +1,21 @@
+module elevenBitUpCount(Enable, Clock, Reset, Done);
+	input Enable;
+	input Clock;
+	input Reset;
+	
+	reg [10:0] count;
+	
+	output Done;
+	
+	always (@posedge Clock) begin
+	if (reset) begin
+		count <= 11'h0;
+	end
+	else begin
+		if (Enable) count <= count + 1'b1;
+		else count <= count;
+	end
+	end
+
+
+endmodule

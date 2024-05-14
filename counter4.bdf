@@ -58,7 +58,7 @@ https://fpgasoftware.intel.com/eula.
 	(input)
 	(rect -720 624 -552 640)
 	(text "INPUT" (rect 125 0 153 10)(font "Arial" (font_size 6)))
-	(text "Clock" (rect 5 0 34 12)(font "Arial" ))
+	(text "Clock" (rect 5 0 33 12)(font "Arial" ))
 	(pt 168 8)
 	(drawing
 		(line (pt 84 12)(pt 109 12))
@@ -636,6 +636,40 @@ https://fpgasoftware.intel.com/eula.
 		(circle (rect 31 12 39 20))
 	)
 )
+(symbol
+	(rect 1080 296 1144 344)
+	(text "NOR2" (rect 1 0 26 10)(font "Arial" (font_size 6)))
+	(text "inst2" (rect 3 37 25 54)(font "Intel Clear" ))
+	(port
+		(pt 0 32)
+		(input)
+		(text "IN2" (rect 2 23 19 35)(font "Courier New" (bold))(invisible))
+		(text "IN2" (rect 2 23 19 35)(font "Courier New" (bold))(invisible))
+		(line (pt 0 32)(pt 14 32))
+	)
+	(port
+		(pt 0 16)
+		(input)
+		(text "IN1" (rect 2 7 19 19)(font "Courier New" (bold))(invisible))
+		(text "IN1" (rect 2 7 19 19)(font "Courier New" (bold))(invisible))
+		(line (pt 0 16)(pt 14 16))
+	)
+	(port
+		(pt 64 24)
+		(output)
+		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
+		(text "OUT" (rect 48 15 65 27)(font "Courier New" (bold))(invisible))
+		(line (pt 54 24)(pt 64 24))
+	)
+	(drawing
+		(line (pt 12 36)(pt 23 36))
+		(line (pt 12 13)(pt 23 13))
+		(arc (pt 46 24)(pt 23 13)(rect -6 13 53 72))
+		(arc (pt 5 29)(pt 5 19)(rect -16 8 17 41))
+		(arc (pt 23 35)(pt 46 24)(rect -6 -23 53 36))
+		(circle (rect 46 20 54 28))
+	)
+)
 (connector
 	(pt 1480 232)
 	(pt 1520 232)
@@ -824,17 +858,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 640 72)
 )
 (connector
-	(pt 1216 104)
-	(pt 1216 168)
-	(bus)
-)
-(connector
-	(text "hex_degit[3..0]" (rect 1200 163 1217 232)(font "Intel Clear" )(vertical))
-	(pt 1216 168)
-	(pt 1216 232)
-	(bus)
-)
-(connector
 	(pt 1024 112)
 	(pt 840 112)
 )
@@ -849,10 +872,6 @@ https://fpgasoftware.intel.com/eula.
 (connector
 	(pt 840 168)
 	(pt 840 408)
-)
-(connector
-	(pt 752 224)
-	(pt 752 96)
 )
 (connector
 	(pt 288 32)
@@ -907,10 +926,6 @@ https://fpgasoftware.intel.com/eula.
 	(pt 720 296)
 )
 (connector
-	(pt 720 408)
-	(pt 840 408)
-)
-(connector
 	(pt 264 104)
 	(pt 264 296)
 )
@@ -943,12 +958,70 @@ https://fpgasoftware.intel.com/eula.
 	(pt 752 96)
 )
 (connector
-	(text "hex_degit[0]" (rect 1098 152 1157 169)(font "Intel Clear" ))
+	(pt 1144 320)
+	(pt 1192 320)
+)
+(connector
+	(pt 1192 320)
+	(pt 1192 216)
+)
+(connector
+	(pt 1216 216)
+	(pt 1216 232)
+	(bus)
+)
+(connector
+	(text "hex_degit[3..0]" (rect 1200 163 1217 232)(font "Intel Clear" )(vertical))
+	(pt 1216 168)
+	(pt 1216 216)
+	(bus)
+)
+(connector
+	(text "hex_degit[3..0]" (rect 1200 99 1217 168)(font "Intel Clear" )(vertical))
+	(pt 1216 104)
+	(pt 1216 168)
+	(bus)
+)
+(connector
+	(pt 1048 408)
+	(pt 1048 328)
+)
+(connector
+	(pt 720 408)
+	(pt 840 408)
+)
+(connector
+	(pt 840 408)
+	(pt 1048 408)
+)
+(connector
+	(pt 1048 328)
+	(pt 1080 328)
+)
+(connector
+	(pt 1080 312)
+	(pt 752 312)
+)
+(connector
+	(pt 752 96)
+	(pt 752 224)
+)
+(connector
+	(pt 752 224)
+	(pt 752 312)
+)
+(connector
+	(text "hex_degit[0]" (rect 1192 200 1251 217)(font "Intel Clear" ))
+	(pt 1192 216)
+	(pt 1216 216)
+)
+(connector
+	(text "hex_degit[1]" (rect 1098 152 1157 169)(font "Intel Clear" ))
 	(pt 1088 168)
 	(pt 1216 168)
 )
 (connector
-	(text "hex_degit[1]" (rect 1098 88 1157 105)(font "Intel Clear" ))
+	(text "hex_degit[2]" (rect 1098 88 1157 105)(font "Intel Clear" ))
 	(pt 1088 104)
 	(pt 1216 104)
 )
@@ -966,3 +1039,6 @@ https://fpgasoftware.intel.com/eula.
 (junction (pt 264 296))
 (junction (pt 144 296))
 (junction (pt 752 96))
+(junction (pt 1216 216))
+(junction (pt 840 408))
+(junction (pt 752 224))

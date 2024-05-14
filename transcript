@@ -1,47 +1,18 @@
-vsim -gui work.Shiftdevideby10
-# vsim -gui work.Shiftdevideby10 
-# Start time: 15:20:41 on Apr 23,2024
-# ** Note: (vsim-8009) Loading existing optimized design _opt2
-# Loading work.Shiftdevideby10(fast)
-add wave -position insertpoint  \
-sim:/Shiftdevideby10/X \
-sim:/Shiftdevideby10/Out
-do devide10-1.do
-# ** Error: invalid command name "//"
-# Error in macro ./devide10-1.do line 1
-# invalid command name "//"
-#     while executing
-# "// Initial reset of X to ensure a clean start"
-do devide10-1.do
-# ** Error: unknown or ambiguous subcommand "clear": must be activecursor, addcursor, clipboard, collapse, configcursor, create, cursor, cursorconfig, cursortime, deletecursor, edit, editwrite, expand, export, exportvcd, group, guiObjGetUPFInfo, guiObjHasUPFInfo, import, interrupt, map, modify, overlay, pah, positioncursor, refresh, seecursor, seetime, sort, ungroup, write, zoom, zoomcursor, zoomfull, zoomin, zoomlast, zoomout, or zoomrange
-# Error in macro ./devide10-1.do line 2
-# unknown or ambiguous subcommand "clear": must be activecursor, addcursor, clipboard, collapse, configcursor, create, cursor, cursorconfig, cursortime, deletecursor, edit, editwrite, expand, export, exportvcd, group, guiObjGetUPFInfo, guiObjHasUPFInfo, import, interrupt, map, modify, overlay, pah, positioncursor, refresh, seecursor, seetime, sort, ungroup, write, zoom, zoomcursor, zoomfull, zoomin, zoomlast, zoomout, or zoomrange
-#     while executing
-# "wave clear"
-do devide10-1.do
-# ** Error: unknown or ambiguous subcommand "clear": must be activecursor, addcursor, clipboard, collapse, configcursor, create, cursor, cursorconfig, cursortime, deletecursor, edit, editwrite, expand, export, exportvcd, group, guiObjGetUPFInfo, guiObjHasUPFInfo, import, interrupt, map, modify, overlay, pah, positioncursor, refresh, seecursor, seetime, sort, ungroup, write, zoom, zoomcursor, zoomfull, zoomin, zoomlast, zoomout, or zoomrange
-# Error in macro ./devide10-1.do line 2
-# unknown or ambiguous subcommand "clear": must be activecursor, addcursor, clipboard, collapse, configcursor, create, cursor, cursorconfig, cursortime, deletecursor, edit, editwrite, expand, export, exportvcd, group, guiObjGetUPFInfo, guiObjHasUPFInfo, import, interrupt, map, modify, overlay, pah, positioncursor, refresh, seecursor, seetime, sort, ungroup, write, zoom, zoomcursor, zoomfull, zoomin, zoomlast, zoomout, or zoomrange
-#     while executing
-# "wave clear"
-do devide10-1.do
-# ** Error: invalid command name "clear"
-# Error in macro ./devide10-1.do line 2
-# invalid command name "clear"
-#     while executing
-# "clear wave"
-do devide10-1.do
-# ** UI-Msg (Warning): (vish-4014) No objects found matching '/full_add_subtract13bit/X'.
-# Error in macro ./devide10-1.do line 4
-# ** UI-Msg (Warning): (vish-4014) No objects found matching '/full_add_subtract13bit/X'.
-#     while executing
-# "add wave -position end /full_add_subtract13bit/X"
-do devide10-1.do
-# ** Error: invalid command name "//"
-# Error in macro ./devide10-1.do line 1
-# invalid command name "//"
-#     while executing
-# "// Initial reset of X to ensure a clean start"
-do devide10-1.do
-# End time: 15:25:38 on Apr 23,2024, Elapsed time: 0:04:57
-# Errors: 5, Warnings: 1
+# Compile of Reaction_Time_Game.v was successful.
+vsim -gui work.Reaction_Time_Game
+# vsim -gui work.Reaction_Time_Game 
+# Start time: 21:52:41 on May 01,2024
+# ** Note: (vsim-3812) Design is being optimized...
+# ** Error: RegisterFile/Register.v(14): Module 'dff' is not defined.
+#  For instance 'regDFF' at path 'Reaction_Time_Game.rf.reg0.register1'
+# ** Error: fullstate.v(57): Module 'dff' is not defined.
+#  For instance 'df0' at path 'Reaction_Time_Game.fs'
+# ** Error: fullstate.v(58): Module 'dff' is not defined.
+#  For instance 'df1' at path 'Reaction_Time_Game.fs'
+# ** Error: fullstate.v(60): Module 'dff' is not defined.
+#  For instance 'df2' at path 'Reaction_Time_Game.fs'
+# Optimization failed
+# ** Note: (vsim-12126) Error and warning message counts have been restored: Errors=4, Warnings=0.
+# Error loading design
+# End time: 21:52:42 on May 01,2024, Elapsed time: 0:00:01
+# Errors: 4, Warnings: 2

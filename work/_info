@@ -1,22 +1,48 @@
 m255
 K4
 z2
-!s12c _opt2
-Z0 !s99 nomlopt
-Z1 !s12c _opt
+Z0 !s12c _opt
+Z1 !s99 nomlopt
 R0
-Z2 !s12c _opt1
+R1
+Z2 !s12c _opt2
+R1
+R2
+R1
 R0
 R1
 R0
-R2
-R0
-R2
-R0
-R2
+R1
 R0
 R1
 R0
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R2
+R1
+R0
+R1
+R2
+R1
+R0
+R1
+Z3 !s12c _opt1
+R1
+R0
+R1
+R3
+R1
+R3
+R1
+R3
+R1
+R0
+R1
 !s11f vlog 2023.2 2023.04, Apr 11 2023
 13
 !s112 1.1
@@ -24,45 +50,33 @@ R0
 !i10e 25
 !i10f 100
 cModel Technology
-Z3 dC:/questasim64_2023.2/examples
+Z4 dC:/questasim64_2023.2/examples
 T_opt
-!s110 1712866224
-V8FcG7b<e@;CLm7[hMPh3>3
-Z4 04 9 4 work upCounter fast 0
-=1-7486e227cda1-661843af-6b-4a98
-R0
+!s110 1714492819
+V2]cIM`]gI9=Q]@HHnlgV63
+04 18 4 work Reaction_Time_Game fast 0
+=1-7486e228a15d-66311592-202-46e0
+R1
 Z5 !s12b OEM100
 Z6 !s124 OEM100
 Z7 o-quiet -auto_acc_if_foreign -work work
 Z8 tCvgOpt 0
 n@_opt
 Z9 OL;O;2023.2;77
-R3
+R4
 T_opt1
 !s110 1712858823
 V48m>Jz?z5g:T[2jL1WN?@3
-R4
+04 9 4 work upCounter fast 0
 =1-7486e228a2b9-661826c5-399-620
-R0
+R1
 R5
 R6
 o-quiet -auto_acc_if_foreign -work work +acc
 R8
 n@_opt1
 R9
-R3
-T_opt2
-!s110 1713901571
-VNQlfaIDcnSTnfC>h4MkMA3
-04 15 4 work Shiftdevideby10 fast 0
-=1-b07b25279035-66280fff-33f-150c
-R0
-R5
-R6
-R7
-R8
-n@_opt2
-R9
+R4
 vAdder13
 2U:/CPRE281/Final/Reaction-Time-Game/Adder13.v
 Z10 !s110 1713901552
@@ -87,63 +101,276 @@ Z14 !s108 1713901552.000000
 Z15 o-work work -L mtiAvm -L mtiRnm -L mtiOvm -L mtiUvm -L mtiUPF -L infact
 R8
 n@adder13
-vFA
-2U:/CPRE281/Final/Reaction-Time-Game/FA.v
-R10
+vDecoder3to8
+Z16 2U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v
+Z17 !s110 1714618343
 !i10b 1
-!s100 jPV;KiJRT<j7ZdU^j6Uc01
-I_7T_zh;?QNWW@Q_cP9b9R2
-R11
-w1710874855
-8U:/CPRE281/Final/Reaction-Time-Game/FA.v
-FU:/CPRE281/Final/Reaction-Time-Game/FA.v
-!i122 26
+!s100 dNA3R;MV=0FZlZWRL1D4G0
+Ia9PQ`FfRZAGE6@zf50hSF3
+Z18 dX:/Documents/FinalProject/Reaction-Time-Game
+w1714350402
+8RegisterFile/Decoder3to8.v
+FRegisterFile/Decoder3to8.v
+!i122 61
+L0 20 48
+R12
+R13
+r1
+!s85 0
+31
+Z19 !s108 1714618343.000000
+Z20 !s107 twoBitUpCounterREAL.v|divideByFiftyThousandCounter.v|thirteenBitUpCounter.v|elevenBitUpCount.v|seven_seg_decoder_enable.v|seven_seg_decoder_bus.v|TFlipFlop.v|equals13bit.v|mux4to1.v|mux3_8.v|FA.v|full_adder_13bit.v|full_add_subtract13bit.v|fullstate.v|RegisterFile/Decoder3to8.v|RegisterFile/Mux8.v|RegisterFile/Register.v|RegisterFile/RegisterRow.v|RegisterFile/regfile.v|U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v|
+Z21 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v|
+!i113 0
+R15
+R8
+n@decoder3to8
+vdelayCounterWithDone
+Z22 2U:/CPRE281/FinalProject/Reaction-Time-Game/delayCounterWithDone.v
+Z23 !s110 1714486724
+!i10b 1
+!s100 j_K25odka7m2_J7GhUeLG1
+IfcRL;RY6cdIF0<IZf3`Kf2
+Z24 dU:/CPRE281/FinalProject/Reaction-Time-Game
+w1714486463
+8U:/CPRE281/FinalProject/Reaction-Time-Game/delayCounterWithDone.v
+FU:/CPRE281/FinalProject/Reaction-Time-Game/delayCounterWithDone.v
+!i122 47
+L0 6 13
+R12
+R13
+r1
+!s85 0
+31
+Z25 !s108 1714486724.000000
+Z26 !s107 TFlipFlop.v|counter/elevenBitUpCounter.v|equals13bit.v|U:/CPRE281/FinalProject/Reaction-Time-Game/delayCounterWithDone.v|
+Z27 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|U:/CPRE281/FinalProject/Reaction-Time-Game/delayCounterWithDone.v|
+!i113 0
+R15
+R8
+ndelay@counter@with@done
+vdffCustom
+R16
+Z28 !s110 1714492774
+!i10b 1
+!s100 C5BiiX<6f]W1TlJ79nL`o3
+Ic=_l[IKn;N[[J`BU^Q@B33
+R24
+Z29 w1714473904
+8RegisterFile/dffCustom.v
+FRegisterFile/dffCustom.v
+!i122 60
+L0 23 41
+R12
+R13
+r1
+!s85 0
+31
+Z30 !s108 1714492772.000000
+Z31 !s107 twoBitUpCounterREAL.v|divideByFiftyThousandCounter.v|TFlipFlop.v|counter/ThirteenBitUpCounter.v|scoreCounterWithDone.v|elevenBitUpCount.v|seven_seg_decoder_enable.v|seven_seg_decoder_bus.v|equals13bit.v|mux4to1.v|mux3_8.v|FA.v|full_adder_13bit.v|full_add_subtract13bit.v|fullstate.v|RegisterFile/Decoder3to8.v|RegisterFile/Mux8.v|RegisterFile/dffCustom.v|RegisterFile/Register.v|RegisterFile/RegisterRow.v|RegisterFile/regfile.v|U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v|
+R21
+!i113 0
+R15
+R8
+ndff@custom
+vdivideByFiftyThousandCounter
+R16
+R17
+!i10b 1
+!s100 :6KZ1^1n8TNj4k^RVen>03
+I;D<PJXiFV1Y98mN?f@3e:3
+R18
+R29
+8divideByFiftyThousandCounter.v
+FdivideByFiftyThousandCounter.v
+!i122 61
+L0 19 338
+R12
+R13
+r1
+!s85 0
+31
+R19
+R20
+R21
+!i113 0
+R15
+R8
+ndivide@by@fifty@thousand@counter
+velevenBitUpCount
+R16
+R17
+!i10b 1
+!s100 4zHIQBk_g57Mo;SI4JD651
+I4jE`G:Mj1M1;:G6=aEW3N1
+R18
+w1714608026
+8elevenBitUpCount.v
+FelevenBitUpCount.v
+!i122 61
+L0 4 21
+R12
+R13
+r1
+!s85 0
+31
+R19
+R20
+R21
+!i113 0
+R15
+R8
+neleven@bit@up@count
+vElevenBitUpCounter
+R22
+R23
+!i10b 1
+!s100 6>A[6fR35@6Q?7Olg4AC@3
+IG:WTI48G`CD?22b:FfVjD3
+R24
+w1714485906
+8counter/elevenBitUpCounter.v
+Fcounter/elevenBitUpCounter.v
+!i122 47
+L0 2 45
+R12
+R13
+r1
+!s85 0
+31
+R25
+R26
+R27
+!i113 0
+R15
+R8
+n@eleven@bit@up@counter
+vequals13bit
+R16
+R17
+!i10b 1
+!s100 EWS9SkoAeDCdzgZQZ2ZAm1
+I2JS`MmJS=j:FAcd^DZ[ZB0
+R18
+R29
+8equals13bit.v
+Fequals13bit.v
+!i122 61
+L0 4 22
+R12
+R13
+r1
+!s85 0
+31
+R19
+R20
+R21
+!i113 0
+R15
+R8
+vFA
+R16
+R17
+!i10b 1
+!s100 n2]za0=aKgJ3RNdjahPFU2
+Iai4QU0><JmkFBJKm`;1>P1
+R18
+w1714350674
+8FA.v
+FFA.v
+!i122 61
 L0 1 7
 R12
 R13
 r1
 !s85 0
 31
-R14
-!s107 U:/CPRE281/Final/Reaction-Time-Game/FA.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|U:/CPRE281/Final/Reaction-Time-Game/FA.v|
+R19
+R20
+R21
 !i113 0
 R15
 R8
 n@f@a
 vfull_add_subtract13bit
-2U:/CPRE281/Final/Reaction-Time-Game/full_add_subtract13bit.v
-Z16 !s110 1713901551
+R16
+R17
 !i10b 1
-!s100 E^C9:leWT?DXT>N:E1fcb3
-IJ65lQOfS35l1j58gdVAdG3
-R11
-w1713755731
-8U:/CPRE281/Final/Reaction-Time-Game/full_add_subtract13bit.v
-FU:/CPRE281/Final/Reaction-Time-Game/full_add_subtract13bit.v
-!i122 20
-L0 2 26
+!s100 1GiSjG7a`;Mn5_XTZfbP;2
+IMech_?IjWbKnPIcYg_Oo:0
+R18
+Z32 w1714601738
+8full_add_subtract13bit.v
+Ffull_add_subtract13bit.v
+!i122 61
+L0 5 26
 R12
 R13
 r1
 !s85 0
 31
-Z17 !s108 1713901551.000000
-!s107 Adder13.v|U:/CPRE281/Final/Reaction-Time-Game/full_add_subtract13bit.v|
-!s90 -reportprogress|300|-work|work|-vopt|-stats=none|U:/CPRE281/Final/Reaction-Time-Game/full_add_subtract13bit.v|
+R19
+R20
+R21
+!i113 0
+R15
+R8
+vfull_adder_13bit
+R16
+R17
+!i10b 1
+!s100 ZefPV7kOcAiWh5J>hJfCk1
+I[M=h^1@[6nK9ND3Xof4bH3
+R18
+R32
+8full_adder_13bit.v
+Ffull_adder_13bit.v
+!i122 61
+L0 6 27
+R12
+R13
+r1
+!s85 0
+31
+R19
+R20
+R21
+!i113 0
+R15
+R8
+vfullstate
+R16
+R17
+!i10b 1
+!s100 A><5IXefX0bWUzRe>?DXe0
+IkAC3oW?[ZnZi6Mz?XRL550
+R18
+w1714618145
+8fullstate.v
+Ffullstate.v
+!i122 61
+L0 11 71
+R12
+R13
+r1
+!s85 0
+31
+R19
+R20
+R21
 !i113 0
 R15
 R8
 vjkff2_0
-Z18 2U:/CPRE281/FinalProject/Reaction-Time-Game/upCounter.v
-Z19 !s110 1712857020
+Z33 2U:/CPRE281/FinalProject/Reaction-Time-Game/upCounter.v
+Z34 !s110 1712857020
 !i10b 1
 !s100 QUIUcRde=R3B@hCh_oREi3
 IXPVLPeHB;ZcWcOjjbg`:f2
-Z20 dU:/CPRE281/FinalProject/Reaction-Time-Game
-Z21 w1712856756
-Z22 8U:/CPRE281/FinalProject/Reaction-Time-Game/upCounter.v
-Z23 FU:/CPRE281/FinalProject/Reaction-Time-Game/upCounter.v
+R24
+Z35 w1712856756
+Z36 8U:/CPRE281/FinalProject/Reaction-Time-Game/upCounter.v
+Z37 FU:/CPRE281/FinalProject/Reaction-Time-Game/upCounter.v
 !i122 3
 L0 89 12
 R12
@@ -151,22 +378,22 @@ R13
 r1
 !s85 0
 31
-Z24 !s108 1712857018.000000
-Z25 !s107 U:/CPRE281/FinalProject/Reaction-Time-Game/upCounter.v|
-Z26 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|U:/CPRE281/FinalProject/Reaction-Time-Game/upCounter.v|
+Z38 !s108 1712857018.000000
+Z39 !s107 U:/CPRE281/FinalProject/Reaction-Time-Game/upCounter.v|
+Z40 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|U:/CPRE281/FinalProject/Reaction-Time-Game/upCounter.v|
 !i113 0
 R15
 R8
 vjkff2_1
-R18
-R19
+R33
+R34
 !i10b 1
 !s100 36zBVN0QlaWcEC>Y>]ZlA2
 I;49:4o:U[@V`1F__8E?]N3
-R20
-R21
-R22
-R23
+R24
+R35
+R36
+R37
 !i122 3
 L0 102 12
 R12
@@ -174,22 +401,22 @@ R13
 r1
 !s85 0
 31
-R24
-R25
-R26
+R38
+R39
+R40
 !i113 0
 R15
 R8
 vjkff2_2
-R18
-R19
+R33
+R34
 !i10b 1
 !s100 _C<fI80?O1Vl8b9PAV?Q50
 IEK<[^KB6fB6J;j<ihc7ZD0
-R20
-R21
-R22
-R23
+R24
+R35
+R36
+R37
 !i122 3
 L0 115 12
 R12
@@ -197,22 +424,22 @@ R13
 r1
 !s85 0
 31
-R24
-R25
-R26
+R38
+R39
+R40
 !i113 0
 R15
 R8
 vjkff2_3
-R18
-R19
+R33
+R34
 !i10b 1
 !s100 TY;U1eFXWDYIZCYB[A1dV3
 IFbXcmo[;5PbV:Qa]4_PI30
-R20
-R21
-R22
-R23
+R24
+R35
+R36
+R37
 !i122 3
 L0 128 11
 R12
@@ -220,15 +447,180 @@ R13
 r1
 !s85 0
 31
-R24
-R25
-R26
+R38
+R39
+R40
 !i113 0
 R15
 R8
+vmux3_8
+R16
+R17
+!i10b 1
+!s100 ^<fdjJmKAi<`6R79hg=8]3
+I1WBOcWB62ML`C1<zh:6>L0
+R18
+w1714495924
+8mux3_8.v
+Fmux3_8.v
+!i122 61
+L0 5 29
+R12
+R13
+r1
+!s85 0
+31
+R19
+R20
+R21
+!i113 0
+R15
+R8
+vmux4to1
+R16
+R17
+!i10b 1
+!s100 k16JL[gaDoAf<Ba:4O5Nb0
+IFQ2[@99?jVJEIUDQ4Xcb21
+R18
+R29
+8mux4to1.v
+Fmux4to1.v
+!i122 61
+L0 3 10
+R12
+R13
+r1
+!s85 0
+31
+R19
+R20
+R21
+!i113 0
+R15
+R8
+vMux8
+R16
+R17
+!i10b 1
+!s100 n^BZ5PIHUNYQ1^UZ1]`3b3
+IMDj9Va=i6`TU8[h03^a[Y0
+R18
+w1714482375
+8RegisterFile/Mux8.v
+FRegisterFile/Mux8.v
+!i122 61
+L0 4 35
+R12
+R13
+r1
+!s85 0
+31
+R19
+R20
+R21
+!i113 0
+R15
+R8
+n@mux8
+vReaction_Time_Game
+R16
+R17
+!i10b 1
+!s100 <WnYRI;=f;z0W]i]CjOK93
+I;GMJf]EZJP17GQm0EZZNU3
+R18
+w1714607308
+8U:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v
+FU:/CPRE281/FinalProject/Reaction-Time-Game/Reaction_Time_Game.v
+!i122 61
+L0 9 69
+R12
+R13
+r1
+!s85 0
+31
+R19
+R20
+R21
+!i113 0
+R15
+R8
+n@reaction_@time_@game
+vregfile
+R16
+R17
+!i10b 1
+!s100 >z<jWkLXiJf4iMWZCV_NZ1
+I7Y2<Z<dT>=RdXF`T<0b]O0
+R18
+R29
+8RegisterFile/regfile.v
+FRegisterFile/regfile.v
+!i122 61
+L0 5 37
+R12
+R13
+r1
+!s85 0
+31
+R19
+R20
+R21
+!i113 0
+R15
+R8
+vRegister
+R16
+R17
+!i10b 1
+!s100 K9JX=G>@OidCR9=O0Y>zm0
+IU?AoSN4iL8@i=jWO?KI;11
+R18
+w1714493105
+8RegisterFile/Register.v
+FRegisterFile/Register.v
+!i122 61
+L0 5 12
+R12
+R13
+r1
+!s85 0
+31
+R19
+R20
+R21
+!i113 0
+R15
+R8
+n@register
+vRegisterRow
+R16
+R17
+!i10b 1
+!s100 HoUWD`V1^<K:hTe;bK`Wj0
+I4<63C_nSV:UT?KB7cccck1
+R18
+R29
+8RegisterFile/RegisterRow.v
+FRegisterFile/RegisterRow.v
+!i122 61
+L0 6 23
+R12
+R13
+r1
+!s85 0
+31
+R19
+R20
+R21
+!i113 0
+R15
+R8
+n@register@row
 vRightshift3
 2U:/CPRE281/Final/Reaction-Time-Game/Rightshift3.v
-R16
+!s110 1713901551
 !i10b 1
 !s100 8KM9NFz=KGJ`KJh0hB[MM1
 IK[0C3K?4b1a2=bU2a`^Se3
@@ -237,13 +629,13 @@ w1713894802
 8U:/CPRE281/Final/Reaction-Time-Game/Rightshift3.v
 FU:/CPRE281/Final/Reaction-Time-Game/Rightshift3.v
 !i122 21
-Z27 L0 1 8
+Z41 L0 1 8
 R12
 R13
 r1
 !s85 0
 31
-R17
+Z42 !s108 1713901551.000000
 !s107 U:/CPRE281/Final/Reaction-Time-Game/Rightshift3.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|U:/CPRE281/Final/Reaction-Time-Game/Rightshift3.v|
 !i113 0
@@ -261,13 +653,13 @@ w1713894341
 8U:/CPRE281/Final/Reaction-Time-Game/Rightshift4.v
 FU:/CPRE281/Final/Reaction-Time-Game/Rightshift4.v
 !i122 22
-R27
+R41
 R12
 R13
 r1
 !s85 0
 31
-R17
+R42
 !s107 U:/CPRE281/Final/Reaction-Time-Game/Rightshift4.v|
 !s90 -reportprogress|300|-work|work|-vopt|-stats=none|U:/CPRE281/Final/Reaction-Time-Game/Rightshift4.v|
 !i113 0
@@ -285,7 +677,7 @@ w1713894863
 8U:/CPRE281/Final/Reaction-Time-Game/Rightshift5.v
 FU:/CPRE281/Final/Reaction-Time-Game/Rightshift5.v
 !i122 23
-R27
+R41
 R12
 R13
 r1
@@ -298,6 +690,76 @@ R14
 R15
 R8
 n@rightshift5
+vscoreCounterWithDone
+R16
+R28
+!i10b 1
+!s100 ;Ue0B0B14HdTh4b<AQ=1@0
+I3W2PNA:0bTXeEFPf:M_oh2
+R24
+w1714482543
+8scoreCounterWithDone.v
+FscoreCounterWithDone.v
+!i122 60
+L0 5 8
+R12
+R13
+r1
+!s85 0
+31
+R30
+R31
+R21
+!i113 0
+R15
+R8
+nscore@counter@with@done
+vseven_seg_decoder_bus
+R16
+R17
+!i10b 1
+!s100 [eQmR71GBIK3AD5Vh`5:h2
+I5=4fKM?aMbL0zao0dkNSb2
+R18
+Z43 w1714473905
+8seven_seg_decoder_bus.v
+Fseven_seg_decoder_bus.v
+!i122 61
+L0 3 8
+R12
+R13
+r1
+!s85 0
+31
+R19
+R20
+R21
+!i113 0
+R15
+R8
+vseven_seg_decoder_enable
+R16
+R17
+!i10b 1
+!s100 ;CKWj8^ePHKn9zcASL]H52
+I:eMVRI2EGiE<Z<0JTk0k12
+R18
+R43
+8seven_seg_decoder_enable.v
+Fseven_seg_decoder_enable.v
+!i122 61
+L0 4 13
+R12
+R13
+r1
+!s85 0
+31
+R19
+R20
+R21
+!i113 0
+R15
+R8
 vShiftdevideby10
 2U:/CPRE281/Final/Reaction-Time-Game/Shiftdevideby10.v
 R10
@@ -322,26 +784,122 @@ R14
 R15
 R8
 n@shiftdevideby10
-vupCounter
+vTFlipFlop
+R16
+R17
+!i10b 1
+!s100 nJ3DK5EK?9<KgSz`XURha0
+Io5jdmcn644TOf_T:VmL0a0
 R18
-!s110 1712866208
+R29
+8TFlipFlop.v
+FTFlipFlop.v
+!i122 61
+L0 22 37
+R12
+R13
+r1
+!s85 0
+31
+R19
+R20
+R21
+!i113 0
+R15
+R8
+n@t@flip@flop
+vThirteenBitUpCounter
+R16
+R28
+!i10b 1
+!s100 A`H>`>RF[R6za5OG8G4Qa2
+I1RBDP8?`CmoA8dcXoa94^0
+R24
+R29
+8counter/ThirteenBitUpCounter.v
+Fcounter/ThirteenBitUpCounter.v
+!i122 60
+L0 2 50
+R12
+R13
+r1
+!s85 0
+31
+R30
+R31
+R21
+!i113 0
+R15
+R8
+n@thirteen@bit@up@counter
+vthirteenBitUpCounter
+R16
+R17
+!i10b 1
+!s100 `J<Tca@6fQ4z?[gB<Llad3
+IPfX<:Km8_Z5B6mYbIX1TM0
+R18
+w1714494217
+8thirteenBitUpCounter.v
+FthirteenBitUpCounter.v
+!i122 61
+L0 4 18
+R12
+R13
+r1
+!s85 0
+31
+R19
+R20
+R21
+!i113 0
+R15
+R8
+nthirteen@bit@up@counter
+vtwoBitUpCounterREAL
+R16
+R17
+!i10b 1
+!s100 <Hf4CK?UzfU8OBzPNJ_P=3
+I]zVKzV>?GW:OD^CLL:F;Z2
+R18
+R43
+8twoBitUpCounterREAL.v
+FtwoBitUpCounterREAL.v
+!i122 61
+L0 20 72
+R12
+R13
+r1
+!s85 0
+31
+R19
+R20
+R21
+!i113 0
+R15
+R8
+ntwo@bit@up@counter@r@e@a@l
+vupCounter
+R33
+R23
 !i10b 1
 !s100 hXSMPUj]9iCeh9bKb4Xf;0
 I[nTz_[ARC5=QOTaoDWRm`0
-R20
+R24
 w1712858792
-R22
-R23
-!i122 9
+R36
+R37
+!i122 44
 L0 20 61
 R12
 R13
 r1
 !s85 0
 31
-!s108 1712866208.000000
-R25
-R26
+!s108 1714486722.000000
+R39
+R40
 !i113 0
 R15
 R8
